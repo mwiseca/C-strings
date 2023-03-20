@@ -42,7 +42,7 @@ while True:
             v= input("//")
             if v == "m":
                 break
-            print("//Enter the memory you alocated to the varable.")
+            print("//Enter the memory you alocated to the variable.")
             ma = input("//")
             if ma == "m":
                 break
