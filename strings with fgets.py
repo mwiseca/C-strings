@@ -14,7 +14,7 @@ eng = {
 def ch():
     print("//Enter a for strings h to hide user input with getpass.")
     print("//Enter f for fgets and removal of new line character.")
-    print("//Enter x to exit, m for main 0for choices.")
+    print("//Enter x to exit, m for main 0 for choices.")
      
      
 ch()
