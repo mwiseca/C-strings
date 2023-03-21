@@ -38,7 +38,7 @@ while True:
                 break
     elif switch == "f":
         while True:
-            print("Enter name of varable.")
+            print("Enter name of variable.")
             v= input("//")
             if v == "m":
                 break
