@@ -9,6 +9,7 @@ int main (){
     char text [100];
     printf("//Enter your string, x to exit.\n");
     while (1){
+    printf("//");
     fgets(text,100,stdin);
     text[strcspn(text,"\n")]=0;
     if (strcmp(text,"x")==0){
