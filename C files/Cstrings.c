@@ -1,4 +1,5 @@
-
+//Copyright 2023 Mitchell E Wise 
+//SPDX-License-Identifier: Apache-20 
 
 
 #include <stdio.h>
