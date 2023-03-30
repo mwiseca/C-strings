@@ -7,11 +7,11 @@
 
 
 void choice(){
- printf("Enter c for choices.\n");
- printf("Enter a for strings b for strings for new line character.\n");
- printf("Enter i for if statment e for else if.\n");
- printf("Enter f for fgets.\n");
- printf("Enter m for main x to exit.\n");
+ printf("//Enter c for choices.\n");
+ printf("//Enter a for strings b for strings for new line character.\n");
+ printf("//Enter i for if statment e for else if.\n");
+ printf("//Enter f for fgets.\n");
+ printf("//Enter m for main x to exit.\n");
  }
 
 
@@ -21,7 +21,8 @@ int main(){
  
  choice();
  while (1){
- printf("Enter x to exit main m for main.\n");
+ printf("//Enter x to exit main m for main.\n");
+ printf("//");
  fgets(sw,250,stdin);
  sw[strcspn(sw,"\n")]=0;
  if (strcmp(sw, "a")==0){
@@ -107,7 +108,7 @@ int main(){
 }else if (strcmp(sw, "c")==0){
  choice();
 }else{
-     printf("Enter a letter in main.\n");
+     printf("//Enter a letter in main.\n");
          } 
       }  
 return 0;
