@@ -5,8 +5,6 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(){        
-	char sw [250];         
 
 void choice(){
  printf("Enter c for choices.\n");
@@ -15,6 +13,11 @@ void choice(){
  printf("Enter f for fgets.\n");
  printf("Enter m for main x to exit.\n");
  }
+
+
+int main(){        
+	char sw [250];         
+
  
  choice();
  while (1){
