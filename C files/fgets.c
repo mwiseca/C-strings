@@ -8,12 +8,12 @@ int main (){
      char f  [5] [15] = {"fgets(", ",", "stdin);", "[strcspn(", ")]=0;"};
      char v [50];
      int me;
-     char nl [5];
+     char nl [6];
 	
  while (1){
  printf("//Enter name of variable x to exit.\n");
  printf("//"); 
- scanf("%50s",v);
+ scanf("%49s",v);
  if (strcmp(v,"x")==0){
  break;}
  printf("//Enter the memory you alocated to the variable.\n");
