@@ -12,7 +12,7 @@ int main (){
  while (1){
  printf("//Enter name of variable x to exit.\n");
  printf("//"); 
- scanf("%50s",v);
+ scanf("%49s",v);
  if (strcmp(v,"x")==0){
  break;}
  printf("//Enter the memory you alocated to the variable.\n");
