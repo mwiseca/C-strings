@@ -123,7 +123,7 @@ while True:
             print("return 0;")
             print("}")
             print("\n")
-            print("Enter m for main.")
+            print("//Enter m for main.")
             cpy = input("//")
             if cpy == "m":
                 break
