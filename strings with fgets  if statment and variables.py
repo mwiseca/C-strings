@@ -107,7 +107,7 @@ while True:
         while True:
             print("#include <stdio.h>")
             print("\n");
-            print("#include <string.h")
+            print("#include <string.h>")
             print("\n")
             print("while (1){")
             print("\n");
