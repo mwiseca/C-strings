@@ -143,7 +143,7 @@ int main(){
  printf("return 0;\n");
  printf("}\n");
  printf("\n");
- printf("Enter m for main.\n");
+ printf("//Enter m for main.\n");
  fgets(cpy,5,stdin);
  cpy[strcspn(cpy,"\n")]=0;
  if (strcmp(cpy,"m")==0){
