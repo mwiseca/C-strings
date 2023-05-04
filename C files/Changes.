@@ -4,5 +4,6 @@ Moved the choice function above main. More comments added and memory allocation 
 March 29 2023.
 C-strings to clear input buffer was added, works with some compilers.
 April 30 2023.
-C-strings for linux was added Works with ubuntu 22.04.
+C-strings for Linux® was added Works with ubuntu 22.04.
+Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.
 May 4 2023.
