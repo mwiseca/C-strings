@@ -2,7 +2,7 @@ The c files work but becouse im just starting to learn C the python file is best
 March 27 2023.
 Moved the choice function above main. More comments added and memory allocation to scanf reduced.
 March 29 2023.
-C-strings for windows was added Compiled with MinGW.
+C-strings to clear input buffer was added, works with some compilers.
 April 30 2023.
-C-strings for linux was added Compiled with gcc. Works with ubuntu 22.04.
+C-strings for linux was added Works with ubuntu 22.04.
 May 4 2023.
