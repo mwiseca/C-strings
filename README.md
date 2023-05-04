@@ -8,3 +8,4 @@ C strings makes if and else if statments and variables for strings.
 This is for learning and checking syntax, not enhancing productivity.
 The c files for operating systems will clear input buffer after user input on those systems.
 The linux one was tested on ubuntu 22.04.
+Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.
