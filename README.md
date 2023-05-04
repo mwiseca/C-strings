@@ -1,7 +1,10 @@
 # C-strings
 Make strings with printf.
-Use this to make strings with the printf function.
+Use this to make very simple programs related to strings.
 The python file can hide user input when used in the terminal.
-The python file comments out almost anything thats not a string with printf.
-C strings now makes fgets with removal of new line character and if statments.
-The c files was tested and ran on ubuntu 22.04 only.
+The program comments out almost anything thats not usable in a program.
+C strings now makes fgets with removal of new line character.
+C strings makes if and else if statments and variables for strings.
+This is for learning and checking syntax, not enhancing productivity.
+The c files for operating systems will clear input buffer after user input on those systems.
+The linux one was tested on ubuntu 22.04.
