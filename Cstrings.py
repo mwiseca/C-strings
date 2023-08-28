@@ -26,7 +26,7 @@ def ch():
     print("//Enter cy for whats needed to copy and paste to finish a simple program.")
     print("//Enter f for fgets and removal of new line character.")
     print("//Enter i for if statement for strings.")
-    print("//Enter e for  if else statment.")
+    print("//Enter e for  if else statement.")
     print("//Enter v for variables without assigning a value.")
     print("//Make sure #include <string.h> is used for fgets and if statments.")
     print("//Enter x to exit, m for main 0 for choices.")
