@@ -25,9 +25,9 @@ def ch():
     print("//Enter b for strings with new line character.")
     print("//Enter cy for whats needed to copy and paste to finish a simple program.")
     print("//Enter f for fgets and removal of new line character.")
-    print("//Enter i for if statment for strings.")
+    print("//Enter i for if statement for strings.")
     print("//Enter e for  if else statment.")
-    print("//Enter v for variables without assighning a value.")
+    print("//Enter v for variables without assigning a value.")
     print("//Make sure #include <string.h> is used for fgets and if statments.")
     print("//Enter x to exit, m for main 0 for choices.")
      
@@ -72,7 +72,7 @@ while True:
             print(v + eng["f"] +  v  + eng ["d"] +  eng["m"] + eng["g"])
     elif switch == "i":
         while True:
-            print("//Enter the name of the if statment.")
+            print("//Enter the name of the if statement.")
             name = input("//")
             if name == "m":
                 break
@@ -83,7 +83,7 @@ while True:
             print(eng["h"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"])
     elif switch == "e":
         while True:
-            print("//Enter The name of else if statment.")
+            print("//Enter The name of else if statement.")
             name = input("//")
             if name == "m":
                 break
