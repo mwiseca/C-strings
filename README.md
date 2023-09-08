@@ -10,7 +10,7 @@ Two of the c files will clear input buffer for different compilers.
 One uses __fpurge(stdin); the other fflush(stdin); They are in C files.
 
 **To Use:**
-To use the python file python must be installed. The C file must be compiled
+To use the Python file Python must be installed. The C file must be compiled
 before use.
 To use select a option from choices. If b is selected and Hello world. is typed,
 printf("Hello world.\n"); will be displayed on the screen.
