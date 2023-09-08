@@ -12,7 +12,7 @@ void choice(){
  printf("//Enter cy for whats needed to copy and paste to finish a simple program.\n");
  printf("//Enter i for if statement e for else if.\n");
  printf("//Enter f for fgets.\n");
- printf("//Enter v for variables without assighning a value.\n");
+ printf("//Enter v for variables without assigning a value.\n");
  printf("//Enter m for main x to exit.\n");
  }
 
