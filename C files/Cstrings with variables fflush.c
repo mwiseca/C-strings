@@ -10,7 +10,7 @@ void choice(){
  printf("//Enter c for choices.\n");
  printf("//Enter a for strings b for strings for new line character.\n");
  printf("//Enter cy for whats needed to copy and paste to finish a simple program.\n");
- printf("//Enter i for if statment e for else if.\n");
+ printf("//Enter i for if statement e for else if.\n");
  printf("//Enter f for fgets.\n");
  printf("//Enter v for variables without assighning a value.\n");
  printf("//Enter m for main x to exit.\n");
@@ -80,7 +80,7 @@ int main(){
      char value [50];
 	
  while (1){
- printf("//Enter name of the if statment m to exit.\n");
+ printf("//Enter name of the if statement m to exit.\n");
  printf("//"); 
  fgets(name,50,stdin);
  name[strcspn(name,"\n")]=0;
@@ -100,7 +100,7 @@ int main(){
      char value [50];
 
  while (1){
- printf("//Enter name of the else if statment x to exit.\n");
+ printf("//Enter name of the else if statement x to exit.\n");
  printf("//"); 
  fgets(name,50,stdin);
  name[strcspn(name,"\n")]=0;
