@@ -10,7 +10,7 @@ int main (){
      char value [50];
 	
  while (1){
- printf("//Enter name of the else if statment x to exit.\n");
+ printf("//Enter name of the else if statement x to exit.\n");
  printf("//"); 
  fgets(name,50,stdin);
  name[strcspn(name,"\n")]=0;
