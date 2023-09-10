@@ -28,7 +28,7 @@ def ch():
     print("//Enter i for if statement for strings.")
     print("//Enter e for  if else statement.")
     print("//Enter v for variables without assigning a value.")
-    print("//Make sure #include <string.h> is used for fgets and if statments.")
+    print("//Make sure #include <string.h> is used for fgets and if statements.")
     print("//Enter x to exit, m for main 0 for choices.")
      
      
