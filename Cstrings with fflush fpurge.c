@@ -140,7 +140,7 @@ int main(){
  printf("//");
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
- printf("enter a value\n");
+ printf("//enter a value\n");
  printf("//");
  fgets(value,2000,stdin);
  value[strcspn(value,"\n")]=0;
