@@ -15,6 +15,6 @@ A file with More memory was allocated to text user inputs.
 August 28 2023.
 the Python file without variables was deleted.
 September 9 2023.
-A new file with __fpurge(stdin);,fflush(stdin);,"#include <stdio_ext.h>
-was added. Variables with assigning a value was also added to the c file.
+A new C and Python file with __fpurge(stdin);,fflush(stdin);,"#include <stdio_ext.h>
+was added. Variables with assigning a value was also added to the  files.
 September 12 2023.
