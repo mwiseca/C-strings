@@ -106,11 +106,11 @@ while True:
     elif switch == "cy":
         while True:
             print("#include <stdio.h>")
-            print("\n");
+            print("\n")
             print("#include <string.h>")
             print("\n")
             print("while (1){")
-            print("\n");
+            print("\n")
             print("break;")
             print("\n")
             print("int main(){")
