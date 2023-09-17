@@ -29,6 +29,7 @@ eng = {
 def ch():
     print("//Enter a for strings h to hide user input with getpass.")
     print("//Enter b for strings with new line character.")
+    print("//Enter c for strings with no quotes.")
     print("//Enter cy for whats needed to copy and paste to finish a simple program.")
     print("//Enter f for fgets and removal of new line character.")
     print("//Enter i for if statement for strings.")
