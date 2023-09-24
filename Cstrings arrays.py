@@ -148,7 +148,7 @@ while True:
             elements = input("//")
             print("//Enter memory alocated to largest element.")
             m = input("//")
-            print("//Enter elememts with quotations and commas between each.")
+            print("//Enter elements with quotations and commas between each.")
             el = input("//")
             print(eng["x"] + name + eng["y"] + elements + eng["z"] + eng["y"] + m + eng["aa"] + el + eng["bb"])
     elif switch == "cy":
