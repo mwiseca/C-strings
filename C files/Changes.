@@ -6,3 +6,5 @@ C-strings to clear input buffer was added, works with some compilers.
 April 30 2023.
 C-strings with fpurge(stdin); was added. fflush(stdin); and fpurge(stdin); work on different compilers.
 May 4 2023.
+Arrays file was added.
+September 24 2023.
