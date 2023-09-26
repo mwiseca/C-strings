@@ -33,9 +33,8 @@ eng = {
     "cc": "void ",
     "dd": "(",
     "ee": "){",
-    "ff": "}",
-    "gg": "(",
-    "hh": ");"
+    "ff": "}",    
+    "gg": ");"
 }
 def ch():
     print("//Enter a for strings h to hide user input with getpass.")
@@ -178,7 +177,7 @@ while True:
                 break
             print("//Enter values for perameters if any.")
             per = input("//")
-            print(name + eng["gg"] + per + eng["hh"])
+            print(name + eng["dd"] + per + eng["gg"])
     elif switch == "cy":
         while True:
             print("#include <stdio.h>")
