@@ -139,7 +139,7 @@ while True:
             name = input("//")
             if name == "m":
                 break
-            print("//Enter  the amount of memory to allocate just press enter to not allocate m for main.")
+            print("//Enter the amount of memory to allocate just press enter to not allocate m for main.")
             mem = input("//")
             if mem == "m":
                 break
