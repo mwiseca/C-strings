@@ -187,7 +187,7 @@ int main(){
  printf("%s%s%s%s%s%s%s%s%s%s\n",t[0],name,t[1],ne,t[2],t[1],m,t[3],elements,t[4]);
  }
 }else if (strcmp(sw, "fc")==0){
-      char t [4] [12] = {"void "," (","){","}"};
+      char t [4] [12] = {"void ","(","){","}"};
       char name [2000];
       char per [2000];
  
