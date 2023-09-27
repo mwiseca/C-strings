@@ -36,7 +36,7 @@ eng = {
     "ff": "}",    
     "gg": ");"
 }
-def ch():
+def choice():
     print("//Enter a for strings h to hide user input with getpass.")
     print("//Enter aa for arrays.")
     print("//Enter b for strings with new line character.")
@@ -51,10 +51,10 @@ def ch():
     print("//Enter vv for variables with assighning a string value.")
     print("//Make sure #include <string.h> is used for fgets and if statements.")
     print("//__fpurg(stdin); must have #include <stdio_ext.h> to work.")
-    print("//Enter x to exit, m for main 0 for choices.")
+    print("//Enter x to exit, m for main ch for choices.")
      
      
-ch()
+choice()
 while True:
     print("//Enter x for exit m for main.")
     switch = input("//")
@@ -208,8 +208,8 @@ while True:
             cpy = input("//")
             if cpy == "m":
                 break
-    elif switch == "0":
-        ch()
+    elif switch == "ch":
+        choice()
     elif switch == "x":
         break
 
