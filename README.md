@@ -15,6 +15,6 @@ before use.
 To use select a option from choices. If b is selected and Hello world. is typed,
 printf("Hello world.\n"); will be displayed on the screen.
 The result can be used to check syntax or pasted into a program.
-To use fgets and if, else if statements  #include <string.h>  must be used.
-To use  __fpurge(stdin);  #include <stdio_ext.h>  must be used.
+To use fgets and if, else if statements   #include <string.h>   must be used.
+To use   __fpurge(stdin);  #include <stdio_ext.h>   must be used.
 Select m to go to main and select another choice or exit.
