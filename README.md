@@ -7,7 +7,7 @@ C strings  makes fgets with removal of new line character.
 C strings makes if and else if statements and variables for strings.
 This is for learning and checking syntax, not enhancing productivity.
 Two of the C files will clear input buffer for different compilers.
-One uses __fpurge(stdin); the other fflush(stdin); They are in C files.
+One uses "__fpurge(stdin);" the other "fflush(stdin);" They are in C files.
 
 **To Use:**
 To use the Python file Python must be installed. The C file must be compiled
@@ -15,6 +15,6 @@ before use.
 To use select a option from choices. If b is selected and Hello world. is typed,
 printf("Hello world.\n"); will be displayed on the screen.
 The result can be used to check syntax or pasted into a program.
-To use fgets and if, else if statements    #include <string.h>    must be used.
-To use    __fpurge(stdin);    #include <stdio_ext.h>    must be used.
+To use fgets and if, else if statements   "#include <string.h>"   must be used.
+To use    "__fpurge(stdin);"    "#include <stdio_ext.h>"    must be used.
 Select m to go to main and select another choice or exit.
