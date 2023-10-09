@@ -8,3 +8,5 @@ C-strings with fpurge(stdin); was added. fflush(stdin); and fpurge(stdin); work 
 May 4 2023.
 Arrays file was added.
 September 24 2023.
+A stand alone fgets with the strlen function to remove the new line character was added.
+October 9 2023.
