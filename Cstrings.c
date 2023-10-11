@@ -86,7 +86,7 @@ int main(){
  printf("//");
  fgets(me,2000,stdin);
  me[strcspn(me,"\n")]=0;
- printf("%s%s%s%d%s%s\n",f[0], v, f[1],me,f[1],f[2]);
+ printf("%s%s%s%s%s%s\n",f[0], v, f[1],me,f[1],f[2]);
  printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4] ,f[5]);
      }
 }else if (strcmp(sw,"fs")==0){
@@ -160,7 +160,7 @@ int main(){
  printf("//");
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")=0;
- printf("%s%s%s%d%s\n",f[0],name,f[1],mem,f[2]);
+ printf("%s%s%s%s%s\n",f[0],name,f[1],mem,f[2]);
     }
 }else if (strcmp(sw, "vv")==0){
         char v [6] [15] ={"char ","[","]"," = ","\"",";"};
