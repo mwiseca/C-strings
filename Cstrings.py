@@ -34,7 +34,9 @@ eng = {
     "dd": "(",
     "ee": "){",
     "ff": "}",    
-    "gg": ");"
+    "gg": ");",
+    "hh": "[strlen(",
+    "ii": ")-1] = '\\0';"
 }
 def choice():
     print("//Enter a for strings h to hide user input with getpass.")
@@ -43,6 +45,7 @@ def choice():
     print("//Enter c for strings with no quotation marks.")
     print("//Enter cy for whats needed to copy and paste to finish a simple program.")
     print("//Enter f for fgets and removal of new line character.")
+    print("//Enter fs for fgets with strlen function to remove new line character.")
     print("//Enter fc for void functions.");
     print("//Enter cf to call functions.")
     print("//Enter i for if statement for strings.")
@@ -56,17 +59,17 @@ def choice():
      
 choice()
 while True:
-    print("//Enter x for exit m for main.")
+    print("//Enter x for exit m for main ch for choices.")
     switch = input("//")
     if switch == "a":
-        print("//Enter text.")
+        print("//Enter text m for main.")
         while True:
             text = input("//")
             if text == "m":
                 break
             print(eng["a"] + text  + eng["b"])
     elif switch == "b":
-        print("//Enter text.")
+        print("//Enter text m for main.")
         while True:
             text = input("//")
             if text == "m":
@@ -74,7 +77,7 @@ while True:
             print(eng["a"] + text + eng["l"] + eng["b"])
     elif switch == "h":
         import getpass
-        print("//Enter text.")
+        print("//Enter text m for main.")
         while True:
             text = getpass.getpass("")
             print(eng["a"] + text + eng["b"])
@@ -99,9 +102,21 @@ while True:
                 break
             print(eng["c"] + v + eng["d"] + ma + eng["d"] + eng["e"])
             print(v + eng["f"] +  v  + eng ["d"] +  eng["m"] + eng["g"])
+    elif switch == "fs":
+        while True:
+            print("//Enter name of variable.")
+            v= input("//")
+            if v == "m":
+                break
+            print("//Enter the memory you alocated to the variable.")
+            ma = input("//")
+            if ma == "m":
+                break
+            print(eng["c"] + v + eng["d"] + ma + eng["d"] + eng["e"])
+            print(v + eng["hh"] +  v  + eng ["ii"] )
     elif switch == "i":
         while True:
-            print("//Enter the name of the if statement.")
+            print("//Enter the name of the if statement m for main.")
             name = input("//")
             if name == "m":
                 break
@@ -112,7 +127,7 @@ while True:
             print(eng["h"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"])
     elif switch == "e":
         while True:
-            print("//Enter The name of else if statement.")
+            print("//Enter The name of else if statement m for main.")
             name = input("//")
             if name == "m":
                 break
