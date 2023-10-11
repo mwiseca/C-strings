@@ -92,7 +92,7 @@ int main(){
      char value [2000];
 	
  while (1){
- printf("//Enter name of the if statement m to exit.\n");
+ printf("//Enter name of the if statement m for main.\n");
  printf("//"); 
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
@@ -110,7 +110,7 @@ int main(){
      char value [2000];
 
  while (1){
- printf("//Enter name of the else if statement x to exit.\n");
+ printf("//Enter name of the else if statement m for main.\n");
  printf("//"); 
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
