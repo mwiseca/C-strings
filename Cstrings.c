@@ -73,17 +73,19 @@ int main(){
 }else if (strcmp(sw, "f")==0){
       char f  [6] [15] = {"fgets(", ",", "stdin);", "[strcspn(","\"\\n", "\")]=0;"};
      char v [2000];
-     int me;
+     char me [2000];
 
  while (1){
  printf("//Enter name of variable m for main.\n");
  printf("//"); 
- scanf("%1999s",v);
+ fgets(v,2000,stdin);
+ v[strcspn(v,"\n")]=0;
  if (strcmp(v,"m")==0){
  break;}
  printf("//Enter the memory you alocated to the variable.\n");
  printf("//");
- scanf("%10d",&me);
+ fgets(me,2000,stdin);
+ me[strcspn(me,"\n")]=0;
  printf("%s%s%s%d%s%s\n",f[0], v, f[1],me,f[1],f[2]);
  printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4] ,f[5]);
      }
@@ -145,17 +147,19 @@ int main(){
 }else if (strcmp(sw, "v")==0){
      char f  [3] [15] = {"char "," [","];"};
      char name [2000];
-     int mem;
+     char mem [2000];
     	
  while (1){
  printf("//Enter name of variable m for main.\n");
  printf("//"); 
- scanf("%1999s",name);
+ fgets(name,2000,stdin);
+ name[strcspn(name,"\n")]=0;
  if (strcmp(name,"m")==0){
  break;}
  printf("//Enter the memory you alocated to the variable.\n");
  printf("//");
- scanf("%10d",&mem);
+ fgets(mem,2000,stdin);
+ mem[strcspn(mem,"\n")=0;
  printf("%s%s%s%d%s\n",f[0],name,f[1],mem,f[2]);
     }
 }else if (strcmp(sw, "vv")==0){
