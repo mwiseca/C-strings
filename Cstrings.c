@@ -159,7 +159,7 @@ int main(){
  printf("//Enter the memory you alocated to the variable.\n");
  printf("//");
  fgets(mem,2000,stdin);
- mem[strcspn(mem,"\n")=0;
+ mem[strcspn(mem,"\n")]=0;
  printf("%s%s%s%s%s\n",f[0],name,f[1],mem,f[2]);
     }
 }else if (strcmp(sw, "vv")==0){
