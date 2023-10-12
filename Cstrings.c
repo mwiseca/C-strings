@@ -11,7 +11,7 @@ void choice(){
  printf("//Enter a for strings b for strings for new line character.\n");
  printf("//Enter aa for arrays.\n");
  printf("//Enter c for strings with no quotation marks.\n");
- printf("//Enter cy for whats needed to copy and paste to finish a simple program.\n");
+ printf("//Enter cy for what's needed to copy and paste to finish a simple program.\n");
  printf("//Enter i for if statement e for else if.\n");
  printf("//Enter f for fgets.\n");
  printf("//Enter fs for fgets with strlen to remove new line character.\n");
