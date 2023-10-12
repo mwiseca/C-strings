@@ -51,7 +51,7 @@ def choice():
     print("//Enter i for if statement for strings.")
     print("//Enter e for  if else statement.")
     print("//Enter v for variables without assigning a value.")
-    print("//Enter vv for variables with assighning a string value.")
+    print("//Enter vv for variables with assigning a string value.")
     print("//Make sure #include <string.h> is used for fgets and if statements.")
     print("//__fpurg(stdin); must have #include <stdio_ext.h> to work.")
     print("//Enter x to exit, m for main ch for choices.")
