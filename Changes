@@ -30,3 +30,5 @@ the Python file was changed so ch is used to select choices in main.
 sept 26 2023.
 More clear m for main was added to all functions, fgets with strlen was add to dev.
 October 14 2023.
+The scanf functions used in fgets and variables  were replaced with fgets.
+October 14 2023.
