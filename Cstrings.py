@@ -92,7 +92,7 @@ while True:
             print(eng["v"] + text + eng["w"])
     elif switch == "f":
         while True:
-            print("//Enter name of variable.")
+            print("//Enter name of variable m for main.")
             v= input("//")
             if v == "m":
                 break
@@ -104,7 +104,7 @@ while True:
             print(v + eng["f"] +  v  + eng ["d"] +  eng["m"] + eng["g"])
     elif switch == "fs":
         while True:
-            print("//Enter name of variable.")
+            print("//Enter name of variable m for main.")
             v= input("//")
             if v == "m":
                 break
@@ -186,7 +186,7 @@ while True:
             print(eng["ff"])   
     elif switch == "cf":
         while True:
-            print("//Enter the function name m to exit.")
+            print("//Enter the function name m for main.")
             name = input("//")
             if name == "m":
                 break
