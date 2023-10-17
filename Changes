@@ -23,12 +23,14 @@ September 17 2023.
 Arrays was added
 sept 24 2023.
 Void functions were added.
-sept 25 2023.
+Sept 25 2023.
 Calls for functions were added.
-sept 25 2023.
+Sept 25 2023.
 the Python file was changed so ch is used to select choices in main.
 sept 26 2023.
 More clear m for main was added to all functions, fgets with strlen was add to dev.
 October 11 2023.
 The scanf functions used in fgets and variables  were replaced with fgets.
 October 11 2023.
+Cstrings with scanf for strings was added and a stand alone scanf was addded to C files.
+October 17 2023.
