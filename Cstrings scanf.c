@@ -110,7 +110,7 @@ int main(){
  printf("%s%s%s%s%s\n", v, f[3], v, f[4] ,f[5]);
  }
 }else if (strcmp(sw,"s")==0){
-         char t [6] [15] = {"scanf(\"","%","[^\\n]s\"",",",");","getchar();"};
+         char t [6] [15] = {"scanf(\"","%","[^\\n]\"",",",");","getchar();"};
          char mem [2000];
 	 char var [2000];
 
