@@ -83,7 +83,7 @@ int main(){
  v[strcspn(v,"\n")]=0;
  if (strcmp(v,"m")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  fgets(me,2000,stdin);
  me[strcspn(me,"\n")]=0;
@@ -102,7 +102,7 @@ int main(){
  v[strcspn(v,"\n")]=0;
  if (strcmp(v,"m")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  fgets(me,2000,stdin);
  me[strcspn(me,"\n")]=0;
@@ -176,7 +176,7 @@ int main(){
  name[strcspn(name,"\n")]=0;
  if (strcmp(name,"m")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
@@ -193,9 +193,9 @@ int main(){
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
  break;}
- printf("Enter the amount of memory you want to alocate.\n");
+ printf("Enter the amount of memory you want to allocate.\n");
  printf("Add one for the null character.\n");
- printf("Or press enter to not alocate.\n");
+ printf("Or press enter to not allocate.\n");
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
  printf("enter a value\n");
@@ -242,7 +242,7 @@ int main(){
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
  break;}
- printf("Enter perameters.\n");
+ printf("Enter parameters.\n");
  printf("//");
  fgets(per,2000,stdin);
  per[strcspn(per,"\n")]=0;
@@ -259,7 +259,7 @@ int main(){
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
  break;}
- printf("Enter values for perameters.\n");
+ printf("Enter values for parameters.\n");
  fgets(per,2000,stdin);
  per[strcspn(per,"\n")]=0;
  printf("%s%s%s%s\n",name,t[0],per,t[1]);
