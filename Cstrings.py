@@ -101,7 +101,7 @@ while True:
             v= input("//")
             if v == "m":
                 break
-            print("//Enter the memory you alocated to the variable.")
+            print("//Enter the memory you allocated to the variable.")
             ma = input("//")
             if ma == "m":
                 break
@@ -113,7 +113,7 @@ while True:
             v= input("//")
             if v == "m":
                 break
-            print("//Enter the memory you alocated to the variable.")
+            print("//Enter the memory you allocated to the variable.")
             ma = input("//")
             if ma == "m":
                 break
@@ -183,7 +183,7 @@ while True:
                 break
             print("//Enter the amount of elements.")
             elements = input("//")
-            print("//Enter memory alocated to largest element.")
+            print("//Enter memory allocated to largest element.")
             m = input("//")
             print("//Enter elements with quotations and commas between each.")
             el = input("//")
@@ -194,7 +194,7 @@ while True:
             name = input("//")
             if name == "m":
                 break
-            print("//Enter perameters if none just press enter.")
+            print("//Enter parameters if none just press enter.")
             per = input("//")
             print(eng["cc"] + name + eng["dd"] + per  + eng["ee"])  
             print(2 *"\n")
@@ -205,7 +205,7 @@ while True:
             name = input("//")
             if name == "m":
                 break
-            print("//Enter values for perameters if any.")
+            print("//Enter values for parameters if any.")
             per = input("//")
             print(name + eng["dd"] + per + eng["gg"])
     elif switch == "cy":
