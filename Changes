@@ -32,3 +32,5 @@ More clear m for main was added to all functions, fgets with strlen was add to d
 October 14 2023.
 The scanf functions used in fgets and variables  were replaced with fgets.
 October 14 2023.
+The fgets with strlen and scanf was added to main.
+October 19 2023.
