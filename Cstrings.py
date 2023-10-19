@@ -36,7 +36,11 @@ eng = {
     "ff": "}",    
     "gg": ");",
     "hh": "[strlen(",
-    "ii": ")-1] = '\\0';"
+    "ii": ")-1] = '\\0';",
+    "jj": 'scanf("%',
+    "kk": '[^\\n]",',
+    "ll": ");",
+    "mm": "getchar();"
 }
 def choice():
     print("//Enter a for strings h to hide user input with getpass.")
@@ -47,6 +51,7 @@ def choice():
     print("//Enter f for fgets and removal of new line character.")
     print("//Enter fs for fgets with strlen function to remove new line character.")
     print("//Enter fc for void functions.");
+    print("//Enter s for scanf for strings.")
     print("//Enter cf to call functions.")
     print("//Enter i for if statement for strings.")
     print("//Enter e for  if else statement.")
@@ -114,6 +119,16 @@ while True:
                 break
             print(eng["c"] + v + eng["d"] + ma + eng["d"] + eng["e"])
             print(v + eng["hh"] +  v  + eng ["ii"] )
+    elif switch == "s":
+        while True:
+            print("//Enter memory allocated to variable -1 byte m for main.")
+            mem = input("//")
+            if mem == "m":
+                break
+            print("//Enter the name of variable.")
+            var = input("//")
+            print(eng["jj"] + mem + eng["kk"]  + var  + eng["ll"])
+            print(eng["mm"])
     elif switch == "i":
         while True:
             print("//Enter the name of the if statement m for main.")
