@@ -62,7 +62,7 @@ int main(){
     char t [2] [12] = {"printf(", ");"};
     char text [2000];
     
- printf("//Enter text m for main\n");   
+ printf("//Enter text m for main.\n");   
  while(1){
  printf("//");
  fgets(text,2000,stdin);
