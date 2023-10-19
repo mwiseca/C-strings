@@ -188,7 +188,7 @@ int main(){
        char mem [2000];
        char value [2000];
  while(1){
- printf("Enter a name of varable m for main.\n");
+ printf("Enter a name of variable m for main.\n");
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
