@@ -34,3 +34,6 @@ The scanf functions used in fgets and variables  were replaced with fgets.
 October 14 2023.
 The fgets with strlen and scanf was added to main.
 October 19 2023.
+The Heap branch was made for Cstrings.malloc.c. This is for very old computers with low stack memory
+only. This was not as thoroughly tested as the others. use only when the others wont work.
+October 30 2023.
