@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdio_ext.h>
+#include <stdlib.h>
 
 
 void choice(){
@@ -31,9 +32,10 @@ int main(){
  __fpurge(stdin);
  if (strcmp(sw, "a")==0){
  char string  [2] [15] = {"printf(\"", "\");"};
-    char text [100];
+    char *text;
     printf("//Enter your string, m to exit.\n");
     while (1){
+    text = (char*)malloc(150);
     printf("//");
     fgets(text,100,stdin);
     text[strcspn(text,"\n")]=0;
@@ -41,12 +43,14 @@ int main(){
     if (strcmp(text,"m")==0){
     break;}
     printf("%s%s%s\n",string[0],text,string[1]);
+    free(text);
        }
 }else if (strcmp(sw,"b")==0){
  char string  [3] [15] = {"printf(\"", "\\n","\");"};
-    char text [150];
+    char *text;
     printf("//Enter your string, m to exit.\n");
     while (1){
+    text = (char*)malloc(150),
     printf("//");
     fgets(text,150,stdin);
     text[strcspn(text,"\n")]=0;
@@ -54,36 +58,45 @@ int main(){
     if (strcmp(text,"m")==0){
     break;}
     printf("%s%s%s%s\n",string[0],text,string[1], string[2]);
+    free(text);
          }
  
 }else if (strcmp(sw, "f")==0){
       char f  [6] [15] = {"fgets(", ",", "stdin);", "[strcspn(","\"\\n", "\")]=0;"};
-     char v [50];
-     int me;
+     char *v;
+     char *me;
 
  while (1){
+ v = (char*)malloc(150);
+ me = (char*)malloc(150);
  printf("//Enter name of variable m to exit.\n");
  printf("//"); 
- scanf("%49s",v);
+ fgets(v,150,stdin);
+ v[strcspn(v,"\n")]=0;
  __fpurge(stdin);
  if (strcmp(v,"m")==0){
  break;}
  printf("//Enter the memory you alocated to the variable.\n");
  printf("//");
- scanf("%10d",&me);
+ fgets(me,150,stdin);
+ me[strcspn(me,"\n")]=0;
  __fpurge(stdin);
- printf("%s%s%s%d%s%s\n",f[0], v, f[1],me,f[1],f[2]);
+ printf("%s%s%s%s%s%s\n",f[0], v, f[1],me,f[1],f[2]);
  printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4] ,f[5]);
+ free(v);
+ free(me);
      }
 }else if (strcmp(sw, "i")==0){
  char f  [4] [15] = {"if (strcmp(",   ",",  "\"", ")==0){"};
-     char name [50];
-     char value [50];
+     char *name;
+     char *value;
 	
  while (1){
+ name = (char*)malloc(100);
+ value = (char*)malloc(100);
  printf("//Enter name of the if statement m to exit.\n");
  printf("//"); 
- fgets(name,50,stdin);
+ fgets(name,100,stdin);
  name[strcspn(name,"\n")]=0;
  __fpurge(stdin);
  if (strcmp(name,"m")==0){
@@ -94,16 +107,20 @@ int main(){
  value[strcspn(value,"\n")]=0;
  __fpurge(stdin);
  printf("%s%s%s%s%s%s%s\n", f[0], name, f[1], f[2],  value, f[2],  f[3] );
+ free(name);
+ free(value);
       }
 }else if (strcmp(sw, "e")==0){
     char f  [4] [18] = {"}else if (strcmp(",   ",",  "\"", ")==0){"};
-     char name [50];
-     char value [50];
+     char *name;
+     char *value;
 
  while (1){
+ name = (char*)malloc(100);
+ value = (char*)malloc(100);
  printf("//Enter name of the else if statement x to exit.\n");
  printf("//"); 
- fgets(name,50,stdin);
+ fgets(name,100,stdin);
  name[strcspn(name,"\n")]=0;
  __fpurge(stdin);
  if (strcmp(name,"m")==0){
@@ -114,24 +131,32 @@ int main(){
  value[strcspn(value,"\n")]=0;
  __fpurge(stdin);
  printf("%s%s%s%s%s%s%s\n", f[0], name, f[1], f[2],  value, f[2],  f[3] );
+ free(name);
+ free(value);
      }
 }else if (strcmp(sw, "v")==0){
      char f  [3] [15] = {"char "," [","];"};
-     char name [50];
-     int mem;
+     char *name;
+     char *mem;
     	
  while (1){
+ name = (char*)malloc(100);
+ mem = (char*)malloc(100);
  printf("//Enter name of variable m for main.\n");
  printf("//"); 
- scanf("%49s",name);
+ fgets(name,100,stdin);
+ name[strcspn(name,"\n")]=0;
  __fpurge(stdin);
  if (strcmp(name,"m")==0){
  break;}
  printf("//Enter the memory you alocated to the variable.\n");
  printf("//");
- scanf("%10d",&mem);
+ fgets(mem,100,stdin);
+ mem[strcspn(mem,"\n")]=0;
  __fpurge(stdin);
- printf("%s%s%s%d%s\n",f[0],name,f[1],mem,f[2]);
+ printf("%s%s%s%s%s\n",f[0],name,f[1],mem,f[2]);
+ free(name);
+ free(mem);
     }
 }else if (strcmp(sw, "cy")==0){
  char cpy [5];
@@ -178,6 +203,7 @@ return 0;
 
 
 	
+
 
 
 
