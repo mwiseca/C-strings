@@ -10,3 +10,5 @@ Arrays file was added.
 September 24 2023.
 A stand alone fgets with the strlen function to remove the new line character was added.
 October 9 2023.
+fpurge and fflush were changed to allocate memory from the heap.
+October 31 2023;
