@@ -12,3 +12,5 @@ A stand alone fgets with the strlen function to remove the new line character wa
 October 9 2023.
 fpurge and fflush were changed to allocate memory from the heap.
 October 31 2023;
+C-strings with variables was changed to use the heap for most user inputs.
+November 1 2023.
