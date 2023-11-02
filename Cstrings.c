@@ -189,7 +189,7 @@ int main(){
        char value [2000];
  while(1){
  printf("//Enter a name of variable m for main.\n");
- printf("//);
+ printf("//");
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
@@ -197,7 +197,7 @@ int main(){
  printf("//Enter the amount of memory you want to allocate.\n");
  printf("//Add one for the null character.\n");
  printf("//Or press enter to not allocate.\n");
- printf("//);
+ printf("//");
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
  printf("//enter a value\n");
