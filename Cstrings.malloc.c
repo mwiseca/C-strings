@@ -223,6 +223,7 @@ int main(){
  mem = (char*)malloc(2000);
  value = (char*)malloc(2000);
  printf("//Enter a name of variable m for main.\n");
+ printf("//");
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
@@ -230,9 +231,11 @@ int main(){
  printf("//Enter the amount of memory you want to allocate.\n");
  printf("//Add one for the null character.\n");
  printf("//Or press enter to not allocate.\n");
+ printf("//");
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
  printf("//enter a value\n");
+ printf("//");
  fgets(value,2000,stdin);
  value[strcspn(value,"\n")]=0;
  printf("%s%s%s%s%s%s%s%s%s%s\n",v[0],name,v[1],mem,v[2],v[3],v[4],value,v[4],v[5]);
@@ -311,6 +314,7 @@ int main(){
  if(strcmp(name,"m")==0){
  break;}
  printf("//Enter values for parameters.\n");
+ printf("//);
  fgets(per,2000,stdin);
  per[strcspn(per,"\n")]=0;
  printf("%s%s%s%s\n",name,t[0],per,t[1]);
