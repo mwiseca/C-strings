@@ -34,3 +34,5 @@ The scanf functions used in fgets and variables  were replaced with fgets.
 October 14 2023.
 The fgets with strlen and scanf was added to main.
 October 19 2023.
+Heap allocation was added to the c file.
+November 2 2023.
