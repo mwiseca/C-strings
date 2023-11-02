@@ -242,7 +242,7 @@ int main(){
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
  break;}
- printf("Enter parameters.\n");
+ printf("//Enter parameters.\n");
  printf("//");
  fgets(per,2000,stdin);
  per[strcspn(per,"\n")]=0;
@@ -259,7 +259,7 @@ int main(){
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
  break;}
- printf("Enter values for parameters.\n");
+ printf("//Enter values for parameters.\n");
  fgets(per,2000,stdin);
  per[strcspn(per,"\n")]=0;
  printf("%s%s%s%s\n",name,t[0],per,t[1]);
