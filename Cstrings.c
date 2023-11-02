@@ -16,6 +16,7 @@ void choice(){
  printf("//Enter f for fgets.\n");
  printf("//Enter fs for fgets with strlen to remove new line character.\n");
  printf("//Enter s for scanf for strings to allow for white spaces.\n");
+ printf("//Enter h to allocate memory from the heap.\n");
  printf("//Enter fc for void functions.\n");
  printf("//Enter cf to call functions.\n");
  printf("//Enter v for variables without assigning a value.\n");
@@ -268,6 +269,26 @@ int main(){
  per[strcspn(per,"\n")]=0;
  printf("%s%s%s%s\n",name,t[0],per,t[1]);
  }
+}else if (strcmp(sw,"h")==0){
+	char t [7] [18] = {"char"," *",";"," = (char*)malloc","(",");","free"};
+        char name [2000];
+	char mem [2000];
+	
+ while(1){
+ printf("//Enter the name of the variable m for main.\n");
+ printf("//");
+ fgets(name,2000,stdin);
+ name[strcspn(name,"\n")]=0;
+ if(strcmp(name,"m")==0){
+ break;}
+ printf("//Enter memory to allocate.\n");
+ printf("//");
+ fgets(mem,2000,stdin);
+ mem[strcspn(mem,"\n")]=0;
+ printf("%s%s%s%s\n\n",t[0],t[1],name,t[2]);
+ printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[5]);
+ printf("%s%s%s%s\n\n",t[6],t[4],name,t[5]);
+ }
 }else if (strcmp(sw, "cy")==0){
  char cpy [5];
  while (1){
@@ -276,6 +297,8 @@ int main(){
  printf("#include <stdio_ext.h>\n");
  printf("\n");
  printf("#include <string.h>\n");
+ printf("\n");
+ printf("#include <stdlib.h>\n");
  printf("\n"); 
  printf("while (1){\n");
  printf("\n");
@@ -311,6 +334,21 @@ int main(){
       }  
 return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
