@@ -38,7 +38,7 @@ Heap allocation was added to the C file.
 November 2 2023.
 Heap allocation was added to the Python file.
 November 4 2023.
-A sizeof option for heap allocation was added to the C file.
+A sizeof option for heap allocation was added.
 November 5  2023.
 
 
