@@ -44,7 +44,8 @@ eng = {
     "nn": "char",
     "oo": " = (char*)malloc",
     "pp": " *",
-    "qq": "free("
+    "qq": "free(",
+    "uu": "* sizeof(char));"
 }
 def choice():
     print("//Enter a for strings hd to hide user input with getpass.")
@@ -56,7 +57,7 @@ def choice():
     print("//Enter fs for fgets with strlen function to remove new line character.")
     print("//Enter fc for void functions.");
     print("//Enter s for scanf for strings.")
-    print("//Enter h to allocate memory from the heap.")
+    print("//Enter h to allocate memory from the heap. Enter hs to use sizeof.")
     print("//Enter cf to call functions.")
     print("//Enter i for if statement for strings.")
     print("//Enter e for  if else statement.")
@@ -225,6 +226,18 @@ while True:
             print(eng["nn"] + eng["pp"] + name + eng["u"] + "\n")
             print(name + eng["oo"] +eng["dd"] + mem + eng["w"] + "\n")
             print(eng["qq"] + name + eng["w"] + "\n") 
+    elif switch == "hs":
+        while True:
+            print("//Enter the name of the variable m for main.")
+            name = input("//")
+            if name == "m":
+                break
+            print("//Enter memory to allocate.")
+            mem = input("//")
+            print("\n")
+            print(eng["nn"] + eng["pp"] + name + eng["u"] + "\n")
+            print(name + eng["oo"] +eng["dd"] + mem + eng["uu"] + "\n")
+            print(eng["qq"] + name + eng["w"] + "\n")
     elif switch == "cy":
         while True:
             print("#include <stdio.h>")
