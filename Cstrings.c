@@ -195,9 +195,7 @@ int main(){
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
  break;}
- printf("//Enter the amount of memory you want to allocate.\n");
- printf("//Add one for the null character.\n");
- printf("//Or press enter to not allocate.\n");
+ printf("//Enter the amount of memory to allocate or press enter to not allocate m for main.\n");
  printf("//");
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
@@ -270,7 +268,7 @@ int main(){
  printf("%s%s%s%s\n",name,t[0],per,t[1]);
  }
 }else if (strcmp(sw,"h")==0){
-	char t [7] [18] = {"char"," *",";"," = (char*)malloc","(",");","free"};
+	char t [8] [18] = {"char"," *",";"," = (char*)malloc","(",");","free"," = NUll;"};
         char name [2000];
 	char mem [2000];
 	
@@ -288,9 +286,10 @@ int main(){
  printf("%s%s%s%s\n\n",t[0],t[1],name,t[2]);
  printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[5]);
  printf("%s%s%s%s\n\n",t[6],t[4],name,t[5]);
+ printf("%s%s\n\n",name,t[7]);
  }
 }else if (strcmp(sw,"hs")==0){
-	char t [8] [18] = {"char"," *",";"," = (char*)malloc","(","* sizeof(char));","free",");"};
+	char t [9] [18] = {"char"," *",";"," = (char*)malloc","(","* sizeof(char));","free",");"," = NUll;"};
         char name [2000];
 	char mem [2000];
  while(1){
@@ -307,6 +306,7 @@ int main(){
  printf("%s%s%s%s\n\n",t[0],t[1],name,t[2]);
  printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[5]);
  printf("%s%s%s%s\n\n",t[6],t[4],name,t[7]);
+ printf("%s%s\n\n",name,t[8]);
  }
 }else if (strcmp(sw, "cy")==0){
  char cpy [5];
