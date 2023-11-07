@@ -46,7 +46,7 @@ eng = {
     "pp": " *",
     "qq": "free(",
     "uu": "* sizeof(char));",
-    "vv": " = NUll;"
+    "vv": " = NULL;"
 }
 def choice():
     print("//Enter a for strings hd to hide user input with getpass.")
