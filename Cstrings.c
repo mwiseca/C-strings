@@ -289,7 +289,7 @@ int main(){
  printf("%s%s\n\n",name,t[7]);
  }
 }else if (strcmp(sw,"hs")==0){
-	char t [9] [18] = {"char"," *",";"," = (char*)malloc","(","* sizeof(char));","free",");"," = NUll;"};
+	char t [9] [18] = {"char"," *",";"," = (char*)malloc","(","* sizeof(char));","free",");"," = NULL;"};
         char name [2000];
 	char mem [2000];
  while(1){
