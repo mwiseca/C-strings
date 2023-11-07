@@ -268,7 +268,7 @@ int main(){
  printf("%s%s%s%s\n",name,t[0],per,t[1]);
  }
 }else if (strcmp(sw,"h")==0){
-	char t [8] [18] = {"char"," *",";"," = (char*)malloc","(",");","free"," = NUll;"};
+	char t [8] [18] = {"char"," *",";"," = (char*)malloc","(",");","free"," = NULL;"};
         char name [2000];
 	char mem [2000];
 	
