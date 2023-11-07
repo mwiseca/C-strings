@@ -45,7 +45,8 @@ eng = {
     "oo": " = (char*)malloc",
     "pp": " *",
     "qq": "free(",
-    "uu": "* sizeof(char));"
+    "uu": "* sizeof(char));",
+    "vv": " = NUll;"
 }
 def choice():
     print("//Enter a for strings hd to hide user input with getpass.")
@@ -174,7 +175,7 @@ while True:
             name = input("//")
             if name == "m":
                 break
-            print("//Enter the amount of memory to allocate just press enter to not allocate m for main.")
+            print("//Enter the amount of memory to allocate or press enter to not allocate m for main.")
             mem = input("//")
             if mem == "m":
                 break
@@ -225,7 +226,8 @@ while True:
             print("\n")
             print(eng["nn"] + eng["pp"] + name + eng["u"] + "\n")
             print(name + eng["oo"] +eng["dd"] + mem + eng["w"] + "\n")
-            print(eng["qq"] + name + eng["w"] + "\n") 
+            print(eng["qq"] + name + eng["w"] + "\n")
+            print(name + eng["vv"] + "\n") 
     elif switch == "hs":
         while True:
             print("//Enter the name of the variable m for main.")
@@ -238,6 +240,7 @@ while True:
             print(eng["nn"] + eng["pp"] + name + eng["u"] + "\n")
             print(name + eng["oo"] +eng["dd"] + mem + eng["uu"] + "\n")
             print(eng["qq"] + name + eng["w"] + "\n")
+            print(name + eng["vv"] + "\n")
     elif switch == "cy":
         while True:
             print("#include <stdio.h>")
