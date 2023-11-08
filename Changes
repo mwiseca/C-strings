@@ -39,3 +39,5 @@ only. This was not as thoroughly tested as the others. use only when the others 
 October 30 2023.
 Heap allocation for strings was added.
 November 2 2023.
+A file was added with sizeof for malloc.
+November 7 2023.
