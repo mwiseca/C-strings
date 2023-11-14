@@ -40,5 +40,7 @@ Heap allocation was added to the Python file.
 November 4 2023.
 A sizeof option for heap allocation was added.
 November 5  2023.
+The hs option in changes was deleted sizeof is now in h.
+November 14 2023.
 
 
