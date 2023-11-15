@@ -61,7 +61,7 @@ def choice():
     print("//Enter h to allocate memory from the heap.")
     print("//Enter cf to call functions.")
     print("//Enter i for if statement for strings.")
-    print("//Enter e for  if else statement.")
+    print("//Enter e for else if statement.")
     print("//Enter v for variables without assigning a value.")
     print("//Enter vv for variables with assigning a string value.")
     print("//Make sure #include <string.h> is used for fgets and if statements.")
