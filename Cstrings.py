@@ -108,7 +108,7 @@ while True:
             v= input("//")
             if v == "m":
                 break
-            print("//Enter the memory you allocated to the variable.")
+            print("//Enter the memory to be allocated to the variable.")
             ma = input("//")
             if ma == "m":
                 break
@@ -120,7 +120,7 @@ while True:
             v= input("//")
             if v == "m":
                 break
-            print("//Enter the memory you allocated to the variable.")
+            print("//Enter the memory to be allocated to the variable.")
             ma = input("//")
             if ma == "m":
                 break
@@ -164,7 +164,7 @@ while True:
             name = input("//")
             if name == "m":
                 break
-            print("//Enter  the amount of memory to allocate m for main.")
+            print("//Enter the amount of memory to allocate m for main.")
             mem = input("//")
             if mem == "m":
                 break
