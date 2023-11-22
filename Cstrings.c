@@ -84,7 +84,7 @@ int main(){
  v[strcspn(v,"\n")]=0;
  if (strcmp(v,"m")==0){
  break;}
- printf("//Enter the memory you allocated to the variable.\n");
+ printf("//Enter the memory to be allocated to the variable.\n");
  printf("//");
  fgets(me,2000,stdin);
  me[strcspn(me,"\n")]=0;
@@ -103,7 +103,7 @@ int main(){
  v[strcspn(v,"\n")]=0;
  if (strcmp(v,"m")==0){
  break;}
- printf("//Enter the memory you allocated to the variable.\n");
+ printf("//Enter the memory to be allocated to the variable.\n");
  printf("//");
  fgets(me,2000,stdin);
  me[strcspn(me,"\n")]=0;
@@ -177,7 +177,7 @@ int main(){
  name[strcspn(name,"\n")]=0;
  if (strcmp(name,"m")==0){
  break;}
- printf("//Enter the memory you allocated to the variable.\n");
+ printf("//Enter the memory to be allocated to the variable.\n");
  printf("//");
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
