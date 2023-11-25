@@ -112,20 +112,20 @@ int main(){
  }
 }else if (strcmp(sw,"s")==0){
          char t [6] [15] = {"scanf(\"","%","[^\\n]\"",",",");","getchar();"};
-         char mem [2000];
-	 char var [2000];
+         char var [2000];
+	 char mem [2000];
 
  while(1){
- printf("//Enter memory allocated to variable -1 byte m for main.\n");
- printf("//");
- fgets(mem,2000,stdin);
- mem[strcspn(mem,"\n")]=0;
- if(strcmp(mem,"m")==0){
- break;}
- printf("//Enter the name of variable.\n");
+ printf("//Enter the name of variable m for main.\n");
  printf("//");
  fgets(var,2000,stdin);
  var[strcspn(var,"\n")]=0;
+ if(strcmp(var,"m")==0){
+ break;}
+ printf("//Enter memory allocated to variable -1 byte.\n"); 
+ printf("//");
+ fgets(mem,2000,stdin);
+ mem[strcspn(mem,"\n")]=0;
  printf("%s%s%s%s%s%s%s\n",t[0],t[1],mem,t[2],t[3],var,t[4]);
  printf("%s\n",t[5]);
  }
