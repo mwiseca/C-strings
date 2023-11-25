@@ -128,12 +128,12 @@ while True:
             print(v + eng["hh"] +  v  + eng ["ii"] )
     elif switch == "s":
         while True:
-            print("//Enter memory allocated to variable -1 byte m for main.")
-            mem = input("//")
-            if mem == "m":
-                break
-            print("//Enter the name of variable.")
+            print("//Enter the name of variable m for main.")
             var = input("//")
+            if var == "m":
+                break
+            print("//Enter memory allocated to variable -1 byte.")
+            mem = input("//") 
             print(eng["jj"] + mem + eng["kk"]  + var  + eng["ll"])
             print(eng["mm"])
     elif switch == "i":
