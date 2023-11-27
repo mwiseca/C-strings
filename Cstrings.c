@@ -301,7 +301,7 @@ int main(){
  printf("\n");
  printf("#include <stdlib.h>\n");
  printf("\n"); 
- printf("while (1){\n");
+ printf("while(1){\n");
  printf("\n");
  printf("break;\n");
  printf("\n");
