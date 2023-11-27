@@ -239,7 +239,7 @@ while True:
             print("\n")
             print("#include <stdlib.h>")
             print("\n")
-            print("while (1){")
+            print("while(1){")
             print("\n")
             print("break;")
             print("\n")
