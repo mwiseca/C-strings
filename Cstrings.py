@@ -201,7 +201,7 @@ while True:
                 break
             print("//Enter the amount of elements.")
             elements = input("//")
-            print("//Enter memory allocated to largest element.")
+            print("//Enter memory allocated to the largest element.")
             m = input("//")
             print("//Enter elements with quotations and commas between each.")
             el = input("//")
