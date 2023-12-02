@@ -41,3 +41,5 @@ Heap allocation for strings was added.
 November 2 2023.
 A file was added with sizeof for malloc.
 November 7 2023.
+Set pointers to NULL in malloc.c
+December 2 2023.
