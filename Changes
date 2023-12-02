@@ -42,5 +42,7 @@ A sizeof option for heap allocation was added.
 November 5  2023.
 The hs option in changes was deleted sizeof is now in h.
 November 14 2023.
+A basic scanf no white spaces was added.
+November 28 2023.
 
 
