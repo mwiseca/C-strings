@@ -17,6 +17,7 @@ void choice(){
  printf("//Enter f for fgets.\n");
  printf("//Enter fs for fgets with strlen to remove new line character.\n");
  printf("//Enter s for scanf for strings to allow for white spaces.\n");
+ printf("//Enter sb for scanf basic no white spaces.\n");
  printf("//Enter h to allocate memory from the heap hs for sizeof.\n");
  printf("//Enter fc for void functions.\n");
  printf("//Enter cf to call functions.\n");
@@ -134,28 +135,52 @@ int main(){
  }
 }else if (strcmp(sw,"s")==0){
          char t [6] [15] = {"scanf(\"","%","[^\\n]\"",",",");","getchar();"};
-         char *mem;
-	 char *var;
+         char *var;
+	 char *mem;
 
  while(1){
- mem = (char*)malloc(2000* sizeof(char));
  var = (char*)malloc(2000* sizeof(char));
- printf("//Enter memory allocated to variable -1 byte m for main.\n");
- printf("//");
- fgets(mem,2000,stdin);
- mem[strcspn(mem,"\n")]=0;
- if(strcmp(mem,"m")==0){
- break;}
- printf("//Enter the name of variable.\n");
+ mem = (char*)malloc(2000* sizeof(char));
+ printf("//Enter the name of the variable m for main.\n");
  printf("//");
  fgets(var,2000,stdin);
  var[strcspn(var,"\n")]=0;
+ if(strcmp(var,"m")==0){
+ break;}
+ printf("//Enter memory allocated to variable -1 byte\n");
+ printf("//");
+ fgets(mem,2000,stdin);
+ mem[strcspn(mem,"\n")]=0;
  printf("%s%s%s%s%s%s%s\n",t[0],t[1],mem,t[2],t[3],var,t[4]);
  printf("%s\n",t[5]);
- free(mem);
- mem = NULL;
  free(var);
  var = NULL;
+ free(mem);
+ mem = NULL;
+ }
+}else if (strcmp(sw, "sb")==0){
+        char t [5] [15] = {"scanf(\"","%","s\"",", ", ");"};
+         char *var;
+         char *mem;
+   
+ while(1){
+ var = (char*)malloc(2000* sizeof(char));
+ mem = (char*)malloc(2000* sizeof(char));
+ printf("//Enter the name of the variable m for main.\n");
+ printf("//");
+ fgets(var,2000,stdin);
+ var[strcspn(var,"\n")]=0;
+ if(strcmp(var,"m")==0){
+ break;}
+ printf("//Enter memory allocated to variable -1 byte.\n");
+ printf("//");
+ fgets(mem,2000,stdin);
+ mem[strcspn(mem,"\n")]=0;
+ printf("%s%s%s%s%s%s%s\n",t[0],t[1],mem,t[2],t[3],var,t[4]);
+ free(var);
+ var = NULL;
+free(mem);
+mem = NULL;
  }
 }else if (strcmp(sw, "i")==0){
  char f  [4] [15] = {"if (strcmp(",   ",",  "\"", ")==0){"};
