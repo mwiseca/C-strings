@@ -47,6 +47,8 @@ int main(){
     fgets(text,2000,stdin);
     text[strcspn(text,"\n")]=0;
     if (strcmp(text,"m")==0){
+    free(text);
+    text = NULL;
     break;}
     printf("%s%s%s\n",string[0],text,string[1]);
     free(text);
@@ -62,6 +64,8 @@ int main(){
     fgets(text,2000,stdin);
     text[strcspn(text,"\n")]=0;
     if (strcmp(text,"m")==0){
+    free(text);
+    text = NULL;
     break;}
     printf("%s%s%s%s\n",string[0],text,string[1], string[2]);
     free(text);
@@ -78,6 +82,8 @@ int main(){
  fgets(text,2000,stdin);
  text[strcspn(text,"\n")]=0;
  if(strcmp(text,"m")==0){
+ free(text);
+ text = NULL;
  break;}
  printf("%s%s%s\n",t[0],text,t[1]);
  free(text);
@@ -96,6 +102,10 @@ int main(){
  fgets(v,2000,stdin);
  v[strcspn(v,"\n")]=0;
  if (strcmp(v,"m")==0){
+ free(v);
+ v = NULL;
+ free(me);
+ me = NULL;
  break;}
  printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
@@ -121,6 +131,10 @@ int main(){
  fgets(v,2000,stdin);;
  v[strcspn(v,"\n")]=0;
  if (strcmp(v,"m")==0){
+ free(v);
+ v = NULL;
+ free(me);
+ me = NULL;
  break;}
  printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
@@ -146,6 +160,10 @@ int main(){
  fgets(var,2000,stdin);
  var[strcspn(var,"\n")]=0;
  if(strcmp(var,"m")==0){
+ free(var);
+ var = NULL;
+ free(mem);
+ mem = NULL;
  break;}
  printf("//Enter memory allocated to variable -1 byte m for main.\n");
  printf("//");
@@ -171,6 +189,10 @@ int main(){
  fgets(var,2000,stdin);
  var[strcspn(var,"\n")]=0;
  if(strcmp(var,"m")==0){
+ free(var);
+ var = NULL;
+ free(mem);
+ mem = NULL;
  break;}
  printf("//Enter memory allocated to variable -1 byte.\n");
  printf("//");
@@ -195,6 +217,10 @@ int main(){
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
  if (strcmp(name,"m")==0){
+ free(name);
+ name = NULL;
+ free(value);
+ value = NULL;
  break;}
  printf("//Enter the value.\n");
  printf("//");
@@ -219,6 +245,10 @@ int main(){
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
  if (strcmp(name,"m")==0){
+ free(name);
+ name = NULL;
+ free(value);
+ value = NULL;
  break;}
  printf("//Enter the value.\n");
  printf("//");
@@ -243,6 +273,10 @@ int main(){
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
  if (strcmp(name,"m")==0){
+ free(name);
+ name = NULL;
+ free(mem);
+ mem = NULL;
  break;}
  printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
@@ -268,9 +302,14 @@ int main(){
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
+ free(name);
+ name = NULL;
+ free(mem);
+ mem = NULL;
+ free(value);
+ value = NULL;
  break;}
  printf("//Enter the amount of memory you want to allocate.\n");
- printf("//Add one for the null character.\n");
  printf("//Or press enter to not allocate.\n");
  printf("//");
  fgets(mem,2000,stdin);
@@ -303,6 +342,14 @@ int main(){
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
+ free(name);
+ name = NULL;
+ free(ne);
+ ne = NULL;
+ free(m);
+ m = NULL;
+ free(elements);
+ elements = NULL;
  break;}
  printf("//Enter the amount of elements.\n");
  printf("//");
@@ -339,6 +386,10 @@ int main(){
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
+ free(name);
+ name = NULL;
+ free(per);
+ per = NULL;
  break;}
  printf("//Enter parameters if any.\n");
  printf("//");
@@ -362,6 +413,10 @@ int main(){
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
+ free(name);
+ name = NULL;
+ free(per);
+ per = NULL;
  break;}
  printf("//Enter values for parameters if any.\n");
  printf("//");
@@ -374,7 +429,7 @@ int main(){
  per = NULL;
  }
 }else if (strcmp(sw,"h")==0){
-	char t [7] [18] = {"char"," *",";"," = (char*)malloc","(",");","free"};
+	char t [8] [18] = {"char"," *",";"," = (char*)malloc","(",");","free"," = NULL;"};
         char *name;
 	char *mem;
  while(1){
@@ -385,6 +440,10 @@ int main(){
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
+ free(name);
+ name = NULL;
+ free(mem);
+ mem = NULL;
  break;}
  printf("//Enter memory to allocate.\n");
  printf("//");
@@ -393,6 +452,7 @@ int main(){
  printf("%s%s%s%s\n\n",t[0],t[1],name,t[2]);
  printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[5]);
  printf("%s%s%s%s\n\n",t[6],t[4],name,t[5]);
+ printf("%s%s\n\n",name,t[7]);
  free(name);
  name = NULL;
  free(mem);
