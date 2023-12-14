@@ -43,5 +43,5 @@ A file was added with sizeof for malloc.
 November 7 2023.
 Set pointers to NULL in malloc.c
 December 2 2023.
-A file was added. Cstrings-check.It checks malloc's and closes program if malloc fails.
+A file was added. Cstrings-check.c. It checks malloc's and closes program if malloc fails.
 December 14 2023.
