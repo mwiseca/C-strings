@@ -34,3 +34,6 @@ The scanf functions used in fgets and variables  were replaced with fgets.
 October 11 2023.
 Cstrings with scanf for strings was added and a stand alone scanf was addded to C files.
 October 17 2023.
+A new file was added. It has python syntax aid content Scanf and variables for ints and doubles.
+This program was originally for strings in C so the new content in this might or might not get to main.
+Dec 18 2023.
