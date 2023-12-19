@@ -37,3 +37,5 @@ October 17 2023.
 A new file was added. It has python syntax aid content Scanf and variables for ints and doubles.
 This program was originally for strings in C so the new content in this might or might not get to main.
 Dec 18 2023.
+The Cstrings.c file in the dev branch now has scanf and varaibles for int and double data types.
+December 18 2023.
