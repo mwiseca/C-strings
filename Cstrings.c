@@ -17,11 +17,14 @@ void choice(){
  printf("//Enter fs for fgets with strlen to remove new line character.\n");
  printf("//Enter s for scanf for strings to allow for white spaces.\n");
  printf("//Enter sb for scanf basic no white spaces.\n");
+ printf("//Enter si for scanf for intagers and floats.\n");
  printf("//Enter h to allocate memory from the heap.\n");
  printf("//Enter fc for void functions.\n");
  printf("//Enter cf to call functions.\n");
  printf("//Enter v for variables without assigning a value.\n");
  printf("//Enter vv for variables with assigning a string value.\n");
+ printf("//Enter vi for int and double variables.\n");
+ printf("//Enter vn for int and double variables with no value.\n");
  printf("//Enter m for main x to exit.\n");
  }
 
@@ -309,6 +312,83 @@ int main(){
  printf("%s%s%s%s\n\n",t[7],t[4],name,t[5]);
  printf("%s%s\n\n",name,t[8]);
  }
+}else if (strcmp(sw,"vi")==0){
+        char t [5] [15] = {"double ","int "," = ", ";", " ;"};
+        char ch [2000];
+        char name [2000];
+        char value [2000];
+ while(1){
+ printf("//Choose i for int d for double, m for main.\n");
+ printf("//");
+ fgets(ch,2000,stdin);
+ ch[strcspn(ch,"\n")]=0;
+ if(strcmp(ch,"m")==0){
+ break;}
+ else if(strcmp(ch, "i")!=0 && strcmp(ch, "d")!=0){
+ printf("Choose i or d or m only.\n");
+ continue;}
+ printf("Enter the name.\n");
+ printf("//");
+ fgets(name,2000,stdin);
+ name[strcspn(name,"\n")]=0;
+ printf("Enter a value.\n");
+ printf("//");
+ fgets(value,2000,stdin);
+ value[strcspn(value,"\n")]=0; 
+ if(strcmp(ch,"i")==0){
+ printf("%s%s%s%s%s\n",t[1],name,t[2],value,t[3]); 
+}else if(strcmp(ch,"d")==0){
+ printf("%s%s%s%s%s\n",t[0],name,t[2],value,t[3]);
+       }
+}
+}else if (strcmp(sw, "vn")==0){
+        char t [3] [15] = {"double ","int ", ";"};
+        char ch [2000];
+        char name [2000];
+ while(1){
+ printf("//Choose i for int d for double, m for main.\n");
+ printf("//");
+ fgets(ch,2000,stdin);
+ ch[strcspn(ch,"\n")]=0;
+ if(strcmp(ch,"m")==0){
+ break;}
+ else if(strcmp(ch, "i")!=0 && strcmp(ch, "d")!=0){
+ printf("Choose i or d or m only.\n");
+ continue;}
+ printf("Enter the name.\n");
+ printf("//");
+ fgets(name,2000,stdin);
+ name[strcspn(name,"\n")]=0; 
+ if(strcmp(ch,"i")==0){
+ printf("%s%s%s\n",t[1],name,t[2]); 
+}else if(strcmp(ch,"d")==0){
+ printf("%s%s%s\n",t[0],name,t[2]);
+      }
+}
+}else if (strcmp(sw, "si")==0){
+       char t [6] [15] = {"scanf(\"", "\%d\"",  "\%lf\"", ","," &", ");"};
+       char ch [2000];
+       char name [2000];
+ while(1){
+ printf("//Choose i for int f for float or double or m for main.\n");
+ printf("//");
+ fgets(ch,2000,stdin);
+ ch[strcspn(ch,"\n")]=0;
+ if(strcmp(ch,"m")==0){
+ break;}
+ else if(strcmp(ch, "i")!=0 && strcmp(ch, "f")!=0){
+ printf("Choose i or f or m only.\n");
+ continue;}
+ printf("//Enter the name of variable.\n");
+ printf("//");
+ fgets(name,2000,stdin);
+ name[strcspn(name,"\n")]=0;
+ if (strcmp(ch,"i")==0){
+ printf("%s%s%s%s%s%s\n",t[0],t[1],t[3],t[4],name,t[5]);
+}else if (strcmp(ch,"f")==0){
+ printf("%s%s%s%s%s%s\n",t[0],t[2],t[3],t[4],name,t[5]);
+       }
+}
 }else if (strcmp(sw, "cy")==0){
  char cpy [5];
  while (1){
