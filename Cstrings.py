@@ -60,12 +60,15 @@ def choice():
     print("//Enter fc for void functions.");
     print("//Enter s for scanf for strings.")
     print("//Enter sb for scanf basic no white spaces.")
+    print("//Enter si for scanf for intagers and floats.")
     print("//Enter h to allocate memory from the heap.")
     print("//Enter cf to call functions.")
     print("//Enter i for if statement for strings.")
     print("//Enter e for else if statement.")
     print("//Enter v for variables without assigning a value.")
     print("//Enter vv for variables with assigning a string value.")
+    print("//Enter vi for int and double variables.")
+    print("//Enter vn for int and double variables with no value.") 
     print("//Make sure #include <string.h> is used for fgets and if statements.")
     print("//__fpurg(stdin); must have #include <stdio_ext.h> to work.")
     print("//Enter x to exit, m for main ch for choices.")
@@ -239,7 +242,54 @@ while True:
             print(name + eng["oo"] +eng["dd"] + mem + eng["w"] + "\n")
             print(name + eng["oo"] +eng["dd"] + mem + eng["uu"] + "\n")
             print(eng["qq"] + name + eng["w"] + "\n")
-            print(name + eng["vv"] + "\n") 
+            print(name + eng["vv"] + "\n")
+    elif switch == "si":
+        t = ['scanf("%d",','scanf("%lf",'," &",");"]
+        while True:
+            print("//Choose i for int f for float or double or m for main.")
+            ch = input("//")
+            if ch == "m":
+                break
+            elif ch != "i" and ch != "f":
+                continue
+            print("//Enter the name of variable.")
+            name = input("//")
+            if ch == "i":
+                print(t[0] + t[2] + name  + t[3])
+            elif ch == "f":
+                print(t[1] + t[2] + name + t[3])
+    elif switch == "vi":
+        t = ["double ","int "," = ", ";", " ;"]
+        while True:
+            print("//Choose i for int d for double, m for main.")
+            ch = input("//")
+            if ch == "m":
+                break
+            elif ch != "i" and ch != "d":
+                continue
+            print("//Enter the name.")
+            name = input("//")
+            print("//Enter a value.")
+            value = input("//")
+            if ch == "i":
+                print(t[1] + name + t[2] + value + t[3])
+            elif ch == "d":
+                print(t[0] +name + t[2] + value + t[3])
+    elif switch == "vn":
+        t = ["double ","int ", ";"]
+        while True:
+             print("//Choose i for int d for double, m for main.")
+             ch = input("//")
+             if ch == "m":
+                 break
+             elif ch != "i" and ch != "d":
+                 continue
+             print("//Enter the name.")
+             name = input("//")
+             if ch == "i":
+                 print(t[1]+name+t[2])
+             elif ch == "d":
+                 print(t[0]+name+t[2])
     elif switch == "cy":
         while True:
             print("#include <stdio.h>")
