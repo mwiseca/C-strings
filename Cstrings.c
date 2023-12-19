@@ -325,13 +325,13 @@ int main(){
  if(strcmp(ch,"m")==0){
  break;}
  else if(strcmp(ch, "i")!=0 && strcmp(ch, "d")!=0){
- printf("Choose i or d or m only.\n");
+ printf("//Choose i or d or m only.\n");
  continue;}
- printf("Enter the name.\n");
+ printf("//Enter the name.\n");
  printf("//");
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
- printf("Enter a value.\n");
+ printf("//Enter a value.\n");
  printf("//");
  fgets(value,2000,stdin);
  value[strcspn(value,"\n")]=0; 
@@ -353,9 +353,9 @@ int main(){
  if(strcmp(ch,"m")==0){
  break;}
  else if(strcmp(ch, "i")!=0 && strcmp(ch, "d")!=0){
- printf("Choose i or d or m only.\n");
+ printf("//Choose i or d or m only.\n");
  continue;}
- printf("Enter the name.\n");
+ printf("//Enter the name.\n");
  printf("//");
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0; 
