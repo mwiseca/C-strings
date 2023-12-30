@@ -39,3 +39,5 @@ This program was originally for strings in C so the new content in this might or
 Dec 18 2023.
 The Cstrings.c file in the dev branch now has scanf and varaibles for int and double data types.
 December 18 2023.
+A file with python was added using malloc for most switches.
+December 30 2023.
