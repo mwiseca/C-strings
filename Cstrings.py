@@ -326,7 +326,8 @@ while True:
         choice()
     elif switch == "x":
         break
-
+    else:
+        print("Enter a letter from choices.")
 
 
 
