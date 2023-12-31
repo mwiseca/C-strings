@@ -1,5 +1,5 @@
 The c files are files used to build the program. They were added to the main when they worked.
-march 27 2023
+March 27 2023
 Moved the choice function above main. More comments added and memory allocation to scanf reduced.
 March 29 2023.
 C-strings to clear input buffer was added, works with some compilers.
