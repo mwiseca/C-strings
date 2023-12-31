@@ -429,7 +429,7 @@ int main(){
 }else if (strcmp(sw, "ch")==0){
  choice();
 }else{
-     printf("//Enter a option in choices.\n");
+     printf("//Enter an option in choices.\n");
          } 
       }  
 return 0;
