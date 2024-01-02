@@ -1,6 +1,6 @@
 # C-strings
 Make strings with printf.
-Use this to make very simple programs related to strings.
+Use this to make simple programs related to strings.
 The python file can hide user input when used in the terminal on strings only.
 The program comments out almost anything that's not usable in a program.
 The program  makes fgets with removal of new line character
