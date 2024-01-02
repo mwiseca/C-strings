@@ -6,7 +6,7 @@ The program comments out almost anything that's not usable in a program.
 C strings  makes fgets with removal of new line character.
 C strings makes if and else if statements and variables for strings.
 This is for learning and checking syntax, not enhancing productivity.
-Two of the C files will clear input buffer for different compilers.
+Two of the files in C files will clear input buffer for different compilers.
 some use **__fpurge(stdin);**  others use **fflush(stdin);** They are in C files.
 
 **To Use:**
