@@ -17,7 +17,7 @@ void choice(){
  printf("//Enter fs for fgets with strlen to remove new line character.\n");
  printf("//Enter s for scanf for strings to allow for white spaces.\n");
  printf("//Enter sb for scanf basic no white spaces.\n");
- printf("//Enter si for scanf for intagers and floats.\n");
+ printf("//Enter si for scanf for integers and floats.\n");
  printf("//Enter h to allocate memory from the heap.\n");
  printf("//Enter fc for void functions.\n");
  printf("//Enter cf to call functions.\n");
@@ -290,10 +290,10 @@ int main(){
  printf("%s%s%s%s\n",name,t[0],per,t[1]);
  }
 }else if (strcmp(sw,"h")==0){
-	char t [9] [18] = {"char"," *",";"," = (char*)malloc","(",");","* sizeof(char));","free"," = NULL;"};
+	char t [18] [25] = {"char"," *",";"," = (char*)malloc","(",");","* sizeof(char));","free"," = NULL;","int","double",  " = (int*)malloc"," = (double*)malloc", "* sizeof(int));","* sizeof(double));", " = (float*)malloc","* sizeof(float));","float"};
         char name [2000];
 	char mem [2000];
-	
+
  while(1){
  printf("//Enter the name of the variable m for main.\n");
  printf("//");
@@ -306,11 +306,16 @@ int main(){
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
  printf("\n");
- printf("%s%s%s%s\n\n",t[0],t[1],name,t[2]);
- printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[5]);
- printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[6]);
- printf("%s%s%s%s\n\n",t[7],t[4],name,t[5]);
- printf("%s%s\n\n",name,t[8]);
+ printf("%s%s%s%s\n\n\n",t[0],t[1],name,t[2]);
+ printf("%s%s%s%s\n\n\n",t[9],t[1],name,t[2]);
+ printf("%s%s%s%s\n\n\n",t[10],t[1],name,t[2]);
+ printf("%s%s%s%s\n\n\n",t[17],t[1],name,t[2]);
+ printf("%s%s%s%s%s\n\n\n",name,t[3],t[4],mem,t[6]);
+ printf("%s%s%s%s%s\n\n\n",name,t[11],t[4],mem,t[13]);
+ printf("%s%s%s%s%s\n\n\n",name,t[12],t[4],mem,t[14]);
+ printf("%s%s%s%s%s\n\n\n",name,t[15],t[4],mem,t[16]);
+ printf("%s%s%s%s\n\n\n",t[7],t[4],name,t[5]);
+ printf("%s%s\n\n\n",name,t[8]);
  }
 }else if (strcmp(sw,"vi")==0){
         char t [5] [15] = {"double ","int "," = ", ";", " ;"};
@@ -325,13 +330,13 @@ int main(){
  if(strcmp(ch,"m")==0){
  break;}
  else if(strcmp(ch, "i")!=0 && strcmp(ch, "d")!=0){
- printf("Choose i or d or m only.\n");
+ printf("//Choose i or d or m only.\n");
  continue;}
- printf("Enter the name.\n");
+ printf("//Enter the name.\n");
  printf("//");
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
- printf("Enter a value.\n");
+ printf("//Enter a value.\n");
  printf("//");
  fgets(value,2000,stdin);
  value[strcspn(value,"\n")]=0; 
@@ -353,9 +358,9 @@ int main(){
  if(strcmp(ch,"m")==0){
  break;}
  else if(strcmp(ch, "i")!=0 && strcmp(ch, "d")!=0){
- printf("Choose i or d or m only.\n");
+ printf("//Choose i or d or m only.\n");
  continue;}
- printf("Enter the name.\n");
+ printf("//Enter the name.\n");
  printf("//");
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0; 
@@ -429,7 +434,7 @@ int main(){
 }else if (strcmp(sw, "ch")==0){
  choice();
 }else{
-     printf("//Enter a letter in main.\n");
+     printf("//Enter an option in choices.\n");
          } 
       }  
 return 0;
