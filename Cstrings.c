@@ -324,7 +324,7 @@ int main(){
  name[strcspn(name,"\n")]=0;
  if(strcmp(name,"m")==0){
  break;}
- printf("//Enter a error message.\n");
+ printf("//Enter an error message.\n");
  printf("//");
  fgets(em,2000,stdin);
  em[strcspn(em,"\n")]=0;
