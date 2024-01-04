@@ -1,4 +1,4 @@
-#Copyright 2023 Mitchell E Wise
+#Copyright 2023-2024 Mitchell E Wise
 #SPDX-License-Identifier: Apache-2.0 
 
 
@@ -60,8 +60,9 @@ def choice():
     print("//Enter fc for void functions.");
     print("//Enter s for scanf for strings.")
     print("//Enter sb for scanf basic no white spaces.")
-    print("//Enter si for scanf for integers and floats.")
+    print("//Enter si for scanf for intagers and floats.")
     print("//Enter h to allocate memory from the heap.")
+    print("//Enter cm to check malloc.")
     print("//Enter cf to call functions.")
     print("//Enter i for if statement for strings.")
     print("//Enter e for else if statement.")
@@ -243,6 +244,19 @@ while True:
             print(name + eng["oo"] +eng["dd"] + mem + eng["uu"] + "\n")
             print(eng["qq"] + name + eng["w"] + "\n")
             print(name + eng["vv"] + "\n")
+    elif switch == "cm":
+        t = ["if("," == NULL){",'printf("',"\\n",'");',"exit(1);}"]
+        while True:
+            print("//Enter the name m for main.")
+            name = input("//")
+            if name == "m":
+                break
+            print("//Enter a error message.")
+            em = input("//")
+            print("\n")
+            print(t[0]+name+t[1])
+            print(t[2]+em+t[3]+t[4])
+            print(t[5]+"\n")
     elif switch == "si":
         t = ['scanf("%d",','scanf("%lf",'," &",");"]
         while True:
@@ -326,8 +340,7 @@ while True:
         choice()
     elif switch == "x":
         break
-    else:
-        print("//Enter an option from choices.")
+
 
 
 
