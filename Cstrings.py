@@ -251,7 +251,7 @@ while True:
             name = input("//")
             if name == "m":
                 break
-            print("//Enter a error message.")
+            print("//Enter an error message.")
             em = input("//")
             print("\n")
             print(t[0]+name+t[1])
