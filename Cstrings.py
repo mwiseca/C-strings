@@ -85,14 +85,16 @@ while True:
             text = input("//")
             if text == "m":
                 break
-            print(eng["a"] + text  + eng["b"])
+            print("\n")
+            print(eng["a"] + text  + eng["b"] + "\n")
     elif switch == "b":
         print("//Enter text m for main.")
         while True:
             text = input("//")
             if text == "m":
                 break
-            print(eng["a"] + text + eng["l"] + eng["b"])
+            print("\n")
+            print(eng["a"] + text + eng["l"] + eng["b"] + "\n")
     elif switch == "hd":
         import getpass
         print("//Enter text m for main.")
@@ -107,7 +109,8 @@ while True:
             text = input("//")
             if text == "m":
                 break
-            print(eng["v"] + text + eng["w"])
+            print("\n")
+            print(eng["v"] + text + eng["w"] + "\n")
     elif switch == "f":
         while True:
             print("//Enter name of variable m for main.")
@@ -118,8 +121,9 @@ while True:
             ma = input("//")
             if ma == "m":
                 break
+            print("\n")
             print(eng["c"] + v + eng["d"] + ma + eng["d"] + eng["e"])
-            print(v + eng["f"] +  v  + eng ["d"] +  eng["m"] + eng["g"])
+            print(v + eng["f"] +  v  + eng ["d"] +  eng["m"] + eng["g"] + "\n")
     elif switch == "fs":
         while True:
             print("//Enter name of variable m for main.")
@@ -130,8 +134,9 @@ while True:
             ma = input("//")
             if ma == "m":
                 break
+            print("\n")
             print(eng["c"] + v + eng["d"] + ma + eng["d"] + eng["e"])
-            print(v + eng["hh"] +  v  + eng ["ii"] )
+            print(v + eng["hh"] +  v  + eng ["ii"]  + "\n")
     elif switch == "s":
         while True:
             print("//Enter the name of variable m for main.")
@@ -139,9 +144,10 @@ while True:
             if var == "m":
                 break
             print("//Enter memory allocated to variable -1 byte.")
-            mem = input("//") 
+            mem = input("//")
+            print("\n")
             print(eng["jj"] + mem + eng["kk"]  + var  + eng["ll"])
-            print(eng["mm"])
+            print(eng["mm"] + "\n")
     elif switch == "sb":
         while True:
             print("//Enter the name of variable m for main.")
@@ -149,8 +155,9 @@ while True:
             if var == "m":
                 break
             print("//Enter memory allocated to variable -1 byte.")
-            mem = input("//") 
-            print(eng["jj"] + mem + eng["ww"]  + var  + eng["ll"])
+            mem = input("//")
+            print("\n")
+            print(eng["jj"] + mem + eng["ww"]  + var  + eng["ll"] + "\n")
     elif switch == "i":
         while True:
             print("//Enter the name of the if statement m for main.")
@@ -161,7 +168,8 @@ while True:
             value = input("//")
             if value == "m":
                 break
-            print(eng["h"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"])
+            print("\n")
+            print(eng["h"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"] + "\n")
     elif switch == "e":
         while True:
             print("//Enter The name of else if statement m for main.")
@@ -172,7 +180,8 @@ while True:
             value = input("//")
             if value == "m":
                 break
-            print(eng["i"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"])
+            print("\n")
+            print(eng["i"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"] + "\n")
     elif switch == "v":
         while True:
             print("//Enter the name of the variable m for main.")
@@ -183,7 +192,8 @@ while True:
             mem = input("//")
             if mem == "m":
                 break
-            print(eng["o"] + name + eng["p"] + mem + eng["r"])
+            print("\n")
+            print(eng["o"] + name + eng["p"] + mem + eng["r"] + "\n")
     elif switch == "vv":
         while True:
             print("//Enter the name of the variable m for main.")
@@ -196,7 +206,8 @@ while True:
                 break
             print("//Enter a value.")
             value = input("//")
-            print(eng["o"] + name + eng["q"] + mem + eng["s"] + eng["t"] + eng["j"] + value + eng["j"] + eng["u"])
+            print("\n")
+            print(eng["o"] + name + eng["q"] + mem + eng["s"] + eng["t"] + eng["j"] + value + eng["j"] + eng["u"]  + "\n")
     elif switch == "aa":
         while True:
             print("//Enter a name m for main.")
@@ -209,7 +220,8 @@ while True:
             m = input("//")
             print("//Enter elements with quotations and commas between each.")
             el = input("//")
-            print(eng["x"] + name + eng["y"] + elements + eng["z"] + eng["y"] + m + eng["aa"] + el + eng["bb"])
+            print("\n")
+            print(eng["x"] + name + eng["y"] + elements + eng["z"] + eng["y"] + m + eng["aa"] + el + eng["bb"] + "\n")
     elif switch == "fc":
         while True:
             print("//Name the function m for main.")
@@ -218,9 +230,10 @@ while True:
                 break
             print("//Enter parameters if none just press enter.")
             per = input("//")
+            print("\n")
             print(eng["cc"] + name + eng["dd"] + per  + eng["ee"])  
             print(2 *"\n")
-            print(eng["ff"])   
+            print(eng["ff"] + "\n")   
     elif switch == "cf":
         while True:
             print("//Enter the function name m for main.")
@@ -229,7 +242,8 @@ while True:
                 break
             print("//Enter values for parameters if any.")
             per = input("//")
-            print(name + eng["dd"] + per + eng["gg"])
+            print("\n")
+            print(name + eng["dd"] + per + eng["gg"] + "\n")
     elif switch == "h":
         while True:
             print("//Enter the name of the variable m for main.")
@@ -269,9 +283,9 @@ while True:
             print("//Enter the name of variable.")
             name = input("//")
             if ch == "i":
-                print(t[0] + t[2] + name  + t[3])
+                print("\n" + t[0] + t[2] + name  + t[3] + "\n")
             elif ch == "f":
-                print(t[1] + t[2] + name + t[3])
+                print("\n" + t[1] + t[2] + name + t[3] + "\n")
     elif switch == "vi":
         t = ["double ","int "," = ", ";", " ;"]
         while True:
@@ -286,9 +300,9 @@ while True:
             print("//Enter a value.")
             value = input("//")
             if ch == "i":
-                print(t[1] + name + t[2] + value + t[3])
+                print("\n" + t[1] + name + t[2] + value + t[3] + "\n")
             elif ch == "d":
-                print(t[0] +name + t[2] + value + t[3])
+                print("\n" + t[0] +name + t[2] + value + t[3] + "\n")
     elif switch == "vn":
         t = ["double ","int ", ";"]
         while True:
@@ -301,9 +315,9 @@ while True:
              print("//Enter the name.")
              name = input("//")
              if ch == "i":
-                 print(t[1]+name+t[2])
+                 print("\n" + t[1]+name+t[2] + "\n")
              elif ch == "d":
-                 print(t[0]+name+t[2])
+                 print("\n" + t[0]+name+t[2] + "\n")
     elif switch == "cy":
         while True:
             print("#include <stdio.h>")
