@@ -19,6 +19,7 @@ void choice(){
  printf("//Enter sb for scanf basic no white spaces.\n");
  printf("//Enter si for scanf for integers and floats.\n");
  printf("//Enter h to allocate memory from the heap.\n");
+ printf("//Enter cm to check malloc.\n");
  printf("//Enter fc for void functions.\n");
  printf("//Enter cf to call functions.\n");
  printf("//Enter v for variables without assigning a value.\n");
@@ -49,7 +50,7 @@ int main(){
     text[strcspn(text,"\n")]=0;
     if (strcmp(text,"m")==0){
     break;}
-    printf("%s%s%s\n",string[0],text,string[1]);
+    printf("\n%s%s%s\n\n",string[0],text,string[1]);
        }
 }else if (strcmp(sw,"b")==0){
  char string  [3] [15] = {"printf(\"", "\\n","\");"};
@@ -61,7 +62,7 @@ int main(){
     text[strcspn(text,"\n")]=0;
     if (strcmp(text,"m")==0){
     break;}
-    printf("%s%s%s%s\n",string[0],text,string[1], string[2]);
+    printf("\n%s%s%s%s\n\n",string[0],text,string[1], string[2]);
          }
 }else if (strcmp(sw,"c")==0){
     char t [2] [12] = {"printf(", ");"};
@@ -74,7 +75,7 @@ int main(){
  text[strcspn(text,"\n")]=0;
  if(strcmp(text,"m")==0){
  break;}
- printf("%s%s%s\n",t[0],text,t[1]);
+ printf("\n%s%s%s\n\n",t[0],text,t[1]);
  }
 }else if (strcmp(sw, "f")==0){
       char f  [6] [15] = {"fgets(", ",", "stdin);", "[strcspn(","\"\\n", "\")]=0;"};
@@ -92,8 +93,8 @@ int main(){
  printf("//");
  fgets(me,2000,stdin);
  me[strcspn(me,"\n")]=0;
- printf("%s%s%s%s%s%s\n",f[0], v, f[1],me,f[1],f[2]);
- printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4] ,f[5]);
+ printf("\n%s%s%s%s%s%s\n",f[0], v, f[1],me,f[1],f[2]);
+ printf("%s%s%s%s%s%s\n\n", v, f[3], v, f[1], f[4] ,f[5]);
      }
 }else if (strcmp(sw,"fs")==0){
      char f  [6] [15] = {"fgets(", ",", "stdin);", "[strlen(",")-1] = '\\0';"};
@@ -111,8 +112,8 @@ int main(){
  printf("//");
  fgets(me,2000,stdin);
  me[strcspn(me,"\n")]=0;
- printf("%s%s%s%s%s%s\n",f[0], v, f[1],me,f[1],f[2]);
- printf("%s%s%s%s%s\n", v, f[3], v, f[4] ,f[5]);
+ printf("\n%s%s%s%s%s%s\n",f[0], v, f[1],me,f[1],f[2]);
+ printf("%s%s%s%s%s\n\n", v, f[3], v, f[4] ,f[5]);
  }
 }else if (strcmp(sw,"s")==0){
          char t [6] [15] = {"scanf(\"","%","[^\\n]\"",",",");","getchar();"};
@@ -130,8 +131,8 @@ int main(){
  printf("//");
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
- printf("%s%s%s%s%s%s%s\n",t[0],t[1],mem,t[2],t[3],var,t[4]);
- printf("%s\n",t[5]);
+ printf("\n%s%s%s%s%s%s%s\n",t[0],t[1],mem,t[2],t[3],var,t[4]);
+ printf("%s\n\n",t[5]);
  }
 }else if (strcmp(sw, "sb")==0){
          char t [5] [15] = {"scanf(\"","%","s\"",", ", ");"};
@@ -149,10 +150,10 @@ int main(){
  printf("//");
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
- printf("%s%s%s%s%s%s%s\n",t[0],t[1],mem,t[2],t[3],var,t[4]);
+ printf("\n%s%s%s%s%s%s%s\n\n",t[0],t[1],mem,t[2],t[3],var,t[4]);
  }
 }else if (strcmp(sw, "i")==0){
- char f  [4] [15] = {"if (strcmp(",   ",",  "\"", ")==0){"};
+ char f  [4] [15] = {"if(strcmp(",   ",",  "\"", ")==0){"};
      char name [2000];
      char value [2000];
 	
@@ -167,10 +168,10 @@ int main(){
  printf("//");
  fgets(value,2000,stdin);
  value[strcspn(value,"\n")]=0;
- printf("%s%s%s%s%s%s%s\n", f[0], name, f[1], f[2],  value, f[2],  f[3] );
+ printf("\n%s%s%s%s%s%s%s\n\n", f[0], name, f[1], f[2],  value, f[2],  f[3] );
       }
 }else if (strcmp(sw, "e")==0){
-    char f  [4] [18] = {"}else if (strcmp(",   ",",  "\"", ")==0){"};
+    char f  [4] [18] = {"}else if(strcmp(",   ",",  "\"", ")==0){"};
      char name [2000];
      char value [2000];
 
@@ -185,7 +186,7 @@ int main(){
  printf("//");
  fgets(value,2000,stdin);
  value[strcspn(value,"\n")]=0;
- printf("%s%s%s%s%s%s%s\n", f[0], name, f[1], f[2],  value, f[2],  f[3] );
+ printf("\n%s%s%s%s%s%s%s\n\n", f[0], name, f[1], f[2],  value, f[2],  f[3] );
      }
 }else if (strcmp(sw, "v")==0){
      char f  [3] [15] = {"char "," [","];"};
@@ -203,7 +204,7 @@ int main(){
  printf("//");
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
- printf("%s%s%s%s%s\n",f[0],name,f[1],mem,f[2]);
+ printf("\n%s%s%s%s%s\n\n",f[0],name,f[1],mem,f[2]);
     }
 }else if (strcmp(sw, "vv")==0){
         char v [6] [15] ={"char ","[","]"," = ","\"",";"};
@@ -225,7 +226,7 @@ int main(){
  printf("//");
  fgets(value,2000,stdin);
  value[strcspn(value,"\n")]=0;
- printf("%s%s%s%s%s%s%s%s%s%s\n",v[0],name,v[1],mem,v[2],v[3],v[4],value,v[4],v[5]);
+ printf("\n%s%s%s%s%s%s%s%s%s%s\n\n",v[0],name,v[1],mem,v[2],v[3],v[4],value,v[4],v[5]);
  }
 }else if (strcmp(sw,"aa")==0){
  char t [5] [15] = {"char "," [","] ", "] = {","};"};
@@ -252,7 +253,7 @@ int main(){
  printf("//");
  fgets(elements,2000,stdin);
  elements[strcspn(elements,"\n")]=0;
- printf("%s%s%s%s%s%s%s%s%s%s\n",t[0],name,t[1],ne,t[2],t[1],m,t[3],elements,t[4]);
+ printf("\n%s%s%s%s%s%s%s%s%s%s\n\n",t[0],name,t[1],ne,t[2],t[1],m,t[3],elements,t[4]);
  }
 }else if (strcmp(sw, "fc")==0){
       char t [4] [12] = {"void ","(","){","}"};
@@ -270,7 +271,7 @@ int main(){
  printf("//");
  fgets(per,2000,stdin);
  per[strcspn(per,"\n")]=0;
- printf("%s%s%s%s%s\n\n\n%s\n",t[0],name,t[1],per,t[2],t[3]); 
+ printf("\n%s%s%s%s%s\n\n\n%s\n\n",t[0],name,t[1],per,t[2],t[3]); 
  }
 }else if (strcmp(sw, "cf")==0){
       char t [2] [12] = {"(",");"};
@@ -287,7 +288,7 @@ int main(){
  printf("//");
  fgets(per,2000,stdin);
  per[strcspn(per,"\n")]=0;
- printf("%s%s%s%s\n",name,t[0],per,t[1]);
+ printf("\n%s%s%s%s\n\n",name,t[0],per,t[1]);
  }
 }else if (strcmp(sw,"h")==0){
 	char t [18] [25] = {"char"," *",";"," = (char*)malloc","(",");","* sizeof(char));","free"," = NULL;","int","double",  " = (int*)malloc"," = (double*)malloc", "* sizeof(int));","* sizeof(double));", " = (float*)malloc","* sizeof(float));","float"};
@@ -317,6 +318,25 @@ int main(){
  printf("%s%s%s%s\n\n\n",t[7],t[4],name,t[5]);
  printf("%s%s\n\n\n",name,t[8]);
  }
+}else if (strcmp(sw,"cm")==0){
+ char t [6] [18] = {"if("," == NULL){","printf(\"", "\\n","\");","exit(1);}"};
+               char name [2000];
+	       char em [2000];
+ while(1){
+ printf("//Enter the name m for main.\n");
+ printf("//"); 
+ fgets(name,2000,stdin);
+ name[strcspn(name,"\n")]=0;
+ if(strcmp(name,"m")==0){
+ break;}
+ printf("//Enter an error message.\n");
+ printf("//");
+ fgets(em,2000,stdin);
+ em[strcspn(em,"\n")]=0;
+ printf("\n%s%s%s\n",t[0],name,t[1]);
+ printf("%s%s%s%s\n",t[2],em,t[3],t[4]);
+ printf("%s\n\n",t[5]);
+ }
 }else if (strcmp(sw,"vi")==0){
         char t [5] [15] = {"double ","int "," = ", ";", " ;"};
         char ch [2000];
@@ -341,9 +361,9 @@ int main(){
  fgets(value,2000,stdin);
  value[strcspn(value,"\n")]=0; 
  if(strcmp(ch,"i")==0){
- printf("%s%s%s%s%s\n",t[1],name,t[2],value,t[3]); 
+ printf("\n%s%s%s%s%s\n\n",t[1],name,t[2],value,t[3]); 
 }else if(strcmp(ch,"d")==0){
- printf("%s%s%s%s%s\n",t[0],name,t[2],value,t[3]);
+ printf("\n%s%s%s%s%s\n\n",t[0],name,t[2],value,t[3]);
        }
 }
 }else if (strcmp(sw, "vn")==0){
@@ -365,9 +385,9 @@ int main(){
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0; 
  if(strcmp(ch,"i")==0){
- printf("%s%s%s\n",t[1],name,t[2]); 
+ printf("\n%s%s%s\n\n",t[1],name,t[2]); 
 }else if(strcmp(ch,"d")==0){
- printf("%s%s%s\n",t[0],name,t[2]);
+ printf("\n%s%s%s\n\n",t[0],name,t[2]);
       }
 }
 }else if (strcmp(sw, "si")==0){
@@ -389,9 +409,9 @@ int main(){
  fgets(name,2000,stdin);
  name[strcspn(name,"\n")]=0;
  if (strcmp(ch,"i")==0){
- printf("%s%s%s%s%s%s\n",t[0],t[1],t[3],t[4],name,t[5]);
+ printf("\n%s%s%s%s%s%s\n\n",t[0],t[1],t[3],t[4],name,t[5]);
 }else if (strcmp(ch,"f")==0){
- printf("%s%s%s%s%s%s\n",t[0],t[2],t[3],t[4],name,t[5]);
+ printf("\n%s%s%s%s%s%s\n\n",t[0],t[2],t[3],t[4],name,t[5]);
        }
 }
 }else if (strcmp(sw, "cy")==0){
@@ -409,6 +429,8 @@ int main(){
  printf("\n");
  printf("break;\n");
  printf("\n");
+ printf("break;}\n");
+ printf("\n");
  printf("int main(){\n");
  printf("\n");
  printf("fflush(stdin);\n");
@@ -416,6 +438,8 @@ int main(){
  printf("__fpurge(stdin);\n");
  printf("\n");
  printf("}else{\n");
+ printf("\n");
+ printf("else{\n");
  printf("\n");
  printf("    }\n");
  printf("}\n");
