@@ -85,16 +85,14 @@ while True:
             text = input("//")
             if text == "m":
                 break
-            print("\n")
-            print(eng["a"] + text  + eng["b"] + "\n")
+            print("\n" + eng["a"] + text  + eng["b"] + "\n")
     elif switch == "b":
         print("//Enter text m for main.")
         while True:
             text = input("//")
             if text == "m":
                 break
-            print("\n")
-            print(eng["a"] + text + eng["l"] + eng["b"] + "\n")
+            print("\n" + eng["a"] + text + eng["l"] + eng["b"] + "\n")
     elif switch == "hd":
         import getpass
         print("//Enter text m for main.")
@@ -109,8 +107,7 @@ while True:
             text = input("//")
             if text == "m":
                 break
-            print("\n")
-            print(eng["v"] + text + eng["w"] + "\n")
+            print("\n" + eng["v"] + text + eng["w"] + "\n")
     elif switch == "f":
         while True:
             print("//Enter name of variable m for main.")
@@ -121,8 +118,7 @@ while True:
             ma = input("//")
             if ma == "m":
                 break
-            print("\n")
-            print(eng["c"] + v + eng["d"] + ma + eng["d"] + eng["e"])
+            print("\n" + eng["c"] + v + eng["d"] + ma + eng["d"] + eng["e"])
             print(v + eng["f"] +  v  + eng ["d"] +  eng["m"] + eng["g"] + "\n")
     elif switch == "fs":
         while True:
@@ -134,8 +130,7 @@ while True:
             ma = input("//")
             if ma == "m":
                 break
-            print("\n")
-            print(eng["c"] + v + eng["d"] + ma + eng["d"] + eng["e"])
+            print("\n" + eng["c"] + v + eng["d"] + ma + eng["d"] + eng["e"])
             print(v + eng["hh"] +  v  + eng ["ii"]  + "\n")
     elif switch == "s":
         while True:
@@ -145,8 +140,7 @@ while True:
                 break
             print("//Enter memory allocated to variable -1 byte.")
             mem = input("//")
-            print("\n")
-            print(eng["jj"] + mem + eng["kk"]  + var  + eng["ll"])
+            print("\n" + eng["jj"] + mem + eng["kk"]  + var  + eng["ll"])
             print(eng["mm"] + "\n")
     elif switch == "sb":
         while True:
@@ -156,8 +150,7 @@ while True:
                 break
             print("//Enter memory allocated to variable -1 byte.")
             mem = input("//")
-            print("\n")
-            print(eng["jj"] + mem + eng["ww"]  + var  + eng["ll"] + "\n")
+            print("\n" + eng["jj"] + mem + eng["ww"]  + var  + eng["ll"] + "\n")
     elif switch == "i":
         while True:
             print("//Enter the name of the if statement m for main.")
@@ -168,8 +161,7 @@ while True:
             value = input("//")
             if value == "m":
                 break
-            print("\n")
-            print(eng["h"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"] + "\n")
+            print("\n" + eng["h"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"] + "\n")
     elif switch == "e":
         while True:
             print("//Enter The name of else if statement m for main.")
@@ -180,8 +172,7 @@ while True:
             value = input("//")
             if value == "m":
                 break
-            print("\n")
-            print(eng["i"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"] + "\n")
+            print("\n" + eng["i"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"] + "\n")
     elif switch == "v":
         while True:
             print("//Enter the name of the variable m for main.")
@@ -192,8 +183,7 @@ while True:
             mem = input("//")
             if mem == "m":
                 break
-            print("\n")
-            print(eng["o"] + name + eng["p"] + mem + eng["r"] + "\n")
+            print("\n" + eng["o"] + name + eng["p"] + mem + eng["r"] + "\n")
     elif switch == "vv":
         while True:
             print("//Enter the name of the variable m for main.")
@@ -206,8 +196,7 @@ while True:
                 break
             print("//Enter a value.")
             value = input("//")
-            print("\n")
-            print(eng["o"] + name + eng["q"] + mem + eng["s"] + eng["t"] + eng["j"] + value + eng["j"] + eng["u"]  + "\n")
+            print("\n" + eng["o"] + name + eng["q"] + mem + eng["s"] + eng["t"] + eng["j"] + value + eng["j"] + eng["u"]  + "\n")
     elif switch == "aa":
         while True:
             print("//Enter a name m for main.")
@@ -220,8 +209,7 @@ while True:
             m = input("//")
             print("//Enter elements with quotations and commas between each.")
             el = input("//")
-            print("\n")
-            print(eng["x"] + name + eng["y"] + elements + eng["z"] + eng["y"] + m + eng["aa"] + el + eng["bb"] + "\n")
+            print("\n" + eng["x"] + name + eng["y"] + elements + eng["z"] + eng["y"] + m + eng["aa"] + el + eng["bb"] + "\n")
     elif switch == "fc":
         while True:
             print("//Name the function m for main.")
@@ -230,8 +218,7 @@ while True:
                 break
             print("//Enter parameters if none just press enter.")
             per = input("//")
-            print("\n")
-            print(eng["cc"] + name + eng["dd"] + per  + eng["ee"])  
+            print("\n" + eng["cc"] + name + eng["dd"] + per  + eng["ee"])  
             print(2 *"\n")
             print(eng["ff"] + "\n")   
     elif switch == "cf":
@@ -242,8 +229,7 @@ while True:
                 break
             print("//Enter values for parameters if any.")
             per = input("//")
-            print("\n")
-            print(name + eng["dd"] + per + eng["gg"] + "\n")
+            print("\n" + name + eng["dd"] + per + eng["gg"] + "\n")
     elif switch == "h":
         while True:
             print("//Enter the name of the variable m for main.")
@@ -252,8 +238,7 @@ while True:
                 break
             print("//Enter memory to allocate.")
             mem = input("//")
-            print("\n")
-            print(eng["nn"] + eng["pp"] + name + eng["u"] + "\n")
+            print("\n" + eng["nn"] + eng["pp"] + name + eng["u"] + "\n")
             print(name + eng["oo"] +eng["dd"] + mem + eng["w"] + "\n")
             print(name + eng["oo"] +eng["dd"] + mem + eng["uu"] + "\n")
             print(eng["qq"] + name + eng["w"] + "\n")
@@ -267,8 +252,7 @@ while True:
                 break
             print("//Enter an error message.")
             em = input("//")
-            print("\n")
-            print(t[0]+name+t[1])
+            print("\n"+t[0]+name+t[1])
             print(t[2]+em+t[3]+t[4])
             print(t[5]+"\n")
     elif switch == "si":
