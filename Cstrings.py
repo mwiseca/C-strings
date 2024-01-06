@@ -261,6 +261,8 @@ while True:
             print(name + t[3] + t[4] + mem + t[6] + "\n")
             print(name + t[11] + t[4] + mem + t[13] + "\n")
             print(name + t[12] + t[4] + mem + t[14] + "\n")
+            print(t[7] + t[4] + name + t[5] + "\n")
+            print(name + t[8] + "\n")
     elif switch == "cm":
         t = ["if("," == NULL){",'printf("',"\\n",'");',"exit(1);}"]
         while True:
