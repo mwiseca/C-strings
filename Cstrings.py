@@ -62,6 +62,7 @@ def choice():
     print("//Enter sb for scanf basic no white spaces.")
     print("//Enter si for scanf for intagers and floats.")
     print("//Enter h to allocate memory from the heap.")
+    print("//Enter hi to allocate int float or double memory from the heap.")
     print("//Enter cm to check malloc.")
     print("//Enter cf to call functions.")
     print("//Enter i for if statement for strings.")
@@ -243,6 +244,23 @@ while True:
             print(name + eng["oo"] +eng["dd"] + mem + eng["uu"] + "\n")
             print(eng["qq"] + name + eng["w"] + "\n")
             print(name + eng["vv"] + "\n")
+    elif switch == "hi":
+        t = ["int"," *",";"," = (int*)malloc","(",");","* sizeof(int));","free"," = NULL;","double","float", " = (double*)malloc"," = (float*)malloc","* sizeof(double));","* sizeof(float));"]
+
+        while True:
+            print("//Enter the name of the variable m for main.")
+            name = input("//")
+            if name == "m":
+                break
+            print("//Enter memory to allocate.")
+            mem = input("//")
+            print("\n")
+            print(t[0] + t[1] + name + t[2] + "\n")
+            print(t[9] + t[1] + name + t[2] + "\n")
+            print(t[10] + t[1] + name + t[2] + "\n")
+            print(name + t[3] + t[4] + mem + t[6] + "\n")
+            print(name + t[11] + t[4] + mem + t[13] + "\n")
+            print(name + t[12] + t[4] + mem + t[14] + "\n")
     elif switch == "cm":
         t = ["if("," == NULL){",'printf("',"\\n",'");',"exit(1);}"]
         while True:
