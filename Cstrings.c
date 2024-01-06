@@ -19,6 +19,7 @@ void choice(){
  printf("//Enter sb for scanf basic no white spaces.\n");
  printf("//Enter si for scanf for intagers and floats.\n");
  printf("//Enter h to allocate memory from the heap.\n");
+ printf("//Enter hi to allocate int double or float memory from the heap.\n");
  printf("//Enter cm to check malloc.\n");
  printf("//Enter fc for void functions.\n");
  printf("//Enter cf to call functions.\n");
@@ -310,6 +311,32 @@ int main(){
  printf("\n%s%s%s%s\n\n",t[0],t[1],name,t[2]);
  printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[5]);
  printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[6]);
+ printf("%s%s%s%s\n\n",t[7],t[4],name,t[5]);
+ printf("%s%s\n\n",name,t[8]);
+ }
+}else if (strcmp(sw,"hi")==0){
+	char t [15] [20] = {"int"," *",";"," = (int*)malloc","(",");","* sizeof(int));","free"," = NULL;","double","float", " = (double*)malloc"," = (float*)malloc","* sizeof(double));","* sizeof(float));"};
+        char name [2000];
+	char mem [2000];
+	
+ while(1){
+ printf("//Enter the name of the variable m for main.\n");
+ printf("//");
+ fgets(name,2000,stdin);
+ name[strcspn(name,"\n")]=0;
+ if(strcmp(name,"m")==0){
+ break;}
+ printf("//Enter memory to allocate.\n");
+ printf("//");
+ fgets(mem,2000,stdin);
+ mem[strcspn(mem,"\n")]=0;
+ printf("\n");
+ printf("%s%s%s%s\n\n",t[0],t[1],name,t[2]);
+ printf("%s%s%s%s\n\n",t[9],t[1],name,t[2]);
+ printf("%s%s%s%s\n\n",t[10],t[1],name,t[2]);
+ printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[6]);
+ printf("%s%s%s%s%s\n\n",name,t[11],t[4],mem,t[13]);
+ printf("%s%s%s%s%s\n\n",name,t[12],t[4],mem,t[14]);
  printf("%s%s%s%s\n\n",t[7],t[4],name,t[5]);
  printf("%s%s\n\n",name,t[8]);
  }
