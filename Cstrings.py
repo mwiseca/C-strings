@@ -60,7 +60,7 @@ def choice():
     print("//Enter fc for void functions.");
     print("//Enter s for scanf for strings.")
     print("//Enter sb for scanf basic no white spaces.")
-    print("//Enter si for scanf for intagers and floats.")
+    print("//Enter si for scanf for integers and floats.")
     print("//Enter sh for scanf for ints and doubles from the heap.")
     print("//Enter h to allocate memory from the heap.")
     print("//Enter hi to allocate int float or double memory from the heap.")
