@@ -61,6 +61,7 @@ def choice():
     print("//Enter s for scanf for strings.")
     print("//Enter sb for scanf basic no white spaces.")
     print("//Enter si for scanf for intagers and floats.")
+    print("//Enter sh for scanf for ints and doubles from the heap.")
     print("//Enter h to allocate memory from the heap.")
     print("//Enter hi to allocate int float or double memory from the heap.")
     print("//Enter cm to check malloc.")
@@ -290,6 +291,23 @@ while True:
                 print("\n" + t[0] + t[2] + name  + t[3] + "\n")
             elif ch == "f":
                 print("\n" + t[1] + t[2] + name + t[3] + "\n")
+    elif switch == "sh":
+        t = ['scanf("%d",','scanf("%lf",',");",'scanf("%f",']
+        while True:
+            print("//Choose i for int f for float or d double or m for main.")
+            ch = input("//")
+            if ch == "m":
+                break
+            elif ch != "i" and ch != "f" and ch != "d":
+                continue
+            print("//Enter the name of variable.")
+            name = input("//")
+            if ch == "i":
+                print("\n" + t[0]   + name  + t[2] + "\n")
+            elif ch == "d":
+                print("\n" + t[1]  + name + t[2] + "\n")
+            elif ch == "f":
+                print("\n" + t[3] + name + t[2] + "\n")
     elif switch == "vi":
         t = ["double ","int "," = ", ";", " ;"]
         while True:
@@ -336,6 +354,8 @@ while True:
             print("\n")
             print("break;")
             print("\n")
+            print("break;}")
+            print("\n")
             print("int main(){")
             print("\n")
             print("__fpurge(stdin);")
@@ -343,6 +363,8 @@ while True:
             print("fflush(stdin);")
             print("\n")
             print("}else{")
+            print("\n")
+            print("else{")
             print("\n")
             print("     }")
             print("}")
