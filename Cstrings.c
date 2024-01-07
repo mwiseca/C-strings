@@ -17,7 +17,7 @@ void choice(){
  printf("//Enter fs for fgets with strlen to remove new line character.\n");
  printf("//Enter s for scanf for strings to allow for white spaces.\n");
  printf("//Enter sb for scanf basic no white spaces.\n");
- printf("//Enter si for scanf for intagers and floats.\n");
+ printf("//Enter si for scanf for integers and floats.\n");
  printf("//Enter sh for scanf for ints and doubles from the heap.\n");
  printf("//Enter h to allocate memory from the heap.\n");
  printf("//Enter hi to allocate int double or float memory from the heap.\n");
