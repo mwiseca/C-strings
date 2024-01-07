@@ -18,6 +18,7 @@ void choice(){
  printf("//Enter s for scanf for strings to allow for white spaces.\n");
  printf("//Enter sb for scanf basic no white spaces.\n");
  printf("//Enter si for scanf for intagers and floats.\n");
+ printf("//Enter sh for scanf for ints and doubles from the heap.\n");
  printf("//Enter h to allocate memory from the heap.\n");
  printf("//Enter hi to allocate int double or float memory from the heap.\n");
  printf("//Enter cm to check malloc.\n");
@@ -436,6 +437,32 @@ int main(){
  printf("\n%s%s%s%s%s%s\n\n",t[0],t[2],t[3],t[4],name,t[5]);
        }
 }
+}else if (strcmp(sw,"sh")==0){
+      char t [6] [15] = {"scanf(\"", "\%d\"",  "\%lf\"", ",",");","\%f\"",};
+       char ch [2000];
+       char name [2000];
+ while(1){
+ printf("//Choose i for int f for float or d for double or m for main.\n");
+ printf("//");
+ fgets(ch,2000,stdin);
+ ch[strcspn(ch,"\n")]=0;
+ if(strcmp(ch,"m")==0){
+ break;}
+ else if(strcmp(ch, "i")!=0 && strcmp(ch, "f")!=0 && strcmp(ch, "d")!=0){
+ printf("Choose i, f, d  or m only.\n");
+ continue;}
+ printf("//Enter the name of variable.\n");
+ printf("//");
+ fgets(name,2000,stdin);
+ name[strcspn(name,"\n")]=0;
+ if (strcmp(ch,"i")==0){
+ printf("\n%s%s%s%s%s\n\n",t[0],t[1],t[3],name,t[4]);
+}else if (strcmp(ch,"d")==0){
+ printf("\n%s%s%s%s%s\n\n",t[0],t[2],t[3],name,t[4]);
+}else if (strcmp(ch,"f")==0){
+ printf("\n%s%s%s%s%s\n\n",t[0],t[5],t[3],name,t[4]);
+       }
+}
 }else if (strcmp(sw, "cy")==0){
  char cpy [5];
  while (1){
@@ -451,6 +478,8 @@ int main(){
  printf("\n");
  printf("break;\n");
  printf("\n");
+ printf("break;}\n");
+ printf("\n");
  printf("int main(){\n");
  printf("\n");
  printf("fflush(stdin);\n");
@@ -458,6 +487,8 @@ int main(){
  printf("__fpurge(stdin);\n");
  printf("\n");
  printf("}else{\n");
+ printf("\n");
+ printf("else{\n");
  printf("\n");
  printf("    }\n");
  printf("}\n");
