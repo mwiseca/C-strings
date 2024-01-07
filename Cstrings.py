@@ -294,7 +294,7 @@ while True:
     elif switch == "sh":
         t = ['scanf("%d",','scanf("%lf",',");",'scanf("%f",']
         while True:
-            print("//Choose i for int f for float or d double or m for main.")
+            print("//Choose i for int f for float or d for double or m for main.")
             ch = input("//")
             if ch == "m":
                 break
