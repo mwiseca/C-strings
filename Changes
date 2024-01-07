@@ -50,6 +50,8 @@ Check malloc was added.
 A space above and below finished code was added.
 January 4 2024.
 Malloc for ints doubles and floats was added.
+A new scanf was added for int double float pointers was added.
+Another break and else was added to cy.
 January 6 2024.
 
 
