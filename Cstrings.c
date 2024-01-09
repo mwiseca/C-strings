@@ -191,7 +191,7 @@ int main(){
  printf("\n%s%s%s%s%s%s%s\n\n", f[0], name, f[1], f[2],  value, f[2],  f[3] );
      }
 }else if (strcmp(sw, "in")==0){
-       char t [10] [20] = {"if(", "else if(","strlen"," <= ", " == "," >= "," != ","(",")","){"};
+       char t [10] [20] = {"if(", "}else if(","strlen"," <= ", " == "," >= "," != ","(",")","){"};
        char select [1000];
        char var [2000];
        char op [1000];
