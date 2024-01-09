@@ -214,8 +214,8 @@ int main(){
  fgets(op,1000,stdin);
  op[strcspn(op,"\n")]=0;
  if(strcmp(op,"a")!=0 && strcmp(op,"b")!=0 && strcmp(op,"c")!=0 && strcmp(op,"d")!=0){
- printf("Enter a or b or c or d only.\n");
- printf("Start over.\n");
+ printf("//Enter a or b or c or d only.\n");
+ printf("//Start over.\n");
  continue;}
  if(strcmp(op,"a")==0){
   strcpy(op,t[3]);
