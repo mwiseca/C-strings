@@ -13,6 +13,7 @@ void choice(){
  printf("//Enter c for strings with no quotation marks.\n");
  printf("//Enter cy for what's needed to copy and paste to finish a simple program.\n");
  printf("//Enter i for if statement e for else if.\n");
+ printf("//Enter in for if and else if statements for numbers.\n");
  printf("//Enter f for fgets.\n");
  printf("//Enter fs for fgets with strlen to remove new line character.\n");
  printf("//Enter s for scanf for strings to allow for white spaces.\n");
@@ -190,6 +191,53 @@ int main(){
  value[strcspn(value,"\n")]=0;
  printf("\n%s%s%s%s%s%s%s\n\n", f[0], name, f[1], f[2],  value, f[2],  f[3] );
      }
+}else if (strcmp(sw, "in")==0){
+       char t [10] [20] = {"if(", "}else if(","strlen"," <= ", " == "," >= "," != ","(",")","){"};
+       char select [1000];
+       char var [2000];
+       char op [1000];
+       char num [1000];
+ while(1){
+ printf("//Enter s for strlen  or r for regular if statement e for else if.\n");
+ printf("//");
+ fgets(select,1000,stdin);
+ select[strcspn(select,"\n")]=0;
+ if(strcmp(select,"s")!=0 && strcmp(select,"r")!=0 && strcmp(select,"e")!=0){ 
+ printf("//Enter s or r or e only.\n");
+ continue;}
+ printf("//Enter the name of if or else if statement  enter m for main.\n");
+ fgets(var,2000,stdin);
+ var[strcspn(var,"\n")]=0;
+ if(strcmp(var,"m")==0){
+ break;} 
+ printf("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal\n");
+ printf("//");
+ fgets(op,1000,stdin);
+ op[strcspn(op,"\n")]=0;
+ if(strcmp(op,"a")!=0 && strcmp(op,"b")!=0 && strcmp(op,"c")!=0 && strcmp(op,"d")!=0){
+ printf("//Enter a or b or c or d only.\n");
+ printf("//Start over.\n");
+ continue;}
+ if(strcmp(op,"a")==0){
+  strcpy(op,t[3]);
+}else if(strcmp(op,"b")==0){
+  strcpy(op,t[4]);
+}else if(strcmp(op,"c")==0){
+ strcpy(op,t[5]);
+}else if(strcmp(op,"d")==0){
+ strcpy(op,t[6]);}
+ printf("//Enter a number to compare to.\n");
+ printf("//");
+ fgets(num,1000,stdin);
+ num[strcspn(num,"\n")]=0;
+ if(strcmp(select,"s")==0){
+ printf("\n%s%s%s%s%s%s%s%s\n\n",t[0],t[2],t[7],var,t[8],op,num,t[9]);
+ }else if(strcmp(select,"r")==0){
+  printf("\n%s%s%s%s%s\n\n",t[0],var,op,num,t[9]);
+ }else if(strcmp(select,"e")==0){
+  printf("\n%s%s%s%s%s\n\n",t[1],var,op,num,t[9]);
+    }
+ }
 }else if (strcmp(sw, "v")==0){
      char f  [3] [15] = {"char "," [","];"};
      char name [2000];
@@ -480,6 +528,10 @@ int main(){
  printf("\n");
  printf("break;}\n");
  printf("\n");
+ printf("continue;\n");
+ printf("\n");
+ printf("continue;}\n");
+ printf("\n");
  printf("int main(){\n");
  printf("\n");
  printf("fflush(stdin);\n");
@@ -512,7 +564,6 @@ int main(){
       }  
 return 0;
 }
-
 
 
 
