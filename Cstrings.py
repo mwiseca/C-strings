@@ -68,6 +68,7 @@ def choice():
     print("//Enter cf to call functions.")
     print("//Enter i for if statement for strings.")
     print("//Enter e for else if statement.")
+    print("//Enter in for if and  else if statements for numbers.")
     print("//Enter v for variables without assigning a value.")
     print("//Enter vv for variables with assigning a string value.")
     print("//Enter vi for int and double variables.")
@@ -175,6 +176,41 @@ while True:
             if value == "m":
                 break
             print("\n" + eng["i"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"] + "\n")
+    elif switch == "in":
+        t = ["if(", "}else if(","strlen"," <= ", " == "," >= "," != ","(",")","){"]
+        while True:
+             print("//Enter s for strlen  or r for regular if statement e for else if.")
+             select = input("//")
+             if select != "s" and select != "r" and select != "e": 
+                 print("//Enter s or r or e only.")
+                 continue
+             print("//Enter the name of if or else if statement  enter m for main.")
+             var = input("//")
+             if var == "m":
+                 break 
+             print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal");
+             op = input("//");
+            
+             if op != "a" and op != "b" and op != "c" and op != "d":
+                 print("//Enter a or b or c or d only.") 
+                 print("//Start over.")
+                 continue
+             if op == "a":
+                 op = t[3]
+             elif op == "b":
+                 op = t[4]
+             elif op == "c":
+                 op = t[5]
+             elif op == "d":
+                 op = t[6]
+             print("//Enter a number to compare to.")
+             num = input("//")
+             if select == "s":
+                 print("\n" + t[0] + t[2] + t[7] + var + t[8] + op + num +  t[9] + "\n")
+             elif select == "r":
+                 print("\n" +  t[0] + var + op + num + t[9] +"\n")
+             elif select == "e":
+                 print("\n" + t[1] + var + op + num + t[9] + "\n")
     elif switch == "v":
         while True:
             print("//Enter the name of the variable m for main.")
@@ -355,6 +391,10 @@ while True:
             print("break;")
             print("\n")
             print("break;}")
+            print("\n")
+            print("continue;")
+            print("\n")
+            print("continue;}")
             print("\n")
             print("int main(){")
             print("\n")
