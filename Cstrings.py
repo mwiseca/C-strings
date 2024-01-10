@@ -179,12 +179,12 @@ while True:
     elif switch == "in":
         t = ["if(", "}else if(","strlen"," <= ", " == "," >= "," != ","(",")","){"]
         while True:
-             print("//Enter s for strlen  or r for regular if statement e for else if.")
+             print("//Enter s for strlen  or i for regular if statement. Enter e for else if.")
              select = input("//")
-             if select != "s" and select != "r" and select != "e": 
-                 print("//Enter s or r or e only.")
+             if select != "s" and select != "i" and select != "e": 
+                 print("//Enter s or i or e only.")
                  continue
-             print("//Enter the name of if or else if statement  enter m for main.")
+             print("//Enter the name of if or else if statement. Enter m for main.")
              var = input("//")
              if var == "m":
                  break 
@@ -207,7 +207,7 @@ while True:
              num = input("//")
              if select == "s":
                  print("\n" + t[0] + t[2] + t[7] + var + t[8] + op + num +  t[9] + "\n")
-             elif select == "r":
+             elif select == "i":
                  print("\n" +  t[0] + var + op + num + t[9] +"\n")
              elif select == "e":
                  print("\n" + t[1] + var + op + num + t[9] + "\n")
