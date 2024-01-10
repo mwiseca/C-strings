@@ -198,12 +198,12 @@ int main(){
        char op [1000];
        char num [1000];
  while(1){
- printf("//Enter s for strlen  or r for regular if statement e for else if.\n");
+ printf("//Enter s for strlen  or i for regular if statement. Enter e for else if.\n");
  printf("//");
  fgets(select,1000,stdin);
  select[strcspn(select,"\n")]=0;
- if(strcmp(select,"s")!=0 && strcmp(select,"r")!=0 && strcmp(select,"e")!=0){ 
- printf("//Enter s or r or e only.\n");
+ if(strcmp(select,"s")!=0 && strcmp(select,"i")!=0 && strcmp(select,"e")!=0){ 
+ printf("//Enter s or i or e only.\n");
  continue;}
  printf("//Enter the name of if or else if statement  enter m for main.\n");
  fgets(var,2000,stdin);
@@ -232,7 +232,7 @@ int main(){
  num[strcspn(num,"\n")]=0;
  if(strcmp(select,"s")==0){
  printf("\n%s%s%s%s%s%s%s%s\n\n",t[0],t[2],t[7],var,t[8],op,num,t[9]);
- }else if(strcmp(select,"r")==0){
+ }else if(strcmp(select,"i")==0){
   printf("\n%s%s%s%s%s\n\n",t[0],var,op,num,t[9]);
  }else if(strcmp(select,"e")==0){
   printf("\n%s%s%s%s%s\n\n",t[1],var,op,num,t[9]);
