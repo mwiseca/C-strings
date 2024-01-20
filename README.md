@@ -12,7 +12,7 @@ Some use **__fpurge(stdin);**  others use **fflush(stdin);** They are in C files
 **To Use:**
 To use the Python file Python must be installed. The C file must be compiled
 before use.
-To use select a option from choices. If b is selected and Hello world. is typed,
+To use select an option from choices. If b is selected and Hello world. is typed,
 printf("Hello world.\n"); will be displayed on the screen.
 The result can be used to check syntax or pasted into a program.
 To use fgets and if, else if statements   **#include <string.h>**   must be used.
