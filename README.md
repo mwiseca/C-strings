@@ -6,7 +6,7 @@ The program comments out almost anything that's not usable in a program.
 The program  makes fgets with removal of new line character
 and makes if and else if statements and variables for strings.
 This is for learning and checking syntax, not enhancing productivity.
-Two of the files in C files will clear input buffer for different compilers.
+Two of the files in C files will clear the input buffer for different compilers.
 Some use **__fpurge(stdin);**  others use **fflush(stdin);** They are in C files.
 
 **To Use:**
