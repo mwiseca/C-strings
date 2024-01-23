@@ -18,7 +18,7 @@ void choice(){
  printf("//Enter fs for fgets with strlen to remove new line character.\n");
  printf("//Enter s for scanf for strings to allow for white spaces.\n");
  printf("//Enter sb for scanf basic no white spaces.\n");
- printf("//Enter si for scanf for integers and floats.\n");
+ printf("//Enter si for scanf for integers and doubles.\n");
  printf("//Enter sh for scanf for ints and doubles from the heap.\n");
  printf("//Enter h to allocate memory from the heap.\n");
  printf("//Enter hi to allocate int double or float memory from the heap.\n");
@@ -466,14 +466,14 @@ int main(){
        char ch [2000];
        char name [2000];
  while(1){
- printf("//Choose i for int f for float or double or m for main.\n");
+ printf("//Choose i for int d for double or m for main.\n");
  printf("//");
  fgets(ch,2000,stdin);
  ch[strcspn(ch,"\n")]=0;
  if(strcmp(ch,"m")==0){
  break;}
- else if(strcmp(ch, "i")!=0 && strcmp(ch, "f")!=0){
- printf("Choose i or f or m only.\n");
+ else if(strcmp(ch, "i")!=0 && strcmp(ch, "d")!=0){
+ printf("Choose i or d or m only.\n");
  continue;}
  printf("//Enter the name of variable.\n");
  printf("//");
@@ -481,7 +481,7 @@ int main(){
  name[strcspn(name,"\n")]=0;
  if (strcmp(ch,"i")==0){
  printf("\n%s%s%s%s%s%s\n\n",t[0],t[1],t[3],t[4],name,t[5]);
-}else if (strcmp(ch,"f")==0){
+}else if (strcmp(ch,"d")==0){
  printf("\n%s%s%s%s%s%s\n\n",t[0],t[2],t[3],t[4],name,t[5]);
        }
 }
