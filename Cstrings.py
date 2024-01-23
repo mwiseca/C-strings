@@ -60,7 +60,7 @@ def choice():
     print("//Enter fc for void functions.");
     print("//Enter s for scanf for strings.")
     print("//Enter sb for scanf basic no white spaces.")
-    print("//Enter si for scanf for integers and floats.")
+    print("//Enter si for scanf for integers and doubles.")
     print("//Enter sh for scanf for ints and doubles from the heap.")
     print("//Enter h to allocate memory from the heap.")
     print("//Enter hi to allocate int float or double memory from the heap.")
@@ -315,17 +315,17 @@ while True:
     elif switch == "si":
         t = ['scanf("%d",','scanf("%lf",'," &",");"]
         while True:
-            print("//Choose i for int f for float or double or m for main.")
+            print("//Choose i for int or d  double or m for main.")
             ch = input("//")
             if ch == "m":
                 break
-            elif ch != "i" and ch != "f":
+            elif ch != "i" and ch != "d":
                 continue
             print("//Enter the name of variable.")
             name = input("//")
             if ch == "i":
                 print("\n" + t[0] + t[2] + name  + t[3] + "\n")
-            elif ch == "f":
+            elif ch == "d":
                 print("\n" + t[1] + t[2] + name + t[3] + "\n")
     elif switch == "sh":
         t = ['scanf("%d",','scanf("%lf",',");",'scanf("%f",']
