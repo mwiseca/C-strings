@@ -315,7 +315,7 @@ while True:
     elif switch == "si":
         t = ['scanf("%d",','scanf("%lf",'," &",");"]
         while True:
-            print("//Choose i for int or d  double or m for main.")
+            print("//Choose i for int or d for double or m for main.")
             ch = input("//")
             if ch == "m":
                 break
