@@ -16,7 +16,7 @@ int main (){
  v[strcspn(v,"\n")]=0;
  if (strcmp(v,"x")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  fgets(me,2000,stdin);
  me[strcspn(me,"\n")]=0;
