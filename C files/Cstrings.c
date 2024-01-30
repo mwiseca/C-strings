@@ -61,7 +61,7 @@ int main(){
  scanf("%49s",v);
  if (strcmp(v,"m")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  scanf("%10d",&me);
  printf("%s%s%s%d%s%s\n",f[0], v, f[1],me,f[1],f[2]);
