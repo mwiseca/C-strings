@@ -16,7 +16,7 @@ int main (){
  scanf("%49s",v);
  if (strcmp(v,"x")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  scanf("%10d",&me);
  printf("Enter the new line character with quotes.\n");
