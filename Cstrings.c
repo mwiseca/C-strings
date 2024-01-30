@@ -538,6 +538,8 @@ int main(){
  printf("\n");
  printf("__fpurge(stdin);\n");
  printf("\n");
+ printf("getchar();\n");
+ printf("\n");
  printf("}else{\n");
  printf("\n");
  printf("else{\n");
