@@ -402,6 +402,8 @@ while True:
             print("\n")
             print("fflush(stdin);")
             print("\n")
+            print("getchar();")
+            print("\n")
             print("}else{")
             print("\n")
             print("else{")
