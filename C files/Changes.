@@ -1,14 +1,14 @@
-The c files work but becouse im just starting to learn C the Python file is best for use at this time.
+The C files are files used to build the program. They were added to the main when they worked.
 March 27 2023.
 Moved the choice function above main. More comments added and memory allocation to scanf reduced.
 March 29 2023.
-C-strings to clear input buffer was added, works with some compilers.
+Added input buffer, works with some compilers.
 April 30 2023.
-C-strings with fpurge(stdin); was added. fflush(stdin); and fpurge(stdin); work on different compilers.
+Added __fpurge(stdin); and fflush(stdin); they will work with different compilers.
 May 4 2023.
 Arrays file was added.
 September 24 2023.
-A stand alone fgets with the strlen function to remove the new line character was added.
+A stand alone fgets with the strlen function to remove the newline character was added.
 October 9 2023.
 fpurge and fflush were changed to allocate memory from the heap.
 October 31 2023;
