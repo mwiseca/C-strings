@@ -68,7 +68,7 @@ int main(){
  __fpurge(stdin);
  if (strcmp(v,"m")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  scanf("%10d",&me);
  __fpurge(stdin);
@@ -127,7 +127,7 @@ int main(){
  __fpurge(stdin);
  if (strcmp(name,"m")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  scanf("%10d",&mem);
  __fpurge(stdin);
