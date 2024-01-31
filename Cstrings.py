@@ -52,7 +52,7 @@ eng = {
 def choice():
     print("//Enter a for strings hd to hide user input with getpass.")
     print("//Enter aa for arrays.")
-    print("//Enter b for strings with new line character.")
+    print("//Enter b for strings with newline character.")
     print("//Enter c for strings with no quotation marks.")
     print("//Enter cy for what's needed to copy and paste to finish a simple program.")
     print("//Enter f for fgets and removal of new line character.")
