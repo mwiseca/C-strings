@@ -63,7 +63,7 @@ int main(){
  scanf("%49s",v);
  if (strcmp(v,"m")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  scanf("%10d",&me);
  printf("%s%s%s%d%s%s\n",f[0], v, f[1],me,f[1],f[2]);
@@ -75,7 +75,7 @@ int main(){
      char value [50];
 	
  while (1){
- printf("//Enter name of the if statment m to exit.\n");
+ printf("//Enter name of the if statement m to exit.\n");
  printf("//"); 
  fgets(name,50,stdin);
  name[strcspn(name,"\n")]=0;
@@ -93,7 +93,7 @@ int main(){
      char value [50];
 
  while (1){
- printf("//Enter name of the else if statment x to exit.\n");
+ printf("//Enter name of the else if statement x to exit.\n");
  printf("//"); 
  fgets(name,50,stdin);
  name[strcspn(name,"\n")]=0;
@@ -116,7 +116,7 @@ int main(){
  scanf("%49s",name);
  if (strcmp(name,"m")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  scanf("%10d",&mem);
  printf("%s%s%s%d%s\n",f[0],name,f[1],mem,f[2]);
