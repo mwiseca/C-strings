@@ -56,7 +56,7 @@ def choice():
     print("//Enter c for strings with no quotation marks.")
     print("//Enter cy for what's needed to copy and paste to finish a simple program.")
     print("//Enter f for fgets and removal of new line character.")
-    print("//Enter fs for fgets with strlen function to remove new line character.")
+    print("//Enter fs for fgets with strlen function to remove newline character.")
     print("//Enter fc for void functions.");
     print("//Enter s for scanf for strings.")
     print("//Enter sb for scanf basic no white spaces.")
