@@ -8,7 +8,7 @@
 
 void choice(){
  printf("//Enter c for choices.\n");
- printf("//Enter a for strings b for strings for new line character.\n");
+ printf("//Enter a for strings b for strings for newline character.\n");
  printf("//Enter i for if statement e for else if.\n");
  printf("//Enter f for fgets.\n");
  printf("//Enter m for main x to exit.\n");
@@ -61,7 +61,7 @@ int main(){
  scanf("%49s",v);
  if (strcmp(v,"m")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  scanf("%10d",&me);
  printf("%s%s%s%d%s%s\n",f[0], v, f[1],me,f[1],f[2]);
