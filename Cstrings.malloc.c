@@ -9,7 +9,7 @@
 
 void choice(){
  printf("//Enter ch for choices.\n");
- printf("//Enter a for strings b for strings for new line character.\n");
+ printf("//Enter a for strings b for strings for newline character.\n");
  printf("//Enter aa for arrays.\n");
  printf("//Enter c for strings with no quotation marks.\n");
  printf("//Enter cy for what's needed to copy and paste to finish a simple program.\n");
