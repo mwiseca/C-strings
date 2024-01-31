@@ -10,7 +10,7 @@
 
 void choice(){
  printf("//Enter c for choices.\n");
- printf("//Enter a for strings b for strings for new line character.\n");
+ printf("//Enter a for strings b for strings for newline character.\n");
  printf("//Enter cy for whats needed to copy and paste to finish a simple program.\n");
  printf("//Enter i for if statement e for else if.\n");
  printf("//Enter f for fgets.\n");
@@ -76,7 +76,7 @@ int main(){
  __fpurge(stdin);
  if (strcmp(v,"m")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  fgets(me,150,stdin);
  me[strcspn(me,"\n")]=0;
@@ -149,7 +149,7 @@ int main(){
  __fpurge(stdin);
  if (strcmp(name,"m")==0){
  break;}
- printf("//Enter the memory you alocated to the variable.\n");
+ printf("//Enter the memory you allocated to the variable.\n");
  printf("//");
  fgets(mem,100,stdin);
  mem[strcspn(mem,"\n")]=0;
