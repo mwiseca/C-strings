@@ -2,11 +2,11 @@ The c files are files used to build the program. They were added to the main whe
 March 27 2023
 Moved the choice function above main. More comments added and memory allocation to scanf reduced.
 March 29 2023.
-C-strings to clear input buffer was added, works with some compilers.
+Added  clear input buffer works with some compilers.
 April 30 2023.
-C-strings with fpurge(stdin); was added. fflush(stdin); and fpurge(stdin); work on different compilers.
+Added __fpurge(stdin); and fflush(stdin); they will work with different compilers.
 May 4 2023.
 Arrays file was added.
 September 24 2023.
-A stand alone fgets with the strlen function to remove the new line character was added.
+A stand alone fgets with the strlen function to remove the newline character was added.
 October 9 2023.
