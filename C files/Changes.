@@ -1,4 +1,4 @@
-The c files work but becouse im just starting to learn C the python file is best for use at this time.
+The c files are files used to build the program.Theywere added to the mainwhen they worked.
 March 27 2023
 Moved the choice function above main. More comments added and memory allocation to scanf reduced.
 March 29 2023
