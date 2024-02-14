@@ -46,4 +46,10 @@ December 2 2023.
 A file was added. Cstrings-check.c. It checks malloc's and closes program if malloc fails.
 December 14 2023.
 The Cstrings.malloc.c file was updated to the functionality of the main branch as of this date.
+A space above and below finished code was added.
+Malloc for ints doubles and floats was added.
+A new scanf was added for int double float pointers was added.
+Another break and else was added to cy.
+If and else if statements for numbers were added.
+Added getchar to cy.
 February 10 2024.
