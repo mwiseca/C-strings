@@ -21,7 +21,7 @@ void choice(){
  printf("//Enter sb for scanf basic no white spaces.\n");
  printf("//Enter si for scanf for integers and doubles.\n");
  printf("//Enter sh for scanf for ints and doubles on the heap.\n");
- printf("//Enter h to allocate memory from the heap.\n");
+ printf("//Enter h to allocate memory on the heap.\n");
  printf("//Enter hi to allocate int double or float memory on the heap.\n");
  printf("//Enter cm to check malloc.\n");
  printf("//Enter fc for void functions.\n");
