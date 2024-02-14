@@ -18,7 +18,7 @@ void choice(){
  printf("//Enter fs for fgets with strlen to remove new line character.\n");
  printf("//Enter s for scanf for strings to allow for white spaces.\n");
  printf("//Enter sb for scanf basic no white spaces.\n");
- printf("//Enter h to allocate memory from the heap hs for sizeof.\n");
+ printf("//Enter h to allocate memory on the heap hs for sizeof.\n");
  printf("//Enter fc for void functions.\n");
  printf("//Enter cf to call functions.\n");
  printf("//Enter v for variables without assigning a value.\n");
