@@ -69,11 +69,12 @@ def choice():
     print("//Enter i for if statement for strings.")
     print("//Enter e for else if statement.")
     print("//Enter in for if and  else if statements for numbers.")
+    print("//Enter im for if and else if statements for numbers if malloc is used.\n")
     print("//Enter v for variables without assigning a value.")
     print("//Enter vv for variables with assigning a string value.")
     print("//Enter vi for int and double variables.")
     print("//Enter vn for int and double variables with no value.") 
-    print("//Make sure #include <string.h> is used for fgets and if statements.")
+    print("//Make sure #include <string.h> is used for fgets and if statements for strings.")
     print("//__fpurg(stdin); must have #include <stdio_ext.h> to work.")
     print("//Enter x to exit, m for main ch for choices.")
      
@@ -211,6 +212,39 @@ while True:
                  print("\n" +  t[0] + var + op + num + t[9] +"\n")
              elif select == "e":
                  print("\n" + t[1] + var + op + num + t[9] + "\n")
+    elif switch == "im":
+        t = ["if(*", "}else if(*"," <= ", " == "," >= "," != ","(",")","){"]
+        while True:
+            print("//Enter i for if statement. Enter e for else if.")
+            select = input("//")
+            if select != "i" and select != "e": 
+                print("//Enter s or i or e only.")
+                continue
+            print("//Enter the name of if or else if statement. Enter m for main.")
+            var = input("//")
+            if var == "m":
+                break 
+            print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal");
+            op = input("//");
+        
+            if op != "a" and op != "b" and op != "c" and op != "d":
+                print("//Enter a or b or c or d only.") 
+                print("//Start over.")
+                continue
+            if op == "a":
+                op = t[2]
+            elif op == "b":
+                op = t[3]
+            elif op == "c":
+                op = t[4]
+            elif op == "d":
+                op = t[5]
+            print("//Enter a number to compare to.")
+            num = input("//")
+            if select == "i":
+                print("\n" +  t[0] + var + op + num + t[8] +"\n")
+            elif select == "e":
+                print("\n" + t[1] + var + op + num + t[8] + "\n")
     elif switch == "v":
         while True:
             print("//Enter the name of the variable m for main.")
@@ -378,7 +412,7 @@ while True:
                  print("\n" + t[0]+name+t[2] + "\n")
     elif switch == "cy":
         while True:
-            print("#include <stdio.h>")
+            print("\n#include <stdio.h>")
             print("\n")
             print("#include <stdio_ext.h>")
             print("\n")
