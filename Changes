@@ -53,6 +53,6 @@ Another break and else was added to cy.
 If and else if statements for numbers were added.
 Added getchar to cy.
 February 10 2024.
-If statements for malloc was added.
+If statements for malloc was added to the .malloc.c file.
 Check im in choices.
 February 17 2024.
