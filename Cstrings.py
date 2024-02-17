@@ -69,7 +69,7 @@ def choice():
     print("//Enter i for if statement for strings.")
     print("//Enter e for else if statement.")
     print("//Enter in for if and  else if statements for numbers.")
-    print("//Enter im for if and else if statements for numbers if malloc is used.\n")
+    print("//Enter im for if and else if statements for numbers if malloc is used.")
     print("//Enter v for variables without assigning a value.")
     print("//Enter vv for variables with assigning a string value.")
     print("//Enter vi for int and double variables.")
