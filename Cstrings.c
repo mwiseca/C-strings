@@ -251,7 +251,7 @@ int main(){
  fgets(select,1000,stdin);
  select[strcspn(select,"\n")]=0;
  if(strcmp(select,"i")!=0 && strcmp(select,"e")!=0){  
- printf("//Enter s or i or e only.\n");
+ printf("//Enter i or e only.\n");
  continue;}
  printf("//Enter the name of if or else if statement  enter m for main.\n");
  fgets(var,2000,stdin);
