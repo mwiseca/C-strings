@@ -61,7 +61,7 @@ def choice():
     print("//Enter s for scanf for strings.")
     print("//Enter sb for scanf basic no white spaces.")
     print("//Enter si for scanf for integers and doubles.")
-    print("//Enter sh for scanf for ints and doubles on the heap.")
+    print("//Enter sh for scanf with ints and doubles on the heap.")
     print("//Enter sc to check scanf.")
     print("//Enter h to allocate memory on the heap.")
     print("//Enter hi to allocate int float or double memory on the heap.")
