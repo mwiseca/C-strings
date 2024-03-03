@@ -63,5 +63,9 @@ February 17 2024.
 Check scanf return was added.
 Check sc in choices.
 February 25 2024.
+Check scanf return for malloc was added.
+A } to close scanf in if statement or loop was added.
+Check sc in choices.
+March 3 2024.
 
 
