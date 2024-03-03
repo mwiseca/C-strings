@@ -61,14 +61,14 @@ def choice():
     print("//Enter s for scanf for strings.")
     print("//Enter sb for scanf basic no white spaces.")
     print("//Enter si for scanf for integers and doubles.")
-    print("//Enter sh for scanf with ints and doubles on the heap.")
-    print("//Enter sc to check scanf.")
+    print("//Enter sh for scanf for ints and doubles on the heap.")
+    print("??Enter sc for check scanf.")
     print("//Enter h to allocate memory on the heap.")
     print("//Enter hi to allocate int float or double memory on the heap.")
     print("//Enter cm to check malloc.")
     print("//Enter cf to call functions.")
     print("//Enter i for if statement for strings.")
-    print("//Enter e for else if statement.")
+    print("//Enter e for else if statement for strings.")
     print("//Enter in for if and  else if statements for numbers.")
     print("//Enter im for if and else if statements for numbers if malloc is used.")
     print("//Enter v for variables without assigning a value.")
@@ -392,11 +392,16 @@ while True:
             name = input("//")
             if ch == "i":
                 print("\n" + t[0] + t[2] + name  + t[3] + "\n")
+                print(f"\n{t[0]}{name}{t[3]}      //Use with malloc.\n")
                 print("\n" + t[4] + t[2] + name  + t[3] + "\n")
+                print(f"\n{t[4]}{name}{t[3]}     //Use with malloc.\n")
             elif ch == "d":
                 print("\n" + t[1] + t[2] + name + t[3] + "\n")
+                print(f"\n{t[1]}{name}{t[3]}    //Use with malloc.\n")
+
                 print("\n" + t[5] + t[2] + name + t[3] + "\n")
-            print("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n")
+                print(f"\n{t[5]}{name}{t[3]}    //Use with malloc.\n") 
+            print("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n}\n\n")
     elif switch == "vi":
         t = ["double ","int "," = ", ";", " ;"]
         while True:
