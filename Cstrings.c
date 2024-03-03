@@ -12,7 +12,7 @@ void choice(){
  printf("//Enter aa for arrays.\n");
  printf("//Enter c for strings with no quotation marks.\n");
  printf("//Enter cy for what's needed to copy and paste to finish a simple program.\n");
- printf("//Enter i for if statement e for else if.\n");
+ printf("//Enter i for if statements e for else if for strings.\n");
  printf("//Enter in for if and else if statements for numbers.\n");
  printf("//Enter im for if and else if statements for numbers if malloc is used.\n");
  printf("//Enter f for fgets.\n");
@@ -20,8 +20,8 @@ void choice(){
  printf("//Enter s for scanf for strings to allow for white spaces.\n");
  printf("//Enter sb for scanf basic no white spaces.\n");
  printf("//Enter si for scanf for integers and doubles.\n");
- printf("//Enter sh for scanf with ints and doubles on the heap.\n");
- printf("//Enter sc to check scanf.\n");
+ printf("//Enter sh for scanf for ints and doubles on the heap.\n");
+ printf("//Enter sc for check scanf.\n");
  printf("//Enter h to allocate memory on the heap.\n");
  printf("//Enter hi to allocate int double or float memory on the heap.\n");
  printf("//Enter cm to check malloc.\n");
@@ -578,11 +578,15 @@ int main(){
  name[strcspn(name,"\n")]=0;
  if (strcmp(ch,"i")==0){
  printf("\n%s%s%s%s%s%s\n\n",t[0],t[1],t[3],t[4],name,t[5]);
+ printf("\n%s%s%s%s%s    //Use with malloc.\n\n",t[0],t[1],t[3],name,t[5]); 
  printf("\n%s%s%s%s%s%s\n\n",t[6],t[1],t[3],t[4],name,t[5]);
+ printf("\n%s%s%s%s%s    //Use with malloc.\n\n",t[6],t[1],t[3],name,t[5]);
 }else if (strcmp(ch,"d")==0){
  printf("\n%s%s%s%s%s%s\n\n",t[0],t[2],t[3],t[4],name,t[5]);
- printf("\n%s%s%s%s%s%s\n\n",t[6],t[2],t[3],t[4],name,t[5]);}
- printf("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n");
+ printf("\n%s%s%s%s%s    //Use with malloc.\n\n",t[0],t[2],t[3],name,t[5]);
+ printf("\n%s%s%s%s%s%s\n\n",t[6],t[2],t[3],t[4],name,t[5]);
+ printf("\n%s%s%s%s%s    //Use with malloc.\n\n",t[6],t[2],t[3],name,t[5]);} 
+ printf("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n}\n\n");
 }
 }else if (strcmp(sw, "cy")==0){
  char cpy [5];
