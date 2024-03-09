@@ -67,5 +67,7 @@ Check scanf return for malloc was added.
 A } to close scanf in if statement or loop was added.
 Check sc in choices.
 March 3 2024.
+A C++ branch was created and a C++ version was uploaded.
+March 9 2024.
 
 
