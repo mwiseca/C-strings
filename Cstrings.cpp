@@ -366,7 +366,7 @@ int main(){
  std::cout << "//";
  getline(std::cin,mem);
  std::cout << "\n";
- std::cout << "\n%" << t[0] << t[1] << name << t[2] << "\n\n";
+ std::cout << "\n" << t[0] << t[1] << name << t[2] << "\n\n";
  std::cout << name << t[3] << t[4] << mem << t[5]<< "\n\n";
  std::cout << name << t[3] << t[4] << mem << t[6] << "\n\n";
  std::cout << t[7] << t[4] << name <<t[5] << "\n\n";
