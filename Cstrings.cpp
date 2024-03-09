@@ -43,7 +43,7 @@ int main(){
  choice();
  while (true){
  std::cout << "//Enter x to exit main m for main ch for choices.\n";
- printf("//");
+ std::cout << "//";
  getline(std::cin,sw);
  if(sw == "a"){
     std::string  string  [2] = {"printf(\"", "\");"};
