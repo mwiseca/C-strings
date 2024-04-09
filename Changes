@@ -67,5 +67,6 @@ Check scanf return for malloc was added.
 A } to close scanf in if statement or loop was added.
 Check sc in choices.
 March 3 2024.
-If statements for numbers and malloc have been changed to not start over if a wrong operator is selected.
+The C file if statements for numbers and malloc have been changed
+to not start over if a wrong operator is selected.
 Check in and  im choices.
