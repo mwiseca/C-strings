@@ -190,13 +190,14 @@ while True:
              var = input("//")
              if var == "m":
                  break 
-             print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal");
-             op = input("//");
+             print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal")
+             while True:
+                 op = input("//")
             
-             if op != "a" and op != "b" and op != "c" and op != "d":
-                 print("//Enter a or b or c or d only.") 
-                 print("//Start over.")
-                 continue
+                 if op != "a" and op != "b" and op != "c" and op != "d":
+                     print("//Enter a or b or c or d only.") 
+                 else:
+                     break
              if op == "a":
                  op = t[3]
              elif op == "b":
@@ -225,13 +226,14 @@ while True:
             var = input("//")
             if var == "m":
                 break 
-            print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal");
-            op = input("//");
+            print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal")
+            while True:
+                op = input("//")
         
-            if op != "a" and op != "b" and op != "c" and op != "d":
-                print("//Enter a or b or c or d only.") 
-                print("//Start over.")
-                continue
+                if op != "a" and op != "b" and op != "c" and op != "d":
+                    print("//Enter a or b or c or d only.") 
+                else:
+                    break
             if op == "a":
                 op = t[2]
             elif op == "b":
