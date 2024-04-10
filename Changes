@@ -71,3 +71,6 @@ A while loop was added to the C file to if statements for numbers and malloc.
 The in and im will no longer start over if a wrong operator is selected.
 Check in and  im choices.
 April 9 2024.
+The if statements for numbers and malloc in the Python file was updated to not start over.
+Check in and im in choices.
+April 10 2024.
