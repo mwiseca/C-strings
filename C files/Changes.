@@ -10,3 +10,8 @@ Arrays file was added.
 September 24 2023.
 A stand alone fgets with the strlen function to remove the newline character was added.
 October 9 2023.
+The old Cstrings files have been deleted they are still in the dev branch.
+April 24 2024.
+Two files were added using functions for all choices. One with functions above main.
+The other below main.
+April 24 2024.
