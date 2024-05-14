@@ -449,6 +449,7 @@ void heap(){
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
  printf("//Enter c to check malloc with error message.\n");
+ printf("//"); 
  fgets(check,2000,stdin);
  check[strcspn(check,"\n")]=0;
  if(strcmp(check, "c")!=0){
