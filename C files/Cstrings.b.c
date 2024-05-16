@@ -15,7 +15,7 @@
             void scanff();
             void scanfBasic();
             void ifStatement();
-            void elseif();
+            void elseIf();
             void ifNum();
             void ifHeap();
             void variable();
@@ -24,7 +24,6 @@
             void func();
             void callFunc();
             void heap();
-            void heapNum();
             void checkMalloc();
             void varInt();
             void varNoValue();
@@ -33,9 +32,6 @@
             void checkScanf();
             void copy();
          
-
-
-
     
 
 int main(){        
@@ -65,7 +61,7 @@ int main(){
 }else if (strcmp(sw, "i")==0){
      ifStatement(); 
 }else if (strcmp(sw, "e")==0){
-     elseif(); 
+     elseIf(); 
 }else if (strcmp(sw, "in")==0){
      ifNum();
 }else if (strcmp(sw,"im")==0){
@@ -82,8 +78,6 @@ int main(){
      callFunc();
 }else if (strcmp(sw,"h")==0){
      heap();
-}else if (strcmp(sw,"hi")==0){
-     heapNum();
 }else if (strcmp(sw,"cm")==0){
      checkMalloc();
 }else if (strcmp(sw,"vi")==0){
@@ -127,7 +121,6 @@ void choice(){
  printf("//Enter sh for scanf for ints and doubles on the heap.\n");
  printf("//Enter sc for check scanf.\n");
  printf("//Enter h to allocate memory on the heap.\n");
- printf("//Enter hi to allocate int double or float memory on the heap.\n");
  printf("//Enter cm to check malloc.\n");
  printf("//Enter fc for void functions.\n");
  printf("//Enter cf to call functions.\n");
@@ -266,10 +259,10 @@ void scanfBasic(){
 
 
 void ifStatement(){
- char f  [4] [15] = {"if (strcmp(",   ",",  "\"", ")==0){"};
+char f  [4] [15] = {"if(strcmp(",   ",",  "\"", ")==0){"};
      char name [2000];
      char value [2000];
-	
+     char swit [2000];	
  while (1){
  printf("//Enter name of the if statement m for main.\n");
  printf("//"); 
@@ -281,11 +274,23 @@ void ifStatement(){
  printf("//");
  fgets(value,2000,stdin);
  value[strcspn(value,"\n")]=0;
- printf("\n%s%s%s%s%s%s%s\n\n", f[0], name, f[1], f[2],  value, f[2],  f[3] );}
-}
+ printf("\n%s%s%s%s%s%s%s\n\n", f[0], name, f[1], f[2],  value, f[2],  f[3] );
+ printf("//Enter e to switch to else if b for strings m for main. Enter to repeat.\n");
+ fgets(swit,2000,stdin);
+ swit[strcspn(swit,"\n")]=0; 
+ if(strcmp(swit,"e")==0){
+	 elseIf();
+         break;}
+ else if(strcmp(swit,"b")==0){
+        stringsnl();
+	break;}
+ else if(strcmp(swit,"m")==0){
+       break;}
+      }
+} 
 
 
-void elseif(){
+void elseIf(){
     char f  [4] [18] = {"}else if (strcmp(",   ",",  "\"", ")==0){"};
      char name [2000];
      char value [2000];
@@ -475,6 +480,7 @@ void array(){
  printf("\n%s%s%s%s%s%s%s%s%s%s\n\n",t[0],name,t[1],ne,t[2],t[1],m,t[3],elements,t[4]);}
  }
 
+
 void func(){
       char t [4] [12] = {"void ","(","){","}"};
       char name [2000];
@@ -516,9 +522,15 @@ void callFunc(){
 
 void heap(){
 	char t [9] [18] = {"char"," *",";"," = (char*)malloc","(",");","* sizeof(char));","free"," = NULL;"};
+        char ch [6] [18] = {"if("," == NULL){","    printf(\"", "\\n","\");","    exit(1);}"};
+	char i [15] [20] = {"int"," *",";"," = (int*)malloc","(",");","* sizeof(int));","free"," = NULL;","double","float", " = (double*)malloc"," = (float*)malloc","* sizeof(double));","* sizeof(float));"};
+
         char name [2000];
 	char mem [2000];
-	
+	char check [2000];
+        char na [2000];
+	char em [2000];	
+	char swit [2000];
  while(1){
  printf("//Enter the name of the variable m for main.\n");
  printf("//");
@@ -530,45 +542,34 @@ void heap(){
  printf("//");
  fgets(mem,2000,stdin);
  mem[strcspn(mem,"\n")]=0;
+ printf("//Enter c to check malloc with error message.\n");
+ printf("//"); 
  printf("\n");
  printf("\n%s%s%s%s\n\n",t[0],t[1],name,t[2]);
- printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[5]);
+ printf("%s%s%s%s\n\n",i[0],i[1],name,i[2]);
+ printf("%s%s%s%s\n\n",i[9],i[1],name,i[2]);
+ printf("%s%s%s%s\n\n",i[10],i[1],name,i[2]);
  printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[6]);
- printf("%s%s%s%s\n\n",t[7],t[4],name,t[5]);
- printf("%s%s\n\n",name,t[8]);}
-}
-
-
-void heapNum(){
-	char t [15] [20] = {"int"," *",";"," = (int*)malloc","(",");","* sizeof(int));","free"," = NULL;","double","float", " = (double*)malloc"," = (float*)malloc","* sizeof(double));","* sizeof(float));"};
-        char name [2000];
-	char mem [2000];
-	
- while(1){
- printf("//Enter the name of the variable m for main.\n");
- printf("//");
- fgets(name,2000,stdin);
- name[strcspn(name,"\n")]=0;
- if(strcmp(name,"m")==0){
- break;}
- printf("//Enter memory to allocate.\n");
- printf("//");
- fgets(mem,2000,stdin);
- mem[strcspn(mem,"\n")]=0;
+ printf("%s%s%s%s%s\n\n",name,i[3],i[4],mem,i[6]);
+ printf("%s%s%s%s%s\n\n",name,i[11],i[4],mem,i[13]);
+ printf("%s%s%s%s%s\n\n",name,i[12],i[4],mem,i[14]);
+ printf("%s%s%s%s\n",i[7],i[4],name,i[5]);
+ printf("%s%s\n\n",name,i[8]);
  printf("\n");
- printf("%s%s%s%s\n\n",t[0],t[1],name,t[2]);
- printf("%s%s%s%s\n\n",t[9],t[1],name,t[2]);
- printf("%s%s%s%s\n\n",t[10],t[1],name,t[2]);
- printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[6]);
- printf("%s%s%s%s%s\n\n",name,t[11],t[4],mem,t[13]);
- printf("%s%s%s%s%s\n\n",name,t[12],t[4],mem,t[14]);
- printf("%s%s%s%s\n\n",t[7],t[4],name,t[5]);
- printf("%s%s\n\n",name,t[8]);}
+ printf("//Enter c to check malloc m for main. Enter to repeat.\n");
+ fgets(swit,2000,stdin);
+ swit[strcspn(swit,"\n")]=0; 
+ if(strcmp(swit,"c")==0){
+         checkMalloc();	
+         break;}
+ else if(strcmp(swit,"m")==0){
+	break;}
+        }
 }
 
 
 void checkMalloc(){
- char t [6] [18] = {"if("," == NULL){","printf(\"", "\\n","\");","exit(1);}"};
+ char t [6] [18] = {"if("," == NULL){","    printf(\"", "\\n","\");","    exit(1);}"};
                char name [2000];
 	       char em [2000];
  while(1){
@@ -703,6 +704,7 @@ void checkScanf(){
        char t [7] [15] = {"if(scanf(\"", "\%d\"",  "\%lf\"", ","," &", ")!=1){","while(scanf(\""};
        char ch [2000];
        char name [2000];
+       char swit [2000];
  while(1){
  printf("//Choose i for int d for double or m for main.\n");
  printf("//");
@@ -728,7 +730,15 @@ void checkScanf(){
  printf("\n%s%s%s%s%s%s\n\n",t[6],t[2],t[3],t[4],name,t[5]);
  printf("\n%s%s%s%s%s    //Use with malloc.\n\n",t[6],t[2],t[3],name,t[5]);} 
  printf("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n}\n\n");
-    }
+ printf("//Enter b to switch strings m for main. Enter to repeat.\n");
+ fgets(swit,2000,stdin);
+ swit[strcspn(swit,"\n")]=0; 
+ if(strcmp(swit,"b")==0){
+	 stringsnl();
+         break;}
+ else if(strcmp(swit,"m")==0){
+	break;}
+	}
 }
 
 
