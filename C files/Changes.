@@ -15,6 +15,13 @@ April 24 2024.
 Two files were added using functions for all choices. One with functions above main.
 The other below main.
 April 24 2024.
-A new file using fuctions for choices was added. It consolidates heap heap numbers and check malloc
-into one. Else if statements is accesible from if without going through main.
+A new file using functions for choices was added. It consolidates heap heap numbers and check malloc
+into one. Else if statements is accessible from if without going through main.
 May 14 2024.
+The Cstringsc.c file was deleted. Cstrings.b.c had if to else if and strings added.
+Check ifStatement to see the code.
+check i in choices to use.
+The heap function consolidates heap and heap numbers and has direct access to check malloc.
+Check h in choices.
+Check heap to see the code.
+may 16 2014.
