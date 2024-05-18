@@ -25,3 +25,5 @@ The heap function consolidates heap and heap numbers and has direct access to ch
 Check h in choices.
 Check heap to see the code.
 may 16 2014.
+A stand alone malloc file was added. It includes a check malloc option.
+May 18 2024.
