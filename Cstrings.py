@@ -411,13 +411,12 @@ def check_scanf():
             print(f"\n{t[0]}{name}{t[3]}      //Use with malloc.\n")
             print("\n" + t[4] + t[2] + name  + t[3] + "\n")
             print(f"\n{t[4]}{name}{t[3]}     //Use with malloc.\n")
-            print("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n}\n\n")
         elif ch == "d":
             print("\n" + t[1] + t[2] + name + t[3] + "\n")
             print(f"\n{t[1]}{name}{t[3]}    //Use with malloc.\n")
             print("\n" + t[5] + t[2] + name + t[3] + "\n")
             print(f"\n{t[5]}{name}{t[3]}    //Use with malloc.\n") 
-            print("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n}\n\n")
+        print("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n}\n\n")
 
 
 def variable_number():
