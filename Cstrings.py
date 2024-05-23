@@ -2,53 +2,7 @@
 #SPDX-License-Identifier: Apache-2.0 
 
 
-eng = {
-    "a": 'printf("',
-    "b": '");',
-    "c": "fgets(",
-    "d": ",",
-    "e": "stdin);",
-    "f": "[strcspn(",
-    "g": ")]=0;",
-    "h": "if (strcmp(",
-    "i": "}else if (strcmp(",
-    "j": '"',
-    "k": ")==0){",
-    "l": '\\n',
-    "m": '"\\n"',
-    "o": "char ",
-    "p": " [",
-    "q": "[",
-    "r": "];",
-    "s": "]",
-    "t": " = ",
-    "u": ";",
-    "v": "printf(",
-    "w": ");",
-    "x": "char ",
-    "y": " [",
-    "z": "]",
-    "aa": "] = {",
-    "bb": "};", 
-    "cc": "void ",
-    "dd": "(",
-    "ee": "){",
-    "ff": "}",    
-    "gg": ");",
-    "hh": "[strlen(",
-    "ii": ")-1] = '\\0';",
-    "jj": 'scanf("%',
-    "kk": '[^\\n]",',
-    "ll": ");",
-    "mm": "getchar();",
-    "nn": "char",
-    "oo": " = (char*)malloc",
-    "pp": " *",
-    "qq": "free(",
-    "uu": "* sizeof(char));",
-    "vv": " = NULL;",
-    "ww": 's", '
-}
+
 def choice():
     print("//Enter a for strings hd to hide user input with getpass.")
     print("//Enter aa for arrays.")
@@ -78,431 +32,515 @@ def choice():
     print("//Make sure #include <string.h> is used for fgets and if statements for strings.")
     print("//__fpurg(stdin); must have #include <stdio_ext.h> to work.")
     print("//Enter x to exit, m for main ch for choices.")
-     
-     
-choice()
-while True:
-    print("//Enter x for exit m for main ch for choices.")
-    switch = input("//")
-    if switch == "a":
-        print("//Enter text m for main.")
-        while True:
-            text = input("//")
-            if text == "m":
-                break
-            print("\n" + eng["a"] + text  + eng["b"] + "\n")
-    elif switch == "b":
-        print("//Enter text m for main.")
-        while True:
-            text = input("//")
-            if text == "m":
-                break
-            print("\n" + eng["a"] + text + eng["l"] + eng["b"] + "\n")
-    elif switch == "hd":
-        import getpass
-        print("//Enter text m for main.")
-        while True:
-            text = getpass.getpass("")
-            print(eng["a"] + text + eng["b"])
-            if text == "m":
-                break
-    elif switch == "c":
-        print("//Enter text m for main.")
-        while True:
-            text = input("//")
-            if text == "m":
-                break
-            print("\n" + eng["v"] + text + eng["w"] + "\n")
-    elif switch == "f":
-        while True:
-            print("//Enter name of variable m for main.")
-            v= input("//")
-            if v == "m":
-                break
-            print("//Enter the memory to be allocated to the variable.")
-            ma = input("//")
-            if ma == "m":
-                break
-            print("\n" + eng["c"] + v + eng["d"] + ma + eng["d"] + eng["e"])
-            print(v + eng["f"] +  v  + eng ["d"] +  eng["m"] + eng["g"] + "\n")
-    elif switch == "fs":
-        while True:
-            print("//Enter name of variable m for main.")
-            v= input("//")
-            if v == "m":
-                break
-            print("//Enter the memory to be allocated to the variable.")
-            ma = input("//")
-            if ma == "m":
-                break
-            print("\n" + eng["c"] + v + eng["d"] + ma + eng["d"] + eng["e"])
-            print(v + eng["hh"] +  v  + eng ["ii"]  + "\n")
-    elif switch == "s":
-        while True:
-            print("//Enter the name of variable m for main.")
-            var = input("//")
-            if var == "m":
-                break
-            print("//Enter memory allocated to variable -1 byte.")
-            mem = input("//")
-            print("\n" + eng["jj"] + mem + eng["kk"]  + var  + eng["ll"])
-            print(eng["mm"] + "\n")
-    elif switch == "sb":
-        while True:
-            print("//Enter the name of variable m for main.")
-            var = input("//")
-            if var == "m":
-                break
-            print("//Enter memory allocated to variable -1 byte.")
-            mem = input("//")
-            print("\n" + eng["jj"] + mem + eng["ww"]  + var  + eng["ll"] + "\n")
-    elif switch == "i":
-        while True:
-            print("//Enter the name of the if statement m for main.")
-            name = input("//")
-            if name == "m":
-                break
-            print("//Enter a value.")
-            value = input("//")
-            if value == "m":
-                break
-            print("\n" + eng["h"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"] + "\n")
-    elif switch == "e":
-        while True:
-            print("//Enter The name of else if statement m for main.")
-            name = input("//")
-            if name == "m":
-                break
-            print("//Enter a value.")
-            value = input("//")
-            if value == "m":
-                break
-            print("\n" + eng["i"] + name + eng["d"] + eng["j"] + value + eng["j"] + eng["k"] + "\n")
-    elif switch == "in":
-        t = ["if(", "}else if(","strlen"," <= ", " == "," >= "," != ","(",")","){"]
-        while True:
-             print("//Enter s for strlen  or i for regular if statement. Enter e for else if.")
-             select = input("//")
-             if select != "s" and select != "i" and select != "e": 
-                 print("//Enter s or i or e only.")
-                 continue
-             print("//Enter the name of if or else if statement. Enter m for main.")
-             var = input("//")
-             if var == "m":
-                 break 
-             print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal")
-             while True:
-                 op = input("//")
-            
-                 if op != "a" and op != "b" and op != "c" and op != "d":
-                     print("//Enter a or b or c or d only.") 
-                 else:
-                     break
-             if op == "a":
-                 op = t[3]
-             elif op == "b":
-                 op = t[4]
-             elif op == "c":
-                 op = t[5]
-             elif op == "d":
-                 op = t[6]
-             print("//Enter a number to compare to.")
-             num = input("//")
-             if select == "s":
-                 print("\n" + t[0] + t[2] + t[7] + var + t[8] + op + num +  t[9] + "\n")
-             elif select == "i":
-                 print("\n" +  t[0] + var + op + num + t[9] +"\n")
-             elif select == "e":
-                 print("\n" + t[1] + var + op + num + t[9] + "\n")
-    elif switch == "im":
-        t = ["if(*", "}else if(*"," <= ", " == "," >= "," != ","(",")","){"]
-        while True:
-            print("//Enter i for if statement. Enter e for else if.")
-            select = input("//")
-            if select != "i" and select != "e": 
-                print("//Enter i or e only.")
-                continue
-            print("//Enter the name of if or else if statement. Enter m for main.")
-            var = input("//")
-            if var == "m":
-                break 
-            print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal")
-            while True:
-                op = input("//")
+    return ""
+
+
+def string():
+    t = ['printf("', '");']
+    print("//Enter text m for main.")
+    while True:
+        text = input("//")
+        if text == "m":
+            return "" 
+        print("\n" + t[0] + text  + t[1] + "\n")
+
+
+def string_new_line():
+    t = ['printf("','\\n','");',]
+    print("//Enter text m for main.")
+    while True:
+        text = input("//")
+        if text == "m":
+            return ""
+        print("\n" + t[0] + text + t[1] + t[2] + "\n")
+
+
+def hide_text():
+    t = ['printf("','");']
+    import getpass
+    print("//Enter text m for main.")
+    while True:
+        text = getpass.getpass("")
+        print(t[0] + text + t[1])
+        if text == "m":
+            return ""
+
+
+def empty_string():
+    t = ["printf(",");"]
+    print("//Enter text m for main.")
+    while True:
+        text = input("//")
+        if text == "m":
+            return ""
+        print("\n" + t[0] + text + t[1] + "\n")
+
+
+def fgets():
+    t = ["fgets(",",","stdin);","[strcspn(",'"\\n"',")]=0;"] 
+    while True:
+        print("//Enter name of variable m for main.")
+        v= input("//")
+        if v == "m":
+            return ""
+        print("//Enter the memory to be allocated to the variable m for main.")
+        ma = input("//")
+        if ma == "m":
+            return ""
+        print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
+        print(v + t[3] +  v  + t[1] +  t[4] + t[5] + "\n")
+
+
+def fgets_strlen():
+    t = ["fgets(",",","stdin);","[strlen(", ")-1] = '\\0';"]
+    while True:
+        print("//Enter name of variable m for main.")
+        v= input("//")
+        if v == "m":
+            return ""
+        print("//Enter the memory to be allocated to the variable.")
+        ma = input("//")
+        if ma == "m":
+            return ""
+        print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
+        print(v + t[3] +  v  + t[4]  + "\n")
+
+
+def scanf():
+    t = ['scanf("%','[^\\n]",',");","getchar();"]
+
+    while True:
+        print("//Enter the name of variable m for main.")
+        var = input("//")
+        if var == "m":
+            return ""
+        print("//Enter memory allocated to variable -1 byte.")
+        mem = input("//")
+        print("\n" + t[0] + mem + t[1]  + var  + t[2])
+        print(t[3] + "\n")
+
+
+def scanf_basic():
+    while True:
+        t = ['scanf("%','s", ',");"]
+        print("//Enter the name of variable m for main.")
+        var = input("//")
+        if var == "m":
+            return ""
+        print("//Enter memory allocated to variable -1 byte.")
+        mem = input("//")
+        print("\n" + t[0] + mem + t[1]  + var  + t[2] + "\n")
+
+
+def if_statement():
+    t = ["if(strcmp(",",",'"',")==0){"]
+    while True:
+        print("//Enter the name of the if statement m for main.")
+        name = input("//")
+        if name == "m":
+          return ""
+        print("//Enter a value.")
+        value = input("//")
+        if value == "m":
+            return ""
+        print("\n" + t[0] + name + t[1] + t[2] + value + t[2] + t[3] + "\n")
+
+
+def elif_statement():
+    while True:
+        t = ["}else if(strcmp(",",",'"',")==0){"] 
+        print("//Enter The name of else if statement m for main.")
+        name = input("//")
+        if name == "m":
+            return ""
+        print("//Enter a value.")
+        value = input("//")
+        if value == "m":
+            return ""
+        print("\n" + t[0] + name + t[1] + t[2] + value + t[2] + t[3] + "\n")
+
+
+def if_number():
+    t = ["if(", "}else if(","strlen"," <= ", " == "," >= "," != ","(",")","){"]
+    while True:
+         print("//Enter s for strlen  or i for regular if statement. Enter e for else if.")
+         select = input("//")
+         if select != "s" and select != "i" and select != "e": 
+             print("//Enter s or i or e only.")
+             continue
+         print("//Enter the name of if or else if statement. Enter m for main.")
+         var = input("//")
+         if var == "m":
+             return ""
+         print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal")
+         while True:
+             op = input("//")
         
-                if op != "a" and op != "b" and op != "c" and op != "d":
-                    print("//Enter a or b or c or d only.") 
-                else:
-                    break
-            if op == "a":
-                op = t[2]
-            elif op == "b":
-                op = t[3]
-            elif op == "c":
-                op = t[4]
-            elif op == "d":
-                op = t[5]
-            print("//Enter a number to compare to.")
-            num = input("//")
-            if select == "i":
-                print("\n" +  t[0] + var + op + num + t[8] +"\n")
-            elif select == "e":
-                print("\n" + t[1] + var + op + num + t[8] + "\n")
-    elif switch == "v":
-        while True:
-            print("//Enter the name of the variable m for main.")
-            name = input("//")
-            if name == "m":
-                break
-            print("//Enter the amount of memory to allocate m for main.")
-            mem = input("//")
-            if mem == "m":
-                break
-            print("\n" + eng["o"] + name + eng["p"] + mem + eng["r"] + "\n")
-    elif switch == "vv":
-        while True:
-            print("//Enter the name of the variable m for main.")
-            name = input("//")
-            if name == "m":
-                break
-            print("//Enter the amount of memory to allocate or press enter to not allocate m for main.")
-            mem = input("//")
-            if mem == "m":
-                break
-            print("//Enter a value.")
-            value = input("//")
-            print("\n" + eng["o"] + name + eng["q"] + mem + eng["s"] + eng["t"] + eng["j"] + value + eng["j"] + eng["u"]  + "\n")
-    elif switch == "aa":
-        while True:
-            print("//Enter a name m for main.")
-            name = input("//")
-            if name == "m":
-                break
-            print("//Enter the amount of elements.")
-            elements = input("//")
-            print("//Enter memory allocated to the largest element.")
-            m = input("//")
-            print("//Enter elements with quotations and commas between each.")
-            el = input("//")
-            print("\n" + eng["x"] + name + eng["y"] + elements + eng["z"] + eng["y"] + m + eng["aa"] + el + eng["bb"] + "\n")
-    elif switch == "fc":
-        while True:
-            print("//Name the function m for main.")
-            name = input("//")
-            if name == "m":
-                break
-            print("//Enter parameters if none just press enter.")
-            per = input("//")
-            print("\n" + eng["cc"] + name + eng["dd"] + per  + eng["ee"])  
-            print(2 *"\n")
-            print(eng["ff"] + "\n")   
-    elif switch == "cf":
-        while True:
-            print("//Enter the function name m for main.")
-            name = input("//")
-            if name == "m":
-                break
-            print("//Enter values for parameters if any.")
-            per = input("//")
-            print("\n" + name + eng["dd"] + per + eng["gg"] + "\n")
-    elif switch == "h":
-        while True:
-            print("//Enter the name of the variable m for main.")
-            name = input("//")
-            if name == "m":
-                break
-            print("//Enter memory to allocate.")
-            mem = input("//")
-            print("\n" + eng["nn"] + eng["pp"] + name + eng["u"] + "\n")
-            print(name + eng["oo"] +eng["dd"] + mem + eng["w"] + "\n")
-            print(name + eng["oo"] +eng["dd"] + mem + eng["uu"] + "\n")
-            print(eng["qq"] + name + eng["w"] + "\n")
-            print(name + eng["vv"] + "\n")
-    elif switch == "hi":
-        t = ["int"," *",";"," = (int*)malloc","(",");","* sizeof(int));","free"," = NULL;","double","float", " = (double*)malloc"," = (float*)malloc","* sizeof(double));","* sizeof(float));"]
-
-        while True:
-            print("//Enter the name of the variable m for main.")
-            name = input("//")
-            if name == "m":
-                break
-            print("//Enter memory to allocate.")
-            mem = input("//")
-            print("\n")
-            print(t[0] + t[1] + name + t[2] + "\n")
-            print(t[9] + t[1] + name + t[2] + "\n")
-            print(t[10] + t[1] + name + t[2] + "\n")
-            print(name + t[3] + t[4] + mem + t[6] + "\n")
-            print(name + t[11] + t[4] + mem + t[13] + "\n")
-            print(name + t[12] + t[4] + mem + t[14] + "\n")
-            print(t[7] + t[4] + name + t[5] + "\n")
-            print(name + t[8] + "\n")
-    elif switch == "cm":
-        t = ["if("," == NULL){",'printf("',"\\n",'");',"exit(1);}"]
-        while True:
-            print("//Enter the name m for main.")
-            name = input("//")
-            if name == "m":
-                break
-            print("//Enter an error message.")
-            em = input("//")
-            print("\n"+t[0]+name+t[1])
-            print(t[2]+em+t[3]+t[4])
-            print(t[5]+"\n")
-    elif switch == "si":
-        t = ['scanf("%d",','scanf("%lf",'," &",");"]
-        while True:
-            print("//Choose i for int or d for double or m for main.")
-            ch = input("//")
-            if ch == "m":
-                break
-            elif ch != "i" and ch != "d":
-                continue
-            print("//Enter the name of variable.")
-            name = input("//")
-            if ch == "i":
-                print("\n" + t[0] + t[2] + name  + t[3] + "\n")
-            elif ch == "d":
-                print("\n" + t[1] + t[2] + name + t[3] + "\n")
-    elif switch == "sh":
-        t = ['scanf("%d",','scanf("%lf",',");",'scanf("%f",']
-        while True:
-            print("//Choose i for int f for float or d for double or m for main.")
-            ch = input("//")
-            if ch == "m":
-                break
-            elif ch != "i" and ch != "f" and ch != "d":
-                continue
-            print("//Enter the name of variable.")
-            name = input("//")
-            if ch == "i":
-                print("\n" + t[0]   + name  + t[2] + "\n")
-            elif ch == "d":
-                print("\n" + t[1]  + name + t[2] + "\n")
-            elif ch == "f":
-                print("\n" + t[3] + name + t[2] + "\n")
-    elif switch == "sc":
-        t = ['if(scanf("%d",','if(scanf("%lf",'," &",")!=1){",'while(scanf("%d",','while(scanf("%lf",']
-        while True:
-            print("//Choose i for int or d for double or m for main.")
-            ch = input("//")
-            if ch == "m":
-                break
-            elif ch != "i" and ch != "d":
-                continue
-            print("//Enter the name of variable.")
-            name = input("//")
-            if ch == "i":
-                print("\n" + t[0] + t[2] + name  + t[3] + "\n")
-                print(f"\n{t[0]}{name}{t[3]}      //Use with malloc.\n")
-                print("\n" + t[4] + t[2] + name  + t[3] + "\n")
-                print(f"\n{t[4]}{name}{t[3]}     //Use with malloc.\n")
-            elif ch == "d":
-                print("\n" + t[1] + t[2] + name + t[3] + "\n")
-                print(f"\n{t[1]}{name}{t[3]}    //Use with malloc.\n")
-
-                print("\n" + t[5] + t[2] + name + t[3] + "\n")
-                print(f"\n{t[5]}{name}{t[3]}    //Use with malloc.\n") 
-            print("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n}\n\n")
-    elif switch == "vi":
-        t = ["double ","int "," = ", ";", " ;"]
-        while True:
-            print("//Choose i for int d for double, m for main.")
-            ch = input("//")
-            if ch == "m":
-                break
-            elif ch != "i" and ch != "d":
-                continue
-            print("//Enter the name.")
-            name = input("//")
-            print("//Enter a value.")
-            value = input("//")
-            if ch == "i":
-                print("\n" + t[1] + name + t[2] + value + t[3] + "\n")
-            elif ch == "d":
-                print("\n" + t[0] +name + t[2] + value + t[3] + "\n")
-    elif switch == "vn":
-        t = ["double ","int ", ";"]
-        while True:
-             print("//Choose i for int d for double, m for main.")
-             ch = input("//")
-             if ch == "m":
+             if op != "a" and op != "b" and op != "c" and op != "d":
+                 print("//Enter a or b or c or d only.") 
+             else:
                  break
-             elif ch != "i" and ch != "d":
-                 continue
-             print("//Enter the name.")
-             name = input("//")
-             if ch == "i":
-                 print("\n" + t[1]+name+t[2] + "\n")
-             elif ch == "d":
-                 print("\n" + t[0]+name+t[2] + "\n")
-    elif switch == "cy":
+         if op == "a":
+             op = t[3]
+         elif op == "b":
+             op = t[4]
+         elif op == "c":
+             op = t[5]
+         elif op == "d":
+             op = t[6]
+         print("//Enter a number to compare to.")
+         num = input("//")
+         if select == "s":
+             print("\n" + t[0] + t[2] + t[7] + var + t[8] + op + num +  t[9] + "\n")
+         elif select == "i":
+             print("\n" +  t[0] + var + op + num + t[9] +"\n")
+         elif select == "e":
+             print("\n" + t[1] + var + op + num + t[9] + "\n")
+
+
+def if_malloc():
+    t = ["if(*", "}else if(*"," <= ", " == "," >= "," != ","(",")","){"]
+    while True:
+        print("//Enter i for if statement. Enter e for else if.")
+        select = input("//")
+        if select != "i" and select != "e": 
+            print("//Enter i or e only.")
+            continue
+        print("//Enter the name of if or else if statement. Enter m for main.")
+        var = input("//")
+        if var == "m":
+            return ""
+        print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal")
         while True:
-            print("\n#include <stdio.h>")
-            print("\n")
-            print("#include <stdio_ext.h>")
-            print("\n")
-            print("#include <string.h>")
-            print("\n")
-            print("#include <stdlib.h>")
-            print("\n")
-            print("while(1){")
-            print("\n")
-            print("break;")
-            print("\n")
-            print("break;}")
-            print("\n")
-            print("continue;")
-            print("\n")
-            print("continue;}")
-            print("\n")
-            print("int main(){")
-            print("\n")
-            print("__fpurge(stdin);")
-            print("\n")
-            print("fflush(stdin);")
-            print("\n")
-            print("getchar();")
-            print("\n")
-            print("}else{")
-            print("\n")
-            print("else{")
-            print("\n")
-            print("     }")
-            print("}")
-            print("\n")
-            print("return 0;")
-            print("}")
-            print("\n")
-            print("//Enter m for main.")
-            cpy = input("//")
-            if cpy == "m":
+            op = input("//")
+    
+            if op != "a" and op != "b" and op != "c" and op != "d":
+                print("//Enter a or b or c or d only.") 
+            else:
                 break
-    elif switch == "ch":
-        choice()
-    elif switch == "x":
-        break
+        if op == "a":
+            op = t[2]
+        elif op == "b":
+            op = t[3]
+        elif op == "c":
+            op = t[4]
+        elif op == "d":
+            op = t[5]
+        print("//Enter a number to compare to.")
+        num = input("//")
+        if select == "i":
+            print("\n" +  t[0] + var + op + num + t[8] +"\n")
+        elif select == "e":
+            print("\n" + t[1] + var + op + num + t[8] + "\n")
 
 
+def variable():
+    t = ["char "," [","];"]
+    while True:
+        print("//Enter the name of the variable m for main.")
+        name = input("//")
+        if name == "m":
+            return ""
+        print("//Enter the amount of memory to allocate m for main.")
+        mem = input("//")
+        if mem == "m":
+            return ""
+        print("\n" + t[0] + name + t[1] + mem + t[2] + "\n")
 
 
+def variable_value():
+    while True:
+        t = ["char ","[","]"," = ",'"',";"]
+        print("//Enter the name of the variable m for main.")
+        name = input("//")
+        if name == "m":
+            return ""
+        print("//Enter the amount of memory to allocate or press enter to not allocate m for main.")
+        mem = input("//")
+        if mem == "m":
+            return ""
+        print("//Enter a value.")
+        value = input("//")
+        print("\n" + t[0] + name + t[1] + mem + t[2] + t[3] + t[4] + value + t[4] + t[5]  + "\n")
 
 
+def array():
+    while True:
+        t = ["char "," [","]"," [","] = {","};"]
+        print("//Enter a name m for main.")
+        name = input("//")
+        if name == "m":
+            return ""
+        print("//Enter the amount of elements.")
+        elements = input("//")
+        print("//Enter memory allocated to the largest element.")
+        m = input("//")
+        print("//Enter elements with quotations and commas between each.")
+        el = input("//")
+        print("\n" + t[0] + name + t[1] + elements + t[2] + t[3] + m + t[4] + el + t[5] + "\n")
+        
 
 
+def function():
+    t = ["void ","(","){","}"]
+    while True:
+        print("//Name the function m for main.")
+        name = input("//")
+        if name == "m":
+            return ""
+        print("//Enter parameters if none just press enter.")
+        per = input("//")
+        print("\n" + t[0] + name + t[1] + per  + t[2])  
+        print(2 *"\n")
+        print(t[3] + "\n")
+        
+
+def call_function():
+    while True:
+        t = ["(",");"]
+        print("//Enter the function name m for main.")
+        name = input("//")
+        if name == "m":
+            return ""
+        print("//Enter values for parameters if any.")
+        per = input("//")
+        print("\n" + name + t[0] + per + t[1] + "\n")
 
 
+def heap():
+    t = ["char"," *",";"," = (char*)malloc","(",");","* sizeof(char));","free(",");"," = NULL;"]
+    while True:
+        print("//Enter the name of the variable m for main.")
+        name = input("//")
+        if name == "m":
+            return ""
+        print("//Enter memory to allocate.")
+        mem = input("//")
+        print("\n" + t[0] + t[1] + name + t[2] + "\n")
+        print(name + t[3] + t[4] + mem + t[5] + "\n")
+        print(name + t[3] + t[4] + mem + t[6] + "\n")
+        print(t[7] + name + t[8] + "\n")
+        print(name + t[9] + "\n")
+        
+
+def heap_numbers():
+    t = ["int"," *",";"," = (int*)malloc","(",");","* sizeof(int));","free"," = NULL;","double","float", " = (double*)malloc"," = (float*)malloc","* sizeof(double));","* sizeof(float));"]
+
+    while True:
+        print("//Enter the name of the variable m for main.")
+        name = input("//")
+        if name == "m":
+            return ""
+        print("//Enter memory to allocate.")
+        mem = input("//")
+        print("\n")
+        print(t[0] + t[1] + name + t[2] + "\n")
+        print(t[9] + t[1] + name + t[2] + "\n")
+        print(t[10] + t[1] + name + t[2] + "\n")
+        print(name + t[3] + t[4] + mem + t[6] + "\n")
+        print(name + t[11] + t[4] + mem + t[13] + "\n")
+        print(name + t[12] + t[4] + mem + t[14] + "\n")
+        print(t[7] + t[4] + name + t[5] + "\n")
+        print(name + t[8] + "\n")
 
 
+def check_malloc():
+    t = ["if("," == NULL){",'    printf("',"\\n",'");',"    exit(1);}"]
+    while True:
+        print("//Enter the name m for main.")
+        name = input("//")
+        if name == "m":
+            return ""
+        print("//Enter an error message.")
+        em = input("//")
+        print("\n"+t[0]+name+t[1])
+        print(t[2]+em+t[3]+t[4])
+        print(t[5]+"\n")
 
 
+def scan_number():
+    t = ['scanf("%d",','scanf("%lf",'," &",");"]
+    while True:
+        print("//Choose i for int or d for double or m for main.")
+        ch = input("//")
+        if ch == "m":
+            return ""
+        elif ch != "i" and ch != "d":
+            continue
+        print("//Enter the name of variable.")
+        name = input("//")
+        if ch == "i":
+            print("\n" + t[0] + t[2] + name  + t[3] + "\n")
+        elif ch == "d":
+            print("\n" + t[1] + t[2] + name + t[3] + "\n")
+        
 
 
+def scan_heap():
+    t = ['scanf("%d",','scanf("%lf",',");",'scanf("%f",']
+    while True:
+        print("//Choose i for int f for float or d for double or m for main.")
+        ch = input("//")
+        if ch == "m":
+            return ""
+        elif ch != "i" and ch != "f" and ch != "d":
+            continue
+        print("//Enter the name of variable.")
+        name = input("//")
+        if ch == "i":
+            print("\n" + t[0]   + name  + t[2] + "\n")
+        elif ch == "d":
+            print("\n" + t[1]  + name + t[2] + "\n")
+        elif ch == "f":
+            print("\n" + t[3] + name + t[2] + "\n")
+        
+
+def check_scanf():
+    t = ['if(scanf("%d",','if(scanf("%lf",'," &",")!=1){",'while(scanf("%d",','while(scanf("%lf",']
+    while True:
+        print("//Choose i for int or d for double or m for main.")
+        ch = input("//")
+        if ch == "m":
+            return ""
+        elif ch != "i" and ch != "d":
+            continue
+        print("//Enter the name of variable.")
+        name = input("//")
+        if ch == "i":
+            print("\n" + t[0] + t[2] + name  + t[3] + "\n")
+            print(f"\n{t[0]}{name}{t[3]}      //Use with malloc.\n")
+            print("\n" + t[4] + t[2] + name  + t[3] + "\n")
+            print(f"\n{t[4]}{name}{t[3]}     //Use with malloc.\n")
+            print("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n}\n\n")
+        elif ch == "d":
+            print("\n" + t[1] + t[2] + name + t[3] + "\n")
+            print(f"\n{t[1]}{name}{t[3]}    //Use with malloc.\n")
+            print("\n" + t[5] + t[2] + name + t[3] + "\n")
+            print(f"\n{t[5]}{name}{t[3]}    //Use with malloc.\n") 
+            print("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n}\n\n")
+
+
+def variable_number():
+    t = ["double ","int "," = ", ";", " ;"]
+    while True:
+        print("//Choose i for int d for double, m for main.")
+        ch = input("//")
+        if ch == "m":
+            return ""
+        elif ch != "i" and ch != "d":
+            continue
+        print("//Enter the name.")
+        name = input("//")
+        print("//Enter a value.")
+        value = input("//")
+        if ch == "i":
+            print("\n" + t[1] + name + t[2] + value + t[3] + "\n")
+        elif ch == "d":
+            print("\n" + t[0] +name + t[2] + value + t[3] + "\n")
+
+
+def variable_no_value():
+    t = ["double ","int ", ";"]
+    while True:
+         print("//Choose i for int d for double, m for main.")
+         ch = input("//")
+         if ch == "m":
+             return ""
+         elif ch != "i" and ch != "d":
+             continue
+         print("//Enter the name.")
+         name = input("//")
+         if ch == "i":
+             print("\n" + t[1]+name+t[2] + "\n")
+         elif ch == "d":
+             print("\n" + t[0]+name+t[2] + "\n")
+
+
+def copy():
+    while True:
+        print("\n#include <stdio.h>")
+        print("\n")
+        print("#include <stdio_ext.h>")
+        print("\n")
+        print("#include <string.h>")
+        print("\n")
+        print("#include <stdlib.h>")
+        print("\n")
+        print("while(1){")
+        print("\n")
+        print("break;")
+        print("\n")
+        print("break;}")
+        print("\n")
+        print("continue;")
+        print("\n")
+        print("continue;}")
+        print("\n")
+        print("int main(){")
+        print("\n")
+        print("__fpurge(stdin);")
+        print("\n")
+        print("fflush(stdin);")
+        print("\n")
+        print("getchar();")
+        print("\n")
+        print("}else{")
+        print("\n")
+        print("else{")
+        print("\n")
+        print("     }")
+        print("}")
+        print("\n")
+        print("return 0;")
+        print("}")
+        print("\n")
+        print("//Enter m for main.")
+        cpy = input("//")
+        if cpy == "m":
+            return ""
+
+
+switch = {
+         "ch": choice,
+         "a": string,
+         "b": string_new_line,
+         "hd": hide_text,
+         "c": empty_string,
+         "f": fgets,
+         "fs": fgets_strlen,
+         "s": scanf,
+         "sb": scanf_basic,
+         "i": if_statement,
+         "e": elif_statement,
+         "in": if_number,
+         "im": if_malloc,
+         "v": variable,
+         "vv": variable_value,
+         "aa": array,
+         "fc": function,
+         "cf": call_function,
+         "h": heap,
+         "hi": heap_numbers,
+         "cm": check_malloc,
+         "si": scan_number,
+         "sh": scan_heap,
+         "sc": check_scanf,
+         "vi": variable_number, 
+         "vn": variable_no_value,
+         "cy": copy,
+}
     
-    
-    
-    
-    
+choice()    
+while True:
+    try:
+        print("//Enter x for exit m for main ch for choices.")
+        call = input("//")
+        if call == "x":
+            break
+        print(switch[call]())
+    except KeyError:
+        print("Enter a letter in choices.")
+      
     
     
     
