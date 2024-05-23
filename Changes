@@ -76,3 +76,6 @@ Check in and im in choices.
 April 10 2024.
 Two files with choices as functions in C files were added.
 April 24 2024.
+The python file was changed to have the choices as functions and a dictionary to call the functions.
+This eliminates the if elif statement to switch choices.
+May 23 2024.
