@@ -73,4 +73,7 @@ February 18 2024.
 Check scanf return for Cstrings with Python  and malloc with Python was added.
 Check sc in choices.
 February 25 2024.
+A new file was added to dev. C-C++map.cpp. It does C and C++.
+It uses a map to call functions and not if and else if statements.
+june 10 2024.
 
