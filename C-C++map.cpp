@@ -984,7 +984,7 @@ std::map<std::string, std::function<void()> > f = {
  if(c != f.end()){
  (*c).second();}
  else{
-     std::cout << "//Enter a letter in choices\n\n";}
+     std::cout << "//Enter a letter in choices.\n\n";}
  }
 return 0;
 }
