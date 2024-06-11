@@ -16,7 +16,7 @@
 void choice(){
  using namespace std;
  cout << "//Enter ch for choices.\n";
- cout << "//Enter a for strings b for strings.\n";
+ cout << "//Enter a for strings.\n";
  cout << "//Enter aa for arrays.\n";
  cout << "//Enter c for strings with no quotation marks.\n";
  cout << "//Enter cy for what's needed to copy and paste to finish a simple program.\n";
@@ -691,6 +691,7 @@ void arraysp(){
  std::cout << "\n" << t[0] << name << t[1] << ne << t[2] << elements << t[3] << "\n\n";}
  }
 
+
 void ifStatementp(){
          std::string f  [4] = {"if(", " == ",  "\"", "){"};
    	 std::string name;
@@ -930,6 +931,7 @@ void copyy(){
  break;} 
      } 
 }
+
 
 int main(){               
 std::map<std::string, std::function<void()> > f = { 
