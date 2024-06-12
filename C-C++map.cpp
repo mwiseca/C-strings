@@ -412,8 +412,6 @@ void heap(){
  std::cout << "//Enter memory to allocate.\n";
  std::cout << "//";
  std::getline(std::cin, mem);
- std::cout << "//Enter c to check malloc with error message.\n";
- std::cout << "//"; 
  std::cout << "\n";
  std::cout << "\n" << t[0] << t[1] << name << t[2] << "\n\n";
  std::cout << i[0] << i[1] << name << i[2] << "\n\n";
