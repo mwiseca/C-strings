@@ -261,6 +261,8 @@ int main(){
  num[strcspn(num,"\n")]=0;
  if(strcmp(select,"s")==0){
  printf("\n%s%s%s%s%s%s%s%s\n\n",t[0],t[2],t[7],var,t[8],op,num,t[9]);
+ if(strcmp(repeat,"r")!=0){
+     break;}
  }else if(strcmp(select,"i")==0){
   printf("\n%s%s%s%s%s\n\n",t[0],var,op,num,t[9]);
  if(strcmp(repeat,"r")!=0){
