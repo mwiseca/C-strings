@@ -79,3 +79,5 @@ April 24 2024.
 The python file was changed to have the choices as functions and a dictionary to call the functions.
 This eliminates the if elif statement to switch choices.
 May 23 2024.
+A new file was added allowing a choice to repeat choices.
+June 14 2024.
