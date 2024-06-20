@@ -489,7 +489,7 @@ int main(){
      break;}
  }
 }else if (strcmp(sw,"cm")==0){
- char t [6] [18] = {"if("," == NULL){","printf(\"", "\\n","\");","exit(1);}"};
+ char t [6] [18] = {"if("," == NULL){","    printf(\"", "\\n","\");","    exit(1);}"};
                char name [2000];
 	       char em [2000];
  while(1){
