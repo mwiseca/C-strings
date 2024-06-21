@@ -455,7 +455,7 @@ int main(){
  printf("\n%s%s%s%s\n\n",t[0],t[1],name,t[2]);
  printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[5]);
  printf("%s%s%s%s%s\n\n",name,t[3],t[4],mem,t[6]);
- printf("%s%s%s%s\n\n",t[7],t[4],name,t[5]);
+ printf("%s%s%s%s\n",t[7],t[4],name,t[5]);
  printf("%s%s\n\n",name,t[8]);
  if(strcmp(repeat,"r")!=0){ 
      break;}
