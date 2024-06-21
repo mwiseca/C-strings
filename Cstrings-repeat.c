@@ -180,7 +180,7 @@ int main(){
      break;}
  }
 }else if (strcmp(sw, "i")==0){
- char f  [4] [15] = {"if (strcmp(",   ",",  "\"", ")==0){"};
+ char f  [4] [15] = {"if(strcmp(",   ",",  "\"", ")==0){"};
      char name [2000];
      char value [2000];
 	
@@ -200,7 +200,7 @@ int main(){
      break;}
       }
 }else if (strcmp(sw, "e")==0){
-    char f  [4] [18] = {"}else if (strcmp(",   ",",  "\"", ")==0){"};
+    char f  [4] [18] = {"}else if(strcmp(",   ",",  "\"", ")==0){"};
      char name [2000];
      char value [2000];
 
