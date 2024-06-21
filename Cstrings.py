@@ -319,7 +319,7 @@ def heap():
         print("\n" + t[0] + t[1] + name + t[2] + "\n")
         print(name + t[3] + t[4] + mem + t[5] + "\n")
         print(name + t[3] + t[4] + mem + t[6] + "\n")
-        print(t[7] + name + t[8] + "\n")
+        print(t[7] + name + t[8])
         print(name + t[9] + "\n")
         
 
@@ -340,7 +340,7 @@ def heap_numbers():
         print(name + t[3] + t[4] + mem + t[6] + "\n")
         print(name + t[11] + t[4] + mem + t[13] + "\n")
         print(name + t[12] + t[4] + mem + t[14] + "\n")
-        print(t[7] + t[4] + name + t[5] + "\n")
+        print(t[7] + t[4] + name + t[5])
         print(name + t[8] + "\n")
 
 
