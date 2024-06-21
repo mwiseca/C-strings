@@ -536,7 +536,7 @@ while True:
         call = input("//")
         if call == "x":
             break
-        print(switch[call]())
+        (switch[call]())
     except KeyError:
         print("Enter a letter in choices.")
       
