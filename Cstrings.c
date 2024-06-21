@@ -158,7 +158,7 @@ int main(){
  printf("\n%s%s%s%s%s%s%s\n\n",t[0],t[1],mem,t[2],t[3],var,t[4]);
  }
 }else if (strcmp(sw, "i")==0){
- char f  [4] [15] = {"if (strcmp(",   ",",  "\"", ")==0){"};
+ char f  [4] [15] = {"if(strcmp(",   ",",  "\"", ")==0){"};
      char name [2000];
      char value [2000];
 	
@@ -176,7 +176,7 @@ int main(){
  printf("\n%s%s%s%s%s%s%s\n\n", f[0], name, f[1], f[2],  value, f[2],  f[3] );
       }
 }else if (strcmp(sw, "e")==0){
-    char f  [4] [18] = {"}else if (strcmp(",   ",",  "\"", ")==0){"};
+    char f  [4] [18] = {"}else if(strcmp(",   ",",  "\"", ")==0){"};
      char name [2000];
      char value [2000];
 
