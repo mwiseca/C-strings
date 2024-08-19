@@ -1,4 +1,4 @@
-//Copyright 2023-2024 Mitchell E Wise 
+j//Copyright 2023-2024 Mitchell E Wise 
 //SPDX-License-Identifier: Apache-20 
 
 
@@ -592,6 +592,8 @@ void scanfHeap(){
  getline(std::cin,name);
  if(ch == "i"){
  std::cout << "\n" << t[0] << t[1] << t[3] << name << t[4] << "\n\n";
+ if(repeat != "r"){
+     break;}
 }else if(ch == "d"){
  std::cout << "\n" << t[0] << t[2] << t[3] << name << t[4] << "\n\n";
  if(repeat != "r"){
