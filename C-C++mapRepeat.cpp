@@ -246,6 +246,8 @@ void ifNumber(){
  getline(std::cin,num);
  if(select == "s"){
   std::cout << "\n" << t[0] << t[2] << t[7] << var << t[8] << op << num << t[9] << "\n\n";
+ if(repeat != "r"){
+     break;}
  }else if(select == "i"){
   std::cout << "\n" << t[0] << var << op << num << t[9] << "\n\n";
  if(repeat != "r"){
