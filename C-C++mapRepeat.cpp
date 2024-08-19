@@ -1,4 +1,4 @@
-j//Copyright 2023-2024 Mitchell E Wise 
+//Copyright 2023-2024 Mitchell E Wise 
 //SPDX-License-Identifier: Apache-20 
 
 
