@@ -82,4 +82,5 @@ May 23 2024.
 A new file was added allowing a choice to repeat choices.
 June 14 2024.
 Fix array out of bounds error in fs.
+The error was fixed within 12 hours of discovery.
 September 1 2024.
