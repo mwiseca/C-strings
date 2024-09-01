@@ -81,3 +81,5 @@ This eliminates the if elif statement to switch choices.
 May 23 2024.
 A new file was added allowing a choice to repeat choices.
 June 14 2024.
+Fix array out of bounds error in fs.
+September 1 2024.
