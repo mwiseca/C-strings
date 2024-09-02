@@ -143,7 +143,7 @@ int main(){
  me = NULL;
      }
 }else if (strcmp(sw,"fs")==0){
-     char f  [6] [15] = {"fgets(", ",", "stdin);", "[strlen(",")-1] = '\\0';"};
+     char f  [5] [15] = {"fgets(", ",", "stdin);", "[strlen(",")-1] = '\\0';"};
      char *v;
      char *me;
 	
@@ -171,7 +171,7 @@ int main(){
  fgets(me,2000,stdin);
  me[strcspn(me,"\n")]=0;
  printf("\n%s%s%s%s%s%s\n",f[0], v, f[1],me,f[1],f[2]);
- printf("%s%s%s%s%s\n\n", v, f[3], v, f[4] ,f[5]);
+ printf("%s%s%s%s\n\n", v, f[3], v, f[4]);
  free(v);
  v = NULL;
  free(me);
