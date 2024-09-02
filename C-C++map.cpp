@@ -103,7 +103,7 @@ void fgetss(){
 
 
 void fgetsStrlen(){
-     std::string f  [6] = {"fgets(", ",", "stdin);", "[strlen(",")-1] = '\\0';"};
+     std::string f  [5] = {"fgets(", ",", "stdin);", "[strlen(",")-1] = '\\0';"};
      std::string v;
      std::string  me;
 
@@ -117,7 +117,7 @@ void fgetsStrlen(){
  std::cout << "//";
  getline(std::cin,me);
  std::cout << "\n" << f[0] <<  v << f[1] << me << f[1] << f[2] << "\n";
- std::cout << v << f[3] << v << f[4] << f[5] << "\n\n";
+ std::cout << v << f[3] << v << f[4] << "\n\n";
    }
 }
 
