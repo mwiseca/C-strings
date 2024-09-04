@@ -8,15 +8,14 @@
 
 void choice(){
  printf("//Enter ch for choices.\n");
- printf("//Enter a for strings b for strings for newline character.\n");
- printf("//Enter aa for arrays.\n");
+ printf("//Enter a for arrays.\n");
+ printf("//Enter b for strings  with printf.");
  printf("//Enter c for strings with no quotation marks.\n");
  printf("//Enter cy for what's needed to copy and paste to finish a simple program.\n");
  printf("//Enter i for if statements e for else if for strings.\n");
  printf("//Enter in for if and else if statements for numbers.\n");
  printf("//Enter im for if and else if statements for numbers if malloc is used.\n");
- printf("//Enter f for fgets.\n");
- printf("//Enter fs for fgets with strlen to remove newline character.\n");
+ printf("//Enter f for fgets with removal of the newline character.\n");
  printf("//Enter s for scanf for strings to allow for white spaces.\n");
  printf("//Enter sb for scanf basic no white spaces.\n");
  printf("//Enter si for scanf for integers and doubles.\n");
@@ -45,30 +44,19 @@ int main(){
  printf("//");
  fgets(sw,250,stdin);
  sw[strcspn(sw,"\n")]=0;
- if (strcmp(sw, "a")==0){
- char string  [2] [15] = {"printf(\"", "\");"};
+ if (strcmp(sw, "b")==0){
+    char string  [3] [15] = {"printf(\"", "\\n","\");"};
     char text [2000];
-    printf("//Enter your string, m to exit.\n");
-    while (1){
-    printf("//");
-    fgets(text,2000,stdin);
-    text[strcspn(text,"\n")]=0;
-    if (strcmp(text,"m")==0){
-    break;}
-    printf("\n%s%s%s\n\n",string[0],text,string[1]);
-       }
-}else if (strcmp(sw,"b")==0){
- char string  [3] [15] = {"printf(\"", "\\n","\");"};
-    char text [2000];
-    printf("//Enter your string, m for main.\n");
-    while (1){
-    printf("//");
-    fgets(text,2000,stdin);
-    text[strcspn(text,"\n")]=0;
-    if (strcmp(text,"m")==0){
-    break;}
-    printf("\n%s%s%s%s\n\n",string[0],text,string[1], string[2]);
-         }
+ printf("//Enter your string, m for main.\n");
+ while (1){
+ printf("//");
+ fgets(text,2000,stdin);
+ text[strcspn(text,"\n")]=0;
+ if (strcmp(text,"m")==0){
+ break;}
+ printf("\n%s%s%s%s\n\n",string[0],text,string[1], string[2]);
+ printf("%s%s%s\n\n",string[0],text,string[2]);
+         } 
 }else if (strcmp(sw,"c")==0){
     char t [2] [12] = {"printf(", ");"};
     char text [2000];
@@ -83,7 +71,7 @@ int main(){
  printf("\n%s%s%s\n\n",t[0],text,t[1]);
  }
 }else if (strcmp(sw, "f")==0){
-      char f  [6] [15] = {"fgets(", ",", "stdin);", "[strcspn(","\"\\n", "\")]=0;"};
+     char f  [8] [15] = {"fgets(", ",", "stdin);", "[strcspn(","\"\\n", "\")]=0;","[strlen(",")-1] = '\\0';"};
      char v [2000];
      char me [2000];
 
@@ -100,25 +88,8 @@ int main(){
  me[strcspn(me,"\n")]=0;
  printf("\n%s%s%s%s%s%s\n",f[0], v, f[1],me,f[1],f[2]);
  printf("%s%s%s%s%s%s\n\n", v, f[3], v, f[1], f[4] ,f[5]);
-     }
-}else if (strcmp(sw,"fs")==0){
-     char f  [5] [15] = {"fgets(", ",", "stdin);", "[strlen(",")-1] = '\\0';"};
-     char v [2000];
-     char me [2000];
-	
- while (1){
- printf("//Enter name of variable m for main.\n");
- printf("//"); 
- fgets(v,2000,stdin);;
- v[strcspn(v,"\n")]=0;
- if (strcmp(v,"m")==0){
- break;}
- printf("//Enter the memory to be allocated to the variable.\n");
- printf("//");
- fgets(me,2000,stdin);
- me[strcspn(me,"\n")]=0;
  printf("\n%s%s%s%s%s%s\n",f[0], v, f[1],me,f[1],f[2]);
- printf("%s%s%s%s\n\n", v, f[3], v, f[4]);
+ printf("%s%s%s%s\n\n", v,f[6],v,f[7]);
  }
 }else if (strcmp(sw,"s")==0){
          char t [6] [15] = {"scanf(\"","%","[^\\n]\"",",",");","getchar();"};
@@ -327,7 +298,7 @@ int main(){
  value[strcspn(value,"\n")]=0;
  printf("\n%s%s%s%s%s%s%s%s%s%s\n\n",v[0],name,v[1],mem,v[2],v[3],v[4],value,v[4],v[5]);
  }
-}else if (strcmp(sw,"aa")==0){
+}else if (strcmp(sw,"a")==0){
  char t [5] [15] = {"char "," [","] ", "] = {","};"};
 	char name [2000];
 	char ne [2000];
