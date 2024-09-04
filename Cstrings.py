@@ -4,13 +4,12 @@
 
 
 def choice():
-    print("//Enter a for strings hd to hide user input with getpass.")
-    print("//Enter aa for arrays.")
-    print("//Enter b for strings with newline character.")
+    print("//Enter hd for strings hd to hide user input with getpass.")
+    print("//Enter a for arrays.")
+    print("//Enter b for strings.")
     print("//Enter c for strings with no quotation marks.")
     print("//Enter cy for what's needed to copy and paste to finish a simple program.")
     print("//Enter f for fgets and removal of new line character.")
-    print("//Enter fs for fgets with strlen function to remove newline character.")
     print("//Enter fc for void functions.");
     print("//Enter s for scanf for strings.")
     print("//Enter sb for scanf basic no white spaces.")
@@ -36,23 +35,14 @@ def choice():
 
 
 def string():
-    t = ['printf("', '");']
-    print("//Enter text m for main.")
-    while True:
-        text = input("//")
-        if text == "m":
-            return "" 
-        print("\n" + t[0] + text  + t[1] + "\n")
-
-
-def string_new_line():
     t = ['printf("','\\n','");',]
     print("//Enter text m for main.")
     while True:
         text = input("//")
         if text == "m":
-            return ""
+            break
         print("\n" + t[0] + text + t[1] + t[2] + "\n")
+        print("\n" + t[0] + text + t[2] + "\n")
 
 
 def hide_text():
@@ -77,7 +67,7 @@ def empty_string():
 
 
 def fgets():
-    t = ["fgets(",",","stdin);","[strcspn(",'"\\n"',")]=0;"] 
+    t = ["fgets(",",","stdin);","[strcspn(",'"\\n"',")]=0;","[strlen(", ")-1] = '\\0';"] 
     while True:
         print("//Enter name of variable m for main.")
         v= input("//")
@@ -89,23 +79,10 @@ def fgets():
             return ""
         print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
         print(v + t[3] +  v  + t[1] +  t[4] + t[5] + "\n")
-
-
-def fgets_strlen():
-    t = ["fgets(",",","stdin);","[strlen(", ")-1] = '\\0';"]
-    while True:
-        print("//Enter name of variable m for main.")
-        v= input("//")
-        if v == "m":
-            return ""
-        print("//Enter the memory to be allocated to the variable.")
-        ma = input("//")
-        if ma == "m":
-            return ""
         print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
-        print(v + t[3] +  v  + t[4]  + "\n")
-
-
+        print(v + t[6] +v + t[7] + "\n")
+    
+    
 def scanf():
     t = ['scanf("%','[^\\n]",',");","getchar();"]
 
@@ -501,12 +478,10 @@ def copy():
 
 switch = {
          "ch": choice,
-         "a": string,
-         "b": string_new_line,
+         "b": string,
          "hd": hide_text,
          "c": empty_string,
          "f": fgets,
-         "fs": fgets_strlen,
          "s": scanf,
          "sb": scanf_basic,
          "i": if_statement,
@@ -515,7 +490,7 @@ switch = {
          "im": if_malloc,
          "v": variable,
          "vv": variable_value,
-         "aa": array,
+         "a": array,
          "fc": function,
          "cf": call_function,
          "h": heap,
