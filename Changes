@@ -84,6 +84,7 @@ June 14 2024.
 Fix array out of bounds error in fs.
 The error was fixed within 12 hours of discovery.
 September 1 2024.
-Fgets and strings were consolidated 4 to 2 choices.
+Fgets and strings were consolidated from 4 to 2 choices.
+The choices a and fs were eliminated.
 check f and b in choices.
 September 4 2024.
