@@ -621,6 +621,7 @@ int main(){
  printf("\n%s%s%s%s%s%s\n\n",t[6],t[1],t[3],t[4],name,t[5]);
  printf("\n%s%s%s%s%s    //Use with malloc.\n\n",t[6],t[1],t[3],name,t[5]);
  if(strcmp(repeat,"r")!=0){ 
+ printf("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n}\n\n");
      break;}
 }else if (strcmp(ch,"d")==0){
  printf("\n%s%s%s%s%s%s\n\n",t[0],t[2],t[3],t[4],name,t[5]);
