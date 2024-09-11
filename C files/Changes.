@@ -27,3 +27,5 @@ Check heap to see the code.
 may 16 2014.
 A stand alone malloc file was added. It includes a check malloc option.
 May 18 2024.
+A file was added arrays for ints or doubles. this may be added to the program.
+September 11 2024.
