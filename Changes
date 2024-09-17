@@ -88,6 +88,6 @@ Fgets and strings were consolidated from 4 to 2 choices.
 The choices a and fs were eliminated.
 check f and b in choices.
 September 4 2024.
-Arrays for numbers were added for the C files.
+Arrays for numbers were added to the C files.
 Check ia in choices.
 September 17 2024.
