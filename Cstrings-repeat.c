@@ -8,7 +8,7 @@
 
 void choice(){
  printf("//Enter ch for choices.\n");
- printf("//Enter a for arrays.\n");
+ printf("//Enter a for arrays ia for numbers.\n");
  printf("//Enter b for strings with printf.\n");
  printf("//Enter c for strings with no quotation marks.\n");
  printf("//Enter cy for what's needed to copy and paste to finish a simple program.\n");
@@ -360,6 +360,45 @@ int main(){
  fgets(elements,2000,stdin);
  elements[strcspn(elements,"\n")]=0;
  printf("\n%s%s%s%s%s%s%s%s%s%s\n\n",t[0],name,t[1],ne,t[2],t[1],m,t[3],elements,t[4]);
+ if(strcmp(repeat,"r")!=0){ 
+     break;}
+ }
+}else if (strcmp(sw, "ia")==0){
+        char a [6] [20] = {"int ","double ", "[","]"," = {","};"};
+	char typ [2000];
+	char name [2000];
+	char num [2000];
+	char elements [2000]; 
+
+ while(1){
+ printf("//Enter a data type i for int d for double.\n");
+ printf("//");
+ while(fgets(typ,2000,stdin)){
+      typ[strcspn(typ,"\n")]=0; 
+ if(strcmp(typ,"i")!=0 && strcmp(typ,"d")!=0){ 
+ printf("//Enter i or d.\n");}
+ else{
+     break;}
+ }
+ if(strcmp(typ,"i")==0){
+  strcpy(typ,a[0]);
+ }else if(strcmp(typ,"d")==0){
+  strcpy(typ,a[1]);}
+ printf("//Enter the name of the array m for main.\n");
+ printf("//");
+ fgets(name,2000,stdin);
+ name[strcspn(name,"\n")]=0;
+ if(strcmp(name,"m")==0){
+ break;}
+ printf("//Enter number of elements m for main.\n");
+ printf("//"); 
+ fgets(num,2000,stdin);
+ num[strcspn(num,"\n")]=0;
+ printf("//Enter elements with a comma between them.\n");
+ printf("//");
+ fgets(elements,2000,stdin);
+ elements[strcspn(elements,"\n")]=0;
+ printf("%s%s%s%s%s%s%s%s\n",typ,name,a[2],num,a[3],a[4],elements,a[5]);
  if(strcmp(repeat,"r")!=0){ 
      break;}
  }
