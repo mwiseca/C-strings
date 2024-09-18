@@ -5,7 +5,7 @@
 
 def choice():
     print("//Enter hd for strings hd to hide user input with getpass.")
-    print("//Enter a for arrays.")
+    print("//Enter a for arrays ia for numbers.")
     print("//Enter b for strings.")
     print("//Enter c for strings with no quotation marks.")
     print("//Enter cy for what's needed to copy and paste to finish a simple program.")
@@ -115,7 +115,7 @@ def if_statement():
         print("//Enter the name of the if statement m for main.")
         name = input("//")
         if name == "m":
-          return ""
+            return ""
         print("//Enter a value.")
         value = input("//")
         if value == "m":
@@ -140,39 +140,39 @@ def elif_statement():
 def if_number():
     t = ["if(", "}else if(","strlen"," <= ", " == "," >= "," != ","(",")","){"]
     while True:
-         print("//Enter s for strlen  or i for regular if statement. Enter e for else if.")
-         select = input("//")
-         if select != "s" and select != "i" and select != "e": 
-             print("//Enter s or i or e only.")
-             continue
-         print("//Enter the name of if or else if statement. Enter m for main.")
-         var = input("//")
-         if var == "m":
-             return ""
-         print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal")
-         while True:
-             op = input("//")
+        print("//Enter s for strlen  or i for regular if statement. Enter e for else if.")
+        select = input("//")
+        if select != "s" and select != "i" and select != "e": 
+            print("//Enter s or i or e only.")
+            continue
+        print("//Enter the name of if or else if statement. Enter m for main.")
+        var = input("//")
+        if var == "m":
+            return ""
+        print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal")
+        while True:
+            op = input("//")
         
-             if op != "a" and op != "b" and op != "c" and op != "d":
-                 print("//Enter a or b or c or d only.") 
-             else:
-                 break
-         if op == "a":
-             op = t[3]
-         elif op == "b":
-             op = t[4]
-         elif op == "c":
-             op = t[5]
-         elif op == "d":
-             op = t[6]
-         print("//Enter a number to compare to.")
-         num = input("//")
-         if select == "s":
-             print("\n" + t[0] + t[2] + t[7] + var + t[8] + op + num +  t[9] + "\n")
-         elif select == "i":
-             print("\n" +  t[0] + var + op + num + t[9] +"\n")
-         elif select == "e":
-             print("\n" + t[1] + var + op + num + t[9] + "\n")
+            if op != "a" and op != "b" and op != "c" and op != "d":
+                print("//Enter a or b or c or d only.") 
+            else:
+                break
+        if op == "a":
+            op = t[3]
+        elif op == "b":
+            op = t[4]
+        elif op == "c":
+            op = t[5]
+        elif op == "d":
+            op = t[6]
+        print("//Enter a number to compare to.")
+        num = input("//")
+        if select == "s":
+            print("\n" + t[0] + t[2] + t[7] + var + t[8] + op + num +  t[9] + "\n")
+        elif select == "i":
+            print("\n" +  t[0] + var + op + num + t[9] +"\n")
+        elif select == "e":
+            print("\n" + t[1] + var + op + num + t[9] + "\n")
 
 
 def if_malloc():
@@ -257,7 +257,31 @@ def array():
         print("\n" + t[0] + name + t[1] + elements + t[2] + t[3] + m + t[4] + el + t[5] + "\n")
         
 
-
+def num_array():
+    a = ["int ","double ", "[","]"," = {","};"]
+    while True:
+        print("//Enter a data type i for int d for double.")
+        while True:
+            typ = input("//")
+            if typ != "i" and typ != "d":
+                print("//Enter i or d only.")
+            else:
+                break
+        if typ == "i":
+            typ = a[0]
+        elif typ == "d":
+            typ = a[1]
+        print("//Enter the name of the array m for main.")
+        name = input("//")
+        if name == "m":
+            return ""
+        print("//Enter the number of elements.")
+        num = input("//")
+        print("//Enter the elements with a comma between them.")
+        elements = input("//")
+        print(typ + name + a[2] + num + a[3] + a[4] + elements + a[5]) 
+       
+    
 def function():
     t = ["void ","(","){","}"]
     while True:
@@ -418,18 +442,18 @@ def variable_number():
 def variable_no_value():
     t = ["double ","int ", ";"]
     while True:
-         print("//Choose i for int d for double, m for main.")
-         ch = input("//")
-         if ch == "m":
-             return ""
-         elif ch != "i" and ch != "d":
-             continue
-         print("//Enter the name.")
-         name = input("//")
-         if ch == "i":
-             print("\n" + t[1]+name+t[2] + "\n")
-         elif ch == "d":
-             print("\n" + t[0]+name+t[2] + "\n")
+        print("//Choose i for int d for double, m for main.")
+        ch = input("//")
+        if ch == "m":
+            return ""
+        elif ch != "i" and ch != "d":
+            continue
+        print("//Enter the name.")
+        name = input("//")
+        if ch == "i":
+            print("\n" + t[1]+name+t[2] + "\n")
+        elif ch == "d":
+            print("\n" + t[0]+name+t[2] + "\n")
 
 
 def copy():
@@ -491,6 +515,7 @@ switch = {
          "v": variable,
          "vv": variable_value,
          "a": array,
+         "ia": num_array,
          "fc": function,
          "cf": call_function,
          "h": heap,
