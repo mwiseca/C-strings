@@ -105,11 +105,8 @@ int main(){
 
  while (1){
  v = (char*)malloc(2000* sizeof(char));
- if(v == NULL){
- printf("Error: Insufficient memory.\n");
- exit(1);}
  me = (char*)malloc(2000* sizeof(char));
- if(me == NULL){
+ if(v == NULL || me == NULL){
  printf("Error: Insufficient memory.\n");
  exit(1);}
  printf("//Enter name of variable m for main.\n");
