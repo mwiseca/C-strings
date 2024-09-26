@@ -59,3 +59,8 @@ February 17 2024.
 Check scanf return was added.
 Check sc in choices.
 February 25 2024.
+A new file was added. Cstrings-mapRepeat.malloc.cpp.
+The choices are in C the program to switch is in C++.
+It must be compiled in C++ and uses a map to switch.
+It does not use a long if else if statement to switch.
+September 26 2024.
