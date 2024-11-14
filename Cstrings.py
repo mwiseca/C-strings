@@ -40,7 +40,7 @@ def string():
     while True:
         text = input("//")
         if text == "m":
-            break
+            return ""
         print("\n" + t[0] + text + t[1] + t[2] + "\n")
         print("\n" + t[0] + text + t[2] + "\n")
 
