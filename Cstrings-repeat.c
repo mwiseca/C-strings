@@ -763,7 +763,7 @@ int main() {
             printf("\n");
             printf("} else {\n");
             printf("\n");
-            printf("else{\n");
+            printf("else {\n");
             printf("\n");
             printf("    }\n");
             printf("}\n");
