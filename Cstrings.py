@@ -67,7 +67,7 @@ def empty_string():
 
 
 def fgets():
-    t = ["fgets(",",","stdin);","[strcspn(",'"\\n"',")]=0;","[strlen(", ")-1] = '\\0';"] 
+    t = ["fgets(",",","stdin);","[strcspn(",'"\\n"',")]=0;","[strlen(", ")-1] = '\\0';","while(","      ","stdin)) {"]
     while True:
         print("//Enter name of variable m for main.")
         v= input("//")
@@ -79,6 +79,8 @@ def fgets():
             return ""
         print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
         print(v + t[3] +  v  + t[1] +  t[4] + t[5] + "\n")
+        print("\n" +t[8] + t[0] + v + t[1] + ma + t[1] + t[10])
+        print(t[9] + v + t[3] +  v  + t[1] +  t[4] + t[5] + "\n") 
         print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
         print(v + t[6] +v + t[7] + "\n")
     

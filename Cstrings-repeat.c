@@ -83,7 +83,7 @@ int main() {
                 }
             }
         } else if (strcmp(sw, "f") == 0) {
-            char f[8][15] = {"fgets(", ",", "stdin);", "[strcspn(", "\"\\n", "\")]=0;", "[strlen(", ")-1] = '\\0';"};
+            char f[11][15] = {"fgets(", ",", "stdin);", "[strcspn(", "\"\\n", "\")]=0;", "[strlen(", ")-1] = '\\0';","while(", "      ", "stdin)) {"};
             char v[2000];
             char me[2000];
 
@@ -101,6 +101,8 @@ int main() {
                 me[strcspn(me, "\n")] = 0;
                 printf("\n%s%s%s%s%s%s\n", f[0], v, f[1], me, f[1], f[2]);
                 printf("%s%s%s%s%s%s\n\n", v, f[3], v, f[1], f[4], f[5]);
+                printf("\n%s%s%s%s%s%s%s\n",f[8], f[0], v, f[1], me, f[1], f[10]);
+                printf("%s%s%s%s%s%s%s\n\n",f[9], v, f[3], v, f[1], f[4], f[5]);
                 printf("\n%s%s%s%s%s%s\n", f[0], v, f[1], me, f[1], f[2]);
                 printf("%s%s%s%s\n\n", v, f[6], v, f[7]);
                 if (strcmp(repeat, "r") != 0) {
