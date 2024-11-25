@@ -101,3 +101,5 @@ Cstrings-repeat.c has been formated better for more easer reading of code.
 November 14 2024.
 Cstrings.c has been formated better for more easer reading of code.
 November 14 2024.
+Fgets with a while loop has been added. Check f in choices.
+November 24 2014.
