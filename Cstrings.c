@@ -53,6 +53,7 @@ int main() {
                     break;
                 }
                 printf("\n%s%s%s%s\n\n", string[0], text, string[1], string[2]);
+		printf("\n%s%s%s%s%s%s\n\n", string[0], string[1], text, string[1],string[1], string[2]);
                 printf("%s%s%s\n\n", string[0], text, string[2]);
             }
         } else if (strcmp(sw, "c") == 0) {
@@ -775,7 +776,7 @@ int main() {
         } else if (strcmp(sw, "ch") == 0) {
             choice();
         } else {
-            printf("//Enter a letter in main.\n");
+            printf("//Enter a letter in main.\n\n");
         }
     }
     return 0;
