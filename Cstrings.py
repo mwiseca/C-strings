@@ -43,6 +43,7 @@ def string():
         if text == "m":
             return ""
         print("\n" + t[0] + text + t[1] + t[2] + "\n")
+        print("\n" + t[0] + t[1] + text + t[1] + t[1] + t[2] + "\n")
         print("\n" + t[0] + text + t[2] + "\n")
 
 
@@ -602,7 +603,7 @@ while True:
             break
         (switch[call]())
     except KeyError:
-        print("Enter a letter in choices.")
+        print("Enter a letter in choices.\n")
       
     
     
