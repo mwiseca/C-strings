@@ -876,7 +876,7 @@ int main() {
         } else if (strcmp(sw, "ch") == 0) {
             choice();
         } else {
-            printf("//Enter a letter in Choices.\n\n");
+            printf("//Enter a letter in choices.\n\n");
         }
     }
     return 0;
