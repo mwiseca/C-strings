@@ -23,4 +23,4 @@ I am not accepting pull requests on this project.
 Below is a example of how it works.
 
 
-                                                                              https://github.com/mwiseca/C-strings/blob/main/Image/Example.png
+                                                                            
