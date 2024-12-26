@@ -21,8 +21,3 @@ Select m to go to main and select another choice or exit.
 I am not accepting pull requests on this project.
 # Example 
 Below is a example of how it works.
-
-
-
-[
-](https://github.com/mwiseca/C-strings/tree/cb3ad92a80343e935e7627af594811138c0105fb/Image)
