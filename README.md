@@ -21,6 +21,7 @@ Select m to go to main and select another choice or exit.
 I am not accepting pull requests on this project.
 # Example 
 Below is a example of how it works.
+Click on image to enlarge.
 
 
 
