@@ -19,3 +19,10 @@ To use fgets and if, else if statements   **#include <string.h>**   must be used
 To use    **__fpurge(stdin);**  to flush input buffer  **#include <stdio_ext.h>**    must be used.
 Select m to go to main and select another choice or exit.
 I am not accepting pull requests on this project.
+# Example 
+Below is a example of how it works.
+
+
+
+
+Example.png
