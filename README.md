@@ -9,7 +9,7 @@ This is for learning and checking syntax, not enhancing productivity.
 Two of the files in C files will clear the input buffer for different compilers.
 Some use **__fpurge(stdin);**  others use **fflush(stdin);** They are in C files.
 
-**To Use:**
+##To Use
 To use the Python file, Python must be installed. The C file must be compiled
 before use.
 To use select an option from choices. If b is selected and Hello world. is typed,
@@ -19,7 +19,7 @@ To use fgets and if, else if statements   **#include <string.h>**   must be used
 To use    **__fpurge(stdin);**  to flush input buffer  **#include <stdio_ext.h>**    must be used.
 Select m to go to main and select another choice or exit.
 I am not accepting pull requests on this project.
-# Example 
+## Example 
 Below is a example of how it works.
 Click on the image to enlarge.
 
