@@ -20,8 +20,8 @@ To use    **__fpurge(stdin);**  to flush input buffer  **#include <stdio_ext.h>*
 Select m to go to main and select another choice or exit.
 I am not accepting pull requests on this project.
 ## Example 
-Below is a example of how it works.
-Click on the image to enlarge.
+**Below is a example of how it works. Click on the image to enlarge.**
+
 
 
 
