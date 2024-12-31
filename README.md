@@ -1,9 +1,7 @@
 # C-strings
 Use this to make simple programs related to strings.<br>
 The program comments out almost anything that's not usable in a program.<br>
-This is for learning and checking syntax, not enhancing productivity.<br>
-Two of the files in C files will clear the input buffer for different compilers.<br>
-Some use **__fpurge(stdin);**  others use **fflush(stdin);** They are in C files.<br>
+This is for learning and checking syntax, not enhancing productivity.
 
 ## To Use
 To use the Python file, Python must be installed. The C file must be compiled
