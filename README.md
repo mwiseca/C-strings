@@ -6,11 +6,8 @@ The program comments out almost anything that's not usable in a program.
 The program  makes fgets with removal of new line character
 and makes if and else if statements and variables for strings.
 This is for learning and checking syntax, not enhancing productivity.
-Two of the files in C files will clear the input buffer for different compilers.
-Some use **__fpurge(stdin);**  others use **fflush(stdin);** They are in C files.
 
-**To Use:**
-To use the Python file, Python must be installed. The C file must be compiled
+**To Use:** The C++ files must be compiled
 before use.
 To use select an option from choices. If b is selected and Hello world. is typed,
 printf("Hello world.\n"); will be displayed on the screen.
