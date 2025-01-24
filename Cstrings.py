@@ -16,6 +16,7 @@ def choice():
     print("//Enter si for scanf for integers and doubles.")
     print("//Enter sh for scanf for ints and doubles on the heap.")
     print("//Enter sc for check scanf.")
+    print("//Enter cb for a function that clears input buffer for scanf.");
     print("//Enter h to allocate memory on the heap.")
     print("//Enter hi to allocate int float or double memory on the heap.")
     print("//Enter cm to check malloc.")
@@ -484,6 +485,20 @@ def check_scanf():
         print("\ncontinue;}\n\nbreak;}\n\nexit(1);}\n\n__fpurge(stdin);\n\nfflush(stdin);\n\n}\n\n")
 
 
+def clear_buffer():
+    t = ["void ","(","){","}","();"]
+    while True:
+        print("//Name the function m for main.")
+        name = input("//")
+        if name == "m":
+            break
+        print("\n" + t[0] + name + t[1] + t[2])
+        print("    int clear;");
+        print("    while ((clear = getc(stdin)) != '\\n' && clear != EOF) {");
+        print(t[3] + "\n")
+        print(name + t[4] + "\n")
+
+
 def variable_number():
     t = ["double ","int "," = ", ";", " ;"]
     while True:
@@ -572,6 +587,7 @@ switch = {
          "f": fgets,
          "s": scanf,
          "sb": scanf_basic,
+         "cb": clear_buffer,
          "i": if_statement,
          "e": else_if_statement,
          "mi": multi_if,

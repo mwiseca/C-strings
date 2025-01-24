@@ -20,6 +20,7 @@ void choice() {
     printf("//Enter si for scanf for integers and doubles.\n");
     printf("//Enter sh for scanf for ints and doubles on the heap.\n");
     printf("//Enter sc for check scanf.\n");
+    printf("//Enter cb for a function that clears input buffer for scanf.\n");
     printf("//Enter h to allocate memory on the heap.\n");
     printf("//Enter hi to allocate int double or float memory on the heap.\n");
     printf("//Enter cm to check malloc.\n");
@@ -132,6 +133,26 @@ int main() {
                 fgets(mem, 2000, stdin);
                 mem[strcspn(mem, "\n")] = 0;
                 printf("\n%s%s%s%s%s%s%s\n\n", t[0], t[1], mem, t[2], t[3], var, t[4]);
+            }
+        } else if (strcmp(sw, "cb") == 0) {
+            char t[5][12] = {"void ", "(", "){", "}","();"};
+            char name[2000];
+            char per[2000];
+
+            while (1) {
+                printf("//Name function m for main.\n");
+                printf("//");
+                fgets(name, 2000, stdin);
+                name[strcspn(name, "\n")] = 0;
+            if (strcmp(name, "m") == 0) {
+                break;
+            }
+                printf("\n%s%s%s%s\n", t[0], name, t[1], t[2]);
+                printf("    int clear;\n");   
+                printf("    while ((clear = getc(stdin)) != '\\n' && clear != EOF) {\n");
+                printf("%s%s\n","    ",t[3]);	
+	        printf("%s\n\n",t[3]);
+		printf("%s%s\n\n",name,t[4]); 
             }
         } else if (strcmp(sw, "i") == 0) {
             char f[4][15] = {"if(strcmp(", ",", "\"", ")==0) {"};
