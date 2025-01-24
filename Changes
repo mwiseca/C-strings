@@ -109,3 +109,10 @@ December 21 2024.
 A new string was added with a space above and below the string.
 Check b in Choices.
 December 25 2024.
+A function that clears input buffer was added.
+This is a alternitive to fflush(stdin); and __fpurge(stdin);.
+It works best with scanf.
+Check cb in choices.
+Check else if (strcmp(sw, "cb")==0){ for code.
+Check def flush_buffer(): in the python file for code.
+January 24 2025.
