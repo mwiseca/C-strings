@@ -491,7 +491,7 @@ def clear_buffer():
         print("//Name the function m for main.")
         name = input("//")
         if name == "m":
-            break
+            return ""
         print("\n" + t[0] + name + t[1] + t[2])
         print("    int clear;");
         print("    while ((clear = getc(stdin)) != '\\n' && clear != EOF) {");
