@@ -114,5 +114,5 @@ This is a alternitive to fflush(stdin); and __fpurge(stdin);.
 It works best with scanf.
 Check cb in choices.
 Check else if (strcmp(sw, "cb")==0){ for code.
-Check def flush_buffer(): in the python file for code.
+Check def clear_buffer(): in the python file for code.
 January 24 2025.
