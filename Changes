@@ -1,2 +1,7 @@
 The Concepts and ideas branch is for files that may or may not be merged to main in the future.
 January 29 2025.
+A new file was added CstringsLowMem.c.
+This is for devices with low memory.
+It tells the user when to many characters are entered.
+Minimal memory was allocated to user inputs.
+January 29 2025.
