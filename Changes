@@ -1,4 +1,5 @@
 The Concepts and ideas branch is for files that may or may not be merged to main in the future.
+Files might not be tested as well as ones in main.
 January 29 2025.
 A new file was added CstringsLowMem.c.
 This is for devices with low memory.
