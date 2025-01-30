@@ -311,20 +311,20 @@ int main() {
             }
 	} else if (strcmp(sw, "mi")==0) {
             char t[11][30] = {"if(strcmp(", ",", "} else if(strcmp(", "\"", ")==0", ")!=0", ")==0) {", ")!=0) {", " && ", " || ", "strcmp("};
-            char select[5];
+            char select[100];
             char name[150];
             char value[150];
-            char op[5];
-            char compare[5];
+            char op[100];
+            char compare[100];
             char sname[150];
             char svalue[150];
-            char scompare[5];
+            char scompare[100];
 
             while (1) {
                 printf("//Enter i for if, e for else if.\n");
-                while (fgets(select,5, stdin)) {
+                while (fgets(select,100, stdin)) {
                     select[strcspn(select, "\n")] = 0;
-		    if (strlen(select) >= 4) {
+		    if (strlen(select) >= 99) {
 		        printf("\nYou entered to many characters.\n\n"); 
 			printf("//");
 			clear(); 
@@ -369,9 +369,9 @@ int main() {
                 }  
                 printf("//Enter a comparison a for equal b for not equal.\n");
                 printf("//");
-                while (fgets(compare, 5, stdin)) {
+                while (fgets(compare, 100, stdin)) {
                        compare[strcspn(compare, "\n")] = 0;
-		    if (strlen(compare) >= 4) {
+		    if (strlen(compare) >= 99) {
 		        printf("\nYou entered to many characters.\n\n"); 
 			printf("//");
 			clear(); 
@@ -388,9 +388,9 @@ int main() {
                 }
                 printf("//Enter a operator a for and o for or.\n");
                 printf("//");
-                while (fgets(op, 5, stdin)) {
+                while (fgets(op, 100, stdin)) {
                       op[strcspn(op, "\n")] = 0;
-		    if (strlen(op) >= 4) {
+		    if (strlen(op) >= 99) {
 		        printf("\nYou entered to many characters.\n\n"); 
 			printf("//");
 			clear(); 
@@ -431,9 +431,9 @@ int main() {
                 }	                
                 printf("Enter a second comparison a for equal b for not equal\n");
                 printf("//");
-                while (fgets(scompare, 5, stdin)) {
+                while (fgets(scompare, 100, stdin)) {
                     scompare[strcspn(scompare, "\n")] = 0;
-		    if (strlen(scompare) >= 4) {
+		    if (strlen(scompare) >= 99) {
 		        printf("\nYou entered to many characters.\n\n"); 
 			printf("//");
 			clear(); 
@@ -452,16 +452,16 @@ int main() {
             } 
         } else if (strcmp(sw, "in") == 0) {
             char t[10][20] = {"if(", "} else if(", "strlen", " <= ", " == ", " >= ", " != ", "(", ")", ") {"};
-            char select[5];
+            char select[100];
             char var[150];
-            char op[5];
+            char op[100];
             char num[150];
             while (1) {
                 printf("//Enter s for strlen  or i for regular if statement. Enter e for else if.\n");
                 printf("//");
-                while (fgets(select,5, stdin)) {
+                while (fgets(select,100, stdin)) {
                     select[strcspn(select, "\n")] = 0;
-		    if (strlen(select) >= 4) {
+		    if (strlen(select) >= 99) {
 		        printf("\nYou entered to many characters.\n\n"); 
 			printf("//");
 			clear(); 
@@ -487,9 +487,9 @@ int main() {
                 }
                 printf("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal\n");
                 printf("//");
-                while (fgets(op, 5, stdin)) {
+                while (fgets(op, 100, stdin)) {
                     op[strcspn(op, "\n")] = 0;
-		    if (strlen(op) >= 4) {
+		    if (strlen(op) >= 99) {
 		        printf("\nYou entered to many characters.\n\n"); 
 			printf("//");
 			clear(); 
@@ -532,7 +532,7 @@ int main() {
             char t[9][20] = {"if(*", "} else if(*", " <= ", " == ", " >= ", " != ", "(", ")", ") {"};
             char select[150];
             char var[150];
-            char op[5];
+            char op[100];
             char num[150];
             while (1) {
                 printf("//Enter i for if statement. Enter e for else if.\n");
@@ -566,9 +566,9 @@ int main() {
                 }
                 printf("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal\n");
                 printf("//");
-                while (fgets(op, 5, stdin)) {
+                while (fgets(op, 100, stdin)) {
                     op[strcspn(op, "\n")] = 0;
-		    if (strlen(op) >= 4) {
+		    if (strlen(op) >= 99) {
 		        printf("\nYou entered to many characters.\n\n"); 
 			printf("//");
 			clear(); 
