@@ -6,3 +6,8 @@ This is for devices with low memory.
 It tells the user when to many characters are entered.
 Minimal memory was allocated to user inputs.
 January 29 2025.
+A new file was added CstringsLowMemCmap.cpp.
+It uses a C++ map instead a if else if statement
+to switch functions.
+January 31 2025.
+
