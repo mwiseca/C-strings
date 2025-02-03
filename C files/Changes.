@@ -39,3 +39,7 @@ November 14 2024.
 A stand alone multiconditions file has been added.
 It makes if and else if statements with 2 conditions.
 December 20 2024.
+Cstrings limit.c was added to C files.
+It limits the size of all user inputs
+for devices with very low memory.
+febuary 2 2025.
