@@ -116,3 +116,6 @@ Check cb in choices.
 Check else if (strcmp(sw, "cb")==0){ for code.
 Check def clear_buffer(): in the Python file for code.
 January 24 2025.
+A fgetsScanf was added to C files. It allocates low memory and uses a while loop in function to flush input buffer.
+It uses scanf that tells the user if wrong data type is entered. There is comment explaining how it works.
+Febuary 8 2025.
