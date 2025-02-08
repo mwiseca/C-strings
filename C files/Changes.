@@ -43,3 +43,6 @@ Cstrings limit.c was added to C files.
 It limits the size of all user inputs
 for devices with very low memory.
 febuary 2 2025.
+A fgetsScanf was added. It allocates low memory and uses a while loop in function to flush input buffer.
+It uses scanf that tells the user if wrong data type is entered. There is comment explaining how it works.
+Febuary 8 2025.
