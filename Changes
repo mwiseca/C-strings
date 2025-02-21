@@ -118,3 +118,6 @@ Check def clear_buffer(): in the Python file for code.
 January 24 2025.
 A fgetsScanf was added to C files.
 Febuary 8 2025.
+A brace was added to close while loop in cb Python file.
+Check def clear_buffer(): in code.
+Febuary 21 2025.
