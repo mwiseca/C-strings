@@ -494,7 +494,8 @@ def clear_buffer():
             return ""
         print("\n" + t[0] + name + t[1] + t[2])
         print("    int clear;");
-        print("    while ((clear = getc(stdin)) != '\\n' && clear != EOF) {");
+        print("    while ((clear = getc(stdin)) != '\\n' && clear != EOF) {")
+        print("    " + t[3])
         print(t[3] + "\n")
         print(name + t[4] + "\n")
 
