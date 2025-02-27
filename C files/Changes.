@@ -46,6 +46,6 @@ febuary 2 2025.
 A fgetsScanf was added. It allocates low memory and uses a while loop in function to flush input buffer.
 It uses scanf that tells the user if wrong data type is entered. There is comment explaining how it works.
 Febuary 8 2025.
-The s and sb choices have been changed so user must add a number to limmit size on scanf for strings.
+CstringsLimmit.c has been changed so users must add a number to limmit size on scanf for strings.
 Check s and sb in Choices.
 Febuary 27 2025.
