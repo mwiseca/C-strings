@@ -982,9 +982,7 @@ int main() {
                 }
             }
         } else if (strcmp(sw, "sh") == 0) {
-            char t[6][15] = {
-                "scanf(\"", "\%d\"", "\%lf\"", ",", ");", "\%f\"",
-            };
+            char t[6][15] = {"scanf(\"", "\%d\"", "\%lf\"", ",", ");", "\%f\"",};
             char ch[125];
             char name[125];
             while (1) {
