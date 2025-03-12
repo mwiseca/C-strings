@@ -49,3 +49,6 @@ Febuary 8 2025.
 CstringsLimmit.c has been changed so users must add a number to limmit size on scanf for strings.
 Check s and sb in Choices.
 Febuary 27 2025.
+CstringsLimit.c has been changed to allow for easer changing Memory size for most user inputs.
+It uses #define SIZE and define MAX.
+March 12 2025.
