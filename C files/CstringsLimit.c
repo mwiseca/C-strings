@@ -608,6 +608,9 @@ int main() {
                 printf("//");
                 fgets(value,SIZE,stdin);
                 value[strcspn(value, "\n")] = 0;
+		if (strlen(value) >= MAX) {
+                    clear();
+                }
                 printf("\n%s%s%s%s%s%s%s%s%s%s\n\n", v[0], name, v[1], mem, v[2], v[3], v[4], value, v[4], v[5]);
                 if (strcmp(repeat, "r") != 0) {
                     break;
