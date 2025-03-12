@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#define SIZE 100
+#define MAX 99
  
     void clear(){
     int clear;     
@@ -65,13 +67,13 @@ int main() {
         }
         if (strcmp(sw, "b") == 0) {
             char string[3][15] = {"printf(\"", "\\n", "\");"};
-            char text[125];
+            char text[SIZE];
             printf("//Enter your string, m for main.\n");
             while (1) {
                 printf("//");
-                fgets(text, 125, stdin);
+                fgets(text, SIZE, stdin);
                 text[strcspn(text, "\n")] = 0;
-                if (strlen(text) >= 124) {
+                if (strlen(text) >= MAX) {
                     clear();
                 }
                 if (strcmp(text, "m") == 0) {
@@ -86,14 +88,14 @@ int main() {
             }
         } else if (strcmp(sw, "c") == 0) {
             char t[2][12] = {"printf(", ");"};
-            char text[125];
+            char text[SIZE];
 
             printf("//Enter text m for main.\n");
             while (1) {
                 printf("//");
-                fgets(text,125, stdin);
+                fgets(text,SIZE, stdin);
                 text[strcspn(text, "\n")] = 0;
-                if (strlen(text) >= 124) {
+                if (strlen(text) >= MAX) {
                     clear();
                 }
                 if (strcmp(text, "m") == 0) {
@@ -106,15 +108,15 @@ int main() {
             }
         } else if (strcmp(sw, "f") == 0) {
             char f[11][15] = {"fgets(", ",", "stdin);", "[strcspn(", "\"\\n", "\")]=0;", "[strlen(", ")-1] = '\\0';","while(", "      ", "stdin)) {"};
-            char v[125];
-            char me[125];
+            char v[SIZE];
+            char me[SIZE];
 
             while (1) {
                 printf("//Enter name of variable m for main.\n");
                 printf("//");
-                fgets(v,125,stdin);
+                fgets(v,SIZE,stdin);
                 v[strcspn(v, "\n")] = 0;
-                if (strlen(v) >= 124) {
+                if (strlen(v) >= MAX) {
                     clear();
                 }
                 if (strcmp(v, "m") == 0) {
@@ -122,9 +124,9 @@ int main() {
                 }
                 printf("//Enter the memory to be allocated to the variable.\n");
                 printf("//");
-                fgets(me,125,stdin);
+                fgets(me,SIZE,stdin);
                 me[strcspn(me, "\n")] = 0;
-                if (strlen(me) >= 124) {
+                if (strlen(me) >= MAX) {
                     clear();
                 }
                 printf("\n%s%s%s%s%s%s\n", f[0], v, f[1], me, f[1], f[2]);
@@ -139,16 +141,16 @@ int main() {
             }
         } else if (strcmp(sw, "s") == 0) {
             char t[6][15] = {"scanf(\"", "%", "[^\\n]\"", ",", ");", "getchar();"};
-	    char var[125];
+	    char var[SIZE];
 	    char mem[10];
 	    int m;
 
 	    while (1) {
 		printf("//Enter the name of variable m for main.\n");
 		printf("//");
-		fgets(var,125, stdin);
+		fgets(var,SIZE, stdin);
 		var[strcspn(var, "\n")] = 0;
-		if (strlen(var) >= 124) {
+		if (strlen(var) >= MAX) {
 		    clear();
 		}
 		if (strcmp(var, "m") == 0) {
@@ -176,16 +178,16 @@ int main() {
 	    }
         } else if (strcmp(sw, "sb") == 0) {
             char t[5][15] = {"scanf(\"", "%", "s\"", ", ", ");"};
-	    char var[125];
+	    char var[SIZE];
 	    char mem[10];
 	    int m;
 
 	    while (1) {
 		printf("//Enter the name of variable m for main.\n");
 		printf("//");
-		fgets(var,125, stdin);
+		fgets(var,SIZE, stdin);
 		var[strcspn(var, "\n")] = 0;
-		if (strlen(var) >= 124) {
+		if (strlen(var) >= MAX) {
 		    clear();
 		}
 		if (strcmp(var, "m") == 0) {
@@ -212,14 +214,14 @@ int main() {
 	    }            
         } else if (strcmp(sw, "cb") == 0) {
             char t[5][12] = {"void ", "(", "){", "}","();"};
-            char name[125];
+            char name[SIZE];
             
             while (1) {
                 printf("//Name function m for main.\n");
                 printf("//");
-                fgets(name,125, stdin);
+                fgets(name,SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(name, "m") == 0) {
@@ -237,15 +239,15 @@ int main() {
             }	
         } else if (strcmp(sw, "i") == 0) {
             char f[4][15] = {"if(strcmp(", ",", "\"", ")==0) {"};
-            char name[125];
-            char value[125];
+            char name[SIZE];
+            char value[SIZE];
 
             while (1) {
                 printf("//Enter name of the if statement m for main.\n");
                 printf("//");
-                fgets(name,125,stdin);
+                fgets(name,SIZE,stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(name, "m") == 0) {
@@ -253,9 +255,9 @@ int main() {
                 }
                 printf("//Enter the value.\n");
                 printf("//");
-                fgets(value,125,stdin);
+                fgets(value,SIZE,stdin);
                 value[strcspn(value, "\n")] = 0;
-                if (strlen(value) >= 124) {
+                if (strlen(value) >= MAX) {
                     clear();
                 }
                 printf("\n%s%s%s%s%s%s%s\n\n", f[0], name, f[1], f[2], value, f[2], f[3]);
@@ -265,15 +267,15 @@ int main() {
             }
         } else if (strcmp(sw, "e") == 0) {
             char f[4][18] = {"} else if(strcmp(", ",", "\"", ")==0) {"};
-            char name[125];
-            char value[125];
+            char name[SIZE];
+            char value[SIZE];
 
             while (1) {
                 printf("//Enter name of the else if statement m for main.\n");
                 printf("//");
-                fgets(name,125, stdin);
+                fgets(name,SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(name, "m") == 0) {
@@ -281,9 +283,9 @@ int main() {
                 }
                 printf("//Enter the value.\n");
                 printf("//");
-                fgets(value,125, stdin);
+                fgets(value,SIZE, stdin);
                 value[strcspn(value, "\n")] = 0;
-                if (strlen(value) >= 124) {
+                if (strlen(value) >= MAX) {
                     clear();
                 }
                 printf("\n%s%s%s%s%s%s%s\n\n", f[0], name, f[1], f[2], value, f[2], f[3]);
@@ -293,20 +295,20 @@ int main() {
             }
         } else if (strcmp(sw, "mi") == 0) {
             char t[11][30] = {"if(strcmp(", ",", "} else if(strcmp(", "\"", ")==0", ")!=0", ")==0) {", ")!=0) {", " && ", " || ", "strcmp("};
-            char select[125];
-            char name[125];
-            char value[125];
-            char op[125];
-            char compare[125];
-            char sname[125];
-            char svalue[125];
-            char scompare[125];
+            char select[SIZE];
+            char name[SIZE];
+            char value[SIZE];
+            char op[SIZE];
+            char compare[SIZE];
+            char sname[SIZE];
+            char svalue[SIZE];
+            char scompare[SIZE];
 
             while (1) {
                 printf("//Enter i for if, e for else if.\n");
-                while (fgets(select,125, stdin)) {
+                while (fgets(select,SIZE, stdin)) {
                     select[strcspn(select, "\n")] = 0;
-                    if (strlen(select) >= 124) {
+                    if (strlen(select) >= MAX) {
                         clear();
                     }
                     if (strcmp(select, "i") != 0 && strcmp(select, "e") != 0) {
@@ -322,9 +324,9 @@ int main() {
                 }
 		printf("//Enter a name of first m for main.\n");
 		printf("//");
-		fgets(name,125, stdin);
+		fgets(name,SIZE, stdin);
 		name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
 		if (strcmp(name, "m") == 0) {
@@ -332,16 +334,16 @@ int main() {
                 }
 		printf("//Enter a value.\n");
 		printf("//");
-		fgets(value, 125, stdin);
+		fgets(value, SIZE, stdin);
 		value[strcspn(value, "\n")] = 0;
-                if (strlen(value) >= 124) {
+                if (strlen(value) >= MAX) {
                     clear();
                 }
 		printf("//Enter a comparison a for equal b for not equal.\n");
 		printf("//");
-                while (fgets(compare,125, stdin)) {
+                while (fgets(compare,SIZE, stdin)) {
                        compare[strcspn(compare, "\n")] = 0;
-                    if (strlen(compare) >= 124) {
+                    if (strlen(compare) >= MAX) {
                         clear();
                     }
                     if (strcmp(compare, "a") != 0 && strcmp(compare, "b") != 0) {
@@ -357,9 +359,9 @@ int main() {
                 }
 		printf("//Enter a operator a for and o for or.\n");
 		printf("//");
-		while (fgets(op,125, stdin)) {
+		while (fgets(op,SIZE, stdin)) {
 		      op[strcspn(op, "\n")] = 0;
-                    if (strlen(op) >= 124) {
+                    if (strlen(op) >= MAX) {
                         clear();
                     }
                     if (strcmp(op, "a") != 0 && strcmp(op, "o") != 0) {
@@ -375,23 +377,23 @@ int main() {
                 }
 		printf("//Enter the second name,\n");
 		printf("//");
-		fgets(sname,125, stdin);
+		fgets(sname,SIZE, stdin);
 		sname[strcspn(sname, "\n")] = 0;
-                if (strlen(sname) >= 124) {
+                if (strlen(sname) >= MAX) {
                     clear();
                 }
 		printf("Enter the second value.\n");
 		printf("//");
-		fgets(svalue,125,stdin);
+		fgets(svalue,SIZE,stdin);
 		svalue[strcspn(svalue, "\n")] = 0;
-                if (strlen(svalue) >= 124) {
+                if (strlen(svalue) >= MAX) {
                     clear();
                 }
 		printf("Enter a second comparison a for equal b for not equal\n");
 		printf("//");
-		while (fgets(scompare,125,stdin)) {
+		while (fgets(scompare,SIZE,stdin)) {
                       scompare[strcspn(scompare, "\n")] = 0;
-                    if (strlen(scompare) >= 124) {
+                    if (strlen(scompare) >= MAX) {
                         clear();
 		    }	
 		    if (strcmp(scompare, "a") != 0 && strcmp(scompare, "b") != 0) {
@@ -412,16 +414,16 @@ int main() {
             }	
         } else if (strcmp(sw, "in") == 0) {
             char t[10][20] = {"if(", "} else if(", "strlen", " <= ", " == ", " >= ", " != ", "(", ")", ") {"};
-            char select[125];
-            char var[125];
-            char op[125];
-            char num[125];
+            char select[SIZE];
+            char var[SIZE];
+            char op[SIZE];
+            char num[SIZE];
             while (1) {
                 printf("//Enter s for strlen  or i for regular if statement. Enter e for else if.\n");
                 printf("//");
-                fgets(select,125,stdin);
+                fgets(select,SIZE,stdin);
                 select[strcspn(select, "\n")] = 0;
-                if (strlen(select) >= 124) {
+                if (strlen(select) >= MAX) {
                     clear();
                 }
                 if (strcmp(select, "s") != 0 && strcmp(select, "i") != 0 && strcmp(select, "e") != 0) {
@@ -429,9 +431,9 @@ int main() {
                     continue;
                 }
                 printf("//Enter the name of if or else if statement  enter m for main.\n");
-                fgets(var,125,stdin);
+                fgets(var,SIZE,stdin);
                 var[strcspn(var, "\n")] = 0;
-                if (strlen(var) >= 124) {
+                if (strlen(var) >= MAX) {
                     clear();
                 }
                 if (strcmp(var, "m") == 0) {
@@ -439,9 +441,9 @@ int main() {
                 }
                 printf("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal\n");
                 printf("//");
-                while (fgets(op,125, stdin)) {
+                while (fgets(op,SIZE, stdin)) {
                     op[strcspn(op, "\n")] = 0;
-                    if (strlen(op) >= 124) {
+                    if (strlen(op) >= MAX) {
                         clear();
                     }
                     if (strcmp(op, "a") != 0 && strcmp(op, "b") != 0 && strcmp(op, "c") != 0 && strcmp(op, "d") != 0) {
@@ -461,9 +463,9 @@ int main() {
                 }
                 printf("//Enter a number to compare to.\n");
                 printf("//");
-                fgets(num, 125, stdin);
+                fgets(num, SIZE, stdin);
                 num[strcspn(num, "\n")] = 0;
-                if (strlen(num) >= 124) {
+                if (strlen(num) >= MAX) {
                     clear();
                 }
                 if (strcmp(select, "s") == 0) {
@@ -485,16 +487,16 @@ int main() {
             }
         } else if (strcmp(sw, "im") == 0) {
             char t[9][20] = {"if(*", "} else if(*", " <= ", " == ", " >= ", " != ", "(", ")", ") {"};
-            char select[125];
-            char var[125];
-            char op[125];
-            char num[125];
+            char select[SIZE];
+            char var[SIZE];
+            char op[SIZE];
+            char num[SIZE];
             while (1) {
                 printf("//Enter i for if statement. Enter e for else if.\n");
                 printf("//");
-                fgets(select,125,stdin);
+                fgets(select,SIZE,stdin);
                 select[strcspn(select, "\n")] = 0;
-                if (strlen(select) >= 124) {
+                if (strlen(select) >= MAX) {
                     clear();
                 }
                 if (strcmp(select, "i") != 0 && strcmp(select, "e") != 0) {
@@ -502,9 +504,9 @@ int main() {
                     continue;
                 }
                 printf("//Enter the name of if or else if statement  enter m for main.\n");
-                fgets(var,125,stdin);
+                fgets(var,SIZE,stdin);
                 var[strcspn(var, "\n")] = 0;
-                if (strlen(var) >= 124) {
+                if (strlen(var) >= MAX) {
                     clear();
                 }
                 if (strcmp(var, "m") == 0) {
@@ -512,9 +514,9 @@ int main() {
                 }
                 printf("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal\n");
                 printf("//");
-                while (fgets(op,125,stdin)) {
+                while (fgets(op,SIZE,stdin)) {
                     op[strcspn(op, "\n")] = 0;
-                    if (strlen(op) >= 124) {
+                    if (strlen(op) >= MAX) {
                         clear();
                     }
                     if (strcmp(op, "a") != 0 && strcmp(op, "b") != 0 && strcmp(op, "c") != 0 && strcmp(op, "d") != 0) {
@@ -534,9 +536,9 @@ int main() {
                 }
                 printf("//Enter a number to compare to.\n");
                 printf("//");
-                fgets(num,125,stdin);
+                fgets(num,SIZE,stdin);
                 num[strcspn(num, "\n")] = 0;
-                if (strlen(num) >= 124) {
+                if (strlen(num) >= MAX) {
                     clear();
                 }
                 if (strcmp(select, "i") == 0) {
@@ -553,15 +555,15 @@ int main() {
             }
         } else if (strcmp(sw, "v") == 0) {
             char f[3][15] = {"char ", " [", "];"};
-            char name[125];
-            char mem[125];
+            char name[SIZE];
+            char mem[SIZE];
 
             while (1) {
                 printf("//Enter name of variable m for main.\n");
                 printf("//");
-                fgets(name,125,stdin);
+                fgets(name,SIZE,stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(name, "m") == 0) {
@@ -569,9 +571,9 @@ int main() {
                 }
                 printf("//Enter the memory to be allocated to the variable.\n");
                 printf("//");
-                fgets(mem,125,stdin);
+                fgets(mem,SIZE,stdin);
                 mem[strcspn(mem, "\n")] = 0;
-                if (strlen(mem) >= 124) {
+                if (strlen(mem) >= MAX) {
                     clear();
                 }
                 printf("\n%s%s%s%s%s\n\n", f[0], name, f[1], mem, f[2]);
@@ -581,15 +583,15 @@ int main() {
             }
         } else if (strcmp(sw, "vv") == 0) {
             char v[6][15] = {"char ", "[", "]", " = ", "\"", ";"};
-            char name[125];
-            char mem[125];
-            char value[125];
+            char name[SIZE];
+            char mem[SIZE];
+            char value[SIZE];
             while (1) {
                 printf("//Enter a name of variable m for main.\n");
                 printf("//");
-                fgets(name,125,stdin);
+                fgets(name,SIZE,stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(name, "m") == 0) {
@@ -597,14 +599,14 @@ int main() {
                 }
                 printf("//Enter the amount of memory to allocate or press enter to not allocate m for main.\n");
                 printf("//");
-                fgets(mem,125,stdin);
+                fgets(mem,SIZE,stdin);
                 mem[strcspn(mem, "\n")] = 0;
-                if (strlen(mem) >= 124) {
+                if (strlen(mem) >= MAX) {
                     clear();
                 }
                 printf("//enter a value\n");
                 printf("//");
-                fgets(value,125,stdin);
+                fgets(value,SIZE,stdin);
                 value[strcspn(value, "\n")] = 0;
                 printf("\n%s%s%s%s%s%s%s%s%s%s\n\n", v[0], name, v[1], mem, v[2], v[3], v[4], value, v[4], v[5]);
                 if (strcmp(repeat, "r") != 0) {
@@ -613,16 +615,16 @@ int main() {
             }
         } else if (strcmp(sw, "a") == 0) {
             char t[5][15] = {"char ", " [", "] ", "] = {", "};"};
-            char name[125];
-            char ne[125];
-            char m[125];
-            char elements[125];
+            char name[SIZE];
+            char ne[SIZE];
+            char m[SIZE];
+            char elements[SIZE];
             while (1) {
                 printf("//Enter the name of array m for main.\n");
                 printf("//");
-                fgets(name,125,stdin);
+                fgets(name,SIZE,stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(name, "m") == 0) {
@@ -630,23 +632,23 @@ int main() {
                 }
                 printf("//Enter the amount of elements.\n");
                 printf("//");
-                fgets(ne,125,stdin);
+                fgets(ne,SIZE,stdin);
                 ne[strcspn(ne, "\n")] = 0;
-                if (strlen(ne) >= 124) {
+                if (strlen(ne) >= MAX) {
                     clear();
                 }
                 printf("//Enter memory allocated to elements.\n");
                 printf("//");
-                fgets(m,125,stdin);
+                fgets(m,SIZE,stdin);
                 m[strcspn(m, "\n")] = 0;
-                if (strlen(m) >= 124) {
+                if (strlen(m) >= MAX) {
                     clear();
                 }
                 printf("//Enter elements with quotations and commas between each.\n");
                 printf("//");
-                fgets(elements,125,stdin);
+                fgets(elements,SIZE,stdin);
                 elements[strcspn(elements, "\n")] = 0;
-                if (strlen(elements) >= 124) {
+                if (strlen(elements) >= MAX) {
                     clear();
                 }
                 printf("\n%s%s%s%s%s%s%s%s%s%s\n\n", t[0], name, t[1], ne, t[2], t[1], m, t[3], elements, t[4]);
@@ -656,17 +658,17 @@ int main() {
             }
         } else if (strcmp(sw, "ia") == 0) {
             char a[6][20] = {"int ", "double ", "[", "]", " = {", "};"};
-            char typ[125];
-            char name[125];
-            char num[125];
-            char elements[125];
+            char typ[SIZE];
+            char name[SIZE];
+            char num[SIZE];
+            char elements[SIZE];
 
             while (1) {
                 printf("//Enter a data type i for int d for double.\n");
                 printf("//");
-                while (fgets(typ, 125, stdin)) {
+                while (fgets(typ, SIZE, stdin)) {
                     typ[strcspn(typ, "\n")] = 0;
-                    if (strlen(typ) >= 124) {
+                    if (strlen(typ) >= MAX) {
                         clear();
                     }
                     if (strcmp(typ, "i") != 0 && strcmp(typ, "d") != 0) {
@@ -682,9 +684,9 @@ int main() {
                 }
                 printf("//Enter the name of the array m for main.\n");
                 printf("//");
-                fgets(name, 125, stdin);
+                fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(name, "m") == 0) {
@@ -692,16 +694,16 @@ int main() {
                 }
                 printf("//Enter number of elements m for main.\n");
                 printf("//");
-                fgets(num, 125, stdin);
+                fgets(num, SIZE, stdin);
                 num[strcspn(num, "\n")] = 0;
-                if (strlen(num) >= 124) {
+                if (strlen(num) >= MAX) {
                     clear();
                 }
                 printf("//Enter elements with a comma between them.\n");
                 printf("//");
-                fgets(elements, 125, stdin);
+                fgets(elements, SIZE, stdin);
                 elements[strcspn(elements, "\n")] = 0;
-                if (strlen(elements) >= 124) {
+                if (strlen(elements) >= MAX) {
                     clear();
                 }
                 printf("%s%s%s%s%s%s%s%s\n", typ, name, a[2], num, a[3], a[4], elements, a[5]);
@@ -711,15 +713,15 @@ int main() {
             }
         } else if (strcmp(sw, "fc") == 0) {
             char t[4][12] = {"void ", "(", "){", "}"};
-            char name[125];
-            char per[125];
+            char name[SIZE];
+            char per[SIZE];
 
             while (1) {
                 printf("//Name function m for main.\n");
                 printf("//");
-                fgets(name, 125, stdin);
+                fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(name, "m") == 0) {
@@ -727,9 +729,9 @@ int main() {
                 }
                 printf("//Enter parameters.\n");
                 printf("//");
-                fgets(per, 125, stdin);
+                fgets(per, SIZE, stdin);
                 per[strcspn(per, "\n")] = 0;
-                if (strlen(per) >= 124) {
+                if (strlen(per) >= MAX) {
                     clear();
                 }
                 printf("\n%s%s%s%s%s\n\n\n%s\n\n", t[0], name, t[1], per, t[2], t[3]);
@@ -739,14 +741,14 @@ int main() {
             }
         } else if (strcmp(sw, "cf") == 0) {
             char t[2][12] = {"(", ");"};
-            char name[125];
-            char per[125];
+            char name[SIZE];
+            char per[SIZE];
             while (1) {
                 printf("//Enter the name of function m for main.\n");
                 printf("//");
-                fgets(name, 125, stdin);
+                fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(name, "m") == 0) {
@@ -754,9 +756,9 @@ int main() {
                 }
                 printf("//Enter values for parameters.\n");
                 printf("//");
-                fgets(per, 125, stdin);
+                fgets(per, SIZE, stdin);
                 per[strcspn(per, "\n")] = 0;
-                if (strlen(per) >= 124) {
+                if (strlen(per) >= MAX) {
                     clear();
                 }
                 printf("\n%s%s%s%s\n\n", name, t[0], per, t[1]);
@@ -766,15 +768,15 @@ int main() {
             }
         } else if (strcmp(sw, "h") == 0) {
             char t[9][18] = {"char", " *", ";", " = (char*)malloc", "(", ");", "* sizeof(char));", "free", " = NULL;"};
-            char name[125];
-            char mem[125];
+            char name[SIZE];
+            char mem[SIZE];
 
             while (1) {
                 printf("//Enter the name of the variable m for main.\n");
                 printf("//");
-                fgets(name, 125, stdin);
+                fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(name, "m") == 0) {
@@ -782,9 +784,9 @@ int main() {
                 }
                 printf("//Enter memory to allocate.\n");
                 printf("//");
-                fgets(mem, 125, stdin);
+                fgets(mem, SIZE, stdin);
                 mem[strcspn(mem, "\n")] = 0;
-                if (strlen(mem) >= 124) {
+                if (strlen(mem) >= MAX) {
                     clear();
                 }
                 printf("\n");
@@ -799,15 +801,15 @@ int main() {
             }
         } else if (strcmp(sw, "hi") == 0) {
             char t[15][20] = {"int", " *", ";", " = (int*)malloc", "(",");", "* sizeof(int));", "free", " = NULL;", "double", "float", " = (double*)malloc", " = (float*)malloc", "* sizeof(double));", "* sizeof(float));"};                 
-            char name[125];
-            char mem[125];
+            char name[SIZE];
+            char mem[SIZE];
 
             while (1) {
                 printf("//Enter the name of the variable m for main.\n");
                 printf("//");
-                fgets(name, 125, stdin);
+                fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(name, "m") == 0) {
@@ -815,9 +817,9 @@ int main() {
                 }
                 printf("//Enter memory to allocate.\n");
                 printf("//");
-                fgets(mem, 125, stdin);
+                fgets(mem, SIZE, stdin);
                 mem[strcspn(mem, "\n")] = 0;
-                if (strlen(mem) >= 124) {
+                if (strlen(mem) >= MAX) {
                     clear();
                 }
                 printf("\n");
@@ -835,14 +837,14 @@ int main() {
             }
         } else if (strcmp(sw, "cm") == 0) {
             char t[6][18] = {"if(", " == NULL){", "    printf(\"", "\\n", "\");", "    exit(1);}"};
-            char name[125];
-            char em[125];
+            char name[SIZE];
+            char em[SIZE];
             while (1) {
                 printf("//Enter the name m for main.\n");
                 printf("//");
-                fgets(name, 125, stdin);
+                fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(name, "m") == 0) {
@@ -850,9 +852,9 @@ int main() {
                 }
                 printf("//Enter an error message.\n");
                 printf("//");
-                fgets(em, 125, stdin);
+                fgets(em, SIZE, stdin);
                 em[strcspn(em, "\n")] = 0;
-                if (strlen(em) >= 124) {
+                if (strlen(em) >= MAX) {
                     clear();
                 }
                 printf("\n%s%s%s\n", t[0], name, t[1]);
@@ -864,15 +866,15 @@ int main() {
             }
         } else if (strcmp(sw, "vi") == 0) {
             char t[5][15] = {"double ", "int ", " = ", ";", " ;"};
-            char ch[125];
-            char name[125];
-            char value[125];
+            char ch[SIZE];
+            char name[SIZE];
+            char value[SIZE];
             while (1) {
                 printf("//Choose i for int d for double, m for main.\n");
                 printf("//");
-                fgets(ch, 125, stdin);
+                fgets(ch, SIZE, stdin);
                 ch[strcspn(ch, "\n")] = 0;
-                if (strlen(ch) >= 124) {
+                if (strlen(ch) >= MAX) {
                     clear();
                 }
                 if (strcmp(ch, "m") == 0) {
@@ -883,16 +885,16 @@ int main() {
                 }
                 printf("Enter the name.\n");
                 printf("//");
-                fgets(name, 125, stdin);
+                fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 printf("Enter a value.\n");
                 printf("//");
-                fgets(value, 125, stdin);
+                fgets(value, SIZE, stdin);
                 value[strcspn(value, "\n")] = 0;
-                if (strlen(value) >= 124) {
+                if (strlen(value) >= MAX) {
                     clear();
                 }
                 if (strcmp(ch, "i") == 0) {
@@ -909,14 +911,14 @@ int main() {
             }
         } else if (strcmp(sw, "vn") == 0) {
             char t[3][15] = {"double ", "int ", ";"};
-            char ch[125];
-            char name[125];
+            char ch[SIZE];
+            char name[SIZE];
             while (1) {
                 printf("//Choose i for int d for double, m for main.\n");
                 printf("//");
-                fgets(ch, 125, stdin);
+                fgets(ch, SIZE, stdin);
                 ch[strcspn(ch, "\n")] = 0;
-                if (strlen(ch) >= 124) {
+                if (strlen(ch) >= MAX) {
                     clear();
                 }
                 if (strcmp(ch, "m") == 0) {
@@ -927,9 +929,9 @@ int main() {
                 }
                 printf("Enter the name.\n");
                 printf("//");
-                fgets(name, 125, stdin);
+                fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(ch, "i") == 0) {
@@ -946,14 +948,14 @@ int main() {
             }
         } else if (strcmp(sw, "si") == 0) {
             char t[6][15] = {"scanf(\"", "\%d\"", "\%lf\"", ",", " &", ");"};
-            char ch[125];
-            char name[125];
+            char ch[SIZE];
+            char name[SIZE];
             while (1) {
                 printf("//Choose i for int d for double or m for main.\n");
                 printf("//");
-                fgets(ch, 125, stdin);
+                fgets(ch, SIZE, stdin);
                 ch[strcspn(ch, "\n")] = 0;
-                if (strlen(ch) >= 124) {
+                if (strlen(ch) >= MAX) {
                     clear();
                 }
                 if (strcmp(ch, "m") == 0) {
@@ -964,9 +966,9 @@ int main() {
                 }
                 printf("//Enter the name of variable.\n");
                 printf("//");
-                fgets(name, 125, stdin);
+                fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(ch, "i") == 0) {
@@ -983,14 +985,14 @@ int main() {
             }
         } else if (strcmp(sw, "sh") == 0) {
             char t[6][15] = {"scanf(\"", "\%d\"", "\%lf\"", ",", ");", "\%f\""};
-            char ch[125];
-            char name[125];
+            char ch[SIZE];
+            char name[SIZE];
             while (1) {
                 printf("//Choose i for int f for float or d for double or m for main.\n");
                 printf("//");
-                fgets(ch, 125, stdin);
+                fgets(ch, SIZE, stdin);
                 ch[strcspn(ch, "\n")] = 0;
-                if (strlen(ch) >= 124) {
+                if (strlen(ch) >= MAX) {
                     clear();
                 }
                 if (strcmp(ch, "m") == 0) {
@@ -1001,9 +1003,9 @@ int main() {
                 }
                 printf("//Enter the name of variable.\n");
                 printf("//");
-                fgets(name, 125, stdin);
+                fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(ch, "i") == 0) {
@@ -1025,14 +1027,14 @@ int main() {
             }
         } else if (strcmp(sw, "sc") == 0) {
             char t[7][15] = {"if(scanf(\"", "\%d\"", "\%lf\"", ",", " &", ")!=1){", "while(scanf(\""};
-            char ch[125];
-            char name[125];
+            char ch[SIZE];
+            char name[SIZE];
             while (1) {
                 printf("//Choose i for int d for double or m for main.\n");
                 printf("//");
-                fgets(ch, 125, stdin);
+                fgets(ch, SIZE, stdin);
                 ch[strcspn(ch, "\n")] = 0;
-                if (strlen(ch) >= 124) {
+                if (strlen(ch) >= MAX) {
                     clear();
                 }
                 if (strcmp(ch, "m") == 0) {
@@ -1043,9 +1045,9 @@ int main() {
                 }
                 printf("//Enter the name of variable.\n");
                 printf("//");
-                fgets(name, 125, stdin);
+                fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= 124) {
+                if (strlen(name) >= MAX) {
                     clear();
                 }
                 if (strcmp(ch, "i") == 0) {
