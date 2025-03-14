@@ -121,3 +121,7 @@ Febuary 8 2025.
 Fixed missing brace to close while loop in cb the Python file.
 Check def clear_buffer(): in code.
 Febuary 21 2025.
+CstringsOriginal.c was moved to C files and CstringsLimit.c was moved from C files.
+CstringsLimit.c Limits memory most user inputs and forces user to enter a number to scanf for strings.
+This prevents buffer overflow.
+March 14 2025.
