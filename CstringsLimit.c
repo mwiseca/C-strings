@@ -51,7 +51,7 @@ int main() {
     printf("          SPDX-License-Identifier: Apache-20\n\n\n");
 
     printf("//Enter r to repeat choices enter to not.\n");
-    fgets(repeat, 50 , stdin);
+    fgets(repeat, sizeof(repeat), stdin);
     repeat[strcspn(repeat, "\n")] = 0;
     if (strlen(repeat) >= 49) {
         clear();
@@ -60,7 +60,7 @@ int main() {
     while (1) {
         printf("//Enter x to exit main m for main ch for choices.\n");
         printf("//");
-        fgets(sw, 50, stdin);
+        fgets(sw, sizeof(sw), stdin);
         sw[strcspn(sw, "\n")] = 0;
         if (strlen(sw) >= 49) {
             clear();
@@ -158,7 +158,7 @@ int main() {
 		}
 		printf("//Enter memory allocated to variable 2 or higher.\n");
 		printf("//");
-		while(fgets(mem,10, stdin)){
+		while(fgets(mem,sizeof(mem), stdin)){
 		      mem[strcspn(mem, "\n")] = 0;
 		    if (strlen(mem) >= 9) {
 			clear();
@@ -196,7 +196,7 @@ int main() {
 		}
 		printf("//Enter memory allocated to variable 2 or higher.\n");
 		printf("//");
-		while(fgets(mem,10, stdin)){
+		while(fgets(mem,sizeof(mem), stdin)){
 		      mem[strcspn(mem, "\n")] = 0;
 		    if (strlen(mem) >= 9) {
 			clear();
