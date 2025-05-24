@@ -127,6 +127,6 @@ This prevents buffer overflow.
 March 14 2025.
 The example photo was changed.
 March 18 2025.
-The sizeof operator was added to fgets in Cstrings limit.c.
+The sizeof operator was added to fgets in CstringsLimit.c.
 It was added to sw,repeat and s,sb.
 May 24 2025.
