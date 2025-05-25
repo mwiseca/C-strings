@@ -43,7 +43,7 @@ int main() {
     printf("          SPDX-License-Identifier: Apache-20\n\n\n");
 
     printf("//Enter r to repeat choices enter to not.\n");
-    fgets(repeat, sizeof(repeat, stdin);
+    fgets(repeat, sizeof(repeat), stdin);
     repeat[strcspn(repeat, "\n")] = 0;
     choice();
     while (1) {
