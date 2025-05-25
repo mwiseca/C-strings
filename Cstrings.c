@@ -43,13 +43,13 @@ int main() {
     printf("          SPDX-License-Identifier: Apache-20\n\n\n");
 
     printf("//Enter r to repeat choices enter to not.\n");
-    fgets(repeat, 2000, stdin);
+    fgets(repeat, sizeof(repeat, stdin);
     repeat[strcspn(repeat, "\n")] = 0;
     choice();
     while (1) {
         printf("//Enter x to exit main m for main ch for choices.\n");
         printf("//");
-        fgets(sw, 250, stdin);
+        fgets(sw, sizeof(sw), stdin);
         sw[strcspn(sw, "\n")] = 0;
         if (strcmp(sw, "b") == 0) {
             char string[3][15] = {"printf(\"", "\\n", "\");"};
@@ -57,7 +57,7 @@ int main() {
             printf("//Enter your string, m for main.\n");
             while (1) {
                 printf("//");
-                fgets(text, 2000, stdin);
+                fgets(text, sizeof(text), stdin);
                 text[strcspn(text, "\n")] = 0;
                 if (strcmp(text, "m") == 0) {
                     break;
@@ -76,7 +76,7 @@ int main() {
             printf("//Enter text m for main.\n");
             while (1) {
                 printf("//");
-                fgets(text, 2000, stdin);
+                fgets(text, sizeof(text), stdin);
                 text[strcspn(text, "\n")] = 0;
                 if (strcmp(text, "m") == 0) {
                     break;
