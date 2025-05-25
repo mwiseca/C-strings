@@ -140,7 +140,7 @@ int main() {
                     break;
                 }
             }
-	} else if (strcmp(sw, "fs") {
+	} else if (strcmp(sw, "fs") == 0) {
             char f[12][15] = {"fgets(", ",","sizeof(", "),stdin);", "[strcspn(", "\"\\n", "\")]=0;", "[strlen(", ")-1] = '\\0';","while(", "      ", "),stdin)) {"};
             char name[SIZE];
             
@@ -150,7 +150,7 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
 		if (strlen(name) >= MAX) {
-		    Clear();
+		    clear();
 		}
                 if (strcmp(name, "m") == 0) {
                     break;
