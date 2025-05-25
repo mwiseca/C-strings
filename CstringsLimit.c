@@ -24,6 +24,7 @@ void choice() {
     printf("//Enter in for if and else if statements for numbers.\n");
     printf("//Enter im for if and else if statements for numbers if malloc is used.\n");
     printf("//Enter f for fgets with removal of the newline character.\n");
+    printf("//Enter fs for fgets with sizeof operator.\n");
     printf("//Enter s for scanf for strings to allow for white spaces.\n");
     printf("//Enter sb for scanf basic no white spaces.\n");
     printf("//Enter si for scanf for integers and doubles.\n");
@@ -135,6 +136,32 @@ int main() {
                 printf("%s%s%s%s%s%s%s\n\n",f[9], v, f[3], v, f[1], f[4], f[5]);
                 printf("\n%s%s%s%s%s%s\n", f[0], v, f[1], me, f[1], f[2]);
                 printf("%s%s%s%s\n\n", v, f[6], v, f[7]);
+                if (strcmp(repeat, "r") != 0) {
+                    break;
+                }
+            }
+	} else if (strcmp(sw, "fs") {
+            char f[12][15] = {"fgets(", ",","sizeof(", "),stdin);", "[strcspn(", "\"\\n", "\")]=0;", "[strlen(", ")-1] = '\\0';","while(", "      ", "),stdin)) {"};
+            char name[SIZE];
+            
+            while (1) {
+                printf("//Enter name of variable m for main.\n");
+                printf("//");
+                fgets(name, SIZE, stdin);
+                name[strcspn(name, "\n")] = 0;
+		if (strlen(name) >= MAX) {
+		    Clear();
+		}
+                if (strcmp(name, "m") == 0) {
+                    break;
+                }
+                printf("//Enter the memory to be allocated to the variable.\n");
+                printf("\n%s%s%s%s%s%s\n", f[0], name, f[1],  f[2],name, f[3]);
+                printf("%s%s%s%s%s%s\n\n", name, f[4], name, f[1], f[5], f[6]);
+                printf("\n%s%s%s%s%s%s%s\n",f[9], f[0], name, f[1], f[2] ,name, f[11]);
+                printf("%s%s%s%s%s%s%s\n\n",f[10], name, f[4], name, f[1], f[5], f[6]);
+                printf("\n%s%s%s%s%s%s\n", f[0], name, f[1],  f[2],name, f[3]); 
+                printf("%s%s%s%s\n\n", name, f[7], name, f[8]);
                 if (strcmp(repeat, "r") != 0) {
                     break;
                 }
