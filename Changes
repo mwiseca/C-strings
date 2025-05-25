@@ -10,4 +10,6 @@ A new file was added CstringsLowMemMap.cpp.
 It uses a C++ map instead a if else if statement
 to switch functions.
 January 31 2025.
+C-C++Python.mapRepeat and Cstrings-with-python-malloc.c were moved from dev.
+May 25 2025.
 
