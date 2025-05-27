@@ -130,3 +130,6 @@ March 18 2025.
 The sizeof operator was added to fgets in CstringsLimit.c.
 It was added to sw,repeat and s,sb.
 May 24 2025.
+Added: fgets with sizeof operator was added check fs in choices.
+A #define max 2000  was added to make it easer to change memory on most user inputs to Cstrings.c.
+May 27 2025.
