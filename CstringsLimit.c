@@ -7,7 +7,7 @@
 #define SIZE 100
 #define MAX 99
  
-    void clear(){
+    void clean(){
     int clear;     
     while ((clear = getc(stdin)) != '\n' && clear != EOF) {     
     } 
@@ -55,7 +55,7 @@ int main() {
     fgets(repeat, sizeof(repeat), stdin);
     repeat[strcspn(repeat, "\n")] = 0;
     if (strlen(repeat) >= 49) {
-        clear();
+        clean();
     }
     choice();
     while (1) {
@@ -64,7 +64,7 @@ int main() {
         fgets(sw, sizeof(sw), stdin);
         sw[strcspn(sw, "\n")] = 0;
         if (strlen(sw) >= 49) {
-            clear();
+            clean();
         }
         if (strcmp(sw, "b") == 0) {
             char string[3][15] = {"printf(\"", "\\n", "\");"};
@@ -75,7 +75,7 @@ int main() {
                 fgets(text, SIZE, stdin);
                 text[strcspn(text, "\n")] = 0;
                 if (strlen(text) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(text, "m") == 0) {
                     break;
@@ -97,7 +97,7 @@ int main() {
                 fgets(text,SIZE, stdin);
                 text[strcspn(text, "\n")] = 0;
                 if (strlen(text) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(text, "m") == 0) {
                     break;
@@ -118,7 +118,7 @@ int main() {
                 fgets(v,SIZE,stdin);
                 v[strcspn(v, "\n")] = 0;
                 if (strlen(v) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(v, "m") == 0) {
                     break;
@@ -128,7 +128,7 @@ int main() {
                 fgets(me,SIZE,stdin);
                 me[strcspn(me, "\n")] = 0;
                 if (strlen(me) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("\n%s%s%s%s%s%s\n", f[0], v, f[1], me, f[1], f[2]);
                 printf("%s%s%s%s%s%s\n\n", v, f[3], v, f[1], f[4], f[5]);
@@ -150,7 +150,7 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
 		if (strlen(name) >= MAX) {
-		    clear();
+		    clean();
 		}
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -178,7 +178,7 @@ int main() {
 		fgets(var,SIZE, stdin);
 		var[strcspn(var, "\n")] = 0;
 		if (strlen(var) >= MAX) {
-		    clear();
+		    clean();
 		}
 		if (strcmp(var, "m") == 0) {
 		    break;
@@ -188,7 +188,7 @@ int main() {
 		while(fgets(mem,sizeof(mem), stdin)){
 		      mem[strcspn(mem, "\n")] = 0;
 		    if (strlen(mem) >= 9) {
-			clear();
+			clean();
 		    }
 		    m = atoi(mem);
 		    if (m < 2){
@@ -216,7 +216,7 @@ int main() {
 		fgets(var,SIZE, stdin);
 		var[strcspn(var, "\n")] = 0;
 		if (strlen(var) >= MAX) {
-		    clear();
+		    clean();
 		}
 		if (strcmp(var, "m") == 0) {
 		    break;
@@ -226,7 +226,7 @@ int main() {
 		while(fgets(mem,sizeof(mem), stdin)){
 		      mem[strcspn(mem, "\n")] = 0;
 		    if (strlen(mem) >= 9) {
-			clear();
+			clean();
 		    }
 		   m = atoi(mem);
 		   if (m < 2){
@@ -251,7 +251,7 @@ int main() {
                 fgets(name,SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -277,7 +277,7 @@ int main() {
                 fgets(name,SIZE,stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -287,7 +287,7 @@ int main() {
                 fgets(value,SIZE,stdin);
                 value[strcspn(value, "\n")] = 0;
                 if (strlen(value) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("\n%s%s%s%s%s%s%s\n\n", f[0], name, f[1], f[2], value, f[2], f[3]);
                 if (strcmp(repeat, "r") != 0) {
@@ -305,7 +305,7 @@ int main() {
                 fgets(name,SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -315,7 +315,7 @@ int main() {
                 fgets(value,SIZE, stdin);
                 value[strcspn(value, "\n")] = 0;
                 if (strlen(value) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("\n%s%s%s%s%s%s%s\n\n", f[0], name, f[1], f[2], value, f[2], f[3]);
                 if (strcmp(repeat, "r") != 0) {
@@ -338,7 +338,7 @@ int main() {
                 while (fgets(select,SIZE, stdin)) {
                     select[strcspn(select, "\n")] = 0;
                     if (strlen(select) >= MAX) {
-                        clear();
+                        clean();
                     }
                     if (strcmp(select, "i") != 0 && strcmp(select, "e") != 0) {
                         printf("//Enter i or e only.\n");
@@ -356,7 +356,7 @@ int main() {
 		fgets(name,SIZE, stdin);
 		name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
 		if (strcmp(name, "m") == 0) {
                     break;
@@ -366,14 +366,14 @@ int main() {
 		fgets(value, SIZE, stdin);
 		value[strcspn(value, "\n")] = 0;
                 if (strlen(value) >= MAX) {
-                    clear();
+                    clean();
                 }
 		printf("//Enter a comparison a for equal b for not equal.\n");
 		printf("//");
                 while (fgets(compare,SIZE, stdin)) {
                        compare[strcspn(compare, "\n")] = 0;
                     if (strlen(compare) >= MAX) {
-                        clear();
+                        clean();
                     }
                     if (strcmp(compare, "a") != 0 && strcmp(compare, "b") != 0) {
                         printf("//Enter a or b only.\n");
@@ -391,7 +391,7 @@ int main() {
 		while (fgets(op,SIZE, stdin)) {
 		      op[strcspn(op, "\n")] = 0;
                     if (strlen(op) >= MAX) {
-                        clear();
+                        clean();
                     }
                     if (strcmp(op, "a") != 0 && strcmp(op, "o") != 0) {
                         printf("//Enter a or o only.\n");
@@ -409,21 +409,21 @@ int main() {
 		fgets(sname,SIZE, stdin);
 		sname[strcspn(sname, "\n")] = 0;
                 if (strlen(sname) >= MAX) {
-                    clear();
+                    clean();
                 }
 		printf("Enter the second value.\n");
 		printf("//");
 		fgets(svalue,SIZE,stdin);
 		svalue[strcspn(svalue, "\n")] = 0;
                 if (strlen(svalue) >= MAX) {
-                    clear();
+                    clean();
                 }
 		printf("Enter a second comparison a for equal b for not equal\n");
 		printf("//");
 		while (fgets(scompare,SIZE,stdin)) {
                       scompare[strcspn(scompare, "\n")] = 0;
                     if (strlen(scompare) >= MAX) {
-                        clear();
+                        clean();
 		    }	
 		    if (strcmp(scompare, "a") != 0 && strcmp(scompare, "b") != 0) {
                         printf("//Enter a or b only.\n");
@@ -453,7 +453,7 @@ int main() {
                 fgets(select,SIZE,stdin);
                 select[strcspn(select, "\n")] = 0;
                 if (strlen(select) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(select, "s") != 0 && strcmp(select, "i") != 0 && strcmp(select, "e") != 0) {
                     printf("//Enter s or i or e only.\n");
@@ -463,7 +463,7 @@ int main() {
                 fgets(var,SIZE,stdin);
                 var[strcspn(var, "\n")] = 0;
                 if (strlen(var) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(var, "m") == 0) {
                     break;
@@ -473,7 +473,7 @@ int main() {
                 while (fgets(op,SIZE, stdin)) {
                     op[strcspn(op, "\n")] = 0;
                     if (strlen(op) >= MAX) {
-                        clear();
+                        clean();
                     }
                     if (strcmp(op, "a") != 0 && strcmp(op, "b") != 0 && strcmp(op, "c") != 0 && strcmp(op, "d") != 0) {
                         printf("//Enter a or b or c or d only.\n");
@@ -495,7 +495,7 @@ int main() {
                 fgets(num, SIZE, stdin);
                 num[strcspn(num, "\n")] = 0;
                 if (strlen(num) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(select, "s") == 0) {
                     printf("\n%s%s%s%s%s%s%s%s\n\n", t[0], t[2], t[7], var, t[8], op, num, t[9]);
@@ -526,7 +526,7 @@ int main() {
                 fgets(select,SIZE,stdin);
                 select[strcspn(select, "\n")] = 0;
                 if (strlen(select) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(select, "i") != 0 && strcmp(select, "e") != 0) {
                     printf("//Enter i or e only.\n");
@@ -536,7 +536,7 @@ int main() {
                 fgets(var,SIZE,stdin);
                 var[strcspn(var, "\n")] = 0;
                 if (strlen(var) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(var, "m") == 0) {
                     break;
@@ -546,7 +546,7 @@ int main() {
                 while (fgets(op,SIZE,stdin)) {
                     op[strcspn(op, "\n")] = 0;
                     if (strlen(op) >= MAX) {
-                        clear();
+                        clean();
                     }
                     if (strcmp(op, "a") != 0 && strcmp(op, "b") != 0 && strcmp(op, "c") != 0 && strcmp(op, "d") != 0) {
                         printf("//Enter a or b or c or d only.\n");
@@ -568,7 +568,7 @@ int main() {
                 fgets(num,SIZE,stdin);
                 num[strcspn(num, "\n")] = 0;
                 if (strlen(num) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(select, "i") == 0) {
                     printf("\n%s%s%s%s%s\n\n", t[0], var, op, num, t[8]);
@@ -593,7 +593,7 @@ int main() {
                 fgets(name,SIZE,stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -603,7 +603,7 @@ int main() {
                 fgets(mem,SIZE,stdin);
                 mem[strcspn(mem, "\n")] = 0;
                 if (strlen(mem) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("\n%s%s%s%s%s\n\n", f[0], name, f[1], mem, f[2]);
                 if (strcmp(repeat, "r") != 0) {
@@ -621,7 +621,7 @@ int main() {
                 fgets(name,SIZE,stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -631,14 +631,14 @@ int main() {
                 fgets(mem,SIZE,stdin);
                 mem[strcspn(mem, "\n")] = 0;
                 if (strlen(mem) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("//enter a value\n");
                 printf("//");
                 fgets(value,SIZE,stdin);
                 value[strcspn(value, "\n")] = 0;
 		if (strlen(value) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("\n%s%s%s%s%s%s%s%s%s%s\n\n", v[0], name, v[1], mem, v[2], v[3], v[4], value, v[4], v[5]);
                 if (strcmp(repeat, "r") != 0) {
@@ -657,7 +657,7 @@ int main() {
                 fgets(name,SIZE,stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -667,21 +667,21 @@ int main() {
                 fgets(ne,SIZE,stdin);
                 ne[strcspn(ne, "\n")] = 0;
                 if (strlen(ne) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("//Enter memory allocated to elements.\n");
                 printf("//");
                 fgets(m,SIZE,stdin);
                 m[strcspn(m, "\n")] = 0;
                 if (strlen(m) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("//Enter elements with quotations and commas between each.\n");
                 printf("//");
                 fgets(elements,SIZE,stdin);
                 elements[strcspn(elements, "\n")] = 0;
                 if (strlen(elements) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("\n%s%s%s%s%s%s%s%s%s%s\n\n", t[0], name, t[1], ne, t[2], t[1], m, t[3], elements, t[4]);
                 if (strcmp(repeat, "r") != 0) {
@@ -701,7 +701,7 @@ int main() {
                 while (fgets(typ, SIZE, stdin)) {
                     typ[strcspn(typ, "\n")] = 0;
                     if (strlen(typ) >= MAX) {
-                        clear();
+                        clean();
                     }
                     if (strcmp(typ, "i") != 0 && strcmp(typ, "d") != 0) {
                         printf("//Enter i or d.\n");
@@ -719,7 +719,7 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -729,14 +729,14 @@ int main() {
                 fgets(num, SIZE, stdin);
                 num[strcspn(num, "\n")] = 0;
                 if (strlen(num) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("//Enter elements with a comma between them.\n");
                 printf("//");
                 fgets(elements, SIZE, stdin);
                 elements[strcspn(elements, "\n")] = 0;
                 if (strlen(elements) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("%s%s%s%s%s%s%s%s\n", typ, name, a[2], num, a[3], a[4], elements, a[5]);
                 if (strcmp(repeat, "r") != 0) {
@@ -754,7 +754,7 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -764,7 +764,7 @@ int main() {
                 fgets(per, SIZE, stdin);
                 per[strcspn(per, "\n")] = 0;
                 if (strlen(per) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("\n%s%s%s%s%s\n\n\n%s\n\n", t[0], name, t[1], per, t[2], t[3]);
                 if (strcmp(repeat, "r") != 0) {
@@ -781,7 +781,7 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -791,7 +791,7 @@ int main() {
                 fgets(per, SIZE, stdin);
                 per[strcspn(per, "\n")] = 0;
                 if (strlen(per) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("\n%s%s%s%s\n\n", name, t[0], per, t[1]);
                 if (strcmp(repeat, "r") != 0) {
@@ -809,7 +809,7 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -819,7 +819,7 @@ int main() {
                 fgets(mem, SIZE, stdin);
                 mem[strcspn(mem, "\n")] = 0;
                 if (strlen(mem) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("\n");
                 printf("\n%s%s%s%s\n\n", t[0], t[1], name, t[2]);
@@ -842,7 +842,7 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -852,7 +852,7 @@ int main() {
                 fgets(mem, SIZE, stdin);
                 mem[strcspn(mem, "\n")] = 0;
                 if (strlen(mem) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("\n");
                 printf("%s%s%s%s\n\n", t[0], t[1], name, t[2]);
@@ -877,7 +877,7 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -887,7 +887,7 @@ int main() {
                 fgets(em, SIZE, stdin);
                 em[strcspn(em, "\n")] = 0;
                 if (strlen(em) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("\n%s%s%s\n", t[0], name, t[1]);
                 printf("%s%s%s%s\n", t[2], em, t[3], t[4]);
@@ -907,7 +907,7 @@ int main() {
                 fgets(ch, SIZE, stdin);
                 ch[strcspn(ch, "\n")] = 0;
                 if (strlen(ch) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(ch, "m") == 0) {
                     break;
@@ -920,14 +920,14 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("Enter a value.\n");
                 printf("//");
                 fgets(value, SIZE, stdin);
                 value[strcspn(value, "\n")] = 0;
                 if (strlen(value) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(ch, "i") == 0) {
                     printf("\n%s%s%s%s%s\n\n", t[1], name, t[2], value, t[3]);
@@ -951,7 +951,7 @@ int main() {
                 fgets(ch, SIZE, stdin);
                 ch[strcspn(ch, "\n")] = 0;
                 if (strlen(ch) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(ch, "m") == 0) {
                     break;
@@ -964,7 +964,7 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(ch, "i") == 0) {
                     printf("\n%s%s%s\n\n", t[1], name, t[2]);
@@ -988,7 +988,7 @@ int main() {
                 fgets(ch, SIZE, stdin);
                 ch[strcspn(ch, "\n")] = 0;
                 if (strlen(ch) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(ch, "m") == 0) {
                     break;
@@ -1001,7 +1001,7 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(ch, "i") == 0) {
                     printf("\n%s%s%s%s%s%s\n\n", t[0], t[1], t[3], t[4], name, t[5]);
@@ -1025,7 +1025,7 @@ int main() {
                 fgets(ch, SIZE, stdin);
                 ch[strcspn(ch, "\n")] = 0;
                 if (strlen(ch) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(ch, "m") == 0) {
                     break;
@@ -1038,7 +1038,7 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(ch, "i") == 0) {
                     printf("\n%s%s%s%s%s\n\n", t[0], t[1], t[3], name, t[4]);
@@ -1067,7 +1067,7 @@ int main() {
                 fgets(ch, SIZE, stdin);
                 ch[strcspn(ch, "\n")] = 0;
                 if (strlen(ch) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(ch, "m") == 0) {
                     break;
@@ -1080,7 +1080,7 @@ int main() {
                 fgets(name, SIZE, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(ch, "i") == 0) {
                     printf("\n%s%s%s%s%s%s\n\n", t[0], t[1], t[3], t[4], name, t[5]);
