@@ -181,7 +181,7 @@ int main() {
 	        fgets(v, SIZE, stdin);
 	        v[strcspn(v, "\n")] = 0;
 	        if(strlen(v) >= MAX){
-	            clear();
+	            clean();
     	        }
     	        if (strcmp(v, "m") == 0) {
      	            break;
@@ -191,7 +191,7 @@ int main() {
 	        while(fgets(me, sizeof(me), stdin)) {
 	             me[strcspn(me, "\n")] = 0;
 	            if(strlen(me) >= 9){
-	                clear();
+	                clean();
 	            }
 	            m = atoi(me);
 	            if(m <=4) {
@@ -204,7 +204,7 @@ int main() {
 	        fgets(function,SIZE,stdin);
 	        function[strcspn(function,"\n")]=0;
 	        if(strlen(v) >= MAX){
-	            clear();
+	            clean();
 	        }
 	        printf("\n%s%s%s%s%s%s\n", f[0], v, f[1], me, f[1], f[2]);
 	        printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
