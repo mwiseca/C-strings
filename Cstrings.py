@@ -145,8 +145,6 @@ def fgets_buffer():
         print(f"    if(strlen({v}) >= {me-1}){{")
         print("        " + function + "();")
         print("    }\n")
-        if repeat != "r":
-            return ""
 
 
 def scanf():
