@@ -133,3 +133,7 @@ May 24 2025.
 Added: fgets with sizeof operator was added check fs in choices.
 A #define max 2000  was added to make it easer to change memory on most user inputs to Cstrings.c.
 May 27 2025.
+Added: fgets with if statement to eliminate the need to press enter twice when using cb that uses getc(stdin); in a while loop
+to clear input buffer.
+Check fb in choices.
+June 21 2025.
