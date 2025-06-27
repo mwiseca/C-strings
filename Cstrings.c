@@ -290,14 +290,14 @@ int main() {
             while (1) {
                 printf("//Enter name of the else if statement m for main.\n");
                 printf("//");
-                fgets(name, 2000, stdin);
+                fgets(name, MAX, stdin);
                 name[strcspn(name, "\n")] = 0;
                 if (strcmp(name, "m") == 0) {
                     break;
                 }
                 printf("//Enter the value.\n");
                 printf("//");
-                fgets(value, 2000, stdin);
+                fgets(value, MAX, stdin);
                 value[strcspn(value, "\n")] = 0;
                 printf("\n%s%s%s%s%s%s%s\n\n", f[0], name, f[1], f[2], value, f[2], f[3]);
                 if (strcmp(repeat, "r") != 0) {
