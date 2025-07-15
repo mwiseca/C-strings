@@ -7,7 +7,7 @@
 #define SIZE 100
 #define MAX 99
  
-    void clean(){
+void clean(){
     int clear;     
     while ((clear = getc(stdin)) != '\n' && clear != EOF) {     
     } 
