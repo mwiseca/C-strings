@@ -79,6 +79,7 @@ int main() {
 		    printf("\nInvalid input. start over.\n\n");
 		    clearerr(stdin);
 		    continue;
+		}
                 if (strlen(text) >= MAX) {
                     clean();
                 }
