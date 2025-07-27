@@ -74,12 +74,11 @@ int main() {
             printf("//Enter your string, m for main.\n");
             while (1) {
                 printf("//");
-                if(fgets(text, SIZE, stdin) == NULL) {
-                    text[strcspn(text, "\n")] = 0;
-		    printf("\nInvalid input. start over.\n\n");
+                while(fgets(text, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
 		    clearerr(stdin);
-		    continue;
 		}
+		text[strcspn(text, "\n")] = 0;  
                 if (strlen(text) >= MAX) {
                     clean();
                 }
