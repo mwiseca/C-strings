@@ -327,7 +327,10 @@ int main() {
             while (1) {
                 printf("//Name function m for main.\n");
                 printf("//");
-                fgets(name,SIZE, stdin);
+                while(fgets(name,SIZE, stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
                     clean();
