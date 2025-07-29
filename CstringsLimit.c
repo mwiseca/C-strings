@@ -263,7 +263,7 @@ int main() {
                     if (strcmp(repeat, "r") != 0) {
                         break;
                     }
-            
+		}
 	    } 
         } else if (strcmp(sw, "s") == 0) {
             char t[6][15] = {"scanf(\"", "%", "[^\\n]\"", ",", ");", "getchar();"};
