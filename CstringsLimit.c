@@ -187,17 +187,16 @@ int main() {
 	} else if (strcmp(sw, "fb")==0) {
             char f[12][15] = {"fgets(", ",", "stdin);", "[strcspn(", "\"\\n", "\")]=0;", "while(", "      ", "stdin)) {","sizeof(","),stdin);","),stdin)) {"};
             char v[SIZE];
-            char me[2000];
+            char me [10];
             char function[SIZE];
-            char *ptr;
-            long int m;
+            int m;
 
             while (1) {
                 printf("//Enter name of variable m for main.\n");
                 printf("//");
                 while(fgets(v, SIZE, stdin) == NULL) {
-                    printf("\n//Invalid input Try again.\n\n");
-                    clearerr(stdin);
+                    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
                 }
                 v[strcspn(v, "\n")] = 0;
                 if(strlen(v) >= MAX){
@@ -206,65 +205,55 @@ int main() {
                 if (strcmp(v, "m") == 0) {
                     break;
                 }
-                printf("//Enter the memory to be allocated to the variable.\n");
+                printf("//Enter the memory to be allocated to the variable 5 minimum.\n");
                 printf("//");
-                while(fgets(me, SIZE, stdin) == NULL) {
-                    printf("\n//Invalid input Try again.\n\n");
-                   clearerr(stdin);
-                }
-                me[strcspn(me, "\n")] = 0;
-                if(strlen(me) >= MAX){
-                    clean();
-                }
-                errno = 0;
-                m = strtol(me,&ptr,10);  
-                if(errno == ERANGE) {
-                    printf("\n//Try not to enter to many numbers.\n");
-                    printf("Start over.\n\n");
-                } else if (ptr == me) {
-                    printf("\n//Enter a number only.\n");
-                    printf("\n//Start over.\n");
-                } else if (*ptr == 0x20) {
-                    printf("\n//Try not to enter spaces between numbers.\n");
-                    printf("\n//Start over.\n\n");
-                } else if (*ptr != '\0') {
-                    printf("\n//Try not to enter text after a number.\n");
-                    printf("\n//Start over.\n\n");
-                } else {      
-                    printf("//Enter the function name.\n");            
-                    while(fgets(function,SIZE,stdin) == NULL) {
-                        printf("\n//Invalid input Try again.\n\n");
-                        clearerr(stdin);
-                    }
-                    function[strcspn(function,"\n")]=0;
-                    if(strlen(v) >= MAX){
-                        clean();
-                    }
-                    printf("\n%s%s%s%s%s%s\n", f[0], v, f[1], me, f[1], f[2]);
-                    printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
-                    printf("if(strlen(%s) >= %ld) {\n",v,m - 1);
-                    printf("    %s();\n",function);
-                    printf("}\n\n");
-                    printf("\n%s%s%s%s%s%s%s\n",f[6], f[0], v, f[1], me, f[1], f[8]);
-                    printf("%s%s%s%s%s%s%s\n",f[7], v, f[3], v, f[1], f[4], f[5]);
-                    printf("    if(strlen(%s) >= %ld) {\n",v,m - 1);
-                    printf("        %s();\n",function);
-                    printf("    }\n\n");
-                    printf("\n%s%s%s%s%s%s\n", f[0], v, f[1],f[9],v,f[10]);
-                    printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
-                    printf("if(strlen(%s) >= %ld) {\n",v,m - 1);
-                    printf("    %s();\n",function);
-                    printf("}\n\n");
-                    printf("\n%s%s%s%s%s%s%s\n",f[6], f[0], v, f[1],f[9],v, f[11]);
-                    printf("%s%s%s%s%s%s%s\n",f[7], v, f[3], v, f[1], f[4], f[5]);
-                    printf("    if(strlen(%s) >= %ld) {\n",v,m - 1);
-                    printf("        %s();\n",function);
-                    printf("    }\n\n");
-                    if (strcmp(repeat, "r") != 0) {
+                while(fgets(me, sizeof(me), stdin) == NULL || (1)) {
+	            clearerr(stdin);    
+                    if(strlen(me) >= 9){
+                     clean();
+                    }            
+                    m = atoi(me);
+                    if(m <=4) {
+                    printf("\n//Enter a number 5 or more.\n\n");
+                    } else {
                         break;
                     }
-		}
-	    } 
+                } 
+                me[strcspn(me, "\n")] = 0;
+                printf("//Enter the function name.\n");
+                while(fgets(function,SIZE,stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+                }
+                function[strcspn(function,"\n")]=0;
+                if(strlen(v) >= MAX){
+                    clean();
+                }
+                printf("\n%s%s%s%s%s%s\n", f[0], v, f[1], me, f[1], f[2]);
+                printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
+                printf("if(strlen(%s) >= %d) {\n",v,m - 1);
+                printf("    %s();\n",function);
+                printf("}\n\n");
+                printf("\n%s%s%s%s%s%s%s\n",f[6], f[0], v, f[1], me, f[1], f[8]);
+                printf("%s%s%s%s%s%s%s\n",f[7], v, f[3], v, f[1], f[4], f[5]);
+                printf("    if(strlen(%s) >= %d) {\n",v,m - 1);
+                printf("        %s();\n",function);
+                printf("    }\n\n");
+                printf("\n%s%s%s%s%s%s\n", f[0], v, f[1],f[9],v,f[10]);
+                printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
+                printf("if(strlen(%s) >= %d) {\n",v,m - 1);
+                printf("    %s();\n",function);
+                printf("}\n\n");
+                printf("\n%s%s%s%s%s%s%s\n",f[6], f[0], v, f[1],f[9],v, f[11]);
+                printf("%s%s%s%s%s%s%s\n",f[7], v, f[3], v, f[1], f[4], f[5]);
+                printf("    if(strlen(%s) >= %d) {\n",v,m - 1);
+                printf("        %s();\n",function);
+                printf("    }\n\n");
+                memset(me, '\0', sizeof(me));
+                if (strcmp(repeat, "r") != 0) {
+                    break;
+                }
+            }	    
         } else if (strcmp(sw, "s") == 0) {
             char t[6][15] = {"scanf(\"", "%", "[^\\n]\"", ",", ");", "getchar();"};
 	    char var[SIZE];
