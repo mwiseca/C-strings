@@ -762,7 +762,10 @@ int main() {
             while (1) {
                 printf("//Enter the name of array m for main.\n");
                 printf("//");
-                fgets(name,SIZE,stdin);
+                while(fgets(name,SIZE,stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
                     clean();
@@ -772,21 +775,30 @@ int main() {
                 }
                 printf("//Enter the amount of elements.\n");
                 printf("//");
-                fgets(ne,SIZE,stdin);
+                while(fgets(ne,SIZE,stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 ne[strcspn(ne, "\n")] = 0;
                 if (strlen(ne) >= MAX) {
                     clean();
                 }
                 printf("//Enter memory allocated to elements.\n");
                 printf("//");
-                fgets(m,SIZE,stdin);
+                while(fgets(m,SIZE,stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 m[strcspn(m, "\n")] = 0;
                 if (strlen(m) >= MAX) {
                     clean();
                 }
                 printf("//Enter elements with quotations and commas between each.\n");
                 printf("//");
-                fgets(elements,SIZE,stdin);
+                while(fgets(elements,SIZE,stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 elements[strcspn(elements, "\n")] = 0;
                 if (strlen(elements) >= MAX) {
                     clean();
@@ -859,7 +871,10 @@ int main() {
             while (1) {
                 printf("//Name function m for main.\n");
                 printf("//");
-                fgets(name, SIZE, stdin);
+                while(fgets(name, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
                     clean();
@@ -869,7 +884,10 @@ int main() {
                 }
                 printf("//Enter parameters.\n");
                 printf("//");
-                fgets(per, SIZE, stdin);
+                while(fgets(per, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 per[strcspn(per, "\n")] = 0;
                 if (strlen(per) >= MAX) {
                     clean();
@@ -886,7 +904,10 @@ int main() {
             while (1) {
                 printf("//Enter the name of function m for main.\n");
                 printf("//");
-                fgets(name, SIZE, stdin);
+                while(fgets(name, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
                     clean();
@@ -896,7 +917,10 @@ int main() {
                 }
                 printf("//Enter values for parameters.\n");
                 printf("//");
-                fgets(per, SIZE, stdin);
+                while(fgets(per, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 per[strcspn(per, "\n")] = 0;
                 if (strlen(per) >= MAX) {
                     clean();
@@ -914,7 +938,10 @@ int main() {
             while (1) {
                 printf("//Enter the name of the variable m for main.\n");
                 printf("//");
-                fgets(name, SIZE, stdin);
+                while(fgets(name, SIZE, stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	    
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
                     clean();
@@ -924,7 +951,10 @@ int main() {
                 }
                 printf("//Enter memory to allocate.\n");
                 printf("//");
-                fgets(mem, SIZE, stdin);
+                while(fgets(mem, SIZE, stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}		
                 mem[strcspn(mem, "\n")] = 0;
                 if (strlen(mem) >= MAX) {
                     clean();
@@ -947,7 +977,10 @@ int main() {
             while (1) {
                 printf("//Enter the name of the variable m for main.\n");
                 printf("//");
-                fgets(name, SIZE, stdin);
+                while(fgets(name, SIZE, stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
                     clean();
@@ -957,7 +990,10 @@ int main() {
                 }
                 printf("//Enter memory to allocate.\n");
                 printf("//");
-                fgets(mem, SIZE, stdin);
+                while(fgets(mem, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 mem[strcspn(mem, "\n")] = 0;
                 if (strlen(mem) >= MAX) {
                     clean();
@@ -982,7 +1018,10 @@ int main() {
             while (1) {
                 printf("//Enter the name m for main.\n");
                 printf("//");
-                fgets(name, SIZE, stdin);
+                while(fgets(name, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
                     clean();
@@ -992,7 +1031,10 @@ int main() {
                 }
                 printf("//Enter an error message.\n");
                 printf("//");
-                fgets(em, SIZE, stdin);
+                while(fgets(em, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 em[strcspn(em, "\n")] = 0;
                 if (strlen(em) >= MAX) {
                     clean();
@@ -1056,7 +1098,10 @@ int main() {
             while (1) {
                 printf("//Choose i for int d for double, m for main.\n");
                 printf("//");
-                fgets(ch, SIZE, stdin);
+                while(fgets(ch, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 ch[strcspn(ch, "\n")] = 0;
                 if (strlen(ch) >= MAX) {
                     clean();
@@ -1069,7 +1114,10 @@ int main() {
                 }
                 printf("Enter the name.\n");
                 printf("//");
-                fgets(name, SIZE, stdin);
+                while(fgets(name, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
                     clean();
