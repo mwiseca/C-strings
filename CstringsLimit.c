@@ -454,7 +454,7 @@ int main() {
 
             while (1) {
                 printf("//Enter i for if, e for else if.\n");
-                while (fgets(select,SIZE, stdin) == NULL || (1)) {
+                while (fgets(select,SIZE, stdin) == NULL) {
 		    printf("\nInvalid input Try again.\n\n");
 		    clearerr(stdin);
                     
@@ -498,7 +498,7 @@ int main() {
                 }
 		printf("//Enter a comparison a for equal b for not equal.\n");
 		printf("//");
-                while (fgets(compare,SIZE, stdin) == NULL || (1)) {
+                while (fgets(compare,SIZE, stdin) == NULL) {
 		    printf("\nInvalid input Try again.\n\n");
 		    clearerr(stdin);   
                     if (strlen(compare) >= MAX) {
@@ -518,7 +518,7 @@ int main() {
                 }
 		printf("//Enter a operator a for and o for or.\n");
 		printf("//");
-		while (fgets(op,SIZE, stdin) == NULL || (1)) {
+		while (fgets(op,SIZE, stdin) == NULL) {
 		    printf("\nInvalid input Try again.\n\n");
 		    clearerr(stdin);  
                     if (strlen(op) >= MAX) {
@@ -555,7 +555,7 @@ int main() {
                 }
 		printf("Enter a second comparison a for equal b for not equal\n");
 		printf("//");
-		while (fgets(scompare,SIZE,stdin) == NULL || (0)) {
+		while (fgets(scompare,SIZE,stdin) == NULL) {
 		    printf("\nInvalid input Try again.\n\n");
 		    clearerr(stdin);
                     if (strlen(scompare) >= MAX) {
@@ -613,7 +613,7 @@ int main() {
                 }
                 printf("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal\n");
                 printf("//");
-                while (fgets(op,SIZE, stdin) == NULL || (1)) {
+                while (fgets(op,SIZE, stdin) == NULL) {
 		    printf("\nInvalid input Try again.\n\n");
 		    clearerr(stdin);
                     
@@ -698,7 +698,7 @@ int main() {
                 }
                 printf("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal\n");
                 printf("//");
-                while (fgets(op,SIZE,stdin) == NULL || (1)) {
+                while (fgets(op,SIZE,stdin) == NULL) {
 		    printf("\nInvalid input Try again.\n\n");
 		    clearerr(stdin);
                     if (strlen(op) >= MAX) {
@@ -725,6 +725,7 @@ int main() {
                 while(fgets(num,SIZE,stdin) == NULL) {
 		    printf("\nInvalid input Try again.\n\n");
 		    clearerr(stdin); 
+		}
                 num[strcspn(num, "\n")] = 0;
                 if (strlen(num) >= MAX) {
                     clean();
