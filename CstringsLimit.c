@@ -456,8 +456,7 @@ int main() {
                 printf("//Enter i for if, e for else if.\n");
                 while (fgets(select,SIZE, stdin) == NULL) {
 		    printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-                    
+		    clearerr(stdin);   
                     if (strlen(select) >= MAX) {
                         clean();
                     }
@@ -548,7 +547,10 @@ int main() {
                 }
 		printf("Enter the second value.\n");
 		printf("//");
-		fgets(svalue,SIZE,stdin);
+		while(fgets(svalue,SIZE,stdin) == NULL) {  
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}		
 		svalue[strcspn(svalue, "\n")] = 0;
                 if (strlen(svalue) >= MAX) {
                     clean();
