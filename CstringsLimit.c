@@ -703,13 +703,13 @@ int main() {
                     if (strlen(op) >= MAX) {
                         clean();
                     }
+		    op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "b") != 0 && strcmp(op, "c") != 0 && strcmp(op, "d") != 0) {
                         printf("//Enter a or b or c or d only.\n");
                     } else {
                         break;
                     }
-                }
-		op[strcspn(op, "\n")] = 0;    
+                }    
                 if (strcmp(op, "a") == 0) {
                     strcpy(op, t[2]);
                 } else if (strcmp(op, "b") == 0) {
