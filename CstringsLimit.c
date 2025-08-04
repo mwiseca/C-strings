@@ -522,7 +522,7 @@ int main() {
                     }
 		    op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "o") != 0) {
-                        printf("Enter a or o only.\n");
+                        printf("//Enter a or o only.\n");
                     } else {
                         break;
                     }
