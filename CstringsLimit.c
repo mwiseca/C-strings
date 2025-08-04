@@ -454,8 +454,7 @@ int main() {
 
             while (1) {
                 printf("//Enter i for if, e for else if.\n");
-                while (fgets(select,SIZE, stdin) == NULL) {
-		    printf("\nInvalid input Try again.\n\n");
+                while (fgets(select,SIZE, stdin) == NULL || (1)) {
 		    clearerr(stdin);   
                     if (strlen(select) >= MAX) {
                         clean();
@@ -466,8 +465,7 @@ int main() {
                     } else {
                         break;
                     }
-                }
-		    
+                }   
                 if (strcmp(select, "i") == 0) {
                     strcpy(select, t[0]);
                 } else if (strcmp(select, "e") == 0) {
@@ -517,19 +515,19 @@ int main() {
                 }
 		printf("//Enter a operator a for and o for or.\n");
 		printf("//");
-		while (fgets(op,SIZE, stdin) == NULL) {
-		    printf("\nInvalid input Try again.\n\n");
+		while (fgets(op,SIZE, stdin) == NULL || (1)) {
 		    clearerr(stdin);  
                     if (strlen(op) >= MAX) {
                         clean();
                     }
+		    op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "o") != 0) {
-                        printf("//Enter a or o only.\n");
+                        printf("Enter a or o only.\n");
                     } else {
                         break;
                     }
                 }
-		op[strcspn(op, "\n")] = 0;   
+		   
                 if (strcmp(op, "a") == 0) {
                     strcpy(op, t[8]);
                 } else if (strcmp(op, "o") == 0) {
@@ -558,7 +556,6 @@ int main() {
 		printf("Enter a second comparison a for equal b for not equal\n");
 		printf("//");
 		while (fgets(scompare,SIZE,stdin) == NULL || (1)) {
-		    printf("\nInvalid input Try again.\n\n");
 		    clearerr(stdin);
                     if (strlen(scompare) >= MAX) {
                         clean();
@@ -570,7 +567,6 @@ int main() {
                         break;
                     }
                 }
-		scompare[strcspn(scompare, "\n")] = 0;
                 if (strcmp(scompare, "a") == 0) {
                     strcpy(scompare, t[6]);
                 } else if (strcmp(scompare, "b") == 0) {
