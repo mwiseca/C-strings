@@ -503,7 +503,7 @@ int main() {
                     }
 		    compare[strcspn(compare, "\n")] = 0;
                     if (strcmp(compare, "a") != 0 && strcmp(compare, "b") != 0) {
-                        printf("//Enter a or b only.\n");
+                        printf("\n//Enter a or b only.\n\n");
                     } else {
                         break;
                     }
@@ -562,7 +562,7 @@ int main() {
 		    }	
 		    scompare[strcspn(scompare, "\n")] = 0;
 		    if (strcmp(scompare, "a") != 0 && strcmp(scompare, "b") != 0) {
-                        printf("//Enter a or b only.\n");
+                        printf("\n//Enter a or b only.\n\n");
                     } else {
                         break;
                     }
@@ -612,20 +612,20 @@ int main() {
                 }
                 printf("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal\n");
                 printf("//");
-                while (fgets(op,SIZE, stdin) == NULL) {
+                while (fgets(op,SIZE, stdin) == NULL || (1)) {
 		    printf("\nInvalid input Try again.\n\n");
 		    clearerr(stdin);
-                    
                     if (strlen(op) >= MAX) {
                         clean();
                     }
+		    op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "b") != 0 && strcmp(op, "c") != 0 && strcmp(op, "d") != 0) {
-                        printf("//Enter a or b or c or d only.\n");
+                        printf("\n//Enter a or b or c or d only.\n\n");
                     } else {
                         break;
                     }
                 }
-		op[strcspn(op, "\n")] = 0;    
+		    
                 if (strcmp(op, "a") == 0) {
                     strcpy(op, t[3]);
                 } else if (strcmp(op, "b") == 0) {
@@ -697,7 +697,7 @@ int main() {
                 }
                 printf("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal\n");
                 printf("//");
-                while (fgets(op,SIZE,stdin) == NULL) {
+                while (fgets(op,SIZE,stdin) == NULL || (1)) {
 		    printf("\nInvalid input Try again.\n\n");
 		    clearerr(stdin);
                     if (strlen(op) >= MAX) {
@@ -705,7 +705,7 @@ int main() {
                     }
 		    op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "b") != 0 && strcmp(op, "c") != 0 && strcmp(op, "d") != 0) {
-                        printf("//Enter a or b or c or d only.\n");
+                        printf("\n//Enter a or b or c or d only.\n\n");
                     } else {
                         break;
                     }
