@@ -461,7 +461,7 @@ int main() {
                     }
 		    select[strcspn(select, "\n")] = 0;
                     if (strcmp(select, "i") != 0 && strcmp(select, "e") != 0) {
-                        printf("//Enter i or e only.\n");
+                        printf("\n//Enter i or e only.\n\n");
                     } else {
                         break;
                     }
@@ -522,7 +522,7 @@ int main() {
                     }
 		    op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "o") != 0) {
-                        printf("//Enter a or o only.\n");
+                        printf("\n//Enter a or o only.\n\n");
                     } else {
                         break;
                     }
@@ -884,13 +884,14 @@ int main() {
             while (1) {
                 printf("//Enter a data type i for int d for double.\n");
                 printf("//");
-                while (fgets(typ, SIZE, stdin)) {
+                while (fgets(typ, SIZE, stdin) == NULL || (1)) {
+                    clearerr(stdin);
                     typ[strcspn(typ, "\n")] = 0;
                     if (strlen(typ) >= MAX) {
                         clean();
                     }
                     if (strcmp(typ, "i") != 0 && strcmp(typ, "d") != 0) {
-                        printf("//Enter i or d.\n");
+                        printf("\n//Enter i or d.\n\n");
                     } else {
                         break;
                     }
@@ -902,7 +903,10 @@ int main() {
                 }
                 printf("//Enter the name of the array m for main.\n");
                 printf("//");
-                fgets(name, SIZE, stdin);
+                while(fgets(name, SIZE, stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
                     clean();
@@ -912,14 +916,20 @@ int main() {
                 }
                 printf("//Enter number of elements m for main.\n");
                 printf("//");
-                fgets(num, SIZE, stdin);
+                while(fgets(num, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 num[strcspn(num, "\n")] = 0;
                 if (strlen(num) >= MAX) {
                     clean();
                 }
                 printf("//Enter elements with a comma between them.\n");
                 printf("//");
-                fgets(elements, SIZE, stdin);
+                while(fgets(elements, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}	
                 elements[strcspn(elements, "\n")] = 0;
                 if (strlen(elements) >= MAX) {
                     clean();
