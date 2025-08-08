@@ -56,7 +56,7 @@ int main() {
     printf("//Enter r to repeat choices enter to not.\n");
     while(fgets(repeat, sizeof(repeat), stdin) == NULL) {
         printf("\nInvalid input Try again.\n\n");
-	clearerr(stdin);
+	    clearerr(stdin);
     }
     repeat[strcspn(repeat, "\n")] = 0;
     if (strlen(repeat) >= 49) {
@@ -81,10 +81,10 @@ int main() {
             while (1) {
                 printf("//");
                 while(fgets(text, SIZE, stdin) == NULL) {
-		    printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}
-		text[strcspn(text, "\n")] = 0;  
+		            printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
+		        text[strcspn(text, "\n")] = 0;  
                 if (strlen(text) >= MAX) {
                     clean();
                 }
@@ -92,7 +92,7 @@ int main() {
                     break;
                 }
                 printf("\n%s%s%s%s\n\n", string[0], text, string[1], string[2]);
-		printf("\n%s%s%s%s%s%s\n\n", string[0], string[1], text, string[1],string[1], string[2]);
+		        printf("\n%s%s%s%s%s%s\n\n", string[0], string[1], text, string[1],string[1], string[2]);
                 printf("%s%s%s\n\n", string[0], text, string[2]);
                 if (strcmp(repeat, "r") != 0) {
                     break;
@@ -107,8 +107,8 @@ int main() {
                 printf("//");
                 while(fgets(text,SIZE, stdin) == NULL) {
                     printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}
+		            clearerr(stdin);
+		        }
                 text[strcspn(text, "\n")] = 0;
                 if (strlen(text) >= MAX) {
                     clean();
@@ -131,8 +131,8 @@ int main() {
                 printf("//");
                 while(fgets(v,SIZE,stdin) == NULL) {
                     printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}	
+		            clearerr(stdin);
+		        }	
                 v[strcspn(v, "\n")] = 0;
                 if (strlen(v) >= MAX) {
                     clean();
@@ -144,8 +144,8 @@ int main() {
                 printf("//");
                 while(fgets(me,SIZE,stdin) == NULL) {
                     printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}	
+		            clearerr(stdin);
+		        }	
                 me[strcspn(me, "\n")] = 0;
                 if (strlen(me) >= MAX) {
                     clean();
@@ -169,12 +169,12 @@ int main() {
                 printf("//");
                 while(fgets(name, SIZE, stdin) == NULL) {
                     printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}	
+		            clearerr(stdin);
+		        }	
                 name[strcspn(name, "\n")] = 0;
-		if (strlen(name) >= MAX) {
-		    clean();
-		}
+		        if (strlen(name) >= MAX) {
+		            clean();
+		        }
                 if (strcmp(name, "m") == 0) {
                     break;
                 }
@@ -189,7 +189,7 @@ int main() {
                     break;
                 }
             }
-	} else if (strcmp(sw, "fb")==0) {
+	    } else if (strcmp(sw, "fb")==0) {
             char f[12][15] = {"fgets(", ",", "stdin);", "[strcspn(", "\"\\n", "\")]=0;", "while(", "      ", "stdin)) {","sizeof(","),stdin);","),stdin)) {"};
             char v[SIZE];
             char me [10];
@@ -268,83 +268,82 @@ int main() {
 	        while (1) {
 		        printf("//Enter the name of variable m for main.\n");
 		        printf("//");
-		    while(fgets(var,SIZE, stdin) == NULL) {
-                printf("\nInvalid input Try again.\n\n");
-                clearerr(stdin);
-            }	
-		var[strcspn(var, "\n")] = 0;
-		if (strlen(var) >= MAX) {
-		    clean();
-		}
-		if (strcmp(var, "m") == 0) {
-		    break;
-		}
-		printf("//Enter memory allocated to variable 2 or higher.\n");
-		printf("//");
-		while(fgets(mem,sizeof(mem), stdin) == NULL || (1)){
-                    clearerr(stdin);  
-		    if (strlen(mem) >= 9) {
-			clean();
-		    }
-		    m = atoi(mem);
-		    if (m < 2){
-			printf("\n//Enter a valid number only.\n\n");
-			printf("//");
-		    }else{
-			break;
-		    }
-		}	
-		mem[strcspn(mem, "\n")] = 0;    
-		printf("\n%s%s%d%s%s%s%s\n", t[0], t[1], m - 1, t[2], t[3], var, t[4]);
-		printf("%s\n\n", t[5]);
-		    memset(mem, '\0', sizeof(mem));   
-		if (strcmp(repeat, "r") != 0) {
-		    break;
-		}
-	    }
-        } else if (strcmp(sw, "sb") == 0) {
-            char t[5][15] = {"scanf(\"", "%", "s\"", ", ", ");"};
-	    char var[SIZE];
-	    char mem[10];
-	    int m;
-
-	    while (1) {
-		printf("//Enter the name of variable m for main.\n");
-		printf("//");
-		while(fgets(var,SIZE, stdin) == NULL) {
-		    printf("\nInvalid input Try again.\n\n");
+		        while(fgets(var,SIZE, stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
                     clearerr(stdin);
                 }	
-		var[strcspn(var, "\n")] = 0;
-		if (strlen(var) >= MAX) {
-		    clean();
-		}
-		if (strcmp(var, "m") == 0) {
-		    break;
-		}
-		printf("//Enter memory allocated to variable 2 or higher.\n");
-		printf("//");
-		while(fgets(mem,sizeof(mem), stdin) == NULL || (1)){
-		     clearerr(stdin);         
-		      
-		    if (strlen(mem) >= 9) {
-			clean();
-		    }
-		   m = atoi(mem);
-		   if (m < 2){
-		       printf("\n//Enter a valid number only.\n\n");
+		        var[strcspn(var, "\n")] = 0;
+		        if (strlen(var) >= MAX) {
+		            clean();
+		        }
+		        if (strcmp(var, "m") == 0) {
+		            break;
+		        }
+		        printf("//Enter memory allocated to variable 2 or higher.\n");
 		       printf("//");
-		   }else{
-		       break; 
-		   }
-		}
-		mem[strcspn(mem, "\n")] = 0;    
-		printf("\n%s%s%d%s%s%s%s\n\n", t[0], t[1], m - 1, t[2], t[3], var, t[4]);
-		    memset(mem, '\0', sizeof(mem));
-		if (strcmp(repeat, "r") != 0) {
-		    break;
-		}
-	    }            
+		       while(fgets(mem,sizeof(mem), stdin) == NULL || (1)){
+                   clearerr(stdin);  
+		           if (strlen(mem) >= 9) {
+			           clean();
+		           }
+		           m = atoi(mem);
+		           if (m < 2){
+			           printf("\n//Enter a valid number only.\n\n");
+			       printf("//");
+		          }else{
+			          break;
+		          }
+		       }	
+		       mem[strcspn(mem, "\n")] = 0;    
+		       printf("\n%s%s%d%s%s%s%s\n", t[0], t[1], m - 1, t[2], t[3], var, t[4]);
+		       printf("%s\n\n", t[5]);
+		       memset(mem, '\0', sizeof(mem));   
+		       if (strcmp(repeat, "r") != 0) {
+		          break;
+		       }
+	        }
+        } else if (strcmp(sw, "sb") == 0) {
+            char t[5][15] = {"scanf(\"", "%", "s\"", ", ", ");"};
+	        char var[SIZE];
+	        char mem[10];
+	        int m;
+
+	        while (1) {
+		        printf("//Enter the name of variable m for main.\n");
+		        printf("//");
+		        while(fgets(var,SIZE, stdin) == NULL) {
+		            printf("\nInvalid input Try again.\n\n");
+                    clearerr(stdin);
+                }	
+		        var[strcspn(var, "\n")] = 0;
+		        if (strlen(var) >= MAX) {
+		            clean();
+		       }
+		       if (strcmp(var, "m") == 0) {
+		           break;
+		       }
+		       printf("//Enter memory allocated to variable 2 or higher.\n");
+		       printf("//");
+		       while(fgets(mem,sizeof(mem), stdin) == NULL || (1)){
+		           clearerr(stdin);          
+		           if (strlen(mem) >= 9) {
+			           clean();
+		           }
+		           m = atoi(mem);
+		           if (m < 2){
+		               printf("\n//Enter a valid number only.\n\n");
+		               printf("//");
+		           }else{
+		               break; 
+		           }
+		       }
+		       mem[strcspn(mem, "\n")] = 0;    
+		       printf("\n%s%s%d%s%s%s%s\n\n", t[0], t[1], m - 1, t[2], t[3], var, t[4]);
+		       memset(mem, '\0', sizeof(mem));
+		       if (strcmp(repeat, "r") != 0) {
+		           break;
+		       }
+	        }               
         } else if (strcmp(sw, "cb") == 0) {
             char t[5][12] = {"void ", "(", "){", "}","();"};
             char name[SIZE];
@@ -354,8 +353,8 @@ int main() {
                 printf("//");
                 while(fgets(name,SIZE, stdin) == NULL) {
                     printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}	
+		            clearerr(stdin);
+		        }	
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
                     clean();
@@ -367,8 +366,8 @@ int main() {
                 printf("    int clear;\n");   
                 printf("    while ((clear = getc(stdin)) != '\\n' && clear != EOF) {\n");
                 printf("%s%s\n","    ",t[3]);	
-	        printf("%s\n\n",t[3]);
-		printf("%s%s\n\n",name,t[4]);
+	            printf("%s\n\n",t[3]);
+		        printf("%s%s\n\n",name,t[4]);
                 if (strcmp(repeat, "r") != 0) {
                     break;
                 }
@@ -383,8 +382,8 @@ int main() {
                 printf("//");
                 while(fgets(name,SIZE,stdin) == NULL) {
                     printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}		
+		            clearerr(stdin);
+		        }		
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
                     clean();
@@ -396,8 +395,8 @@ int main() {
                 printf("//");
                 while(fgets(value,SIZE,stdin) == NULL) {
                     printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}	
+		            clearerr(stdin);
+		        }	
                 value[strcspn(value, "\n")] = 0;
                 if (strlen(value) >= MAX) {
                     clean();
@@ -417,8 +416,8 @@ int main() {
                 printf("//");
                 while(fgets(name,SIZE, stdin) == NULL) {
                     printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}	
+		            clearerr(stdin);
+		        }	
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
                     clean();
@@ -430,8 +429,8 @@ int main() {
                 printf("//");
                 while(fgets(value,SIZE, stdin) ==NULL) {
                     printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}		
+		            clearerr(stdin);
+		        }		
                 value[strcspn(value, "\n")] = 0;
                 if (strlen(value) >= MAX) {
                     clean();
@@ -455,11 +454,11 @@ int main() {
             while (1) {
                 printf("//Enter i for if, e for else if.\n");
                 while (fgets(select,SIZE, stdin) == NULL || (1)) {
-		    clearerr(stdin);   
+		            clearerr(stdin);   
                     if (strlen(select) >= MAX) {
                         clean();
                     }
-		    select[strcspn(select, "\n")] = 0;
+		            select[strcspn(select, "\n")] = 0;
                     if (strcmp(select, "i") != 0 && strcmp(select, "e") != 0) {
                         printf("\n//Enter i or e only.\n\n");
                     } else {
@@ -471,19 +470,19 @@ int main() {
                 } else if (strcmp(select, "e") == 0) {
                     strcpy(select, t[2]);
                 }
-		printf("//Enter a name of first m for main.\n");
-		printf("//");
-		while(fgets(name,SIZE, stdin) == NULL) {
-		    printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}
-		name[strcspn(name, "\n")] = 0;
-                if (strlen(name) >= MAX) {
-                    clean();
-                }
-		if (strcmp(name, "m") == 0) {
-                    break;
-                }
+		        printf("//Enter a name of first m for main.\n");
+		        printf("//");
+		        while(fgets(name,SIZE, stdin) == NULL) {
+		            printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		       }
+		       name[strcspn(name, "\n")] = 0;
+               if (strlen(name) >= MAX) {
+                   clean();
+               }
+		       if (strcmp(name, "m") == 0) {
+                   break;
+               }
 		printf("//Enter a value.\n");
 		printf("//");
 		while(fgets(value, SIZE, stdin) == NULL) {
