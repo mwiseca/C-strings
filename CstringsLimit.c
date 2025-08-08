@@ -475,32 +475,32 @@ int main() {
 		        while(fgets(name,SIZE, stdin) == NULL) {
 		            printf("\nInvalid input Try again.\n\n");
 		            clearerr(stdin);
-		       }
-		       name[strcspn(name, "\n")] = 0;
-               if (strlen(name) >= MAX) {
+		        }
+		        name[strcspn(name, "\n")] = 0;
+                if (strlen(name) >= MAX) {
                    clean();
-               }
-		       if (strcmp(name, "m") == 0) {
-                   break;
-               }
-		printf("//Enter a value.\n");
-		printf("//");
-		while(fgets(value, SIZE, stdin) == NULL) {
-		    printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}
-		value[strcspn(value, "\n")] = 0;
+                }
+		        if (strcmp(name, "m") == 0) {
+                    break;
+                }
+		        printf("//Enter a value.\n");
+		        printf("//");
+		        while(fgets(value, SIZE, stdin) == NULL) {
+		            printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
+		        value[strcspn(value, "\n")] = 0;
                 if (strlen(value) >= MAX) {
                     clean();
                 }
-		printf("//Enter a comparison a for equal b for not equal.\n");
-		printf("//");
+		        printf("//Enter a comparison a for equal b for not equal.\n");
+		        printf("//");
                 while (fgets(compare,SIZE, stdin) == NULL || (1)) {
-		    clearerr(stdin);   
+		            clearerr(stdin);   
                     if (strlen(compare) >= MAX) {
                         clean();
                     }
-		    compare[strcspn(compare, "\n")] = 0;
+		            compare[strcspn(compare, "\n")] = 0;
                     if (strcmp(compare, "a") != 0 && strcmp(compare, "b") != 0) {
                         printf("\n//Enter a or b only.\n\n");
                     } else {
@@ -512,55 +512,54 @@ int main() {
                 } else if (strcmp(compare, "b") == 0) {
                     strcpy(compare, t[5]);
                 }
-		printf("//Enter a operator a for and o for or.\n");
-		printf("//");
-		while (fgets(op,SIZE, stdin) == NULL || (1)) {
-		    clearerr(stdin);  
+		        printf("//Enter a operator a for and o for or.\n");
+		        printf("//");
+		        while (fgets(op,SIZE, stdin) == NULL || (1)) {
+		            clearerr(stdin);  
                     if (strlen(op) >= MAX) {
                         clean();
                     }
-		    op[strcspn(op, "\n")] = 0;
+		            op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "o") != 0) {
                         printf("\n//Enter a or o only.\n\n");
                     } else {
                         break;
                     }
                 }
-		   
                 if (strcmp(op, "a") == 0) {
                     strcpy(op, t[8]);
                 } else if (strcmp(op, "o") == 0) {
                     strcpy(op, t[9]);
                 }
-		printf("//Enter the second name,\n");
-		printf("//");
-		while(fgets(sname,SIZE, stdin) == NULL) {
-		    printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}    
-		sname[strcspn(sname, "\n")] = 0;
+		        printf("//Enter the second name,\n");
+		        printf("//");
+		        while(fgets(sname,SIZE, stdin) == NULL) {
+		            printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }    
+		        sname[strcspn(sname, "\n")] = 0;
                 if (strlen(sname) >= MAX) {
                     clean();
                 }
-		printf("Enter the second value.\n");
-		printf("//");
-		while(fgets(svalue,SIZE,stdin) == NULL) {  
-		    printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin);
-		}		
-		svalue[strcspn(svalue, "\n")] = 0;
+		        printf("Enter the second value.\n");
+		        printf("//");
+		        while(fgets(svalue,SIZE,stdin) == NULL) {  
+		            printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }		
+		        svalue[strcspn(svalue, "\n")] = 0;
                 if (strlen(svalue) >= MAX) {
                     clean();
                 }
-		printf("Enter a second comparison a for equal b for not equal\n");
-		printf("//");
-		while (fgets(scompare,SIZE,stdin) == NULL || (1)) {
-		    clearerr(stdin);
+		        printf("Enter a second comparison a for equal b for not equal\n");
+		        printf("//");
+		        while (fgets(scompare,SIZE,stdin) == NULL || (1)) {
+		            clearerr(stdin);
                     if (strlen(scompare) >= MAX) {
                         clean();
-		    }	
-		    scompare[strcspn(scompare, "\n")] = 0;
-		    if (strcmp(scompare, "a") != 0 && strcmp(scompare, "b") != 0) {
+		            }   	
+		            scompare[strcspn(scompare, "\n")] = 0;
+		            if (strcmp(scompare, "a") != 0 && strcmp(scompare, "b") != 0) {
                         printf("\n//Enter a or b only.\n\n");
                     } else {
                         break;
@@ -719,9 +718,9 @@ int main() {
                 printf("//Enter a number to compare to.\n");
                 printf("//");
                 while(fgets(num,SIZE,stdin) == NULL) {
-		    printf("\nInvalid input Try again.\n\n");
-		    clearerr(stdin); 
-		}
+		            printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin); 
+		        }
                 num[strcspn(num, "\n")] = 0;
                 if (strlen(num) >= MAX) {
                     clean();
