@@ -137,3 +137,5 @@ Added: fgets with if statement to eliminate the need to press enter twice when u
 to clear input buffer.
 Check fb in choices.
 June 21 2025.
+CstringsLimit.c had all fgets in a while loop to prevent a infinite loop when ctrl + d was pressed.
+August 9 2025.
