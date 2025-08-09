@@ -1,5 +1,5 @@
 # C-strings
-Use this to make simple programs related to strings.<br>
+Use this to make simple programs in C.<br>
 The program comments out almost anything that's not usable in a program.<br>
 This is for learning and checking syntax, not enhancing productivity.
 
