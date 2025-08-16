@@ -47,13 +47,19 @@ int main() {
     printf("          SPDX-License-Identifier: Apache-20\n\n\n");
 
     printf("//Enter r to repeat choices enter to not.\n");
-    fgets(repeat, MAX, stdin);
+    while(fgets(repeat, MAX, stdin) == NULL) {
+		printf("\nInvalid input Try again.\n\n");
+	    clearerr(stdin);
+    }
     repeat[strcspn(repeat, "\n")] = 0;
     choice();
     while (1) {
         printf("//Enter x to exit main m for main ch for choices.\n");
         printf("//");
-        fgets(sw, sizeof(sw), stdin);
+        while(fgets(sw, sizeof(sw), stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+		    clearerr(stdin);
+		}
         sw[strcspn(sw, "\n")] = 0;
         if (strcmp(sw, "b") == 0) {
             char string[3][15] = {"printf(\"", "\\n", "\");"};
@@ -61,7 +67,10 @@ int main() {
             printf("//Enter your string, m for main.\n");
             while (1) {
                 printf("//");
-                fgets(text, MAX, stdin);
+                while(fgets(text, MAX, stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }    
                 text[strcspn(text, "\n")] = 0;
                 if (strcmp(text, "m") == 0) {
                     break;
@@ -80,7 +89,10 @@ int main() {
             printf("//Enter text m for main.\n");
             while (1) {
                 printf("//");
-                fgets(text, MAX, stdin);
+                while(fgets(text, MAX, stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
                 text[strcspn(text, "\n")] = 0;
                 if (strcmp(text, "m") == 0) {
                     break;
@@ -98,14 +110,20 @@ int main() {
             while (1) {
                 printf("//Enter name of variable m for main.\n");
                 printf("//");
-                fgets(v, MAX, stdin);
+                while(fgets(v, MAX, stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
                 v[strcspn(v, "\n")] = 0;
                 if (strcmp(v, "m") == 0) {
                     break;
                 }
                 printf("//Enter the memory to be allocated to the variable.\n");
                 printf("//");
-                fgets(me, MAX, stdin);
+                while(fgets(me, MAX, stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
                 me[strcspn(me, "\n")] = 0;
                 printf("\n%s%s%s%s%s%s\n", f[0], v, f[1], me, f[1], f[2]);
                 printf("%s%s%s%s%s%s\n\n", v, f[3], v, f[1], f[4], f[5]);
