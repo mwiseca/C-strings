@@ -353,7 +353,7 @@ int main() {
                 }
             }
         } else if (strcmp(sw, "mi") == 0) {
-            char t[11][30] = {"if(strcmp(", ",", "} else if(strcmp(", "\"", ")==0", ")!=0", ")==0) {", ")!=0) {", " && ", " || ", "strcmp("};
+                        char t[11][30] = {"if(strcmp(", ",", "} else if(strcmp(", "\"", ")==0", ")!=0", ")==0) {", ")!=0) {", " && ", " || ", "strcmp("};
             char select[MAX];
             char name[MAX];
             char value[MAX];
@@ -365,36 +365,44 @@ int main() {
 
             while (1) {
                 printf("//Enter i for if, e for else if.\n");
-                while (fgets(select, MAX, stdin)) {
-                    select[strcspn(select, "\n")] = 0;
+                while (fgets(select,MAX, stdin) == NULL || (1)) {
+		            clearerr(stdin);    
+		            select[strcspn(select, "\n")] = 0;
                     if (strcmp(select, "i") != 0 && strcmp(select, "e") != 0) {
-                        printf("//Enter i or e only.\n");
+                        printf("\n//Enter i or e only.\n\n");
                     } else {
                         break;
                     }
-                }
+                }   
                 if (strcmp(select, "i") == 0) {
                     strcpy(select, t[0]);
                 } else if (strcmp(select, "e") == 0) {
                     strcpy(select, t[2]);
                 }
-		printf("//Enter a name of first m for main.\n");
-		printf("//");
-		fgets(name, MAX, stdin);
-		name[strcspn(name, "\n")] = 0;
-		if (strcmp(name, "m") == 0) {
+		        printf("//Enter a name of first m for main.\n");
+		        printf("//");
+		        while(fgets(name,MAX, stdin) == NULL) {
+		            printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
+		        name[strcspn(name, "\n")] = 0;
+		        if (strcmp(name, "m") == 0) {
                     break;
                 }
-		printf("//Enter a value.\n");
-		printf("//");
-		fgets(value, MAX, stdin);
-		value[strcspn(value, "\n")] = 0;
-		printf("//Enter a comparison a for equal b for not equal.\n");
-		printf("//");
-                while (fgets(compare, MAX, stdin)) {
-                       compare[strcspn(compare, "\n")] = 0;
+		        printf("//Enter a value.\n");
+		        printf("//");
+		        while(fgets(value, MAX, stdin) == NULL) {
+		            printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
+		        value[strcspn(value, "\n")] = 0;
+		        printf("//Enter a comparison a for equal b for not equal.\n");
+		        printf("//");
+                while (fgets(compare,MAX, stdin) == NULL || (1)) {
+		            clearerr(stdin);   
+		            compare[strcspn(compare, "\n")] = 0;
                     if (strcmp(compare, "a") != 0 && strcmp(compare, "b") != 0) {
-                        printf("//Enter a or b only.\n");
+                        printf("\n//Enter a or b only.\n\n");
                     } else {
                         break;
                     }
@@ -404,12 +412,13 @@ int main() {
                 } else if (strcmp(compare, "b") == 0) {
                     strcpy(compare, t[5]);
                 }
-		printf("//Enter a operator a for and o for or.\n");
-		printf("//");
-		while (fgets(op, MAX, stdin)) {
-		      op[strcspn(op, "\n")] = 0;
+		        printf("//Enter a operator a for and o for or.\n");
+		        printf("//");
+		        while (fgets(op,MAX, stdin) == NULL || (1)) {
+		            clearerr(stdin);  
+		            op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "o") != 0) {
-                        printf("//Enter a or o only.\n");
+                        printf("\n//Enter a or o only.\n\n");
                     } else {
                         break;
                     }
@@ -419,20 +428,27 @@ int main() {
                 } else if (strcmp(op, "o") == 0) {
                     strcpy(op, t[9]);
                 }
-		printf("//Enter the second name,\n");
-		printf("//");
-		fgets(sname, MAX, stdin);
-		sname[strcspn(sname, "\n")] = 0;
-		printf("Enter the second value.\n");
-		printf("//");
-		fgets(svalue, MAX, stdin);
-		svalue[strcspn(svalue, "\n")] = 0;
-		printf("Enter a second comparison a for equal b for not equal\n");
-		printf("//");
-		while (fgets(scompare, MAX, stdin)) {
-                      scompare[strcspn(scompare, "\n")] = 0;
-                    if (strcmp(scompare, "a") != 0 && strcmp(scompare, "b") != 0) {
-                        printf("//Enter a or b only.\n");
+		        printf("//Enter the second name,\n");
+		        printf("//");
+		        while(fgets(sname,MAX, stdin) == NULL) {
+		            printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }    
+		        sname[strcspn(sname, "\n")] = 0;
+		        printf("Enter the second value.\n");
+		        printf("//");
+		        while(fgets(svalue,MAX,stdin) == NULL) {  
+                    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }		
+		        svalue[strcspn(svalue, "\n")] = 0;
+		        printf("Enter a second comparison a for equal b for not equal\n");
+		        printf("//");
+		        while (fgets(scompare,MAX,stdin) == NULL || (1)) {
+		            clearerr(stdin);	
+		            scompare[strcspn(scompare, "\n")] = 0;
+		            if (strcmp(scompare, "a") != 0 && strcmp(scompare, "b") != 0) {
+                        printf("\n//Enter a or b only.\n\n");
                     } else {
                         break;
                     }
@@ -446,7 +462,7 @@ int main() {
                 if (strcmp(repeat, "r") != 0) {
                     break;
                 }
-            }	
+            }	   
         } else if (strcmp(sw, "in") == 0) {
             char t[10][20] = {"if(", "} else if(", "strlen", " <= ", " == ", " >= ", " != ", "(", ")", ") {"};
             char select[1000];
