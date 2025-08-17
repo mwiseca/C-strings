@@ -693,7 +693,8 @@ int main() {
             while (1) {
                 printf("//Enter a data type i for int d for double.\n");
                 printf("//");
-                while (fgets(typ, MAX, stdin)) {
+                while (fgets(typ, MAX, stdin)== NULL || (1)) {
+                    clearerr(stdin);
                     typ[strcspn(typ, "\n")] = 0;
                     if (strcmp(typ, "i") != 0 && strcmp(typ, "d") != 0) {
                         printf("//Enter i or d.\n");
@@ -708,18 +709,27 @@ int main() {
                 }
                 printf("//Enter the name of the array m for main.\n");
                 printf("//");
-                fgets(name, MAX, stdin);
+                while(fgets(name, MAX, stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }    	
                 name[strcspn(name, "\n")] = 0;
                 if (strcmp(name, "m") == 0) {
                     break;
                 }
                 printf("//Enter number of elements m for main.\n");
                 printf("//");
-                fgets(num, MAX, stdin);
+                while(fgets(num, MAX, stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }    
                 num[strcspn(num, "\n")] = 0;
                 printf("//Enter elements with a comma between them.\n");
                 printf("//");
-                fgets(elements, MAX, stdin);
+                while(fgets(elements, MAX, stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }    
                 elements[strcspn(elements, "\n")] = 0;
                 printf("%s%s%s%s%s%s%s%s\n", typ, name, a[2], num, a[3], a[4], elements, a[5]);
                 if (strcmp(repeat, "r") != 0) {
