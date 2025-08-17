@@ -171,15 +171,18 @@ int main() {
             while (1) {
                 printf("//Enter name of variable m for main.\n");
                 printf("//");
-	        fgets(v, MAX, stdin);
+	        while(fgets(v, MAX, stdin) == NULL) {
+                printf("\nInvalid input Try again.\n\n");
+		        clearerr(stdin);
+		    }    
 	        v[strcspn(v, "\n")] = 0;
 	        if (strcmp(v, "m") == 0) {
 	            break;
 	        }  
 	        printf("//Enter the memory to be allocated to the variable 5 minimum.\n");
 	        printf("//");
-	        while(fgets(me,MAX, stdin)) {
-	              me[strcspn(me, "\n")] = 0;
+	        while(fgets(me,MAX, stdin) == NULL || (1)) {
+		        clearerr(stdin);       
 	            m = atoi(me);
 	            if(m <=4 || m > 999999999) {
 	                printf("\n//Enter a number 5 or more or less than 99999999.\n\n");
@@ -187,8 +190,12 @@ int main() {
 	                break;
 	            }
 	        } 
+			me[strcspn(me, "\n")] = 0;
 	        printf("//Enter the function name.\n");
-	        fgets(function,MAX,stdin);
+	        while(fgets(function,MAX,stdin) == NULL) {
+                printf("\nInvalid input Try again.\n\n");
+		        clearerr(stdin);
+		    }    
 	        function[strcspn(function,"\n")]=0;
 	        printf("\n%s%s%s%s%s%s\n", f[0], v, f[1], me, f[1], f[2]);
 	        printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
