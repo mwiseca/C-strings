@@ -504,7 +504,7 @@ int main() {
 		            clearerr(stdin);
                     op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "b") != 0 && strcmp(op, "c") != 0 && strcmp(op, "d") != 0) {
-                        printf("//Enter a or b or c or d only.\n");
+                        printf("//\nEnter a or b or c or d only.\n\n");
                     } else {
                         break;
                     }
@@ -575,7 +575,7 @@ int main() {
 		            clearerr(stdin);
                     op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "b") != 0 && strcmp(op, "c") != 0 && strcmp(op, "d") != 0) {
-                        printf("//Enter a or b or c or d only.\n");
+                        printf("//\nEnter a or b or c or d only.\n\n");
                     } else {
                         break;
                     }
