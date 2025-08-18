@@ -626,7 +626,10 @@ int main() {
                 }
                 printf("//Enter the memory to be allocated to the variable.\n");
                 printf("//");
-                fgets(mem, MAX, stdin);
+                while(fgets(mem, MAX, stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
                 mem[strcspn(mem, "\n")] = 0;
                 printf("\n%s%s%s%s%s\n\n", f[0], name, f[1], mem, f[2]);
                 if (strcmp(repeat, "r") != 0) {
