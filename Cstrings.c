@@ -480,21 +480,28 @@ int main() {
             while (1) {
                 printf("//Enter s for strlen  or i for regular if statement. Enter e for else if.\n");
                 printf("//");
-                fgets(select, sizeof(select), stdin);
+                while(fgets(select, sizeof(select), stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
                 select[strcspn(select, "\n")] = 0;
                 if (strcmp(select, "s") != 0 && strcmp(select, "i") != 0 && strcmp(select, "e") != 0) {
                     printf("//Enter s or i or e only.\n");
                     continue;
                 }
                 printf("//Enter the name of if or else if statement  enter m for main.\n");
-                fgets(var, MAX, stdin);
+                while(fgets(var, MAX, stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
                 var[strcspn(var, "\n")] = 0;
                 if (strcmp(var, "m") == 0) {
                     break;
                 }
                 printf("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal\n");
                 printf("//");
-                while (fgets(op, sizeof(op), stdin)) {
+                while (fgets(op, sizeof(op), stdin) == NULL || (1)) {
+		            clearerr(stdin);
                     op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "b") != 0 && strcmp(op, "c") != 0 && strcmp(op, "d") != 0) {
                         printf("//Enter a or b or c or d only.\n");
@@ -513,7 +520,10 @@ int main() {
                 }
                 printf("//Enter a number to compare to.\n");
                 printf("//");
-                fgets(num, sizeof(num), stdin);
+                while(fgets(num, sizeof(num), stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
                 num[strcspn(num, "\n")] = 0;
                 if (strcmp(select, "s") == 0) {
                     printf("\n%s%s%s%s%s%s%s%s\n\n", t[0], t[2], t[7], var, t[8], op, num, t[9]);
@@ -541,21 +551,28 @@ int main() {
             while (1) {
                 printf("//Enter i for if statement. Enter e for else if.\n");
                 printf("//");
-                fgets(select, sizeof(select), stdin);
+                while(fgets(select, sizeof(select), stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
                 select[strcspn(select, "\n")] = 0;
                 if (strcmp(select, "i") != 0 && strcmp(select, "e") != 0) {
                     printf("//Enter i or e only.\n");
                     continue;
                 }
                 printf("//Enter the name of if or else if statement  enter m for main.\n");
-                fgets(var, MAX, stdin);
+                while(fgets(var, MAX, stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
                 var[strcspn(var, "\n")] = 0;
                 if (strcmp(var, "m") == 0) {
                     break;
                 }
                 printf("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal\n");
                 printf("//");
-                while (fgets(op, sizeof(op), stdin)) {
+                while (fgets(op, sizeof(op), stdin) == NULL || (1)) {
+		            clearerr(stdin);
                     op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "b") != 0 && strcmp(op, "c") != 0 && strcmp(op, "d") != 0) {
                         printf("//Enter a or b or c or d only.\n");
@@ -574,7 +591,10 @@ int main() {
                 }
                 printf("//Enter a number to compare to.\n");
                 printf("//");
-                fgets(num, sizeof(num), stdin);
+                while(fgets(num, sizeof(num), stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+		            clearerr(stdin);
+		        }
                 num[strcspn(num, "\n")] = 0;
                 if (strcmp(select, "i") == 0) {
                     printf("\n%s%s%s%s%s\n\n", t[0], var, op, num, t[8]);
