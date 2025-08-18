@@ -217,6 +217,7 @@ int main() {
     	        printf("    if(strlen(%s) >= %d) {\n",v,m - 1);
      	        printf("        %s();\n",function);
 	        printf("    }\n\n");
+			memset(me, '\0', sizeof(me));
 	        if (strcmp(repeat, "r") != 0) {
 	            break;
                 } 
