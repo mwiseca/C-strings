@@ -930,7 +930,7 @@ int main() {
                 if (strlen(elements) >= MAX) {
                     clean();
                 }
-                printf("%s%s%s%s%s%s%s%s\n", typ, name, a[2], num, a[3], a[4], elements, a[5]);
+                printf("\n%s%s%s%s%s%s%s%s\n\n", typ, name, a[2], num, a[3], a[4], elements, a[5]);
                 if (strcmp(repeat, "r") != 0) {
                     break;
                 }
