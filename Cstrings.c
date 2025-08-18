@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#define SIZE 100
-#define MAX 99
+#define SIZE 200
+#define MAX 199
  
 void clean(){
     int clear;     
