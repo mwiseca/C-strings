@@ -42,67 +42,81 @@ def string():
     t = ['printf("','\\n','");',]
     print("//Enter text m for main.")
     while True:
-        text = input("//")
-        if text == "m":
-            return ""
-        print("\n" + t[0] + text + t[1] + t[2] + "\n")
-        print("\n" + t[0] + t[1] + text + t[1] + t[1] + t[2] + "\n")
-        print("\n" + t[0] + text + t[2] + "\n")
-
+        try:
+            text = input("//")
+            if text == "m":
+                return ""
+            print("\n" + t[0] + text + t[1] + t[2] + "\n")
+            print("\n" + t[0] + t[1] + text + t[1] + t[1] + t[2] + "\n")
+            print("\n" + t[0] + text + t[2] + "\n")
+        except EOFError:
+            print("\nInvalid input\n")
 
 def hide_text():
     t = ['printf("','");']
     import getpass
     print("//Enter text m for main.")
     while True:
-        text = getpass.getpass("")
-        print(t[0] + text + t[1])
-        if text == "m":
-            return ""
+        try:
+            text = getpass.getpass("")
+            print(t[0] + text + t[1])
+            if text == "m":
+                return ""
+        except EOFError:
+            print("\nInvalid input\n")
 
 
 def empty_string():
     t = ["printf(",");"]
     print("//Enter text m for main.")
     while True:
-        text = input("//")
-        if text == "m":
-            return ""
-        print("\n" + t[0] + text + t[1] + "\n")
+        try:
+            text = input("//")
+            if text == "m":
+                return ""
+            print("\n" + t[0] + text + t[1] + "\n")
+        except EOFError:
+            print("\nInvalid input\n")
 
 
 def fgets():
     t = ["fgets(",",","stdin);","[strcspn(",'"\\n"',")]=0;","[strlen(", ")-1] = '\\0';","while(","      ","stdin)) {"]
     while True:
-        print("//Enter name of variable m for main.")
-        v= input("//")
-        if v == "m":
-            return ""
-        print("//Enter the memory to be allocated to the variable m for main.")
-        ma = input("//")
-        if ma == "m":
-            return ""
-        print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
-        print(v + t[3] +  v  + t[1] +  t[4] + t[5] + "\n")
-        print("\n" +t[8] + t[0] + v + t[1] + ma + t[1] + t[10])
-        print(t[9] + v + t[3] +  v  + t[1] +  t[4] + t[5] + "\n") 
-        print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
-        print(v + t[6] +v + t[7] + "\n")
+        try:
+            print("//Enter name of variable m for main.")
+            v= input("//")
+            if v == "m":
+                return ""
+            print("//Enter the memory to be allocated to the variable m for main.")
+            ma = input("//")
+            if ma == "m":
+                return ""
+            print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
+            print(v + t[3] +  v  + t[1] +  t[4] + t[5] + "\n")
+            print("\n" +t[8] + t[0] + v + t[1] + ma + t[1] + t[10])
+            print(t[9] + v + t[3] +  v  + t[1] +  t[4] + t[5] + "\n") 
+            print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
+            print(v + t[6] +v + t[7] + "\n")
+            except EOFError:
+                print("\nInvalid input\n")
 
 
 def fgets_sizeof():
     t = ["fgets(",",","sizeof(","),stdin);","[strcspn(",'"\\n"',")]=0;","[strlen(", ")-1] = '\\0';","while(","      ","),stdin)) {"]
     while True:
-        print("//Enter name of variable m for main.")
-        name = input("//")
-        if name == "m":
-            return ""
-        print("\n" + t[0] + name + t[1] + t[2] +name + t[3])
-        print(name + t[4] +  name  + t[1] +  t[5] + t[6] + "\n")
-        print("\n" +t[9] + t[0] + name + t[1] + t[2] + name + t[11])
-        print(t[10] + name + t[4] +  name  + t[1] +  t[5] + t[6] + "\n")
-        print("\n" + t[0] + name + t[1] + t[2] + name + t[3])
-        print(name + t[7] + name + t[8] + "\n")
+        try:
+            print("//Enter name of variable m for main.")
+            name = input("//")
+            if name == "m":
+                return ""
+            print("\n" + t[0] + name + t[1] + t[2] +name + t[3])
+            print(name + t[4] +  name  + t[1] +  t[5] + t[6] + "\n")
+            print("\n" +t[9] + t[0] + name + t[1] + t[2] + name + t[11])
+            print(t[10] + name + t[4] +  name  + t[1] +  t[5] + t[6] + "\n")
+            print("\n" + t[0] + name + t[1] + t[2] + name + t[3])
+            print(name + t[7] + name + t[8] + "\n")
+        except EOFError:
+            print("\nInvalid input\n")
 
 
 def fgets_buffer():
@@ -682,6 +696,8 @@ while True:
         (switch[call]())
     except KeyError:
         print("Enter a letter in choices.\n")
+    except EOFError:
+            print("\nInvalid input\n")
       
     
     
