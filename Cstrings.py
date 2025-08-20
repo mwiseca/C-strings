@@ -97,8 +97,8 @@ def fgets():
             print(t[9] + v + t[3] +  v  + t[1] +  t[4] + t[5] + "\n") 
             print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
             print(v + t[6] +v + t[7] + "\n")
-            except EOFError:
-                print("\nInvalid input\n")
+        except EOFError:
+            print("\nInvalid input\n")
 
 
 def fgets_sizeof():
