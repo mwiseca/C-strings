@@ -224,7 +224,7 @@ def else_if_statement():
             print("//Enter a value.")
             value = input("//")
             if value == "m":
-            return ""
+                return ""
             print("\n" + t[0] + name + t[1] + t[2] + value + t[2] + t[3] + "\n")
         except EOFError:
             print("\nInvalid input\n")
@@ -590,7 +590,7 @@ def check_scanf():
             if ch == "m":
                 return ""
             elif ch != "i" and ch != "d":
-            continue
+                continue
             print("//Enter the name of variable.")
             name = input("//")
             if ch == "i":
@@ -644,8 +644,8 @@ def variable_number():
                 print("\n" + t[1] + name + t[2] + value + t[3] + "\n")
             elif ch == "d":
                 print("\n" + t[0] +name + t[2] + value + t[3] + "\n")
-            except EOFError:
-                print("\nInvalid input\n")
+        except EOFError:
+            print("\nInvalid input\n")
 
 
 def variable_no_value():
@@ -659,7 +659,7 @@ def variable_no_value():
             elif ch != "i" and ch != "d":
                 continue
             print("//Enter the name.")
-                name = input("//")
+            name = input("//")
             if ch == "i":
                 print("\n" + t[1]+name+t[2] + "\n")
             elif ch == "d":
