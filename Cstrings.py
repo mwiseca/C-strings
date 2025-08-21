@@ -381,18 +381,21 @@ def variable_value():
 
 def array():
     while True:
-        t = ["char "," [","]"," [","] = {","};"]
-        print("//Enter a name m for main.")
-        name = input("//")
-        if name == "m":
-            return ""
-        print("//Enter the amount of elements.")
-        elements = input("//")
-        print("//Enter memory allocated to the largest element.")
-        m = input("//")
-        print("//Enter elements with quotations and commas between each.")
-        el = input("//")
-        print("\n" + t[0] + name + t[1] + elements + t[2] + t[3] + m + t[4] + el + t[5] + "\n")
+        try:
+            t = ["char "," [","]"," [","] = {","};"]
+            print("//Enter a name m for main.")
+            name = input("//")
+            if name == "m":
+                return ""
+            print("//Enter the amount of elements.")
+            elements = input("//")
+            print("//Enter memory allocated to the largest element.")
+            m = input("//")
+            print("//Enter elements with quotations and commas between each.")
+            el = input("//")
+            print("\n" + t[0] + name + t[1] + elements + t[2] + t[3] + m + t[4] + el + t[5] + "\n")
+        except EOFError:
+            print("\nInvalid input\n")
         
 
 def num_array():
@@ -423,43 +426,52 @@ def num_array():
 def function():
     t = ["void ","(","){","}"]
     while True:
-        print("//Name the function m for main.")
-        name = input("//")
-        if name == "m":
-            return ""
-        print("//Enter parameters if none just press enter.")
-        per = input("//")
-        print("\n" + t[0] + name + t[1] + per  + t[2])  
-        print(2 *"\n")
-        print(t[3] + "\n")
+        try:
+            print("//Name the function m for main.")
+            name = input("//")
+            if name == "m":
+                return ""
+            print("//Enter parameters if none just press enter.")
+            per = input("//")
+            print("\n" + t[0] + name + t[1] + per  + t[2])  
+            print(2 *"\n")
+            print(t[3] + "\n")
+        except EOFError:
+            print("\nInvalid input\n")
         
 
 def call_function():
     while True:
-        t = ["(",");"]
-        print("//Enter the function name m for main.")
-        name = input("//")
-        if name == "m":
-            return ""
-        print("//Enter values for parameters if any.")
-        per = input("//")
-        print("\n" + name + t[0] + per + t[1] + "\n")
+        try:
+            t = ["(",");"]
+            print("//Enter the function name m for main.")
+            name = input("//")
+            if name == "m":
+                return ""
+            print("//Enter values for parameters if any.")
+            per = input("//")
+            print("\n" + name + t[0] + per + t[1] + "\n")
+        except EOFError:
+            print("\nInvalid input\n")
 
 
 def heap():
     t = ["char"," *",";"," = (char*)malloc","(",");","* sizeof(char));","free(",");"," = NULL;"]
     while True:
-        print("//Enter the name of the variable m for main.")
-        name = input("//")
-        if name == "m":
-            return ""
-        print("//Enter memory to allocate.")
-        mem = input("//")
-        print("\n" + t[0] + t[1] + name + t[2] + "\n")
-        print(name + t[3] + t[4] + mem + t[5] + "\n")
-        print(name + t[3] + t[4] + mem + t[6] + "\n")
-        print(t[7] + name + t[8])
-        print(name + t[9] + "\n")
+        try:
+            print("//Enter the name of the variable m for main.")
+            name = input("//")
+            if name == "m":
+                return ""
+            print("//Enter memory to allocate.")
+            mem = input("//")
+            print("\n" + t[0] + t[1] + name + t[2] + "\n")
+            print(name + t[3] + t[4] + mem + t[5] + "\n")
+            print(name + t[3] + t[4] + mem + t[6] + "\n")
+            print(t[7] + name + t[8])
+            print(name + t[9] + "\n")
+        except EOFError:
+            print("\nInvalid input\n")
         
 
 def heap_numbers():
@@ -561,16 +573,19 @@ def check_scanf():
 def clear_buffer():
     t = ["void ","(","){","}","();"]
     while True:
-        print("//Name the function m for main.")
-        name = input("//")
-        if name == "m":
-            return ""
-        print("\n" + t[0] + name + t[1] + t[2])
-        print("    int clear;");
-        print("    while ((clear = getc(stdin)) != '\\n' && clear != EOF) {")
-        print("    " + t[3])
-        print(t[3] + "\n")
-        print(name + t[4] + "\n")
+        try:
+            print("//Name the function m for main.")
+            name = input("//")
+            if name == "m":
+                return ""
+            print("\n" + t[0] + name + t[1] + t[2])
+            print("    int clear;");
+            print("    while ((clear = getc(stdin)) != '\\n' && clear != EOF) {")
+            print("    " + t[3])
+            print(t[3] + "\n")
+            print(name + t[4] + "\n")
+        except EOFError:
+            print("\nInvalid input\n")
 
 
 def variable_number():
