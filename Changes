@@ -143,3 +143,5 @@ Cstrings.c had all fgets in a while loop to prevent a infinite loop when ctrl + 
 The name was changed to CstringsBasic.c as it will be a basic file with less features then Cstrings.c.
 CstringsLimit.c was changed to Cstrings.c and the bounds limit was changed from 100 to 200 on most user inputs.
 August 19 2025.
+Added: a exception for eof error to all user inputs strings.py.
+August 22 2025.
