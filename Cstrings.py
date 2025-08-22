@@ -233,66 +233,70 @@ def else_if_statement():
 def multi_if():
     t = ["if(strcmp(", ",", "} else if(strcmp(", '"', ")==0", ")!=0", ")==0) {", ")!=0) {", " && ", " || ", "strcmp("]
     while True:
-        print("//Enter i for if, e for elseif.")
-        while True: 
-            select = input("//")
-            if select != "i" and select != "e":
-                print("//Enter i or e only.")
-            else:
-                break
-        if select == "i":
-            select = t[0]
-        elif select == "e":
-            select = t[2]
-        print("//Enter a name of first m for main.")
-        name = input("//")
-        if name == "m":
-            return ""
-        print("//Enter a value.")
-        value = input("//")
-        print("Enter a comparison a for equal b for not equal.")
-        while True:
-            compare = input("//")
-            if compare != "a" and compare != "b":
-                print("//Enter a or b only.")
-            else:
-                break
-        if compare == "a":
-            compare = t[4]
-        elif compare == "b":
-            compare = t[5]
-        print("//Enter a operator a for and o for or.")
-        while True:
-            op = input("//")
-            if op != "a" and op != "o":
-                print("//Enter a or o only.")
-            else:
-                break
-        if op == "a":
-            op = t[8]
-        elif op == "o":
-            op = t[9]
-        print("Enter the second name.")
-        sname = input("//")
-        print("//Enter the second value.")
-        svalue = input("//")
-        print("//Enter a second comparison a for equal b for not equal")
-        while True:
-            scompare = input("//")
-            if scompare != "a" and scompare != "b":
-                print("//Enter a or b only.")
-            else:
-                break
-        if scompare == "a":
-            scompare = t[6]
-        elif scompare == "b":
-            scompare = t[7]
-        print("\n\n" + select + name + t[1] + t[3] + value + t[3] + compare + op + t[10] + sname + t[1] + t[3] + svalue + t[3] +  scompare + "\n\n")
+        try:
+            print("//Enter i for if, e for elseif.")
+            while True: 
+                select = input("//")
+                if select != "i" and select != "e":
+                    print("//Enter i or e only.")
+                else:
+                    break
+            if select == "i":
+                select = t[0]
+            elif select == "e":
+                select = t[2]
+            print("//Enter a name of first m for main.")
+            name = input("//")
+            if name == "m":
+                return ""
+            print("//Enter a value.")
+            value = input("//")
+            print("Enter a comparison a for equal b for not equal.")
+            while True:
+                compare = input("//")
+                if compare != "a" and compare != "b":
+                    print("//Enter a or b only.")
+                else:
+                    break
+            if compare == "a":
+                compare = t[4]
+            elif compare == "b":
+                compare = t[5]
+            print("//Enter a operator a for and o for or.")
+            while True:
+                op = input("//")
+                if op != "a" and op != "o":
+                    print("//Enter a or o only.")
+                else:
+                    break
+            if op == "a":
+                op = t[8]
+            elif op == "o":
+                op = t[9]
+            print("Enter the second name.")
+            sname = input("//")
+            print("//Enter the second value.")
+            svalue = input("//")
+            print("//Enter a second comparison a for equal b for not equal")
+            while True:
+                scompare = input("//")
+                if scompare != "a" and scompare != "b":
+                    print("//Enter a or b only.")
+                else:
+                    break
+            if scompare == "a":
+                scompare = t[6]
+            elif scompare == "b":
+                scompare = t[7]
+            print("\n\n" + select + name + t[1] + t[3] + value + t[3] + compare + op + t[10] + sname + t[1] + t[3] + svalue + t[3] +  scompare + "\n\n")
+        except EOFError:
+            print("\nInvalid input\n")
 
 
 def if_number():
     t = ["if(", "}else if(","strlen"," <= ", " == "," >= "," != ","(",")","){"]
     while True:
+        try:
         print("//Enter s for strlen  or i for regular if statement. Enter e for else if.")
         select = input("//")
         if select != "s" and select != "i" and select != "e": 
@@ -331,37 +335,39 @@ def if_number():
 def if_malloc():
     t = ["if(*", "}else if(*"," <= ", " == "," >= "," != ","(",")","){"]
     while True:
-        print("//Enter i for if statement. Enter e for else if.")
-        select = input("//")
-        if select != "i" and select != "e": 
-            print("//Enter i or e only.")
-            continue
-        print("//Enter the name of if or else if statement. Enter m for main.")
-        var = input("//")
-        if var == "m":
-            return ""
-        print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal")
-        while True:
-            op = input("//")
-    
-            if op != "a" and op != "b" and op != "c" and op != "d":
-                print("//Enter a or b or c or d only.") 
-            else:
-                break
-        if op == "a":
-            op = t[2]
-        elif op == "b":
-            op = t[3]
-        elif op == "c":
-            op = t[4]
-        elif op == "d":
-            op = t[5]
-        print("//Enter a number to compare to.")
-        num = input("//")
-        if select == "i":
-            print("\n" +  t[0] + var + op + num + t[8] +"\n")
-        elif select == "e":
-            print("\n" + t[1] + var + op + num + t[8] + "\n")
+        try:
+            print("//Enter i for if statement. Enter e for else if.")
+            select = input("//")
+            if select != "i" and select != "e": 
+                print("//Enter i or e only.")
+                continue
+            print("//Enter the name of if or else if statement. Enter m for main.")
+            var = input("//")
+            if var == "m":
+                return ""
+            print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal")
+            while True:
+                op = input("//")
+                if op != "a" and op != "b" and op != "c" and op != "d":
+                    print("//Enter a or b or c or d only.") 
+                else:
+                    break
+            if op == "a":
+                op = t[2]
+            elif op == "b":
+                op = t[3]
+            elif op == "c":
+                op = t[4]
+            elif op == "d":
+                op = t[5]
+            print("//Enter a number to compare to.")
+            num = input("//")
+            if select == "i":
+                print("\n" +  t[0] + var + op + num + t[8] +"\n")
+            elif select == "e":
+                print("\n" + t[1] + var + op + num + t[8] + "\n")
+        except EOFError:
+            print("\nInvalid input\n")
 
 
 def variable():
