@@ -297,39 +297,41 @@ def if_number():
     t = ["if(", "}else if(","strlen"," <= ", " == "," >= "," != ","(",")","){"]
     while True:
         try:
-        print("//Enter s for strlen  or i for regular if statement. Enter e for else if.")
-        select = input("//")
-        if select != "s" and select != "i" and select != "e": 
-            print("//Enter s or i or e only.")
-            continue
-        print("//Enter the name of if or else if statement. Enter m for main.")
-        var = input("//")
-        if var == "m":
-            return ""
-        print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal")
-        while True:
-            op = input("//")
+            print("//Enter s for strlen  or i for regular if statement. Enter e for else if.")
+            select = input("//")
+            if select != "s" and select != "i" and select != "e": 
+                print("//Enter s or i or e only.")
+                continue
+            print("//Enter the name of if or else if statement. Enter m for main.")
+            var = input("//")
+            if var == "m":
+                return ""
+            print("//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal")
+            while True:
+                op = input("//")
         
-            if op != "a" and op != "b" and op != "c" and op != "d":
-                print("//Enter a or b or c or d only.") 
-            else:
-                break
-        if op == "a":
-            op = t[3]
-        elif op == "b":
-            op = t[4]
-        elif op == "c":
-            op = t[5]
-        elif op == "d":
-            op = t[6]
-        print("//Enter a number to compare to.")
-        num = input("//")
-        if select == "s":
-            print("\n" + t[0] + t[2] + t[7] + var + t[8] + op + num +  t[9] + "\n")
-        elif select == "i":
-            print("\n" +  t[0] + var + op + num + t[9] +"\n")
-        elif select == "e":
-            print("\n" + t[1] + var + op + num + t[9] + "\n")
+                if op != "a" and op != "b" and op != "c" and op != "d":
+                    print("//Enter a or b or c or d only.") 
+                else:
+                    break
+            if op == "a":
+                op = t[3]
+            elif op == "b":
+                op = t[4]
+            elif op == "c":
+                op = t[5]
+            elif op == "d":
+                op = t[6]
+            print("//Enter a number to compare to.")
+            num = input("//")
+            if select == "s":
+                print("\n" + t[0] + t[2] + t[7] + var + t[8] + op + num +  t[9] + "\n")
+            elif select == "i":
+                print("\n" +  t[0] + var + op + num + t[9] +"\n")
+            elif select == "e":
+                print("\n" + t[1] + var + op + num + t[9] + "\n")
+        except EOFError:
+            print("\nInvalid input\n")   
 
 
 def if_malloc():
