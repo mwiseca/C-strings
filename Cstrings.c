@@ -13,6 +13,11 @@ void clean(){
     } 
 }
 
+void checkInput() {
+    printf("\nInvalid input Try again.\n\n");
+    clearerr(stdin);
+}
+
 void choice() {
     printf("//Enter ch for choices.\n");
     printf("//Enter a for arrays ia for numbers.\n");
@@ -55,8 +60,7 @@ int main() {
 
     printf("//Enter r to repeat choices enter to not.\n");
     while(fgets(repeat, sizeof(repeat), stdin) == NULL) {
-        printf("\nInvalid input Try again.\n\n");
-	    clearerr(stdin);
+        checkInput();    
     }
     repeat[strcspn(repeat, "\n")] = 0;
     if (strlen(repeat) >= 49) {
@@ -67,8 +71,7 @@ int main() {
         printf("//Enter x to exit main m for main ch for choices.\n");
         printf("//");
         while(fgets(sw, sizeof(sw), stdin) == NULL) {
-	        printf("\nInvalid input Try again.\n\n");
-	        clearerr(stdin);
+	        checkInput();     
 	    }
         sw[strcspn(sw, "\n")] = 0;
         if (strlen(sw) >= 49) {
