@@ -775,7 +775,7 @@ int main() {
                 if (strlen(mem) >= MAX) {
                     clean();
                 }
-                printf("//enter a value\n");
+                printf("//Enter a value\n");
                 printf("//");
                 while(fgets(value,SIZE,stdin) == NULL) {
 		            checkInput();    
@@ -1096,7 +1096,7 @@ int main() {
                     printf("Choose i or d or m only.\n");
                     continue;
                 }
-                printf("Enter the name.\n");
+                printf("//Enter the name.\n");
                 printf("//");
                 while(fgets(name, SIZE, stdin) == NULL) {
 		            checkInput();
@@ -1105,7 +1105,7 @@ int main() {
                 if (strlen(name) >= MAX) {
                     clean();
                 }
-                printf("Enter a value.\n");
+                printf("//Enter a value.\n");
                 printf("//");
                 while(fgets(value, SIZE, stdin) == NULL) {
 		            checkInput();    
@@ -1146,7 +1146,7 @@ int main() {
                     printf("Choose i or d or m only.\n");
                     continue;
                 }
-                printf("Enter the name.\n");
+                printf("//Enter the name.\n");
                 printf("//");
                 while(fgets(name, SIZE, stdin) == NULL) {
 		            checkInput();    
