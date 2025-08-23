@@ -145,3 +145,6 @@ CstringsLimit.c was changed to Cstrings.c and the bounds limit was changed from 
 August 19 2025.
 Added: a exception for eof error to all user inputs strings.py.
 August 22 2025.
+All printf("\nInvalid input try again.\n\n"); and clearerr(stdin); were replaced with a function.
+The function is void checkInput() { on Cstrings.c.
+August 23 2025.
