@@ -883,8 +883,7 @@ int main() {
                 printf("//Choose i for int d for double, m for main.\n");
                 printf("//");
                 while(fgets(ch, MAX, stdin) == NULL) {
-                    printf("\nInvalid input Try again.\n\n");
-		            clearerr(stdin);
+                     checkInput();        
 		        }   	
                 ch[strcspn(ch, "\n")] = 0;
                 if (strcmp(ch, "m") == 0) {
@@ -893,18 +892,16 @@ int main() {
                     printf("Choose i or d or m only.\n");
                     continue;
                 }
-                printf("Enter the name.\n");
+                printf("//Enter the name.\n");
                 printf("//");
                 while(fgets(name, MAX, stdin) == NULL) {
-                    printf("\nInvalid input Try again.\n\n");
-		            clearerr(stdin);
+                    checkInput();    
 		        }   	
                 name[strcspn(name, "\n")] = 0;
-                printf("Enter a value.\n");
+                printf("//Enter a value.\n");
                 printf("//");
                 while(fgets(value, MAX, stdin) == NULL) {
-				    printf("\nInvalid input Try again.\n\n");
-		            clearerr(stdin);
+				    checkInput();    
 		        }   	
                 value[strcspn(value, "\n")] = 0;
                 if (strcmp(ch, "i") == 0) {
@@ -927,8 +924,7 @@ int main() {
                 printf("//Choose i for int d for double, m for main.\n");
                 printf("//");
                 while(fgets(ch, MAX, stdin) == NULL) {
-					printf("\nInvalid input Try again.\n\n");
-		            clearerr(stdin);
+					checkInput();    
 		        }   				
                 ch[strcspn(ch, "\n")] = 0;
                 if (strcmp(ch, "m") == 0) {
@@ -937,11 +933,10 @@ int main() {
                     printf("Choose i or d or m only.\n");
                     continue;
                 }
-                printf("Enter the name.\n");
+                printf("//Enter the name.\n");
                 printf("//");
                 while(fgets(name, MAX, stdin) == NULL) {
-					printf("\nInvalid input Try again.\n\n");
-		            clearerr(stdin);
+					checkInput();     
 		        }    
                 name[strcspn(name, "\n")] = 0;
                 if (strcmp(ch, "i") == 0) {
@@ -964,8 +959,7 @@ int main() {
                 printf("//Choose i for int d for double or m for main.\n");
                 printf("//");
                 while(fgets(ch, MAX, stdin) == NULL) {
-				    printf("\nInvalid input Try again.\n\n");
-		            clearerr(stdin);
+				    checkInput();     
 		        }   	
                 ch[strcspn(ch, "\n")] = 0;
                 if (strcmp(ch, "m") == 0) {
@@ -977,8 +971,7 @@ int main() {
                 printf("//Enter the name of variable.\n");
                 printf("//");
                 while(fgets(name, MAX, stdin) == NULL) {
-					printf("\nInvalid input Try again.\n\n");
-		            clearerr(stdin);
+					checkInput();     
 		        }   
                 name[strcspn(name, "\n")] = 0;
                 if (strcmp(ch, "i") == 0) {
@@ -1001,8 +994,7 @@ int main() {
                 printf("//Choose i for int f for float or d for double or m for main.\n");
                 printf("//");
                 while(fgets(ch, MAX, stdin) == NULL) { 
-                    printf("\nInvalid input Try again.\n\n");
-		            clearerr(stdin);
+                    checkInput();     
 		        }   	
                 ch[strcspn(ch, "\n")] = 0;
                 if (strcmp(ch, "m") == 0) {
@@ -1014,8 +1006,7 @@ int main() {
                 printf("//Enter the name of variable.\n");
                 printf("//");
                 while(fgets(name, MAX, stdin) == NULL) {
-                    printf("\nInvalid input Try again.\n\n");
-		            clearerr(stdin);
+                    checkInput(); 
 		        }   	
                 name[strcspn(name, "\n")] = 0;
                 if (strcmp(ch, "i") == 0) {
@@ -1043,8 +1034,7 @@ int main() {
                 printf("//Choose i for int d for double or m for main.\n");
                 printf("//");
                 while(fgets(ch, MAX, stdin) == NULL) {
-                    printf("\nInvalid input Try again.\n\n");
-		            clearerr(stdin);
+                    checkInput();     
 		        }   	
                 ch[strcspn(ch, "\n")] = 0;
                 if (strcmp(ch, "m") == 0) {
@@ -1056,8 +1046,7 @@ int main() {
                 printf("//Enter the name of variable.\n");
                 printf("//");
                 while(fgets(name, MAX, stdin) == NULL) {
-                    printf("\nInvalid input Try again.\n\n");
-		            clearerr(stdin);
+                    checkInput();   
 		        }   	
                 name[strcspn(name, "\n")] = 0;
                 if (strcmp(ch, "i") == 0) {
