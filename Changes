@@ -148,3 +148,5 @@ August 22 2025.
 All printf("\nInvalid input try again.\n\n"); and clearerr(stdin); were replaced with a function.
 The function is void checkInput() { on Cstrings.c.
 August 23 2025.
+A new file was added to C files textToBin.c. It Converts keyboard many characters to binary and hexadecimal numbers.
+September 8 2025.
