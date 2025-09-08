@@ -52,3 +52,6 @@ Febuary 27 2025.
 CstringsLimit.c has been changed to allow for easer changing Memory size for most user inputs.
 It uses #define SIZE and define MAX.
 March 12 2025.
+A new file was added textToBin.c It converts keyboard characters to binary and hexadecimal numbers.
+Right now theres enough to make sentances in binary and hexadecimal.
+September 8 2025.
