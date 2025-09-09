@@ -204,7 +204,7 @@ int main() {
     while(1) {
         int number = -1;
         int i = 0;
-        printf("//Enter a leter to get a binary and hexadecimal number.\n");
+        printf("//Enter a letter to get a binary and hexadecimal number.\n");
         printf("//Enter ii for index mn for main.\n");
         while(fgets(select,sizeof(select),stdin) == NULL){
             clearerr(stdin);
