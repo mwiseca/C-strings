@@ -191,7 +191,7 @@ int main() {
     sprintf(value[50], "\n01111001\n\n0b01111001\n\n79\n\n0x79\n");
     sprintf(value[51], "\n01111010\n\n0b01111010\n\n7A\n\n0x7A\n");
     sprintf(value[52], "\n00101110\n\n0b00101110\n\n2E\n\n0x2E\n");
-    sprintf(value[53], "\n00001010\n\n0b00001010\n\n0A\n\n0X0A\n");
+    sprintf(value[53], "\n00001010\n\n0b00001010\n\n0A\n\n0x0A\n");
     sprintf(value[54], "\n00100000\n\n0b00100000\n\n20\n\n0x20\n");
     sprintf(value[55], "\n00101100\n\n0b00101100\n\n2C\n\n0x2C\n");
     sprintf(value[56], "\n00111011\n\n0b00111011\n\n3B\n\n0x3B\n");
