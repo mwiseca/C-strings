@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-void clear(){
+void clean(){
     int clear;
     while ((clear = getc(stdin)) != '\n' && clear != EOF) {
     }
@@ -212,7 +212,7 @@ int main() {
         }
         select[strcspn(select,"\n")]=0;
         if(strlen(select) >= 9) {
-            clear();
+            clean();
         }
         if(strcmp(select,"ii")==0) {
             keys();
