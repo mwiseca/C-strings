@@ -55,3 +55,6 @@ March 12 2025.
 A new file was added textToBin.c It converts keyboard characters to binary and hexadecimal numbers.
 Right now theres enough to make sentances in binary and hexadecimal.
 September 8 2025.
+The break statement on line 226 was removed.
+It was used to fix another error.
+September 10 2025;
