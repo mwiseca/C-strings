@@ -27,9 +27,9 @@ void checkInput() {
 
 void choice() {
     printf("//Enter ch for choices.\n");
-    printf("//Enter a for strings.\n");
-    printf("//Enter aa for arrays.\n");
+    printf("//Enter a for arrays.\n");
     printf("//Enter ia for arrays with numbers .\n");
+    printf("//Enter b for strings for arrays.\n");
     printf("//Enter c for strings with no quotation marks.\n");
     printf("//Enter cy for what's needed to copy and paste to finish a simple program.\n");
     printf("//Enter i for if statements e for else if for strings.\n");
@@ -1702,7 +1702,7 @@ int main() {
             choice();
         } else if(strcmp(sw,"cy")==0) {
             copy();
-        } else if(strcmp(sw, "a")==0) {
+        } else if(strcmp(sw, "b")==0) {
             string();
         } else if(strcmp(sw, "c")==0) {
             stringEmpty();
@@ -1734,7 +1734,7 @@ int main() {
             variable();    
         } else if(strcmp(sw, "vv")==0) { 
             variableValue();  
-        } else if(strcmp(sw, "aa")==0) { 
+        } else if(strcmp(sw, "a")==0) { 
             array(); 
         } else if(strcmp(sw, "ia")==0) {
             numArray(); 
