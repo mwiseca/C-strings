@@ -29,7 +29,7 @@ void choice() {
     printf("//Enter ch for choices.\n");
     printf("//Enter a for arrays.\n");
     printf("//Enter ia for arrays with numbers .\n");
-    printf("//Enter b for strings for arrays.\n");
+    printf("//Enter b for strings with printf.\n");
     printf("//Enter c for strings with no quotation marks.\n");
     printf("//Enter cy for what's needed to copy and paste to finish a simple program.\n");
     printf("//Enter i for if statements e for else if for strings.\n");
