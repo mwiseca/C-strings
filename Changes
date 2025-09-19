@@ -150,3 +150,8 @@ The function is void checkInput() { on Cstrings.c.
 August 23 2025.
 A new file was added to C files textToBin.c. It Converts keyboard many characters to binary and hexadecimal numbers.
 September 8 2025.
+CstringsBasic was replaced with CstringsF.c.
+It calls functions in sw instead of complete programs.
+A function that converts letters to binary and hexadecimal numbers was added to CstringsF.c
+there is a index to show what keys are in it.
+Sept 19 2025.
