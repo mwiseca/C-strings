@@ -1,6 +1,6 @@
 # C-strings
 Use this to make simple programs in C.<br>
-The program comments out almost anything that's not usable in a program.<br>
+The program converts plain text into C code snippets and comments out almost anything that isn't valid C code.<br>
 This is for learning and checking syntax, not enhancing productivity.
 
 ## To Use
