@@ -333,9 +333,9 @@ void checkFgets() {
         printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
         printf("\n\n");
         memset(me, '\0', sizeof(me));
-        //if (strcmp(repeat, "r") != 0) {
-        //break;
-        //}
+        if (strcmp(repeat, "r") != 0) {
+        break;
+        }
     }	    
 }
 
