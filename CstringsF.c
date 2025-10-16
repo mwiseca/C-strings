@@ -40,6 +40,7 @@ void choice() {
     printf("//Enter fs for fgets with sizeof operator.\n");
     printf("//Enter fb for fgets to use with cb to clear input buffer without having ");
     printf("to press enter twice.\n");
+    printf("//Enter fcb to check fgets.\n");
     printf("//Enter s for scanf for strings to allow for white spaces.\n");
     printf("//Enter sb for scanf basic no white spaces.\n");
     printf("//Enter si for scanf for integers and doubles.\n");
@@ -249,6 +250,93 @@ void fgetsBuffer() {
             break;
         }	
     }     
+}
+
+void checkFgets() {
+    char f[12][25] = {"while(fgets(", ",", "stdin) == NULL) {", "[strcspn(", "\"\\n", "\")]=0;", "    ","sizeof(","),stdin) == NULL) {","printf(\"","\\n","\");"};
+    char v[SIZE];
+    char me [10];
+    char em [SIZE];
+    char function[SIZE];
+    int m;
+
+    while (1) {
+        printf("//Enter name of variable m for main.\n");
+        printf("//");
+        while(fgets(v, SIZE, stdin) == NULL) {
+            checkInput();    
+        }
+        v[strcspn(v, "\n")] = 0;
+        if(strlen(v) >= 9){
+            clear();
+        }
+        if (strcmp(v, "m") == 0) {
+            break;
+        }
+        printf("//Enter the memory to be allocated to the variable 5 minimum.\n");
+        printf("//");
+        while(fgets(me, sizeof(me), stdin) == NULL || (1)) {
+            clearerr(stdin);    
+            if(strlen(me) >= 9){
+                clear();
+            }            
+            m = atoi(me);
+            if(m <=4) {
+                printf("\n//Enter a number 5 or more.\n\n");
+            } else {
+                break;
+            }
+        } 
+        me[strcspn(me, "\n")] = 0;
+        printf("//Enter a error message. Invalid input is good.\n");
+        while(fgets(em,SIZE,stdin) == NULL) {
+            checkInput();     
+        }
+        em[strcspn(em,"\n")]=0;
+        if(strlen(em) >= MAX){
+            clear();
+        }
+        printf("//Enter the function name.\n");
+        while(fgets(function,SIZE,stdin) == NULL) {
+            checkInput();     
+        }
+        function[strcspn(function,"\n")]=0;
+        if(strlen(function) >= MAX){
+            clear();
+        }
+        printf("\n%s%s%s%s%s%s\n",f[0], v, f[1], me, f[1], f[2]);
+        printf("%sclearerr(stdin);\n",f[6]);
+        printf("%s%s%s%s%s%s%s\n",f[6],f[9],f[10],em,f[10],f[10],f[11]); 
+        printf("}\n");
+        printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
+        printf("if(strlen(%s) >= %d) {\n",v,m - 1);
+        printf("    %s();\n",function);
+        printf("}\n\n");
+        printf("\n%s%s%s%s%s%s\n",f[0], v, f[1],f[7],v, f[8]);
+        printf("%sclearerr(stdin);\n",f[6]);
+        printf("%s%s%s%s%s%s%s\n",f[6],f[9],f[10],em,f[10],f[10],f[11]);
+        printf("}\n");
+        printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
+        printf("if(strlen(%s) >= %d) {\n",v,m - 1);
+        printf("    %s();\n",function);
+        printf("}\n\n");
+        printf("\n%s%s%s%s%s%s\n",f[0], v, f[1], me, f[1], f[2]);
+        printf("%sclearerr(stdin);\n",f[6]);
+        printf("%s%s%s%s%s%s%s\n",f[6],f[9],f[10],em,f[10],f[10],f[11]); 
+        printf("}\n");
+        printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
+        printf("\n\n");
+        printf("\n%s%s%s%s%s%s\n",f[0], v, f[1],f[7],v, f[8]);
+        printf("%sclearerr(stdin);\n",f[6]);
+        printf("%s%s%s%s%s%s%s\n",f[6],f[9],f[10],em,f[10],f[10],f[11]);
+        printf("}\n");
+        printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
+        printf("\n\n");
+        memset(me, '\0', sizeof(me));
+        //if (strcmp(repeat, "r") != 0) {
+        //break;
+        //}
+    }	    
 }
 
 void scanff() {
@@ -1712,6 +1800,8 @@ int main() {
             fgetsSizeof();
         } else if(strcmp(sw, "fb")==0) {
             fgetsBuffer(); 
+        } else if(strcmp(sw, "fcb")==0) {
+            checkFgets();
         } else if(strcmp(sw, "s")==0) {
             scanff();
         } else if(strcmp(sw, "sb")==0) {
