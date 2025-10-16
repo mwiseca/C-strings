@@ -1781,7 +1781,9 @@ int main() {
     while (1) {
         printf("//Enter a selection from choices x to exit ch for choices.\n");
         printf("//");
-        fgets(sw,SIZE, stdin);
+        while(fgets(sw,SIZE, stdin) == NULL) {
+            checkInput();
+        }
         sw[strcspn(sw, "\n")] = 0;
         if (strlen(sw) >= MAX) {
             clear(); 
