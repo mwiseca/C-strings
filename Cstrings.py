@@ -12,7 +12,8 @@ def choice():
     print("//Enter f for fgets and removal of new line character.")
     print("//Enter fs for fgets with sizeof operator.")
     print("//Enter fb for fgets to use with cb to clear input buffer without having to press enter twice.")
-    print("//Enter fc for void functions.");
+    print("//Enter fcb to check fgets.")
+    print("//Enter fc for void functions.")
     print("//Enter s for scanf for strings.")
     print("//Enter sb for scanf basic no white spaces.")
     print("//Enter si for scanf for integers and doubles.")
@@ -164,9 +165,62 @@ def fgets_buffer():
             print("\nInvalid input\n")
 
 
+def checkFgets():
+    f = ["while(fgets(", ",", "stdin) == NULL) {", "[strcspn(", "\"\\n", "\")]=0;", "    ","sizeof(","),stdin) == NULL) {","printf(\"","\\n","\");"]
+    while True:
+        try:
+            print("//Enter name of variable m for main.")
+            v = input("//")
+            if v == "m":
+                break
+            print("//Enter the memory to be allocated to the variable 5 minimum.")
+            while True:
+                try:
+                    me = int(input("//"))
+                    if me < 5:
+                        print("\n//Enter 5 or more.\n")
+                    else:
+                        break
+                except ValueError:
+                    print("\n//Enter a number only.\n")
+            print("//Enter a error message. Invalid input is good.")
+            em = input("//")
+            print("//Enter the function name.")
+            function = input("//")
+            print(f"\n{f[0]}{v}{f[1]}{me}{f[1]}{f[2]}")
+            print(f[6] + "clearerr(stdin);")
+            print(f[6] + f[9] + f[10] + em + f[10] + f[10] + f[11])
+            print("}")
+            print(v + f[3] + v + f[1] +  f[4] + f[5])
+            print(f"if(strlen({v}) >= {me-1}) {{")
+            print("    " + function + "();")
+            print("}\n")
+            print("\n" + f[0] + v + f[1] + f[7] + v + f[8])
+            print(f[6] + "clearerr(stdin);")
+            print(f[6] + f[9] + f[10] + em + f[10] + f[10] + f[11])
+            print("}")
+            print(v + f[3] + v + f[1] + f[4] + f[5]) 
+            print(f"if(strlen({v}) >= {me-1}) {{")    
+            print(f[6] + function + "();");
+            print("}\n");
+            print(f"\n{f[0]}{v}{f[1]}{me}{f[1]}{f[2]}")
+            print(f[6] + "clearerr(stdin);")
+            print(f[6] + f[9] + f[10] + em + f[10] + f[10] + f[11])
+            print("}")
+            print( v +f[3] + v + f[1] + f[4] + f[5])
+            print("\n")
+            print("\n" + f[0] + v + f[1] + f[7] + v + f[8])
+            print(f[6] + "clearerr(stdin);")
+            print(f[6] + f[9] + f[10] + em + f[10] + f[10] + f[11])
+            print("}")
+            print(v + f[3] + v + f[1] + f[4] + f[5]);
+            print("\n") 
+        except EOFError:
+            print("\nInvalid input.\n")
+
+
 def scanf():
     t = ['scanf("%','[^\\n]",',");","getchar();"]
-
     while True:
         try:
             print("//Enter the name of variable m for main.")
@@ -728,6 +782,7 @@ switch = {
          "f": fgets,
          "fs": fgets_sizeof,
          "fb": fgets_buffer,
+         "fcb": checkFgets,
          "s": scanf,
          "sb": scanf_basic,
          "cb": clear_buffer,
