@@ -155,3 +155,5 @@ It calls functions in sw instead of complete programs.
 A function that converts letters to binary and hexadecimal numbers was added to CstringsF.c
 there is a index to show what keys are in it.
 Sept 19 2025.
+Check fgets has been added.
+October 18 2025.
