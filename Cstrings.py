@@ -12,7 +12,7 @@ def choice():
     print("//Enter f for fgets and removal of new line character.")
     print("//Enter fs for fgets with sizeof operator.")
     print("//Enter fb for fgets to use with cb to clear input buffer without having to press enter twice.")
-    print("//Enter fcb to check fgets.\n")
+    print("//Enter fcb to check fgets.")
     print("//Enter fc for void functions.")
     print("//Enter s for scanf for strings.")
     print("//Enter sb for scanf basic no white spaces.")
