@@ -1,1 +1,4 @@
+This version uses 2 arrays of keys and values to select functions.
+The value array is function pointers. This makes it possible to use a array to call functions.
+November 6 2025.
 
