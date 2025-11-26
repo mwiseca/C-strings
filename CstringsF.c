@@ -1866,7 +1866,7 @@ void copy() {
     printf("\n");
     printf("getchar();\n");
     printf("\n");
-    printf("clearerr(stdin);
+    printf("clearerr(stdin);\n");
     printf("\n");
     printf("} else {\n");
     printf("\n");
