@@ -14,6 +14,7 @@ def choice():
     print("//Enter fb for fgets to use with cb to clear input buffer without having to press enter twice.")
     print("//Enter fcb to check fgets.")
     print("//Enter fc for void functions.")
+    print("//Enter fi to convert a string to int or double to use with fgets.")
     print("//Enter s for scanf for strings.")
     print("//Enter sb for scanf basic no white spaces.")
     print("//Enter si for scanf for integers and doubles.")
@@ -218,6 +219,49 @@ def checkFgets():
         except EOFError:
             print("\nInvalid input.\n")
 
+
+def string_to_int():
+    t = ["long int", ";","char *"," = strtol(","&",",10);","    ","printf(\"","\\n", "\");","} else if","(*"," == 0x20) {","printf(\"","\\n","\");","("," == ",") {"," != '\\0') {", "} else {",","," = strtod(",")"," &",");"]
+ 
+    while True:
+        try:
+            type = input("//Enter type i for int d for double.\n")     
+            if type != "i" and type != "d":
+                print("\n//Enter i or d only.\n")
+                continue;
+            string = input("//Enter the string name to be converted m for main.\n")
+            if string == "m":
+                break
+            long_int = input("//Enter the converted integer or double name.\n")
+            ptr_name = input("//Enter the name of the pointer endptr or ptr will do.\n")
+            range_printf = input("//Enter a error message for out of range.\n");
+            spaces_printf = input("//Enter a error message for spaces between numbers.\n");
+            number_only = input("//Enter a error message for enter a number only.\n");
+            text_after_number = input("//Enter a error message for text after number.\n");
+            print("\nerrno = 0;")
+            if type == "i":
+                print(long_int + t[3] + string + t[21] + t[4] + ptr_name + t[5])
+            elif type == "d":
+                print(long_int + t[22] + string + t[21] + t[24] + ptr_name + t [25]) 
+            print("if(errno == ERANGE) {")
+            print(t[6] + t[7] + t[8] + range_printf + t[8] + t[8] + t[9])
+            print(t[10] + t[11] + ptr_name + t[12])
+            print(t[6] + t[7] + t[8] + spaces_printf + t[8] + t[8] + t[9])
+            print(t[10] + t[16] + ptr_name + t[17] + string + t[18])
+            print(t[6] + t[7] + t[8] + number_only +t [8] + t[8] + t[9])
+            print(t[10] + t[11] + ptr_name + t[19])
+            print(t[6] + t[7] + t[8] + text_after_number + t[8] + t[8] + t[9])
+            print(f"{t[20]}\n")
+            print("#include <errno.h>          Place at top of file.\n\n");
+            if type == "i":
+                print(f"long int {long_int};")
+                print(f"char *{ptr_name};\n")
+            elif type == "d":
+                print(f"double  {long_int};") 
+                print(f"char *{ptr_name};\n")
+        except EOFError:
+            print("\nInvalid input.\n")
+            
 
 def scanf():
     t = ['scanf("%','[^\\n]",',");","getchar();"]
@@ -740,6 +784,8 @@ def copy():
         print("\n")
         print("#include <stdlib.h>")
         print("\n")
+        print("#include <errno.h>")
+        print("\n")
         print("while(1){")
         print("\n")
         print("break;")
@@ -757,6 +803,8 @@ def copy():
         print("fflush(stdin);")
         print("\n")
         print("getchar();")
+        print("\n")
+        print("clearerr(stdin);")
         print("\n")
         print("}else{")
         print("\n")
@@ -783,6 +831,7 @@ switch = {
          "fs": fgets_sizeof,
          "fb": fgets_buffer,
          "fcb": checkFgets,
+         "fi": string_to_int,
          "s": scanf,
          "sb": scanf_basic,
          "cb": clear_buffer,
