@@ -3,4 +3,7 @@ The value array is function pointers. This makes it possible to use a array to c
 For this to work properly the index numbers on the arrays must match as well the <32 in the forloop
 must match the number of elements in arrays.
 November 6 2025.
-
+A convert string to int or double feature was added To CstringsF.c and Cstrings.py.
+This is how i use fgets for ints and doubles.
+A #include <errno.h> and clearerr(stdin); was added.
+November 26 2025.
