@@ -1847,6 +1847,7 @@ void copy() {
     printf("#include <stdlib.h>\n");
     printf("\n");
     printf("#include <errno.h>\n");
+    printf("\n");
     printf("while(1) {\n");
     printf("\n");
     printf("break;\n");
@@ -1866,6 +1867,7 @@ void copy() {
     printf("getchar();\n");
     printf("\n");
     printf("clearerr(stdin);\n");
+    printf("\n");
     printf("} else {\n");
     printf("\n");
     printf("else {\n");
