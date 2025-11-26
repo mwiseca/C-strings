@@ -157,3 +157,7 @@ there is a index to show what keys are in it.
 Sept 19 2025.
 Check fgets has been added.
 October 18 2025.
+A convert string to int or double feature was added To CstringsF.c and Cstrings.py.
+This is how i use fgets for ints and doubles.
+A #include <errno.h> and clearerr(stdin); was added.
+November 26 2025.
