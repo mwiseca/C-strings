@@ -465,7 +465,7 @@ void stringToInt() {
         printf("%s%s%s%s\n",t[10],t[11],ptrName,t[19]);
         printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],textAfterNumber,t[8],t[8],t[9]);
         printf("%scontinue;\n",t[6]);
-        printf("}");
+        printf("}\n\n");
         if(strcmp(repeat,"r")!=0) {
             break;
         } 
