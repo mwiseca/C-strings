@@ -424,7 +424,7 @@ void stringToInt() {
             clear();
         }
         
-        printf("#include <errno.h>          Place at top of file.\n\n");
+        printf("\n#include <errno.h>          Place at top of file.\n\n");
         if(strcmp(type,"i")==0) {
            printf("long int %s;\n",longInt);
            printf("char *%s;\n",ptrName);
@@ -446,7 +446,7 @@ void stringToInt() {
         printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],numberOnly,t[8],t[8],t[9]);
         printf("%s%s%s%s\n",t[10],t[11],ptrName,t[19]);
         printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],textAfterNumber,t[8],t[8],t[9]);
-        printf("%s\n\n\n",t[20]);
+        printf("%s\n\n",t[20]);
         printf("\nerrno = 0;\n");
         if(strcmp(type,"i")==0) {
             printf("%s%s%s%s%s%s%s\n",longInt,t[3],string,t[21],t[4],ptrName,t[5]);
@@ -465,6 +465,7 @@ void stringToInt() {
         printf("%s%s%s%s\n",t[10],t[11],ptrName,t[19]);
         printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],textAfterNumber,t[8],t[8],t[9]);
         printf("%scontinue;\n",t[6]);
+        printf("}");
         if(strcmp(repeat,"r")!=0) {
             break;
         } 
