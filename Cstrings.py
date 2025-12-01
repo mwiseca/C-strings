@@ -238,6 +238,13 @@ def string_to_int():
             spaces_printf = input("//Enter a error message for spaces between numbers.\n");
             number_only = input("//Enter a error message for enter a number only.\n");
             text_after_number = input("//Enter a error message for text after number.\n");
+                       print("\n#include <errno.h>          Place at top of file.\n\n");
+            if type == "i":
+                print(f"long int {long_int};")
+                print(f"char *{ptr_name};\n")
+            elif type == "d":
+                print(f"double  {long_int};") 
+                print(f"char *{ptr_name};\n")
             print("\nerrno = 0;")
             if type == "i":
                 print(long_int + t[3] + string + t[21] + t[4] + ptr_name + t[5])
@@ -252,13 +259,24 @@ def string_to_int():
             print(t[10] + t[11] + ptr_name + t[19])
             print(t[6] + t[7] + t[8] + text_after_number + t[8] + t[8] + t[9])
             print(f"{t[20]}\n")
-            print("#include <errno.h>          Place at top of file.\n\n");
+            print("\nerrno = 0;")
             if type == "i":
-                print(f"long int {long_int};")
-                print(f"char *{ptr_name};\n")
+                print(long_int + t[3] + string + t[21] + t[4] + ptr_name + t[5])
             elif type == "d":
-                print(f"double  {long_int};") 
-                print(f"char *{ptr_name};\n")
+                print(long_int + t[22] + string + t[21] + t[24] + ptr_name + t [25]) 
+            print("if(errno == ERANGE) {")
+            print(t[6] + t[7] + t[8] + range_printf + t[8] + t[8] + t[9])
+            print(f"{t[6]}continue;")
+            print(t[10] + t[11] + ptr_name + t[12])
+            print(t[6] + t[7] + t[8] + spaces_printf + t[8] + t[8] + t[9])
+            print(f"{t[6]}continue;")
+            print(t[10] + t[16] + ptr_name + t[17] + string + t[18])
+            print(t[6] + t[7] + t[8] + number_only +t [8] + t[8] + t[9])
+            print(f"{t[6]}continue;")
+            print(t[10] + t[11] + ptr_name + t[19])
+            print(t[6] + t[7] + t[8] + text_after_number + t[8] + t[8] + t[9])
+            print(f"{t[6]}continue;")
+            print("}\n") 
         except EOFError:
             print("\nInvalid input.\n")
             
