@@ -238,7 +238,7 @@ def string_to_int():
             spaces_printf = input("//Enter a error message for spaces between numbers.\n");
             number_only = input("//Enter a error message for enter a number only.\n");
             text_after_number = input("//Enter a error message for text after number.\n");
-                       print("\n#include <errno.h>          Place at top of file.\n\n");
+            print("\n#include <errno.h>          Place at top of file.\n\n");
             if type == "i":
                 print(f"long int {long_int};")
                 print(f"char *{ptr_name};\n")
