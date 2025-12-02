@@ -423,6 +423,15 @@ void stringToInt() {
         if(strlen(textAfterNumber) >= MAX) {
             clear();
         }
+        
+        printf("\n#include <errno.h>          Place at top of file.\n\n");
+        if(strcmp(type,"i")==0) {
+           printf("long int %s;\n",longInt);
+           printf("char *%s;\n",ptrName);
+        } else if(strcmp(type,"d")==0) {
+           printf("double %s;\n",longInt); 
+           printf("char *%s;\n\n",ptrName);
+        } 
         printf("\nerrno = 0;\n");
         if(strcmp(type,"i")==0) {
             printf("%s%s%s%s%s%s%s\n",longInt,t[3],string,t[21],t[4],ptrName,t[5]);
@@ -437,15 +446,26 @@ void stringToInt() {
         printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],numberOnly,t[8],t[8],t[9]);
         printf("%s%s%s%s\n",t[10],t[11],ptrName,t[19]);
         printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],textAfterNumber,t[8],t[8],t[9]);
-        printf("%s\n\n\n",t[20]);
-        printf("#include <errno.h>          Place at top of file.\n\n");
+        printf("%s\n\n",t[20]);
+        printf("\nerrno = 0;\n");
         if(strcmp(type,"i")==0) {
-           printf("long int %s;\n",longInt);
-           printf("char *%s;\n",ptrName);
+            printf("%s%s%s%s%s%s%s\n",longInt,t[3],string,t[21],t[4],ptrName,t[5]);
         } else if(strcmp(type,"d")==0) {
-           printf("double %s;\n",longInt); 
-           printf("char *%s;\n\n",ptrName);
-        } 
+            printf("%s%s%s%s%s%s%s\n",longInt,t[22],string,t[21], t[24],ptrName,t[25]);
+        }
+        printf("if(errno == ERANGE) {\n");
+        printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],rangePrintf,t[8],t[8],t[9]);
+        printf("%scontinue;\n",t[6]);
+        printf("%s%s%s%s\n",t[10],t[11],ptrName,t[12]);
+        printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],spacesPrintf,t[8],t[8],t[9]);
+        printf("%scontinue;\n",t[6]);
+        printf("%s%s%s%s%s%s\n",t[10],t[16],ptrName,t[17],string,t[18]);
+        printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],numberOnly,t[8],t[8],t[9]);
+        printf("%scontinue;\n",t[6]);
+        printf("%s%s%s%s\n",t[10],t[11],ptrName,t[19]);
+        printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],textAfterNumber,t[8],t[8],t[9]);
+        printf("%scontinue;\n",t[6]);
+        printf("}\n\n");
         if(strcmp(repeat,"r")!=0) {
             break;
         } 
