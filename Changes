@@ -162,4 +162,5 @@ This is how i use fgets for ints and doubles.
 A #include <errno.h> and clearerr(stdin); was added.
 November 26 2025.
 The string to int has been upgraded to include one without a  else  statement.
+This was added to stringsF.c and Cstrings.py.
 December 2 2025.
