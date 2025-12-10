@@ -164,3 +164,6 @@ November 26 2025.
 The string to int has been upgraded to include one without a  else  statement.
 This was added to stringsF.c and Cstrings.py.
 December 2 2025.
+String to int basic was added to CstringsF.c. It is the same as string to int with only one error message.
+Check fib in choices.
+December 10 2025.
