@@ -1997,7 +1997,7 @@ void copy() {
 int main() {
     char sw[SIZE];
 
-    printf("          copyright 2025 Mitchell E Wise\n");
+    printf("\n          copyright 2025 Mitchell E Wise\n");
     printf("          SPDX-License-Identifier: Apache-20\n\n\n");
 
     printf("//Enter r to repeat choices enter to not.\n");
