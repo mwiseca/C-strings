@@ -42,6 +42,7 @@ void choice() {
     printf("to press enter twice.\n");
     printf("//Enter fcb to check fgets.\n");
     printf("//Enter fi to convert a string to int or double with fgets.\n");
+    printf("//Enter fib to convert a string to int or double with only one error message.\n");
     printf("//Enter s for scanf for strings to allow for white spaces.\n");
     printf("//Enter sb for scanf basic no white spaces.\n");
     printf("//Enter si for scanf for integers and doubles.\n");
@@ -469,6 +470,101 @@ void stringToInt() {
         if(strcmp(repeat,"r")!=0) {
             break;
         } 
+    } 
+}
+
+void stringToIntBasic() {
+    const char *t [] = {"long int", ";","char *"," = strtol(","&",",10);","    ","printf(\"","\\n", "\");","*"," == 0x20","printf(\"","\\n","\");","("," == ",") {"," != '\\0') {", "} else {",","," = strtod(",")"," &",");"," || "};
+
+    char type [SIZE];
+    char string [SIZE];
+    char longInt [SIZE];
+    char ptrName [SIZE];
+    char errorMessage [SIZE];
+    while(1){
+        printf("//Enter type i for int d for double.\n");
+        while(fgets(type,SIZE,stdin) == NULL) {
+            checkInput(); 
+        }
+        type[strcspn(type,"\n")]=0;
+        if(strlen(type) >= MAX) {
+            clear();
+        }
+        if(strcmp(type,"i") !=0 && strcmp(type, "d")!=0){
+            printf("\n//Enter i or d only.\n\n");
+            continue;
+        }
+        printf("//Enter the string name to be converted m for main.\n");
+        while(fgets(string,SIZE,stdin) == NULL) {
+            checkInput(); 
+        }
+        string[strcspn(string,"\n")]=0;
+        if(strlen(string) >= MAX) {
+            clear();
+        }
+        if(strcmp(string,"m")==0) {
+            break;
+        }
+        printf("//Enter the converted integer or double name.\n");
+        while(fgets(longInt,SIZE,stdin) == NULL) {
+            checkInput(); 
+        }
+        longInt[strcspn(longInt,"\n")]=0;
+        if(strlen(longInt) >= MAX) {
+            clear();
+        }
+        printf("//Enter the name of the pointer endptr or ptr will do.\n");
+        while(fgets(ptrName,SIZE,stdin) == NULL) {
+            checkInput(); 
+        }
+        ptrName[strcspn(ptrName,"\n")]=0;
+        if(strlen(ptrName) >= MAX) {
+            clear();
+        }
+        printf("//Enter a error message.\n");
+        while(fgets(errorMessage,SIZE,stdin) == NULL) {
+            checkInput(); 
+        }
+        errorMessage[strcspn(errorMessage,"\n")]=0;
+        if(strlen(errorMessage) >= MAX) {
+            clear();
+        }
+        printf("\n#include <errno.h>          Place at top of file.\n\n");
+        if(strcmp(type,"i")==0) {
+            printf("long int %s;\n",longInt);
+            printf("char *%s;\n",ptrName);
+        } else if(strcmp(type,"d")==0) {
+            printf("double %s;\n",longInt); 
+            printf("char *%s;\n\n",ptrName);
+        } 
+        printf("\nerrno = 0;\n");
+        if(strcmp(type,"i")==0) {
+            printf("%s%s%s%s%s%s%s\n",longInt,t[3],string,t[20],t[4],ptrName,t[5]);
+        } else if(strcmp(type,"d")==0) {
+            printf("%s%s%s%s%s%s%s\n",longInt,t[21],string,t[20], t[23],ptrName,t[24]);
+        }
+        printf("if(errno == ERANGE || ");
+        printf("%s%s%s",t[10],ptrName,t[11]); 
+        printf("%s%s%s%s",t[25],ptrName,t[16],string); 
+        printf("%s%s%s%s\n",t[25],t[10],ptrName,t[18]);
+        printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],errorMessage,t[8],t[8],t[9]);
+        printf("%s\n\n",t[19]);
+        printf("\nerrno = 0;\n");
+        if(strcmp(type,"i")==0) {
+            printf("%s%s%s%s%s%s%s\n",longInt,t[3],string,t[20],t[4],ptrName,t[5]);
+        } else if(strcmp(type,"d")==0) {
+            printf("%s%s%s%s%s%s%s\n",longInt,t[21],string,t[20], t[23],ptrName,t[24]);
+        }
+        printf("if(errno == ERANGE || ");
+        printf("%s%s%s",t[10],ptrName,t[11]); 
+        printf("%s%s%s%s",t[25],ptrName,t[16],string); 
+        printf("%s%s%s%s\n",t[25],t[10],ptrName,t[18]);
+        printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],errorMessage,t[8],t[8],t[9]);
+        printf("%scontinue;\n",t[6]);
+        printf("}\n\n");
+        if(strcmp(repeat,"r")!=0) {
+            break;
+        }              
     } 
 }
 
@@ -1911,6 +2007,7 @@ void copy() {
         "fb",
         "fcb",
         "fi",
+        "fib",
         "s",
         "sb",
         "cb",
@@ -1947,6 +2044,7 @@ void copy() {
         fgetsBuffer,
         checkFgets,
         stringToInt,
+        stringToIntBasic,
         scanff,
         scanfBasic,
         clearBuffC,
@@ -1975,7 +2073,7 @@ void copy() {
 
     char sw[SIZE];
 
-    printf("          copyright 2025 Mitchell E Wise\n");
+    printf("\n          copyright 2025 Mitchell E Wise\n");
     printf("          SPDX-License-Identifier: Apache-20\n\n\n");
 
     printf("//Enter r to repeat choices enter to not.\n");
@@ -2001,7 +2099,7 @@ void copy() {
             break;
         } 
         int index = -1;
-        for(int i = 0; i<33;i++) {
+        for(int i = 0; i<34;i++) {
             if(strcmp(sw, keys[i])==0){
                 index = i;
             }
