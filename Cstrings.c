@@ -359,7 +359,7 @@ int main() {
                 }
                 type[strcspn(type,"\n")]=0;
                 if(strlen(type) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if(strcmp(type,"i") !=0 && strcmp(type, "d")!=0){
                     printf("\n//Enter i or d only.\n\n");
@@ -371,7 +371,7 @@ int main() {
                 }
                 string[strcspn(string,"\n")]=0;
                 if(strlen(string) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if(strcmp(string,"m")==0) {
                     break;
@@ -382,7 +382,7 @@ int main() {
                 }
                 longInt[strcspn(longInt,"\n")]=0;
                 if(strlen(longInt) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("//Enter the name of the pointer endptr or ptr will do.\n");
                 while(fgets(ptrName,SIZE,stdin) == NULL) {
@@ -390,7 +390,7 @@ int main() {
                 }
                 ptrName[strcspn(ptrName,"\n")]=0;
                 if(strlen(ptrName) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("//Enter a error message for out of range.\n");
                 while(fgets(rangePrintf,SIZE,stdin) == NULL) {
@@ -398,7 +398,7 @@ int main() {
                 }
                 rangePrintf[strcspn(rangePrintf,"\n")]=0;
                 if(strlen(rangePrintf) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("//Enter a error message for spaces between numbers.\n");
                 while(fgets(spacesPrintf,SIZE,stdin) == NULL) {
@@ -406,7 +406,7 @@ int main() {
                 }
                 spacesPrintf[strcspn(spacesPrintf,"\n")]=0;
                 if(strlen(spacesPrintf) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("//Enter a error message for enter a number only.\n");
                 while(fgets(numberOnly,SIZE,stdin) == NULL) {
@@ -414,7 +414,7 @@ int main() {
                 }
                 numberOnly[strcspn(numberOnly,"\n")]=0;
                 if(strlen(numberOnly) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("//Enter a error message for text after number.\n");
                 while(fgets(textAfterNumber,SIZE,stdin) == NULL) {
@@ -422,7 +422,7 @@ int main() {
                 }
                 textAfterNumber[strcspn(textAfterNumber,"\n")]=0;
                 if(strlen(textAfterNumber) >= MAX) {
-                    clear();
+                    clean();
                 }
 
                 printf("\n#include <errno.h>          Place at top of file.\n\n");
