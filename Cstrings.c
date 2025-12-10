@@ -1529,6 +1529,8 @@ int main() {
             printf("\n");
             printf("#include <stdlib.h>\n");
             printf("\n");
+			printf("#include <errno.h>\n");
+			prinft("\n");
             printf("while(1) {\n");
             printf("\n");
             printf("break;\n");
