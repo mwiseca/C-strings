@@ -33,6 +33,7 @@ void choice() {
     printf("//Enter fb for fgets to use with cb to clear input buffer without having ");
     printf("to press enter twice.\n");
 	printf("//Enter fcb to check fgets.\n");
+	printf("//Enter fi to convert a string to int or double to use with fgets.\n");
     printf("//Enter s for scanf for strings to allow for white spaces.\n");
     printf("//Enter sb for scanf basic no white spaces.\n");
     printf("//Enter si for scanf for integers and doubles.\n");
@@ -340,7 +341,136 @@ int main() {
                 if (strcmp(repeat, "r") != 0) {
                     break;
                 } 
-            }   	       
+            } 
+		} else if (strcmp(sw, "fi") == 0) {
+            char  t [26] [25] = {"long int", ";","char *"," = strtol(","&",",10);","    ","printf(\"","\\n", "\");","} else if","(*"," == 0x20) {","printf(\"","\\n","\");","("," == ",") {"," != '\\0') {", "} else {",","," = strtod(",")"," &",");"};
+            char type [SIZE];
+            char string [SIZE];
+            char longInt [SIZE];
+            char ptrName [SIZE];
+            char rangePrintf [SIZE];
+            char spacesPrintf [SIZE]; 
+            char numberOnly [SIZE];
+            char textAfterNumber [SIZE];
+            while(1){
+                printf("//Enter type i for int d for double.\n");
+                while(fgets(type,SIZE,stdin) == NULL) {
+                    checkInput(); 
+                }
+                type[strcspn(type,"\n")]=0;
+                if(strlen(type) >= MAX) {
+                    clean();
+                }
+                if(strcmp(type,"i") !=0 && strcmp(type, "d")!=0){
+                    printf("\n//Enter i or d only.\n\n");
+                    continue;
+                }    
+                printf("//Enter the string name to be converted m for main.\n");
+                while(fgets(string,SIZE,stdin) == NULL) {
+                    checkInput(); 
+                }
+                string[strcspn(string,"\n")]=0;
+                if(strlen(string) >= MAX) {
+                    clean();
+                }
+                if(strcmp(string,"m")==0) {
+                    break;
+                }
+                printf("//Enter the converted integer or double name.\n");
+                while(fgets(longInt,SIZE,stdin) == NULL) {
+                    checkInput(); 
+                }
+                longInt[strcspn(longInt,"\n")]=0;
+                if(strlen(longInt) >= MAX) {
+                    clean();
+                }
+                printf("//Enter the name of the pointer endptr or ptr will do.\n");
+                while(fgets(ptrName,SIZE,stdin) == NULL) {
+                    checkInput(); 
+                }
+                ptrName[strcspn(ptrName,"\n")]=0;
+                if(strlen(ptrName) >= MAX) {
+                    clean();
+                }
+                printf("//Enter a error message for out of range.\n");
+                while(fgets(rangePrintf,SIZE,stdin) == NULL) {
+                    checkInput(); 
+                }
+                rangePrintf[strcspn(rangePrintf,"\n")]=0;
+                if(strlen(rangePrintf) >= MAX) {
+                    clean();
+                }
+                printf("//Enter a error message for spaces between numbers.\n");
+                while(fgets(spacesPrintf,SIZE,stdin) == NULL) {
+                    checkInput(); 
+                }
+                spacesPrintf[strcspn(spacesPrintf,"\n")]=0;
+                if(strlen(spacesPrintf) >= MAX) {
+                    clean();
+                }
+                printf("//Enter a error message for enter a number only.\n");
+                while(fgets(numberOnly,SIZE,stdin) == NULL) {
+                    checkInput(); 
+                }
+                numberOnly[strcspn(numberOnly,"\n")]=0;
+                if(strlen(numberOnly) >= MAX) {
+                    clean();
+                }
+                printf("//Enter a error message for text after number.\n");
+                while(fgets(textAfterNumber,SIZE,stdin) == NULL) {
+                    checkInput(); 
+                }
+                textAfterNumber[strcspn(textAfterNumber,"\n")]=0;
+                if(strlen(textAfterNumber) >= MAX) {
+                    clean();
+                }
+
+                printf("\n#include <errno.h>          Place at top of file.\n\n");
+                if(strcmp(type,"i")==0) {
+                    printf("long int %s;\n",longInt);
+                    printf("char *%s;\n",ptrName);
+                } else if(strcmp(type,"d")==0) {
+                    printf("double %s;\n",longInt); 
+                    printf("char *%s;\n\n",ptrName);
+                } 
+                printf("\nerrno = 0;\n");
+                if(strcmp(type,"i")==0) {
+                    printf("%s%s%s%s%s%s%s\n",longInt,t[3],string,t[21],t[4],ptrName,t[5]);
+                } else if(strcmp(type,"d")==0) {
+                    printf("%s%s%s%s%s%s%s\n",longInt,t[22],string,t[21], t[24],ptrName,t[25]);
+                }
+                printf("if(errno == ERANGE) {\n");
+                printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],rangePrintf,t[8],t[8],t[9]);
+                printf("%s%s%s%s\n",t[10],t[11],ptrName,t[12]);
+                printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],spacesPrintf,t[8],t[8],t[9]);
+                printf("%s%s%s%s%s%s\n",t[10],t[16],ptrName,t[17],string,t[18]);
+                printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],numberOnly,t[8],t[8],t[9]);
+                printf("%s%s%s%s\n",t[10],t[11],ptrName,t[19]);
+                printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],textAfterNumber,t[8],t[8],t[9]);
+                printf("%s\n\n",t[20]);
+                printf("\nerrno = 0;\n");
+                if(strcmp(type,"i")==0) {
+                    printf("%s%s%s%s%s%s%s\n",longInt,t[3],string,t[21],t[4],ptrName,t[5]);
+                } else if(strcmp(type,"d")==0) {
+                    printf("%s%s%s%s%s%s%s\n",longInt,t[22],string,t[21], t[24],ptrName,t[25]);
+                }
+                printf("if(errno == ERANGE) {\n");
+                printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],rangePrintf,t[8],t[8],t[9]);
+                printf("%scontinue;\n",t[6]);
+                printf("%s%s%s%s\n",t[10],t[11],ptrName,t[12]);
+                printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],spacesPrintf,t[8],t[8],t[9]);
+                printf("%scontinue;\n",t[6]);
+                printf("%s%s%s%s%s%s\n",t[10],t[16],ptrName,t[17],string,t[18]);
+                printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],numberOnly,t[8],t[8],t[9]);
+                printf("%scontinue;\n",t[6]);
+                printf("%s%s%s%s\n",t[10],t[11],ptrName,t[19]);
+                printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],textAfterNumber,t[8],t[8],t[9]);
+                printf("%scontinue;\n",t[6]);
+                printf("}\n\n"); 
+                if(strcmp(repeat,"r")!=0) {
+                    break;
+                }
+            }			
         } else if (strcmp(sw, "s") == 0) {
             char t[6][15] = {"scanf(\"", "%", "[^\\n]\"", ",", ");", "getchar();"};
 	        char var[SIZE];
@@ -1399,6 +1529,8 @@ int main() {
             printf("\n");
             printf("#include <stdlib.h>\n");
             printf("\n");
+			printf("#include <errno.h>\n");
+			printf("\n");
             printf("while(1) {\n");
             printf("\n");
             printf("break;\n");
