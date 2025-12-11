@@ -167,3 +167,6 @@ December 2 2025.
 String to int basic was added to CstringsF.c. It is the same as string to int with only one error message.
 Check fib in choices.
 December 10 2025.
+The convert string to int or double was added to Cstrings.c.
+Check fi in choices.
+December 10 2025.
