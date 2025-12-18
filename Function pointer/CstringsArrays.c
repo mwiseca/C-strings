@@ -1112,7 +1112,7 @@ void multiIf() {
 }
 
 void multiIfNumber() {
-            char t[9][30] = {"if(", "} else if(",  " <= ", " == "," >= "," != ", " && ", " || ",") {"};
+    char t[9][30] = {"if(", "} else if(",  " <= ", " == "," >= "," != ", " && ", " || ",") {"};
     char select[SIZE];  
     char name[SIZE];
     char compare[SIZE];
