@@ -1153,7 +1153,7 @@ void multiIfNumber() {
         if (strcmp(name, "m") == 0) {
             break;
         }
-        printf("//Enter a comparison a for less or equal b for equal c for Grater or equal d for not equal.\n");
+        printf("//Enter a comparison a for less or equal, b for equal, c for Greater or equal, d for not equal.\n");
         printf("//");
         while (fgets(compare,SIZE, stdin) == NULL || (1)) {
             clearerr(stdin);
@@ -1215,7 +1215,7 @@ void multiIfNumber() {
         if (strlen(sname) >= MAX) {
             clear();
         }
-        printf("//Enter a second comparison a for less or equal b for equal c for Grater or equal d for not equal.\n");
+        printf("//Enter a second comparison a for less or equal, b for equal, c for Greater or equal, d for not equal.\n");
         printf("//");
         while (fgets(scompare, SIZE, stdin) == NULL || (1)) {
             clearerr(stdin);    
