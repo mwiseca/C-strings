@@ -1163,7 +1163,7 @@ void multiIfNumber() {
             }
             compare[strcspn(compare, "\n")] = 0;
             if (strcmp(compare, "a") != 0 && strcmp(compare, "b") != 0 && strcmp(compare, "c") !=0 && strcmp(compare, "d")!=0) {
-                printf("\n//Enter a or b only.\n\n");
+                printf("\n//Enter a b c or d only.\n\n");
             } else {
                 break;
             }
@@ -1224,7 +1224,7 @@ void multiIfNumber() {
             }
             scompare[strcspn(scompare, "\n")] = 0;
             if (strcmp(scompare, "a") != 0 && strcmp(scompare, "b") != 0 && strcmp(scompare, "c") !=0 && strcmp(scompare, "d")!=0) {
-                printf("\n//Enter a or b only.\n\n");
+                printf("\n//Enter a b c or d only.\n\n");
             } else {
                 break;
             }
