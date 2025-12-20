@@ -12,3 +12,6 @@ December 2 2025.
 String to int basic was added to CstringsArrays.c. It is the same as string to int with only one error message.
 Check fib in choices.
 December 10 2025.
+A multi if statement for numbers has been added to CstringsArrays.c with 2 conditions.
+check min in choices.
+December 20 2025.
