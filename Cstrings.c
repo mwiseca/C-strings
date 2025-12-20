@@ -793,7 +793,7 @@ int main() {
                 while (fgets(select, SIZE, stdin) == NULL || (1)) {
                     clearerr(stdin); 
                     if (strlen(select) >= MAX) {
-                        clear(); 
+                        clean(); 
                     }
                     select[strcspn(select, "\n")] = 0;
                         if (strcmp(select, "i") != 0 && strcmp(select, "e") != 0) {
@@ -814,7 +814,7 @@ int main() {
                 }
                 name[strcspn(name, "\n")] = 0;
                 if (strlen(name) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if (strcmp(name, "m") == 0) {
                     break;
@@ -824,7 +824,7 @@ int main() {
                 while (fgets(compare,SIZE, stdin) == NULL || (1)) {
                     clearerr(stdin);
                     if (strlen(compare) >= MAX) {
-                        clear();
+                        clean();
                     }
                         compare[strcspn(compare, "\n")] = 0;
                     if (strcmp(compare, "a") != 0 && strcmp(compare, "b") != 0 && strcmp(compare, "c") !=0 && strcmp(compare, "d")!=0) {
@@ -849,14 +849,14 @@ int main() {
                 }
                 value[strcspn(value, "\n")] = 0;
                 if (strlen(value) >= MAX) {
-                    clear();
+                    clean();
                 } 
                 printf("//Enter a operator a for and o for or.\n");
                 printf("//");
                 while (fgets(op, SIZE, stdin) == NULL || (1)) {
                     clearerr(stdin);     
                     if (strlen(op) >= MAX) {
-                        clear();
+                        clean();
                     }
                     op[strcspn(op, "\n")] = 0;
                     if (strcmp(op, "a") != 0 && strcmp(op, "o") != 0) {
@@ -877,14 +877,14 @@ int main() {
                 }
                 sname[strcspn(sname, "\n")] = 0;
                 if (strlen(sname) >= MAX) {
-                    clear();
+                    clean();
                 }
                 printf("//Enter a second comparison a for less or equal b for equal c for Greater or equal d for not equal.\n");
                 printf("//");
                 while (fgets(scompare, SIZE, stdin) == NULL || (1)) {
                     clearerr(stdin);    
                     if (strlen(scompare) >= MAX) {
-                        clear();
+                        clean();
                     }
                     scompare[strcspn(scompare, "\n")] = 0;
                     if (strcmp(scompare, "a") != 0 && strcmp(scompare, "b") != 0 && strcmp(scompare, "c") !=0 && strcmp(scompare, "d")!=0) {
@@ -909,7 +909,7 @@ int main() {
                 }
                 svalue[strcspn(svalue, "\n")] = 0;
                 if (strlen(sname) >= MAX) {
-                    clear();
+                    clean();
                 } 
                 printf("\n%s%s%s%s%s%s%s%s%s\n\n",select,name,compare,value,op,sname,scompare,svalue,t[8]);
                 if (strcmp(repeat, "r") != 0) {
