@@ -170,3 +170,6 @@ December 10 2025.
 The convert string to int or double was added to Cstrings.c.
 Check fi in choices.
 December 10 2025.
+A multi if statement for numbers has been added to Cstrings.c and CstringsF.c with 2 conditions.
+check min in choices.
+December 20 2025.
