@@ -1247,7 +1247,7 @@ void multiIfNumber() {
         } 
         printf("\n%s%s%s%s%s%s%s%s%s\n\n",select,name,compare,value,op,sname,scompare,svalue,t[8]);
         if (strcmp(repeat, "r") != 0) {
-            //break;
+            break;
         }
     }
 }
