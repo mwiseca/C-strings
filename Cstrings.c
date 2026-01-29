@@ -1280,7 +1280,7 @@ int main() {
                 }
                 keyArray[strcspn(keyArray,"\n")]=0;
                 if(strlen(keyArray) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if(strcmp(keyArray,"m") == 0) {
                     break;
@@ -1291,7 +1291,7 @@ int main() {
                 }
                 valueArray[strcspn(valueArray,"\n")]=0;
                 if(strlen(valueArray) >= MAX) {                                    
-                    clear();
+                    clean();
                 }
                 if(strcmp(valueArray,"m") == 0) {
                     break;
@@ -1302,7 +1302,7 @@ int main() {
                 }
                 select[strcspn(select,"\n")]=0;
                 if(strlen(select) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if(strcmp(select,"m") == 0) {
                     break;
@@ -1314,7 +1314,7 @@ int main() {
                 }
                 input[strcspn(input,"\n")]=0;
                 if(strlen(input) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if(strcmp(input,"m") == 0) {
                     break;
@@ -1325,7 +1325,7 @@ int main() {
                 }
                 forLoopInt[strcspn(forLoopInt,"\n")]=0;
                 if(strlen(forLoopInt) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if(strcmp(input,"m") == 0) {
                     break;
@@ -1336,7 +1336,7 @@ int main() {
                 }
                 elements[strcspn(elements,"\n")]=0;
                 if(strlen(elements) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if(strcmp(elements,"m") == 0) {
                     break;
@@ -1347,7 +1347,7 @@ int main() {
                 }
                 error[strcspn(error,"\n")]=0;
                 if(strlen(error) >= MAX) {
-                    clear();
+                    clean();
                 }
                 if(strcmp(error,"m") == 0) {
                     break;
@@ -1356,7 +1356,7 @@ int main() {
                 while(fgets(format,SIZE,stdin) == NULL || (1)) {
                     clearerr(stdin);
                     if(strlen(format) >= MAX) {
-                        clear();
+                        clean();
                     }
                     format[strcspn(format,"\n")]=0;
                     if(strcmp(format,"s")!=0 && strcmp(format,"i")!=0 && strcmp(format,"d")!=0) {
