@@ -173,3 +173,8 @@ December 10 2025.
 A multi if statement for numbers has been added to Cstrings.c and CstringsF.c with 2 conditions.
 check min in choices.
 December 20 2025.
+A simple map was added It uses 2 arrays for key value pairs. 
+A string key array and string int or double values array must be add first.
+User input must also be added first.
+check ma in choices.
+January 29 2026.
