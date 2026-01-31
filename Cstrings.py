@@ -6,7 +6,7 @@
 def choice():
     print("//Enter hd for strings hd to hide user input with getpass.")
     print("//Enter a for arrays ia for numbers.")
-    print("//Enter ma to build a simple map that maps 2 arrays.\n")
+    print("//Enter ma to build a simple map that maps 2 arrays.")
     print("//Enter b for strings.")
     print("//Enter c for strings with no quotation marks.")
     print("//Enter cy for what's needed to copy and paste to finish a simple program.")
