@@ -58,3 +58,7 @@ September 8 2025.
 The break statement on line 226 was removed.
 It was used to fix another error.
 September 10 2025;
+A new file was added strcpy.c. It has little use other than renaming a variable.
+It shows some points on string handling in C.
+It is much harder to have a buffer overflow while using this.
+February 18 2026.
