@@ -62,3 +62,6 @@ A new file was added strcpy.c. It has little use other than renaming a variable.
 It shows some points on string handling in C.
 It is much harder to have a buffer overflow while using this.
 February 18 2026.
+A new file was added strcpyStruct.c. It is for strings in structs. It assigns a value using strcpy.
+It reduces the chance of a buffer overflow.
+February 19 2026.
