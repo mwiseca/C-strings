@@ -77,6 +77,8 @@ int main () {
             break;
         }
         printf("//Enter the string to assign a value.\n");
+        printf("//This must be the largest amount of characters assigned to this member.\n");
+        printf("//Otherwise the buffer overflow protection won't work.\n");
         while(1) {
             if(fgets(string,sizeof(string),stdin) == NULL) {
                 checkInput();
