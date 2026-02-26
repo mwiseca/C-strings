@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#define SIZE 50
-#define MAX 49
+#define SIZE 1000
+#define MAX 999
 
 char repeat [SIZE];
 
