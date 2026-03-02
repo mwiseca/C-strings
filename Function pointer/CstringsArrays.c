@@ -1740,7 +1740,7 @@ void mapArrays() {
     }
 }
 
-void mapInt() {
+void mapNum() {
         char loop [7] [25] = {"int "," = -1;","for(int "," = 0;","<",";","++) {"};
     char ifStatement [12] [25] = {"    if(",", ","[","]",") {"," = ",";","}","    }","}","        "," == "};
     char keyError [7] [25] = {"if(", " == -1) {", "    printf(\"", "\\n", "\");","    continue;","}"};
@@ -2468,7 +2468,7 @@ void copy() {
         array,
         numArray,
         mapArrays,
-        mapInt,
+        mapNum,
         funct,
         callFunct,
         heap,
