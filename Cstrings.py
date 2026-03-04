@@ -7,6 +7,7 @@ def choice():
     print("//Enter hd for strings hd to hide user input with getpass.")
     print("//Enter a for arrays ia for numbers.")
     print("//Enter ma to build a simple map that maps 2 arrays.")
+    print("//Enter mn to build a simple map were the key array is numbers.\n")
     print("//Enter b for strings.")
     print("//Enter c for strings with no quotation marks.")
     print("//Enter cy for what's needed to copy and paste to finish a simple program.")
@@ -634,8 +635,73 @@ def mapArrays():
         except EOFError:
             print("\nInvalid input.")
             print("Start over.\n")
-   
 
+
+def mapNum():
+    loop = ["int "," = -1;","for(int "," = 0;","<",";","++) {"]
+    ifStatement = ["    if(",", ","[","]",") {"," = ",";","}","    }","}","        "," == "]
+    keyError = ["if(", " == -1) {", '    printf("', "\\n", '");',"    continue;","}"]
+    end = ["printf(\"","%s","%d","%f","\\n","\"",",","[","]",");"]
+  
+    while True:
+        try:
+            print("//Enter the name of the number key array m for main.")
+            keyArray = input("//")
+            if keyArray == "m":
+                break
+            print("//Enter the value array name m for main.")
+            valueArray = input("//")
+            if valueArray == "m":
+                break
+            print("//Enter the name of the number user input m for main.")
+            select = input("//")
+            if select == "m":
+                break; 
+            print("//Select the name of the variable that stores the key to be selected.")
+            print("//Index or number is good. m for main.")
+            inputt = input("//")
+            if inputt == "m":
+                break 
+            print("//Select a name for the for loop int i is the usual.")
+            forLoopInt = input("//")
+            if forLoopInt == "m":
+                break 
+            print("//Enter the number of elements in arrays.")
+            elements = input("//")
+            if elements == "m":
+                break
+            print("//Enter a key error message m for main.")
+            error = input("//")
+            if error == "m":
+                break
+            print("//Enter a format specifier for the value array s for string i for int d for double.")
+            while True:
+                formatt = input("//")
+                if formatt != "s" and formatt != "i" and formatt != "d":
+                    print("//\nEnter s i or d only.\n")
+                else:
+                    break 
+            if formatt == "s":
+                formatt = end[1]
+            elif formatt == "i":
+                formatt = end[2]
+            elif formatt == "d":
+                formatt = end[3]
+            print("\n" + loop[0] + inputt + loop[1])
+            print(loop[2] + forLoopInt + loop[3] + forLoopInt + loop[4] + elements + loop[5] + forLoopInt + loop[6])
+            print(ifStatement[0] + select + ifStatement[11] + keyArray + ifStatement[2] + forLoopInt + ifStatement[3] + ifStatement[4])
+            print(ifStatement[10] + inputt + ifStatement[5] + forLoopInt + ifStatement[6])
+            print(ifStatement[8] +  "\n" + ifStatement[9])
+            print(keyError[0] + inputt +keyError[1])
+            print(keyError[2] + keyError[3] + error + keyError[3] + keyError[3] + keyError[4])
+            print(keyError[5])
+            print(keyError[6])
+            print(end[0] + formatt + end[4] + end[5] + end[6] + valueArray + end[7] + inputt + end[8] + end[9] + "\n")
+        except EOFError:
+            print("\nInvalid input.")
+            print("Start over.\n")
+        
+    
 def function():
     t = ["void ","(","){","}"]
     while True:
@@ -929,6 +995,7 @@ switch = {
          "a": array,
          "ia": num_array,
          "ma": mapArrays,
+         "mn": mapNum,
          "fc": function,
          "cf": call_function,
          "h": heap,
