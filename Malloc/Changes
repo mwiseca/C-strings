@@ -4,3 +4,12 @@ february 26 2026.
 A simple map with the key array for numbers was added.
 Check mn in choices.
 March 4 2026.
+A new file was added. CstringsMallocOut.c.
+This one allocates and frees memory outside the while loops.
+The original allocates inside the loops.
+This is ok becouse most users wont select r and when they do
+they will do very few iterations of the loops.
+Allocating the memory inside the loops is easer to read.
+Allocating the memory outside is better if r is selected and
+and choices are repeated many times.
+March 24 2026.
