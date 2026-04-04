@@ -33,7 +33,7 @@ void choice() {
     printf("//Enter mn to build a simple map were the key array is numbers.\n");
     printf("//Enter b for strings with printf.\n");
     printf("//Enter c for strings with no quotation marks.\n");
-    printf("//Enter bq for strings with quotes and no printf.\n");
+    printf("//Enter bl for string literals.\n");
     printf("//Enter cy for what's needed to copy and paste to finish a simple program.\n");
     printf("//Enter i for if statements e for else if for strings.\n");
     printf("//Enter mi for if statements with 2 conditions.\n");
@@ -116,7 +116,7 @@ void stringEmpty() {
     }
 }
 
-void stringQuote() {
+void stringLiteral() {
     char data [10] [2] = { "\"", ","};
     char string [SIZE];
     char cont [SIZE];
@@ -2452,7 +2452,7 @@ void copy() {
         "cy",
         "b",
         "c",
-        "bq",
+        "bl",
         "f",
         "fs",
         "fb",
@@ -2493,7 +2493,7 @@ void copy() {
         copy,
         string,
         stringEmpty,
-        stringQuote,
+        stringLiteral,
         fgetss,
         fgetsSizeof,
         fgetsBuffer,
