@@ -141,7 +141,7 @@ void stringLiteral() {
         }
         string[strcspn(string,"\n")]=0;
         if(strlen(string) >= MAX) {
-            clear();
+            clean();
         }
         if(strcmp(string,"m")==0) {
             break;
@@ -153,7 +153,7 @@ void stringLiteral() {
         }
         cont[strcspn(cont,"\n")]=0;
         if(strlen(cont) >= MAX) {
-            clear();
+            clean();
         }
         if(strcmp(cont,"c")!=0) {
             printf("\n%s%s%s\n",data[0],string,data[0]);
@@ -165,7 +165,7 @@ void stringLiteral() {
             }
             nextString[strcspn(nextString,"\n")]=0;
             if(strlen(nextString) >= MAX) {
-                clear();
+                clean();
             }
             printf("\n%s%s%s%s%s%s%s\n",data[0],string,data[0],data[1],data[0],nextString,data[0]);
             printf("%s%s%s%s%s%s%s%s\n\n",data[0],string,data[0],data[1],data[0],nextString,data[0],data[1]); 
