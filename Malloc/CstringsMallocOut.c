@@ -65,7 +65,7 @@ void string() {
     char *text;
     text = (char*)malloc(SIZE* sizeof(char));
     if (text == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     printf("//Enter your string, m for main.\n");
@@ -97,7 +97,7 @@ void stringEmpty() {
     char *text;
     text = (char*)malloc(SIZE* sizeof(char));
     if (text == NULL) {
-        printf("Error: Insufficiant memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     printf("//Enter text m for main.\n");
@@ -131,7 +131,7 @@ void stringLiteral() {
     cont = (char*)malloc(SIZE* sizeof(char));
     nextString = (char*)malloc(SIZE* sizeof(char));
     if(string == NULL || cont == NULL || nextString == NULL) {
-        printf("Error: Insuffieient memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1); 
     } 
     while(1) {
@@ -188,7 +188,7 @@ void fgetss() {
     v = (char*)malloc(SIZE* sizeof(char));
     me = (char*)malloc(SIZE* sizeof(char));
     if (v == NULL || me == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -235,7 +235,7 @@ void fgetsSizeof() {
 
     name = (char*)malloc(SIZE* sizeof(char));
     if(name == NULL){
-        printf("Error: Insuficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -277,7 +277,7 @@ void checkFgets() {
     em = (char *)malloc(SIZE * sizeof(char));
     function = (char *)malloc(SIZE * sizeof(char));
     if (v == NULL || em == NULL || function == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -385,7 +385,7 @@ void stringToInt() {
     numberOnly = (char*)malloc(SIZE* sizeof(char));
     textAfterNumber = (char*)malloc(SIZE* sizeof(char));
     if(type == NULL || string == NULL || longInt == NULL || ptrName == NULL || rangePrintf == NULL || spacesPrintf == NULL || spacesPrintf == NULL || numberOnly == NULL || textAfterNumber == NULL) {
-        printf("Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while(1){
