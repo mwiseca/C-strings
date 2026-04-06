@@ -13,3 +13,5 @@ Allocating the memory inside the loops is easer to read.
 Allocating the memory outside is better if r is selected and
 and choices are repeated many times.
 March 24 2026.
+String literals was added to CstringsMallocOut.c.
+Check bl in choices.
