@@ -43,7 +43,7 @@ def choice():
     return ""
 
 
-def string():
+def strings():
     t = ['printf("','\\n','");',]
     print("//Enter text m for main.")
     while True:
@@ -994,7 +994,7 @@ def copy():
 
 switch = {
          "ch": choice,
-         "b": string,
+         "b": strings,
          "hd": hide_text,
          "c": empty_string,
          "bl": stringLiteral,
@@ -1041,7 +1041,7 @@ while True:
     except KeyError:
         print("Enter a letter in choices.\n")
     except EOFError:
-            print("\nInvalid input\n")
+        print("\nInvalid input\n")
       
     
     
