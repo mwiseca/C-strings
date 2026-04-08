@@ -52,7 +52,7 @@ void choice() {
     printf("//Enter si for scanf for integers and doubles.\n");
     printf("//Enter sh for scanf for ints and doubles on the heap.\n");
     printf("//Enter sc for check scanf.\n");
-    printf("//Enter csl to check scanf and limmit size.\n");
+    printf("//Enter csl to check scanf and limit size.\n");
     printf("//Enter cb to clear input buffer\n");
     printf("//Enter bh to convert letters to binary and hexadecimal numbers.\n");
     printf("//Enter h to allocate memory on the heap.\n");
