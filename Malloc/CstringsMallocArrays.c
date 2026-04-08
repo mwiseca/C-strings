@@ -66,7 +66,7 @@ void string() {
     while (1) {
         text = (char*)malloc(SIZE* sizeof(char));
         if (text == NULL) {
-            printf("Error: Insufficent memory.\n");
+            printf("Error: Insufficient memory.\n");
             exit(1);
         }
         printf("//");
@@ -101,7 +101,7 @@ void stringEmpty() {
     while (1) {
         text = (char*)malloc(SIZE* sizeof(char));
         if (text == NULL) {
-            printf("Error: Insufficiant memory.\n");
+            printf("Error: Insufficient memory.\n");
             exit(1);
         }
         printf("//");
@@ -136,7 +136,7 @@ void fgetss() {
         v = (char*)malloc(SIZE* sizeof(char));
         me = (char*)malloc(SIZE* sizeof(char));
         if (v == NULL || me == NULL) {
-            printf("Error: Insufficent memory.\n");
+            printf("Error: Insufficient memory.\n");
             exit(1);
         }
         printf("//Enter name of variable m for main.\n");
@@ -187,7 +187,7 @@ void fgetsSizeof() {
     while (1) {
         name = (char*)malloc(SIZE* sizeof(char));
         if(name == NULL){
-            printf("Error: Insuficent memory.\n");
+            printf("Error: Insufficient memory.\n");
             exit(1);
         }
         printf("//Enter name of variable m for main.\n");
@@ -231,7 +231,7 @@ void checkFgets() {
         em = (char *)malloc(SIZE * sizeof(char));
         function = (char *)malloc(SIZE * sizeof(char));
         if (v == NULL || em == NULL || function == NULL) {
-            printf("Error: Insufficent memory.\n");
+            printf("Error: Insufficient memory.\n");
             exit(1);
         }
         printf("//Enter name of variable m for main.\n");
@@ -344,7 +344,7 @@ void stringToInt() {
         numberOnly = (char*)malloc(SIZE* sizeof(char));
         textAfterNumber = (char*)malloc(SIZE* sizeof(char));
         if(type == NULL || string == NULL || longInt == NULL || ptrName == NULL || rangePrintf == NULL || spacesPrintf == NULL || spacesPrintf == NULL || numberOnly == NULL || textAfterNumber == NULL) {
-            printf("Insufficent memory.\n");
+            printf("Error: Insufficient memory.\n");
             exit(1);
         }
         printf("//Enter type i for int d for double.\n");
