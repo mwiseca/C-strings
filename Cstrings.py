@@ -629,7 +629,7 @@ def mapArrays():
             error = input("//")
             if error == "m":
                 break
-            print("//Enter a format specifier s for string i for int d for double.")
+            print("//Enter a format specifier for the value array: s for string i for int d for double.")
             while True:
                 formatt = input("//")
                 if formatt != "s" and formatt != "i" and formatt != "d":
