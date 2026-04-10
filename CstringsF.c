@@ -1747,7 +1747,7 @@ void mapArrays() {
         if(strcmp(error,"m") == 0) {
             break;
         }
-        printf("//Enter a format specifier s for string i for int d for double.\n");
+        printf("//Enter a format specifier for the value array: s for string i for int d for double.\n");
         while(fgets(format,SIZE,stdin) == NULL || (1)) {
             clearerr(stdin);
             if(strlen(format) >= MAX) {
@@ -1877,7 +1877,7 @@ void mapNum() {
         if(strcmp(error,"m") == 0) {
             break;
         }
-        printf("//Enter a format specifier s for string i for int d for double.\n");
+        printf("//Enter a format specifier for the value array: s for string i for int d for double.\n");
         while(fgets(format,SIZE,stdin) == NULL || (1)) {
             clearerr(stdin);
             if(strlen(format) >= MAX) {
