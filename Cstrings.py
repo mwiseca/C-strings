@@ -7,9 +7,10 @@ def choice():
     print("//Enter hd for strings hd to hide user input with getpass.")
     print("//Enter a for arrays ia for numbers.")
     print("//Enter ma to build a simple map that maps 2 arrays.")
-    print("//Enter mn to build a simple map were the key array is numbers.\n")
+    print("//Enter mn to build a simple map were the key array is numbers.")
     print("//Enter b for strings.")
     print("//Enter c for strings with no quotation marks.")
+    print("//Enter bl for string literals.")
     print("//Enter cy for what's needed to copy and paste to finish a simple program.")
     print("//Enter f for fgets and removal of new line character.")
     print("//Enter fs for fgets with sizeof operator.")
@@ -22,7 +23,7 @@ def choice():
     print("//Enter si for scanf for integers and doubles.")
     print("//Enter sh for scanf for ints and doubles on the heap.")
     print("//Enter sc for check scanf.")
-    print("//Enter cb for a function that clears input buffer for scanf.");
+    print("//Enter cb for a function that clears input buffer.");
     print("//Enter h to allocate memory on the heap.")
     print("//Enter hi to allocate int float or double memory on the heap.")
     print("//Enter cm to check malloc.")
@@ -42,7 +43,7 @@ def choice():
     return ""
 
 
-def string():
+def strings():
     t = ['printf("','\\n','");',]
     print("//Enter text m for main.")
     while True:
@@ -79,6 +80,25 @@ def empty_string():
             if text == "m":
                 return ""
             print("\n" + t[0] + text + t[1] + "\n")
+        except EOFError:
+            print("\nInvalid input\n")
+
+
+def stringLiteral():
+    data = [ "\"", ","]
+    while True:
+        try:
+            string = input("//Enter a string m for main.\n//")
+            if string == "m":
+                break 
+            cont = input("//To add another string with a comma between enter c. Or press enter.\n//")
+            if cont != "c":
+                print("\n" + data[0] + string + data[0])
+                print(data[0] + string + data[0] + data[1] + "\n")
+            elif cont == "c":
+                nextString = input("//Enter the next string.\n//") 
+                print("\n" + data[0] + string + data[0] + data[1] + data[0] + nextString + data[0])
+                print(data[0] + string + data[0] + data[1] + data[0] + nextString + data[0] + data[1] + "\n") 
         except EOFError:
             print("\nInvalid input\n")
 
@@ -609,7 +629,7 @@ def mapArrays():
             error = input("//")
             if error == "m":
                 break
-            print("//Enter a format specifier s for string i for int d for double.")
+            print("//Enter a format specifier for the value array: s for string i for int d for double.")
             while True:
                 formatt = input("//")
                 if formatt != "s" and formatt != "i" and formatt != "d":
@@ -974,9 +994,10 @@ def copy():
 
 switch = {
          "ch": choice,
-         "b": string,
+         "b": strings,
          "hd": hide_text,
          "c": empty_string,
+         "bl": stringLiteral,
          "f": fgets,
          "fs": fgets_sizeof,
          "fb": fgets_buffer,
@@ -1020,7 +1041,7 @@ while True:
     except KeyError:
         print("Enter a letter in choices.\n")
     except EOFError:
-            print("\nInvalid input\n")
+        print("\nInvalid input\n")
       
     
     

@@ -23,3 +23,5 @@ January 29 2026.
 A simple map with the key array for numbers was added.
 Check mn in choices.
 March 4 2026.
+String literals was added to CstringsArrays.c.
+Check bl in choices.

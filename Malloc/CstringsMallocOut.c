@@ -28,6 +28,7 @@ void choice() {
     printf("//Enter ma to build a simple map that maps 2 arrays.\n");
     printf("//Enter mn to build a simple map were the key array is numbers.\n");
     printf("//Enter c for strings with no quotation marks.\n");
+    printf("//Enter bl for string literals.\n");
     printf("//Enter cy for what's needed to copy and paste to finish a simple program.\n");
     printf("//Enter i for if statements e for else if for strings.\n");
     printf("//Enter mi for if statements with 2 conditions.\n");
@@ -35,7 +36,7 @@ void choice() {
     printf("//Enter in for if and else if statements for numbers\n");
     printf("//Enter im for if and else if statements for numbers if malloc is used.\n");
     printf("//Enter f for fgets.\n");
-    printf("//Enter fs for fgets with sizeof operater.\n");
+    printf("//Enter fs for fgets with sizeof operator.\n");
     printf("//Enter fcb to check fgets.\n");
     printf("//Enter fi to convert a string to a int or double to use with fgets.\n");
     printf("//Enter fib to convert a string to a int or double with only one error message.\n");
@@ -44,7 +45,7 @@ void choice() {
     printf("//Enter si for scanf for integers and doubles.\n");
     printf("//Enter sh for scanf for ints and doubles on the heap.\n");
     printf("//Enter sc for check scanf.\n");
-    printf("//Enter csl to check scanf and limmit size.\n");
+    printf("//Enter csl to check scanf and limit size.\n");
     printf("//Enter cb to clear input buffer in C.\n");
     printf("//Enter bh to convert letters to binary and hexadecimal numbers.\n");
     printf("//Enter h to allocate memory on the heap.\n");
@@ -64,7 +65,7 @@ void string() {
     char *text;
     text = (char*)malloc(SIZE* sizeof(char));
     if (text == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     printf("//Enter your string, m for main.\n");
@@ -96,7 +97,7 @@ void stringEmpty() {
     char *text;
     text = (char*)malloc(SIZE* sizeof(char));
     if (text == NULL) {
-        printf("Error: Insufficiant memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     printf("//Enter text m for main.\n");
@@ -121,6 +122,63 @@ void stringEmpty() {
     text == NULL;
 }
 
+void stringLiteral() {
+    const char *data [] = { "\"", ","};
+    char *string;
+    char *cont;
+    char *nextString;
+    string = (char*)malloc(SIZE* sizeof(char));
+    cont = (char*)malloc(SIZE* sizeof(char));
+    nextString = (char*)malloc(SIZE* sizeof(char));
+    if(string == NULL || cont == NULL || nextString == NULL) {
+        printf("Error: Insufficient memory.\n");
+        exit(1); 
+    } 
+    while(1) {
+        printf("//Enter a string m for main.\n");
+        while(fgets(string,SIZE,stdin) == NULL) {
+            checkInput();
+        }
+        string[strcspn(string,"\n")]=0;
+        if(strlen(string) >= MAX) {
+            clean();
+        }
+        if(strcmp(string,"m")==0) {
+            break;
+        }
+        printf("//To add another string with a comma between enter c. ");
+        printf("Or press enter.\n");
+        while(fgets(cont,SIZE,stdin) == NULL) {
+            checkInput();
+        }
+        cont[strcspn(cont,"\n")]=0;
+        if(strlen(cont) >= MAX) {
+            clean();
+        }
+        if(strcmp(cont,"c")!=0) {
+            printf("\n%s%s%s\n",data[0],string,data[0]);
+            printf("%s%s%s%s\n\n",data[0],string,data[0],data[1]);
+        } else if (strcmp(cont,"c")==0) {
+            printf("//Enter the next string.\n");
+            while(fgets(nextString,SIZE,stdin) == NULL) {
+                checkInput();
+            }
+            nextString[strcspn(nextString,"\n")]=0;
+            if(strlen(nextString) >= MAX) {
+                clean();
+            }
+            printf("\n%s%s%s%s%s%s%s\n",data[0],string,data[0],data[1],data[0],nextString,data[0]);
+            printf("%s%s%s%s%s%s%s%s\n\n",data[0],string,data[0],data[1],data[0],nextString,data[0],data[1]); 
+        } 
+    }
+    free(string);
+    string = NULL;
+    free(cont);
+    cont = NULL;
+    free(nextString);
+    nextString = NULL;
+}
+
 void fgetss() {
     const char* f[] = {"fgets(", ",", "stdin);", "[strcspn(", "\"\\n", "\")]=0;", "[strlen(", ")-1] = '\\0';"};
     const char* w[] = {"while(fgets(", ",", "stdin)){", "[strcspn(", "\"\\n", "\")]=0;", "[strlen(", ")-1] = '\\0';", "      "};
@@ -130,7 +188,7 @@ void fgetss() {
     v = (char*)malloc(SIZE* sizeof(char));
     me = (char*)malloc(SIZE* sizeof(char));
     if (v == NULL || me == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -177,7 +235,7 @@ void fgetsSizeof() {
 
     name = (char*)malloc(SIZE* sizeof(char));
     if(name == NULL){
-        printf("Error: Insuficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -219,7 +277,7 @@ void checkFgets() {
     em = (char *)malloc(SIZE * sizeof(char));
     function = (char *)malloc(SIZE * sizeof(char));
     if (v == NULL || em == NULL || function == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -327,7 +385,7 @@ void stringToInt() {
     numberOnly = (char*)malloc(SIZE* sizeof(char));
     textAfterNumber = (char*)malloc(SIZE* sizeof(char));
     if(type == NULL || string == NULL || longInt == NULL || ptrName == NULL || rangePrintf == NULL || spacesPrintf == NULL || spacesPrintf == NULL || numberOnly == NULL || textAfterNumber == NULL) {
-        printf("Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while(1){
@@ -481,7 +539,7 @@ void stringToIntBasic() {
     ptrName = (char*)malloc(SIZE* sizeof(char));
     errorMessage = (char*)malloc(SIZE* sizeof(char));
     if(type == NULL || string == NULL || longInt == NULL || ptrName == NULL || errorMessage == NULL) {
-        printf("Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while(1){
@@ -589,7 +647,7 @@ void scanff() {
 
     var = (char*)malloc(SIZE* sizeof(char));
     if (var == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -639,7 +697,7 @@ void scanfBasic() {
 
     var = (char*)malloc(SIZE* sizeof(char));
     if (var == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -687,7 +745,7 @@ void clearBuffC() {
 
     name = (char*)malloc(SIZE* sizeof(char));
     if(name == NULL){
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -907,7 +965,7 @@ void binHex() {
     char *select;
     select = (char*)malloc(SIZE* sizeof(char));
     if(select == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while(1) {
@@ -997,7 +1055,7 @@ void elseIf() {
     name = (char *)malloc(SIZE * sizeof(char));
     value = (char *)malloc(SIZE * sizeof(char));
     if (name == NULL || value == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -1053,7 +1111,7 @@ void multiIf() {
     svalue = (char*)malloc(SIZE* sizeof(char));
     scompare = (char*)malloc(SIZE* sizeof(char));
     if ( select == NULL || name == NULL || value == NULL || op == NULL || compare == NULL || sname == NULL || svalue == NULL || scompare == NULL) {
-        printf("Error: Insuffecent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }	    
     while (1) {
@@ -1230,7 +1288,7 @@ void multiIfNumber() {
     scompare = (char*)malloc(SIZE* sizeof(char));
     svalue = (char*)malloc(SIZE* sizeof(char));
     if (select == NULL || name == NULL || compare == NULL || value == NULL || op == NULL || sname == NULL || scompare == NULL || svalue == NULL) {
-        printf("\nInsuffient memory.\n\n");
+        printf("\nError: Insufficient memory.\n\n");
         exit(1);
     } 
     while (1) {
@@ -1408,7 +1466,7 @@ void ifNumber() {
     op = (char *)malloc(SIZE * sizeof(char));
     num = (char *)malloc(SIZE * sizeof(char));
     if (select == NULL || var == NULL || op == NULL || num == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -1511,7 +1569,7 @@ void ifHeap() {
     op = (char *)malloc(SIZE * sizeof(char));
     num = (char *)malloc(SIZE * sizeof(char));
     if (select == NULL || var == NULL || op == NULL || num == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -1605,7 +1663,7 @@ void variable() {
     name = (char *)malloc(SIZE * sizeof(char));
     mem = (char *)malloc(SIZE * sizeof(char));
     if (name == NULL || mem == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -1651,7 +1709,7 @@ void variableValue() {
     mem = (char *)malloc(SIZE * sizeof(char));
     value = (char *)malloc(SIZE * sizeof(char));
     if (name == NULL || mem == NULL || value == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -1710,7 +1768,7 @@ void array() {
     m = (char *)malloc(SIZE * sizeof(char));
     elements = (char *)malloc(SIZE * sizeof(char));
     if (name == NULL || ne == NULL || m == NULL || elements == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -1780,7 +1838,7 @@ void numArray() {
     num = (char*)malloc(SIZE* sizeof(char));
     elements = (char*)malloc(SIZE* sizeof(char));
     if (typ == NULL || name == NULL || num == NULL || elements == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -1870,7 +1928,7 @@ void mapArrays() {
     error = (char*)malloc(SIZE* sizeof(char));
     format = (char*)malloc(SIZE* sizeof(char));
     if(keyArray == NULL || valueArray == NULL || select == NULL || input == NULL || forLoopInt == NULL || elements == NULL || error == NULL || format == NULL) {
-        printf("\nInsufficent memory.\n\n");
+        printf("\nInsufficient memory.\n\n");
         exit(1);
     }
     while(1) {
@@ -1937,7 +1995,7 @@ void mapArrays() {
         if(strlen(error) >= MAX) {
             clean();
         }
-        printf("//Enter a format specifier s for string i for int d for double.\n");
+        printf("//Enter a format specifier for the value array: s for string i for int d for double.\n");
         while(1) {
             if(fgets(format,SIZE,stdin) == NULL) {
                 checkInput();
@@ -2015,7 +2073,7 @@ void mapNum() {
         error = (char*)malloc(SIZE* sizeof(char));
         format = (char*)malloc(SIZE* sizeof(char));
         if(keyArray == NULL || valueArray == NULL || select == NULL || input == NULL || forLoopInt == NULL || elements == NULL || error == NULL || format == NULL) {
-            printf("\nInsufficent memory.\n\n");
+            printf("\nInsufficient memory.\n\n");
             exit(1);
         }
     while(1) {
@@ -2083,7 +2141,7 @@ void mapNum() {
         if(strlen(error) >= MAX) {
             clean();
         }
-        printf("//Enter a format specifier s for string i for int d for double.\n");
+        printf("//Enter a format specifier for the value array: s for string i for int d for double.\n");
         while(1) {
             if(fgets(format,SIZE,stdin) == NULL) {
                 checkInput();
@@ -2234,7 +2292,7 @@ void heap() {
     name = (char *)malloc(SIZE * sizeof(char));
     mem = (char *)malloc(SIZE * sizeof(char));
     if (name == NULL || mem == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -2283,7 +2341,7 @@ void heapNum() {
     name = (char *)malloc(SIZE * sizeof(char));
     mem = (char *)malloc(SIZE * sizeof(char));
     if (name == NULL || mem == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -2335,7 +2393,7 @@ void checkMalloc() {
     name = (char *)malloc(SIZE * sizeof(char));
     em = (char *)malloc(SIZE * sizeof(char));
     if (name == NULL || em == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -2383,7 +2441,7 @@ void variableNum() {
     name = (char *)malloc(SIZE * sizeof(char));
     value = (char *)malloc(SIZE * sizeof(char));
     if (ch == NULL || name == NULL || value == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -2448,7 +2506,7 @@ void varNoValue() {
     ch = (char *)malloc(SIZE * sizeof(char));
     name = (char *)malloc(SIZE * sizeof(char));
     if (ch == NULL || name == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -2502,7 +2560,7 @@ void scanfNum() {
     ch = (char *)malloc(SIZE * sizeof(char));
     name = (char *)malloc(SIZE * sizeof(char));
     if (ch == NULL || name == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -2556,7 +2614,7 @@ void scanfHeap() {
     ch = (char *)malloc(SIZE * sizeof(char));
     name = (char *)malloc(SIZE * sizeof(char));
     if (ch == NULL || name == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -2615,7 +2673,7 @@ void checkScanf() {
     ch = (char *)malloc(SIZE * sizeof(char));
     name = (char *)malloc(SIZE * sizeof(char));
     if (ch == NULL || name == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -2679,7 +2737,7 @@ void checkScanfL() {
     name = (char *)malloc(SIZE * sizeof(char));
     mem = (char *)malloc(SIZE * sizeof(char));
     if (ch == NULL || name == NULL || mem == NULL) {
-        printf("Error: Insufficent memory.\n");
+        printf("Error: Insufficient memory.\n");
         exit(1);
     }
     while (1) {
@@ -2792,6 +2850,7 @@ int main() {
         "cy",
         "b",
         "c",
+        "bl",
         "f",
         "fs",
         "fcb",
@@ -2831,6 +2890,7 @@ int main() {
         copy,
         string,
         stringEmpty,
+        stringLiteral,
         fgetss,
         fgetsSizeof,
         checkFgets,
@@ -2893,7 +2953,7 @@ int main() {
             break;
         } 
         int index = -1;
-        for(int i = 0; i<36;i++) {
+        for(int i = 0; i<37;i++) {
             if(strcmp(sw, keys[i])==0){
                 index = i;
             }

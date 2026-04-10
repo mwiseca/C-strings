@@ -185,3 +185,5 @@ A simple map with the key array for numbers was added.
 This was added to CstringsF.c and Cstrings.py.
 Check mn in choices.
 March 4 2026.
+String literals was added to CstringsF.c and Cstrings.py.
+Check bl in choices.
