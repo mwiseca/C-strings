@@ -1,4 +1,4 @@
-// Copyright 2023-2025 Mitchell E Wise
+// Copyright 2023-2026 Mitchell E Wise
 // SPDX-License-Identifier: Apache-20
 
 #include <stdio.h>
@@ -2551,7 +2551,7 @@ void copy() {
 
     char sw[SIZE];
 
-    printf("\n          copyright 2025 Mitchell E Wise\n");
+    printf("\n          copyright 2023-2026 Mitchell E Wise\n");
     printf("          SPDX-License-Identifier: Apache-20\n\n\n");
 
     printf("//Enter r to repeat choices enter to not.\n");
