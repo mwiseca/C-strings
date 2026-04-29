@@ -44,7 +44,7 @@ void choice() {
     printf("//Enter fs for fgets with sizeof operator.\n");
     printf("//Enter fb for fgets to use with cb to clear input buffer without having ");
     printf("to press enter twice.\n");
-    printf("//Enter fcb to check fgets.\n");
+    printf("//Enter fcb to check fgets and clear input buffer using cb.\n");
     printf("//Enter fi to convert a string to a int or double to use with fgets.\n");
     printf("//Enter fib to convert a string to a int or double with only one error message.\n");
     printf("//Enter s for scanf for strings to allow for white spaces.\n");
@@ -303,7 +303,7 @@ void fgetsBuffer() {
 }
 
 void checkFgets() {
-    char f[12][25] = {"while(fgets(", ",", "stdin) == NULL) {", "[strcspn(", "\"\\n", "\")]=0;", "    ","sizeof(","),stdin) == NULL) {","printf(\"","\\n","\");"};
+    char f[14][25] = {"while(1) {","if(fgets(","while(fgets(", ",", "stdin) == NULL) {", "[strcspn(", "\"\\n", "\")]=0;", "    ","sizeof(","),stdin) == NULL) {","printf(\"","\\n","\");"};
     char v[SIZE];
     char me [10];
     char em [SIZE];
@@ -314,7 +314,7 @@ void checkFgets() {
         printf("//Enter name of variable m for main.\n");
         printf("//");
         while(fgets(v, SIZE, stdin) == NULL) {
-            checkInput();    
+            checkInput();
         }
         v[strcspn(v, "\n")] = 0;
         if(strlen(v) >= 9){
@@ -326,67 +326,87 @@ void checkFgets() {
         printf("//Enter the memory to be allocated to the variable 5 minimum.\n");
         printf("//");
         while(fgets(me, sizeof(me), stdin) == NULL || (1)) {
-            clearerr(stdin);    
+            clearerr(stdin);
             if(strlen(me) >= 9){
                 clear();
-            }            
+            }
             m = atoi(me);
             if(m <=4) {
                 printf("\n//Enter a number 5 or more.\n\n");
             } else {
                 break;
             }
-        } 
+        }
         me[strcspn(me, "\n")] = 0;
         printf("//Enter a error message. Invalid input is good.\n");
         while(fgets(em,SIZE,stdin) == NULL) {
-            checkInput();     
+            checkInput();
         }
         em[strcspn(em,"\n")]=0;
         if(strlen(em) >= MAX){
             clear();
         }
-        printf("//Enter the function name.\n");
+        printf("//Enter the name of the function to clear input buffer.\n");
         while(fgets(function,SIZE,stdin) == NULL) {
-            checkInput();     
+            checkInput();
         }
         function[strcspn(function,"\n")]=0;
         if(strlen(function) >= MAX){
             clear();
         }
-        printf("\n%s%s%s%s%s%s\n",f[0], v, f[1], me, f[1], f[2]);
-        printf("%sclearerr(stdin);\n",f[6]);
-        printf("%s%s%s%s%s%s%s\n",f[6],f[9],f[10],em,f[10],f[10],f[11]); 
+        printf("\n%s%s%s%s%s%s\n",f[2], v, f[3], me, f[3], f[4]);
+        printf("%sclearerr(stdin);\n",f[8]);
+        printf("%s%s%s%s%s%s%s\n",f[8],f[11],f[12],em,f[12],f[12],f[13]);
         printf("}\n");
-        printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
+        printf("%s%s%s%s%s%s\n", v, f[5], v, f[3], f[6], f[7]);
         printf("if(strlen(%s) >= %d) {\n",v,m - 1);
         printf("    %s();\n",function);
         printf("}\n\n");
-        printf("\n%s%s%s%s%s%s\n",f[0], v, f[1],f[7],v, f[8]);
-        printf("%sclearerr(stdin);\n",f[6]);
-        printf("%s%s%s%s%s%s%s\n",f[6],f[9],f[10],em,f[10],f[10],f[11]);
+        printf("\n%s%s%s%s%s%s\n",f[2], v, f[3],f[9],v, f[10]);
+        printf("%sclearerr(stdin);\n",f[8]);
+        printf("%s%s%s%s%s%s%s\n",f[8],f[11],f[12],em,f[12],f[12],f[13]);
         printf("}\n");
-        printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
+        printf("%s%s%s%s%s%s\n", v, f[5], v, f[3], f[6], f[7]);
         printf("if(strlen(%s) >= %d) {\n",v,m - 1);
         printf("    %s();\n",function);
         printf("}\n\n");
-        printf("\n%s%s%s%s%s%s\n",f[0], v, f[1], me, f[1], f[2]);
-        printf("%sclearerr(stdin);\n",f[6]);
-        printf("%s%s%s%s%s%s%s\n",f[6],f[9],f[10],em,f[10],f[10],f[11]); 
+        printf("\n%s\n",f[0]); 
+        printf("%s%s%s%s%s%s%s\n",f[8],f[1], v, f[3], me, f[3], f[4]);
+        printf("%s%sclearerr(stdin);\n",f[8],f[8]);
+        printf("%s%s%s%s%s%s%s%s\n",f[8],f[8],f[11],f[12],em,f[12],f[12],f[13]);
+        printf("%s%scontinue;\n",f[8],f[8]); 
+        printf("%s}\n",f[8]);
+        printf("%s%s%s%s%s%s%s\n",f[8], v, f[5], v, f[3], f[6], f[7]);
+        printf("    if(strlen(%s) >= %d) {\n",v,m - 1);
+        printf("        %s();\n",function);
+        printf("%s}\n\n",f[8]);
+        printf("\n%s\n",f[0]); 
+        printf("%s%s%s%s%s%s%s\n",f[8],f[1], v, f[3],f[9],v, f[10]);
+        printf("%s%sclearerr(stdin);\n",f[8],f[8]);
+        printf("%s%s%s%s%s%s%s%s\n",f[8],f[8],f[11],f[12],em,f[12],f[12],f[13]);
+        printf("%s%scontinue;\n",f[8],f[8]);
+        printf("%s}\n",f[8]);
+        printf("%s%s%s%s%s%s%s\n",f[8], v, f[5], v, f[3], f[6], f[7]);
+        printf("    if(strlen(%s) >= %d) {\n",v,m - 1);
+        printf("        %s();\n",function);
+        printf("    }\n\n");
+        printf("\n%s%s%s%s%s%s\n",f[2], v, f[3], me, f[3], f[4]);
+        printf("%sclearerr(stdin);\n",f[8]);
+        printf("%s%s%s%s%s%s%s\n",f[8],f[11],f[12],em,f[12],f[12],f[13]);
         printf("}\n");
-        printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
+        printf("%s%s%s%s%s%s\n", v, f[5], v, f[3], f[6], f[7]);
         printf("\n\n");
-        printf("\n%s%s%s%s%s%s\n",f[0], v, f[1],f[7],v, f[8]);
-        printf("%sclearerr(stdin);\n",f[6]);
-        printf("%s%s%s%s%s%s%s\n",f[6],f[9],f[10],em,f[10],f[10],f[11]);
+        printf("\n%s%s%s%s%s%s\n",f[2], v, f[3],f[9],v, f[10]);
+        printf("%sclearerr(stdin);\n",f[8]);
+        printf("%s%s%s%s%s%s%s\n",f[8],f[11],f[12],em,f[12],f[12],f[13]);
         printf("}\n");
-        printf("%s%s%s%s%s%s\n", v, f[3], v, f[1], f[4], f[5]);
+        printf("%s%s%s%s%s%s\n", v, f[5], v, f[3], f[6], f[7]);
         printf("\n\n");
         memset(me, '\0', sizeof(me));
         if (strcmp(repeat, "r") != 0) {
         break;
         }
-    }	    
+    }
 }
 
 void stringToInt() {
