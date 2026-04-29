@@ -287,7 +287,7 @@ void checkFgets() {
         }
         v[strcspn(v, "\n")] = 0;
         if(strlen(v) >= 9){
-            clear();
+            clean();
         }
         if (strcmp(v, "m") == 0) {
             break;
@@ -297,7 +297,7 @@ void checkFgets() {
         while(fgets(me, sizeof(me), stdin) == NULL || (1)) {
             clearerr(stdin);
             if(strlen(me) >= 9){
-                clear();
+                clean();
             }
             m = atoi(me);
             if(m <=4) {
@@ -313,7 +313,7 @@ void checkFgets() {
         }
         em[strcspn(em,"\n")]=0;
         if(strlen(em) >= MAX){
-            clear();
+            clean();
         }
         printf("//Enter the name of the function to clear input buffer.\n");
         while(fgets(function,SIZE,stdin) == NULL) {
@@ -321,7 +321,7 @@ void checkFgets() {
         }
         function[strcspn(function,"\n")]=0;
         if(strlen(function) >= MAX){
-            clear();
+            clean();
         }
         printf("\n%s%s%s%s%s%s\n",f[2], v, f[3], me, f[3], f[4]);
         printf("%sclearerr(stdin);\n",f[8]);
