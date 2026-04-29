@@ -2927,7 +2927,7 @@ int main() {
 
     char sw[25];
 
-    printf("          copyright 2026 Mitchell E Wise\n");
+    printf("          copyright 2023-2026 Mitchell E Wise\n");
     printf("          SPDX-License-Identifier: Apache-20\n\n\n");
 
     printf("//Enter r to repeat choices enter to not.\n");
