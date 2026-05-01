@@ -2405,7 +2405,7 @@ void heapNum() {
 }
 
 void checkMalloc() {
-    const char* t[] = {"if(", " == NULL){", "    printf(\"", "\\n", "\");", "    exit(1);}"};
+    const char* t[] = {"if(", " == NULL){", "    printf(\"", "\\n", "\");", "    exit(1);}","    exit(1);","}"};
     char *name;
     char *em;
 
@@ -2440,6 +2440,10 @@ void checkMalloc() {
         printf("\n%s%s%s\n", t[0], name, t[1]);
         printf("%s%s%s%s\n", t[2], em, t[3], t[4]);
         printf("%s\n\n", t[5]);
+        printf("\n%s%s%s\n", t[0], name, t[1]);
+        printf("%s%s%s%s\n", t[2], em, t[3], t[4]);
+        printf("%s\n", t[6]);
+        printf("%s\n\n", t[7]);   
         if(strcmp(repeat, "r")!=0) {
             break;     
         }
