@@ -26,3 +26,5 @@ March 4 2026.
 String literals was added to CstringsArrays.c.
 Check bl in choices.
 April 10 2026.
+A new option was added to fcb.Its if fgets along with while fgets. CstringsArrays.c.
+May 2 2026.

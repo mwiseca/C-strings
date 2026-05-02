@@ -188,3 +188,5 @@ March 4 2026.
 String literals was added to CstringsF.c and Cstrings.py.
 Check bl in choices.
 April 10 2026.
+A new option was added to fcb.Its if fgets along with while fgets. Cstrings.c and Cstrings.py.
+May 2 2026.

@@ -15,7 +15,7 @@ def choice():
     print("//Enter f for fgets and removal of new line character.")
     print("//Enter fs for fgets with sizeof operator.")
     print("//Enter fb for fgets to use with cb to clear input buffer without having to press enter twice.")
-    print("//Enter fcb to check fgets.")
+    print("//Enter fcb to check fgets and clear input buffer with cb.")
     print("//Enter fc for void functions.")
     print("//Enter fi to convert a string to int or double to use with fgets.")
     print("//Enter s for scanf for strings.")
@@ -189,7 +189,7 @@ def fgets_buffer():
 
 
 def checkFgets():
-    f = ["while(fgets(", ",", "stdin) == NULL) {", "[strcspn(", "\"\\n", "\")]=0;", "    ","sizeof(","),stdin) == NULL) {","printf(\"","\\n","\");"]
+    f = ["while(1) {","if(fgets(","while(fgets(", ",", "stdin) == NULL) {", "[strcspn(", "\"\\n", "\")]=0;", "    ","sizeof(","),stdin) == NULL) {","printf(\"","\\n","\");"]
     while True:
         try:
             print("//Enter name of variable m for main.")
@@ -208,38 +208,59 @@ def checkFgets():
                     print("\n//Enter a number only.\n")
             print("//Enter a error message. Invalid input is good.")
             em = input("//")
-            print("//Enter the function name.")
+            print("//Enter the name of the function to clear the input buffer.")
             function = input("//")
-            print(f"\n{f[0]}{v}{f[1]}{me}{f[1]}{f[2]}")
-            print(f[6] + "clearerr(stdin);")
-            print(f[6] + f[9] + f[10] + em + f[10] + f[10] + f[11])
+            print(f"\n{f[2]}{v}{f[3]}{me}{f[3]}{f[4]}")
+            print(f[8] + "clearerr(stdin);")
+            print(f[8] + f[11] + f[12] + em + f[12] + f[12] + f[13])
             print("}")
-            print(v + f[3] + v + f[1] +  f[4] + f[5])
+            print(v + f[5] + v + f[3] +  f[6] + f[7])
             print(f"if(strlen({v}) >= {me-1}) {{")
             print("    " + function + "();")
             print("}\n")
-            print("\n" + f[0] + v + f[1] + f[7] + v + f[8])
-            print(f[6] + "clearerr(stdin);")
-            print(f[6] + f[9] + f[10] + em + f[10] + f[10] + f[11])
+            print("\n" + f[2] + v + f[3] + f[9] + v + f[10])
+            print(f[8] + "clearerr(stdin);")
+            print(f[8] + f[11] + f[12] + em + f[12] + f[12] + f[13])
             print("}")
-            print(v + f[3] + v + f[1] + f[4] + f[5]) 
-            print(f"if(strlen({v}) >= {me-1}) {{")    
-            print(f[6] + function + "();");
+            print(v + f[5] + v + f[3] + f[6] + f[7])
+            print(f"if(strlen({v}) >= {me-1}) {{")
+            print(f[8] + function + "();");
             print("}\n");
-            print(f"\n{f[0]}{v}{f[1]}{me}{f[1]}{f[2]}")
-            print(f[6] + "clearerr(stdin);")
-            print(f[6] + f[9] + f[10] + em + f[10] + f[10] + f[11])
+            print(f"\n{f[0]}")
+            print(f"{f[8]}{f[1]}{v}{f[3]}{me}{f[3]}{f[4]}")
+            print(f[8] + f[8] + "clearerr(stdin);")
+            print(f[8] +f[8] + f[11] + f[12] + em + f[12] + f[12] + f[13])
+            print(f[8] + f[8] + "continue;")
+            print(f[8] + "}")
+            print(f[8] + v + f[5] + v + f[3] +  f[6] + f[7])
+            print(f"    if(strlen({v}) >= {me-1}) {{")
+            print("        " + function + "();")
+            print(f[8] + "}\n")
+            print(f"\n{f[0]}")
+            print(f[8] + f[1] + v + f[3] + f[9] + v + f[10])
+            print(f[8] +f[8] + "clearerr(stdin);")
+            print(f[8] +f[8] + f[11] + f[12] + em + f[12] + f[12] + f[13])
+            print(f[8] + f[8] + "continue;")
+            print(f[8] + "}")
+            print(f[8] + v + f[5] + v + f[3] + f[6] + f[7])
+            print(f"    if(strlen({v}) >= {me-1}) {{")
+            print(f[8] +f[8] + function + "();");
+            print("}\n");
+            print(f"\n{f[2]}{v}{f[3]}{me}{f[3]}{f[4]}")
+            print(f[8] + "clearerr(stdin);")
+            print(f[8] + f[11] + f[12] + em + f[12] + f[12] + f[13])
             print("}")
-            print( v +f[3] + v + f[1] + f[4] + f[5])
+            print( v +f[5] + v + f[3] + f[6] + f[7])
             print("\n")
-            print("\n" + f[0] + v + f[1] + f[7] + v + f[8])
-            print(f[6] + "clearerr(stdin);")
-            print(f[6] + f[9] + f[10] + em + f[10] + f[10] + f[11])
+            print("\n" + f[2] + v + f[3] + f[9] + v + f[10])
+            print(f[8] + "clearerr(stdin);")
+            print(f[8] + f[11] + f[12] + em + f[12] + f[12] + f[13])
             print("}")
-            print(v + f[3] + v + f[1] + f[4] + f[5]);
-            print("\n") 
+            print(v + f[5] + v + f[3] + f[6] + f[7]);
+            print("\n")
         except EOFError:
             print("\nInvalid input.\n")
+
 
 
 def string_to_int():
