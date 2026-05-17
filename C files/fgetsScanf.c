@@ -29,28 +29,28 @@ int main() {
 
     while (1) {
         printf("//Enter name of variable m for main.\n");
-	printf("//");
-	fgets(var, 15, stdin);
-	var[strcspn(var, "\n")] = 0;
-	if(strlen(var) >= 14){
-	    clean();
-	} else if (strcmp(var, "m") == 0) {
-	    break;
-	}
-	printf("//Enter the memory to be allocated to the variable.\n");
-	printf("//");
-	while(scanf("%8d",&mem)!=1){
-	    clean();
-	    printf("\nThat is not a number.\n\n");
 	    printf("//");
-	}
-	clean(); 
-	printf("\n%s%s%s%d%s%s\n", f[0], var, f[1], mem, f[1], f[2]);
-	printf("%s%s%s%s%s%s\n\n", var, f[3], var, f[1], f[4], f[5]);
-	printf("\n%s%s%s%s%d%s%s\n",f[8], f[0], var, f[1], mem, f[1], f[10]);
-	printf("%s%s%s%s%s%s%s\n\n",f[9], var, f[3], var, f[1], f[4], f[5]);
-	printf("\n%s%s%s%d%s%s\n", f[0], var, f[1], mem, f[1], f[2]);
-	printf("%s%s%s%s\n\n", var, f[6], var, f[7]);
+	    fgets(var, 15, stdin);
+	    var[strcspn(var, "\n")] = 0;
+	    if(strlen(var) >= 14){
+	        clean();
+	    } else if (strcmp(var, "m") == 0) {
+	        break;
+	    }
+	    printf("//Enter the memory to be allocated to the variable.\n");
+	    printf("//");
+	    while(scanf("%8d",&mem)!=1){
+	        clean();
+	        printf("\nThat is not a number.\n\n");
+	        printf("//");
+	    }
+	    clean(); 
+	    printf("\n%s%s%s%d%s%s\n", f[0], var, f[1], mem, f[1], f[2]);
+	    printf("%s%s%s%s%s%s\n\n", var, f[3], var, f[1], f[4], f[5]);
+	    printf("\n%s%s%s%s%d%s%s\n",f[8], f[0], var, f[1], mem, f[1], f[10]);
+	    printf("%s%s%s%s%s%s%s\n\n",f[9], var, f[3], var, f[1], f[4], f[5]);
+	    printf("\n%s%s%s%d%s%s\n", f[0], var, f[1], mem, f[1], f[2]);
+	    printf("%s%s%s%s\n\n", var, f[6], var, f[7]);
     }
 return 0;
 }
