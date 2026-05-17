@@ -65,3 +65,6 @@ February 18 2026.
 A new file was added strcpyStruct.c. It is for strings in structs. It assigns a value using strcpy.
 It reduces the chance of a buffer overflow.
 February 19 2026.
+A new file was added to C files. CheckScanfClear.c.
+Its scanf for strings that allows white spaces sets bounds limits and error checks.
+May 17 2026.
