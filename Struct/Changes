@@ -1,1 +1,4 @@
-
+Added: CstringsStruct.c uses a struct for the menu choices. 
+The keys and values are orginized like a C++ map.
+This makes it easy for users to add or remove functions.
+May 29 2026.
