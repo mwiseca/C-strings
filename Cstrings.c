@@ -48,6 +48,7 @@ void choice() {
     printf("//Enter fi to convert a string to a int or double to use with fgets.\n");
     printf("//Enter fib to convert a string to a int or double with only one error message.\n");
     printf("//Enter s for scanf for strings to allow for white spaces.\n");
+    printf("Enter scb to check scanf and clear buffer with cb.\n");
     printf("//Enter sb for scanf basic no white spaces.\n");
     printf("//Enter si for scanf for integers and doubles.\n");
     printf("//Enter sh for scanf for ints and doubles on the heap.\n");
@@ -677,6 +678,83 @@ void scanff() {
             break;
         }
     }
+}
+
+void CheckScanfClear() {
+    char t[12][20] = {"while(scanf(\"","if(scanf(\"" ,"%","while(1) {", "[^\\n]\"", ",", ")!=1) {","    ","();","clearerr(stdin);","}","continue;" };
+    char error[3] [15] = {"printf(\"", "\\n", "\");"};
+    char var [SIZE];
+    char mem[10];
+    int m;
+    char buff [SIZE];
+    char err [SIZE];
+    
+    while (1) {
+        printf("//Enter the name of variable m for main.\n");
+        printf("//");
+        while(fgets(var,SIZE, stdin) == NULL) {
+            checkInput();
+        }
+        var[strcspn(var, "\n")] = 0;
+        if (strlen(var) >= MAX) {
+            clear();
+        }
+        if (strcmp(var, "m") == 0) {
+            break;
+        }
+        printf("//Enter memory allocated to variable 5 or more.\n");
+        printf("//");
+        while(1) {
+            if(fgets(mem,sizeof(mem), stdin) == NULL){
+                checkInput();
+                continue;
+            }
+            mem[strcspn(mem, "\n")] = 0;
+            if (strlen(mem) >= 9) {
+                clear();
+            }
+            m = atoi(mem);
+            if(m < 5) {
+                printf("\n//Enter a number 5 or more.\n\n");
+            } else {
+                break;
+            }
+        }
+        printf("//Enter the name of the function to flush input buffer.\n");
+        printf("//");
+        while(fgets(buff,SIZE,stdin)== NULL) {
+            checkInput();
+       }
+       buff[strcspn(buff,"\n")]=0;
+       if(strlen(buff) >= MAX) {
+           clear();
+       }
+       printf("//Enter a error message. Enter valid text only will do.\n");
+       printf("//");
+       while(fgets(err,SIZE, stdin) == NULL) {
+           checkInput();
+       }
+       err[strcspn(err, "\n")] = 0;
+       if(strlen(err) >= MAX) {
+           clear();
+       }
+       printf("\n%s%s%d%s%s%s%s\n",t[0],t[2],m-1,t[4],t[5],var,t[6]);
+       printf("%s%s%s\n",t[7],buff,t[8]);       
+       printf("%s%s%s%s%s%s%s\n",t[7], error[0], error[1], err, error[1],error[1], error[2]);
+       printf("%s%s\n",t[7],t[9]);
+       printf("%s\n\n",t[10]);
+       printf("\n%s\n",t[3]);
+       printf("%s%s%s%d%s%s%s%s\n",t[7],t[1],t[2],m-1,t[4],t[5],var,t[6]);
+       printf("%s%s%s%s\n",t[7],t[7],buff,t[8]);       
+       printf("%s%s%s%s%s%s%s%s\n",t[7],t[7], error[0], error[1], err, error[1],error[1], error[2]);
+       printf("%s%s%s\n",t[7],t[7],t[9]);
+       printf("%s%s%s\n",t[7],t[7],t[11]);
+       printf("%s%s\n\n",t[7],t[10]);
+        if (strcmp(repeat, "r") != 0) {
+            break;
+        }
+      
+    }     
 }
 
 void scanfBasic() {
@@ -2513,6 +2591,8 @@ int main() {
             stringToIntBasic();
         } else if(strcmp(sw, "s")==0) {
             scanff();
+        } else if(strcmp(sw, "scb")==0) {
+             CheckScanfClear();     
         } else if(strcmp(sw, "sb")==0) {
             scanfBasic();
         } else if(strcmp(sw, "cb")==0) {
