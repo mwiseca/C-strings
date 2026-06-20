@@ -360,7 +360,7 @@ def CheckScanfClear():
                     else:
                         break
                 except ValueError:
-            print("\nEnter 2 or more.\n") 
+                    print("\nEnter 2 or more.\n") 
             buff = input("//Enter the name of the function to flush input buffer.\n//")
             err = input("//Enter a error message. Enter valid text only will do.\n//")
            
