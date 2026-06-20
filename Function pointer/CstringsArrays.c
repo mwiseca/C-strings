@@ -48,7 +48,7 @@ void choice() {
     printf("//Enter fi to convert a string to int or double with fgets.\n");
     printf("//Enter fib to convert a string to int or double with only one error message.\n");
     printf("//Enter s for scanf for strings to allow for white spaces.\n");
-    printf("Enter scb to check scanf and clear buffer with cb.\n");
+    printf("//Enter scb to check scanf and clear buffer with cb.\n");
     printf("//Enter sb for scanf basic no white spaces.\n");
     printf("//Enter si for scanf for integers and doubles.\n");
     printf("//Enter sh for scanf for ints and doubles on the heap.\n");
