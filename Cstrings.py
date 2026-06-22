@@ -364,7 +364,7 @@ def CheckScanfClear():
             buff = input("//Enter the name of the function to flush input buffer.\n//")
             err = input("//Enter a error message. Enter valid text only will do.\n//")
            
-            print(f"\n {t[0]}{t[2]}{mem-1}{t[4]}{t[5]}{var}{t[6]}")
+            print(f"\n{t[0]}{t[2]}{mem-1}{t[4]}{t[5]}{var}{t[6]}")
             print(t[7] + buff + t[8])       
             print(t[7] + error[0] + error[1] + err + error[1] + error[1], error[2])
             print(t[7] + t[9])
