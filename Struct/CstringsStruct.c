@@ -751,6 +751,7 @@ void CheckScanfClear() {
        printf("%s%s%s%s%s%s%s\n",t[7], error[0], error[1], err, error[1],error[1], error[2]);
        printf("%s%s\n",t[7],t[9]);
        printf("%s\n\n",t[10]);
+       printf("%s%s\n\n",buff,t[8]);
        printf("\n%s\n",t[3]);
        printf("%s%s%s%d%s%s%s%s\n",t[7],t[1],t[2],m-1,t[4],t[5],var,t[6]);
        printf("%s%s%s%s\n",t[7],t[7],buff,t[8]);       
@@ -758,6 +759,7 @@ void CheckScanfClear() {
        printf("%s%s%s\n",t[7],t[7],t[9]);
        printf("%s%s%s\n",t[7],t[7],t[11]);
        printf("%s%s\n\n",t[7],t[10]);
+       printf("%s%s%s\n\n",t[7],buff,t[8]);
        if (strcmp(repeat, "r") != 0) {
             break;
         }
