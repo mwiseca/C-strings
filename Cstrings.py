@@ -368,14 +368,16 @@ def CheckScanfClear():
             print(t[7] + buff + t[8])       
             print(t[7] + error[0] + error[1] + err + error[1] + error[1], error[2])
             print(t[7] + t[9])
-            print(t[10] + "\n")
+            print(t[10])
+            print(buff + t[8] + "\n")
             print(t[3]);
             print(f"{t[7]}{t[1]}{t[2]}{mem-1}{t[4]}{t[5]}{var}{t[6]}")
             print(t[7] + t[7] + buff + t[8])       
             print(t[7] + t[7] + error[0] + error[1] + err + error[1] + error[1] + error[2])
             print(t[7] + t[7] + t[9])
             print(t[7] + t[7] + t[11])
-            print(t[7] + t[10] + "\n")
+            print(t[7] + t[10])
+            print(t[7] + buff + t[8] + "\n")
         except EOFError:
             print("\nInvalid input\n")
 
