@@ -5,3 +5,4 @@ May 29 2026.
 May 2 2026.
 Added check scanf for strings that uses clearerr(stdin); to clear errors and cb to flush buffer.
 Check scb in choices. its added to CstringsStruct.c.
+June 23 2026.
