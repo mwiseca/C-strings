@@ -192,3 +192,4 @@ A new option was added to fcb.Its if fgets along with while fgets. Cstrings.c an
 May 2 2026.
 Added check scanf for strings that uses clearerr(stdin); to clear errors and cb to flush buffer.
 Check scb in choices. its added to Cstrings.c Cstrings.py. CstringsStruct.c CstringsArrays.c CstringsMallocOut.c.
+June 23 2026.
