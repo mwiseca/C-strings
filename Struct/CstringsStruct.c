@@ -1661,7 +1661,7 @@ void array() {
         clear();
     }
     if (strcmp(name, "m") == 0) {
-        exit(0);
+        return;
     }
     printf("//Enter the amount of elements.\n");
     printf("//");
