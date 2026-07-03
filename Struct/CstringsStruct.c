@@ -1707,67 +1707,77 @@ void array() {
 }
 
 void numArray() {
-    char a[6][20] = {"int ", "double ", "[", "]", " = {", "};"};
+    char a[6][20] = {"int ", "double ", "[", "]", " = {", "};",};
+    char elements[10][150];
+    int count = 0;
     char typ[SIZE];
     char name[SIZE];
     char num[SIZE];
-    char elements[SIZE];
 
-    while (1) {
-        printf("//Enter a data type i for int d for double.\n");
-        printf("//");
-        while (fgets(typ,SIZE, stdin) == NULL || (1)) {
-            clearerr(stdin);
-            typ[strcspn(typ, "\n")] = 0;
-            if (strlen(typ) >= MAX) {
-                clear(); 
-            } 
-            if (strcmp(typ, "i") != 0 && strcmp(typ, "d") != 0) {
-                printf("//Enter i or d.\n");
-            } else {
-                break;
-            }
+
+    printf("//Enter a data type i for int d for double.\n");
+    printf("//");
+    while (fgets(typ,SIZE, stdin) == NULL || (1)) {
+        clearerr(stdin);
+        typ[strcspn(typ, "\n")] = 0;
+        if (strlen(typ) >= MAX) {
+            clear();
         }
-        if (strcmp(typ, "i") == 0) {
-            strcpy(typ, a[0]);
-        } else if (strcmp(typ, "d") == 0) {
-            strcpy(typ, a[1]);
-        }
-        printf("//Enter the name of the array m for main.\n");
-        printf("//");
-        while(fgets(name,SIZE, stdin) == NULL) {
-            checkInput();
-        }
-        name[strcspn(name, "\n")] = 0;
-        if (strlen(name) >= MAX) {
-            clear(); 
-        } 
-        if (strcmp(name, "m") == 0) {
-            break;
-        }
-        printf("//Enter number of elements m for main.\n");
-        printf("//");
-        while(fgets(num, SIZE, stdin) == NULL) {
-            checkInput();
-        }
-        num[strcspn(num, "\n")] = 0;
-        if (strlen(num) >= MAX) {
-            clear(); 
-        } 
-        printf("//Enter elements with a comma between them.\n");
-        printf("//");
-        while(fgets(elements, SIZE, stdin) == NULL) {
-            checkInput();
-        }
-        elements[strcspn(elements, "\n")] = 0;
-        if (strlen(elements) >= MAX) {
-            clear(); 
-        } 
-        printf("%s%s%s%s%s%s%s%s\n", typ, name, a[2], num, a[3], a[4], elements, a[5]);
-        if (strcmp(repeat, "r") != 0) {
+        if (strcmp(typ, "i") != 0 && strcmp(typ, "d") != 0) {
+            printf("//Enter i or d.\n");
+        } else {
             break;
         }
     }
+    if (strcmp(typ, "i") == 0) {
+        strcpy(typ, a[0]);
+    } else if (strcmp(typ, "d") == 0) {
+        strcpy(typ, a[1]);
+    }
+    printf("//Enter the name of the array m for main.\n");
+    printf("//");
+    while(fgets(name,SIZE, stdin) == NULL) {
+        checkInput();
+    }
+    name[strcspn(name, "\n")] = 0;
+    if (strlen(name) >= MAX) {
+        clear();
+    }
+    if (strcmp(name, "m") == 0) {
+        return;
+    }
+    printf("//Enter number of elements m for main.\n");
+    printf("//");
+    while(fgets(num, SIZE, stdin) == NULL) {
+        checkInput();
+    }
+    num[strcspn(num, "\n")] = 0;
+    if (strlen(num) >= MAX) {
+        clear();
+    }
+    while(count < 10) {
+        printf("//Enter a element press # to stop.\n");
+        while(fgets(elements[count], 150, stdin) == NULL) {
+            checkInput();
+        }
+        elements[count][strcspn(elements[count], "\n")] = 0;
+        if (strlen(elements[count]) >= 148) {
+            clear();
+        }
+        if(strcmp(elements[count],"#")==0) {
+            break;
+        }else{
+            count++;
+        }
+    }
+    printf("\n%s%s%s%s%s%s", typ, name, a[2], num, a[3], a[4]); 
+    for (int i = 0; i < count; i++) {
+        printf("%s",elements[i]);
+        if(i < count -1) {
+            printf(",");
+        }
+    }
+    printf("%s\n\n",a[5]);
 }
 
 void mapArrays() {
