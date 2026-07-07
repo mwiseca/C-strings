@@ -31,6 +31,8 @@ void choice() {
     printf("//Enter ia for arrays with numbers .\n");
     printf("//Enter ma to build a simple map that maps 2 arrays.\n");
     printf("//Enter mn to build a simple map were the key array is numbers.\n");
+    printf("//Enter sf for a struct with a function pointer for a menu program.\n");
+    printf("//Enter ms to build a simple map using a struct with keys as strings after selecting sf.\n");
     printf("//Enter b for strings with printf.\n");
     printf("//Enter c for strings with no quotation marks.\n");
     printf("//Enter bl for string literals.\n");
@@ -2032,6 +2034,240 @@ void mapNum() {
     }
 }
 
+void structMenu() {
+    char structVar [7] [20] = {"struct "," {","const char* ","int ","double ",";","    "};
+    char fptr [4] [20] = {"void(*",")","(void);","};"};
+    char structArray [8] [20] = {"struct ","[] = {","{","\"",",","     ","};","},"};
+    char arrayKey [10] [150];
+    char function [10] [150];
+
+    char name [SIZE];
+    char keyType [SIZE];
+    char keyName [SIZE];
+    char ptrName [SIZE];
+    char varName [SIZE];
+    int count = 0;
+    int counts = 0; 
+    printf("//Name the struct m for main.\n");
+    while(fgets(name,SIZE,stdin) == NULL) {
+        checkInput();
+    }
+    name[strcspn(name,"\n")] =0;
+    if(strlen(name) >= MAX) {
+        clear();
+    }
+    if(strcmp(name,"m")==0) {
+        return;
+    }
+    printf("//Enter the type for keys s for string i for int d for double.\n");
+    while(1) {
+        if(fgets(keyType,SIZE,stdin) == NULL) {
+            checkInput();
+            continue;
+        }
+        keyType[strcspn(keyType,"\n")]=0;
+        if(strlen(keyType) >= MAX) {
+            clear();
+        }
+        if(strcmp(keyType,"s")!=0 && strcmp(keyType,"i")!=0 && strcmp(keyType,"d")!=0) {
+            printf("\n//Enter s i or d only.\n\n");
+        } else {
+            break;
+        }
+    }
+    if(strcmp(keyType,"s")==0) {
+        strcpy(keyType, structVar[2]);
+    } else if(strcmp(keyType,"i")==0) {
+        strcpy(keyType, structVar[3]);
+    } else if(strcmp(keyType,"d")==0) {
+        strcpy(keyType, structVar[4]);
+    }
+    printf("//Enter a key name.\n");
+    while(fgets(keyName,SIZE,stdin) == NULL) {
+        checkInput();
+    }
+    keyName[strcspn(keyName,"\n")] =0;
+    if(strlen(keyName) >= MAX) {
+        clear();
+    }
+    if(strcmp(keyName,"x")==0) {
+        return;
+    }
+    printf("//Enter the name of the values function pointer.\n");
+    while(fgets(ptrName,SIZE,stdin) == NULL) {
+        checkInput();
+    }
+    ptrName[strcspn(ptrName,"\n")]=0;
+    if(strlen(ptrName) >= MAX) {
+        clear();
+    }
+    printf("//Enter the Variable Identifier.\n");
+    while(fgets(varName,SIZE,stdin) == NULL) {
+        checkInput();
+    }
+    varName[strcspn(varName,"\n")]=0;
+    if(strlen(varName) >= MAX) {
+        clear();
+    }
+    while(count < 10 && counts < 10){ 
+        printf("//Enter a array key press # to stop.\n");
+        while(fgets(arrayKey[count],150,stdin) == NULL) {
+            checkInput();
+        }
+        arrayKey[count][strcspn(arrayKey[count],"\n")]=0;
+        if(strlen(arrayKey[count]) >= 148) {
+            clear();
+        }
+        if(strcmp(arrayKey[count],"#")==0) {
+            break;
+        }else{
+            count++;
+        } 
+        printf("//Enter a value function.\n");
+        while(fgets(function[counts],150,stdin) == NULL) {
+            checkInput();
+        }
+        function[counts][strcspn(function[counts],"\n")]=0;
+        if(strlen(function[counts]) >= 148) {
+            clear();
+        } 
+        counts++; 
+    }
+    printf("\n%s%s%s\n",structVar[0],name, structVar[1]);    
+    printf("%s%s%s%s\n",structVar[6],keyType,keyName,structVar[5]);   
+    printf("%s%s%s%s%s\n",structVar[6],fptr[0],ptrName,fptr[1],fptr[2]);
+    printf("%s%s\n\n",fptr[3],"      //Place this code above the main function\n\n");
+    printf("%s%s %s%s\n",structArray[0],name,varName,structArray[1]);
+    for (int i = 0; i < count   && i < counts; i++) {
+        if(strcmp(keyType,structVar[2])==0) {
+            printf("%s%s%s%s%s%s%s%s%s\n",structArray[5],structArray[2],structArray[3],arrayKey[i],structArray[3],structArray[4],structArray[5],function[i],structArray[7]);
+        } else {
+            printf("%s%s%s%s%s%s%s\n",structArray[5],structArray[2],arrayKey[i],structArray[4],structArray[5],function[i],structArray[7]);
+        }     
+    }
+    printf("%s\n\n",structArray[6]); 
+}
+
+void mapStruct() {
+    char loop [7] [25] = {"int "," = -1;","for(int "," = 0;","<",";","++) {"};
+    char ifStatement [12] [25] = {"    if(strcmp(",", ","[","]",".",") == 0) {"," = ",";","}","    }","}","        "};
+    char keyError [7] [25] = {"if(", " == -1) {", "    printf(\"", "\\n", "\");","    continue;","}"}; 
+    const char *end [] = {"[","]",".","();"};
+    char keys [SIZE];
+    char values [SIZE];
+    char select [SIZE];
+    char varId[SIZE];
+    char input [SIZE];
+    char forLoopInt [SIZE];
+    char elements [SIZE];
+    char error [SIZE];
+  
+
+    while(1) {
+        printf("//Enter the name of the keys m for main.\n");
+        while(fgets(keys,SIZE,stdin) == NULL) {
+            checkInput();
+        }
+        keys[strcspn(keys,"\n")]=0;
+        if(strlen(keys) >= MAX) {
+            clear();
+        }
+        if(strcmp(keys,"m") == 0) {
+            break;
+        }
+        printf("//Enter the value for the function pointer m for main.\n");
+        while(fgets(values,SIZE,stdin) == NULL) {
+            checkInput();
+        }
+        values[strcspn(values,"\n")]=0;
+        if(strlen(values) >= MAX) {                                    
+            clear();
+        }
+        if(strcmp(values,"m") == 0) {
+            break;
+        }
+        printf("//Enter the name of the user input m for main.\n");
+        while(fgets(select,SIZE,stdin) == NULL) {
+            checkInput();
+        }
+        select[strcspn(select,"\n")]=0;
+        if(strlen(select) >= MAX) {
+            clear();
+        }
+        if(strcmp(select,"m") == 0) {
+            break;
+        }
+        printf("Enter the name of the variable identifier.\n");
+        while(fgets(varId,SIZE,stdin) == NULL) {
+            checkInput();
+        }
+        varId[strcspn(varId,"\n")]=0;
+        if(strlen(varId) >= MAX) {
+            clear();
+        }
+        printf("//Select the name of the variable that stores the key to be selected.\n");
+        printf("//Index or number is good. m for main.\n");
+        while(fgets(input,SIZE,stdin) == NULL) {
+            checkInput();
+        }
+        input[strcspn(input,"\n")]=0;
+        if(strlen(input) >= MAX) {
+            clear();
+        }
+        if(strcmp(input,"m") == 0) {
+            break;
+        }
+        printf("//Select a name for the for loop int i is the usual.\n");
+        while(fgets(forLoopInt,SIZE,stdin) == NULL) {
+            checkInput();
+        }
+        forLoopInt[strcspn(forLoopInt,"\n")]=0;
+        if(strlen(forLoopInt) >= MAX) {
+            clear();
+        }
+        if(strcmp(input,"m") == 0) {
+            break;
+        }
+        printf("//Enter the number of elements in struct.\n");
+        while(fgets(elements,SIZE,stdin) == NULL) {
+            checkInput();
+        }
+        elements[strcspn(elements,"\n")]=0;
+        if(strlen(elements) >= MAX) {
+            clear();
+        }
+        if(strcmp(elements,"m") == 0) {
+            break;
+        }
+        printf("//Enter a key error message m for main.\n");
+        while(fgets(error,SIZE,stdin) == NULL) {
+            checkInput();
+        }
+        error[strcspn(error,"\n")]=0;
+        if(strlen(error) >= MAX) {
+            clear();
+        }
+        if(strcmp(error,"m") == 0) {
+            break;
+        }
+                  
+        printf("\n%s%s%s\n",loop[0],input,loop[1]); 
+        printf("%s%s%s%s%s%s%s%s%s\n",loop[2],forLoopInt,loop[3],forLoopInt,loop[4],elements,loop[5],forLoopInt,loop[6]);
+        printf("%s%s%s%s%s%s%s%s",ifStatement[0],select,ifStatement[1],varId,ifStatement[2],forLoopInt,ifStatement[3],ifStatement[4]);
+        printf("%s%s\n",keys,ifStatement[5]);
+        printf("%s%s%s%s%s\n",ifStatement[11],input,ifStatement[6],forLoopInt,ifStatement[7]);
+        printf("%s\n%s\n",ifStatement[9],ifStatement[8]);
+        printf("%s%s%s\n",keyError[0],input,keyError[1]);
+        printf("%s%s%s%s%s%s\n",keyError[2],keyError[3],error,keyError[3],keyError[3],keyError[4]);
+        printf("%s\n",keyError[5]);
+        printf("%s\n",keyError[6]); 
+        printf("%s%s%s%s%s%s%s\n\n",varId,end[0],input,end[1],end[2],values,end[3]);       
+        if (strcmp(repeat, "r") != 0) {
+            break;
+        }
+    }
+}
+
 void funct() {
     char t[4][12] = {"void ", "(", "){", "}"};
     char name[SIZE];
@@ -2643,7 +2879,11 @@ int main() {
         } else if(strcmp(sw, "ma")==0) { 
             mapArrays();
         } else if(strcmp(sw, "mn")==0) { 
-            mapNum();  
+            mapNum();
+        } else if(strcmp(sw, "sf")==0) { 
+            structMenu();
+        } else if(strcmp(sw, "ms")==0) { 
+            mapStruct();  
         } else if(strcmp(sw, "fc")==0) {
             funct();
         } else if(strcmp(sw, "cf")==0) {
