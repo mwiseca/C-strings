@@ -68,3 +68,6 @@ February 19 2026.
 A new file was added to C files. CheckScanfClear.c.
 Its scanf for strings that allows white spaces sets bounds limits and error checks.
 May 17 2026.
+A new file was added. it makes a struct of void functions. this can be used to make a menu program.
+structFunctions.c
+July 7 2026.
