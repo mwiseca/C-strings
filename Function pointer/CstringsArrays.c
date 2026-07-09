@@ -2832,7 +2832,7 @@ void copy() {
         "ma",
         "mn",
         "sf",
-        "ms"
+        "ms",
         "fc",
         "cf",
         "h",
