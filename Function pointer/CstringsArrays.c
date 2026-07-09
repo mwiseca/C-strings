@@ -2876,7 +2876,7 @@ void copy() {
         mapArrays,
         mapNum,
         structMenu,
-        mapStruct
+        mapStruct,
         funct,
         callFunct,
         heap,
