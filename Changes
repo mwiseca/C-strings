@@ -196,3 +196,9 @@ June 23 2026.
 Arrays have been changed to include syntax for up to 10 elements in Cstrings.c.
 check a and ia in choices.
 July 4 2026.
+A struct with function pointer was added for a menu program to Cstrings.c.
+Check sf in choices.
+A simple map that uses the the struct with function pointer was added to Cstrings.c
+It makes the code to link the key value pairs in the struct with user input.
+check ms in choices.
+July 10 2026.
