@@ -41,6 +41,3 @@ A simple map that uses the the struct with function pointer was added to Cstring
 It makes the code to link the key value pairs in the struct with user input.
 check ms in choices.
 July 10 2026.
-Added: Change the value of a variable with strcpy with reduced risk of buffer overflow to CstringsArrays.c.
-Check cv in choices.
-August 19 2026.
