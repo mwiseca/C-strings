@@ -65,6 +65,7 @@ void choice() {
     printf("//Enter cf to call functions \n");
     printf("//Enter v for variables without assigning a value.\n");
     printf("//Enter vv for variables with assigning a string value.\n");
+    printf("//Enter cv to change the value of a variable with strcpy.\n");
     printf("//Enter vi for int and double variables.\n");
     printf("//Enter vn for int and double variables with no value,\n");
     printf("//Enter m for main x to exit.\n");
@@ -1646,6 +1647,64 @@ void variableValue() {
     }
 }
 
+void changeVar() {
+    char t [9]  [25] = {"char ","[","]"," = ",";","strcpy(",",", "\"","\");"};
+    char name [SIZE] = {0};
+    char value [SIZE] = {0};
+    char nv [SIZE] = {0};
+
+
+    while(1) {
+        printf("//Enter a variable name m for main.\n");
+        printf("//");
+        while(fgets(name,SIZE,stdin) == NULL) {
+            checkInput();
+        }
+        name[strcspn(name,"\n")]=0;
+        if(strlen(name) >= MAX) {
+            clear();
+        }
+        if(strcmp(name,"m")==0) {
+            break;
+        }
+
+        printf("//Enter the value assigned.\n");
+        printf("//");
+        while(fgets(value,sizeof(value),stdin) == NULL) {
+            checkInput();
+        }
+        value[strcspn(value,"\n")]=0;
+        if(strlen(value) >= MAX) {
+            clear(); 
+        }
+        printf("//Enter the new value m for main.\n");
+        printf("//");
+        while(1) {
+            if(fgets(nv,sizeof(nv),stdin) == NULL) {
+                checkInput();
+                continue;
+            }
+            nv[strcspn(nv,"\n")]=0;
+            if(strlen(nv) >= MAX) {
+                clear(); 
+            }
+             if(strcmp(nv,"m")==0){
+                 return; 
+             }
+             if (strlen(nv) + 2 > strlen(value)) { 
+                printf("//Enter a string maximum 2 bytes less than original value.\n");
+            } else {
+                break;
+            } 
+        }
+        printf("\n%s%s%s%s%s%s%s%s%s      //Place code with vairables\n\n",t[0],name,t[1],t[2],t[3],t[7],value,t[7],t[4] );
+        printf("%s%s%s%s%s%s      //Place code were vairable value is to be changed.\n\n",t[5],name,t[6],t[7],nv,t[8]);
+        if(strcmp(repeat,"r")!=0) {
+            break;
+        }
+    }
+}
+
 void array() {
     char t[5][15] = {"char ", " [", "] ", "] = {", "};"};
     char elements[10][150];
@@ -2839,6 +2898,7 @@ int main() {
         {"im",             ifHeap},  
         {"v",            variable},        
         {"vv",      variableValue}, 
+        {"cv",          changeVar},
         {"a",               array},
         {"ia",           numArray},
         {"ma",          mapArrays},      
@@ -2886,7 +2946,7 @@ int main() {
             break;
         } 
         int index = -1;
-        for(int i = 0; i<41;i++) {
+        for(int i = 0; i<42;i++) {
             if(strcmp(sw, m1[i].keys)==0){
                 index = i;
             }

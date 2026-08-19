@@ -71,3 +71,5 @@ May 17 2026.
 A new file was added. it makes a struct of void functions. this can be used to make a menu program.
 structFunctions.c
 July 7 2026.
+A new file was added it changes string value to a variable using strcpy with less risk of buffer overflow.
+August 17 2026.
