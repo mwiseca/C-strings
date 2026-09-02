@@ -546,7 +546,7 @@ void stringToInt() {
 }
 
 void stringToIntBasic() {
-    const char *t [] = {"long int", ";","char *"," = strtol(","&",",10);","    ","printf(\"","\\n", "\");","*"," == 0x20","printf(\"","\\n","\");","("," == ",") {"," != '\\0') {", "} else {",","," = strtod(",")"," &",");"," || "};
+    const char *t [] = {"long int", ";","char *"," = strtol(","&",",10);","    ","printf(\"","\\n", "\");","*","printf(\"","\\n","\");","("," == ",") {"," != '\\0') {", "} else {",","," = strtod(",")"," &",");"," || "};
 
     char type [SIZE];
     char string [SIZE];
@@ -556,7 +556,7 @@ void stringToIntBasic() {
     while(1){
         printf("//Enter type i for int d for double.\n");
         while(fgets(type,SIZE,stdin) == NULL) {
-            checkInput(); 
+            checkInput();
         }
         type[strcspn(type,"\n")]=0;
         if(strlen(type) >= MAX) {
@@ -568,7 +568,7 @@ void stringToIntBasic() {
         }
         printf("//Enter the string name to be converted m for main.\n");
         while(fgets(string,SIZE,stdin) == NULL) {
-            checkInput(); 
+            checkInput();
         }
         string[strcspn(string,"\n")]=0;
         if(strlen(string) >= MAX) {
@@ -579,7 +579,7 @@ void stringToIntBasic() {
         }
         printf("//Enter the converted integer or double name.\n");
         while(fgets(longInt,SIZE,stdin) == NULL) {
-            checkInput(); 
+            checkInput();
         }
         longInt[strcspn(longInt,"\n")]=0;
         if(strlen(longInt) >= MAX) {
@@ -587,7 +587,7 @@ void stringToIntBasic() {
         }
         printf("//Enter the name of the pointer endptr or ptr will do.\n");
         while(fgets(ptrName,SIZE,stdin) == NULL) {
-            checkInput(); 
+            checkInput();
         }
         ptrName[strcspn(ptrName,"\n")]=0;
         if(strlen(ptrName) >= MAX) {
@@ -595,7 +595,7 @@ void stringToIntBasic() {
         }
         printf("//Enter a error message.\n");
         while(fgets(errorMessage,SIZE,stdin) == NULL) {
-            checkInput(); 
+            checkInput();
         }
         errorMessage[strcspn(errorMessage,"\n")]=0;
         if(strlen(errorMessage) >= MAX) {
@@ -606,38 +606,36 @@ void stringToIntBasic() {
             printf("long int %s;\n",longInt);
             printf("char *%s;\n",ptrName);
         } else if(strcmp(type,"d")==0) {
-            printf("double %s;\n",longInt); 
+            printf("double %s;\n",longInt);
             printf("char *%s;\n\n",ptrName);
-        } 
+        }
         printf("\nerrno = 0;\n");
         if(strcmp(type,"i")==0) {
-            printf("%s%s%s%s%s%s%s\n",longInt,t[3],string,t[20],t[4],ptrName,t[5]);
+            printf("%s%s%s%s%s%s%s\n",longInt,t[3],string,t[19],t[4],ptrName,t[5]);
         } else if(strcmp(type,"d")==0) {
-            printf("%s%s%s%s%s%s%s\n",longInt,t[21],string,t[20], t[23],ptrName,t[24]);
+            printf("%s%s%s%s%s%s%s\n",longInt,t[20],string,t[19], t[22],ptrName,t[23]);
         }
         printf("if(errno == ERANGE || ");
-        printf("%s%s%s",t[10],ptrName,t[11]); 
-        printf("%s%s%s%s",t[25],ptrName,t[16],string); 
-        printf("%s%s%s%s\n",t[25],t[10],ptrName,t[18]);
+        printf("%s%s%s",ptrName,t[15],string);
+        printf("%s%s%s%s\n",t[24],t[10],ptrName,t[17]);
         printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],errorMessage,t[8],t[8],t[9]);
-        printf("%s\n\n",t[19]);
+        printf("%s\n\n",t[18]);
         printf("\nerrno = 0;\n");
         if(strcmp(type,"i")==0) {
-            printf("%s%s%s%s%s%s%s\n",longInt,t[3],string,t[20],t[4],ptrName,t[5]);
+            printf("%s%s%s%s%s%s%s\n",longInt,t[3],string,t[19],t[4],ptrName,t[5]);
         } else if(strcmp(type,"d")==0) {
-            printf("%s%s%s%s%s%s%s\n",longInt,t[21],string,t[20], t[23],ptrName,t[24]);
+            printf("%s%s%s%s%s%s%s\n",longInt,t[20],string,t[19], t[22],ptrName,t[23]);
         }
         printf("if(errno == ERANGE || ");
-        printf("%s%s%s",t[10],ptrName,t[11]); 
-        printf("%s%s%s%s",t[25],ptrName,t[16],string); 
-        printf("%s%s%s%s\n",t[25],t[10],ptrName,t[18]);
+        printf("%s%s%s",ptrName,t[15],string);
+        printf("%s%s%s%s\n",t[24],t[10],ptrName,t[17]);
         printf("%s%s%s%s%s%s%s\n",t[6],t[7],t[8],errorMessage,t[8],t[8],t[9]);
         printf("%scontinue;\n",t[6]);
         printf("}\n\n");
         if(strcmp(repeat,"r")!=0) {
             break;
-        }              
-    } 
+        }
+    }
 }
 
 void scanff() {
