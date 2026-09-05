@@ -206,3 +206,7 @@ Added: Change the value of a variable with strcpy with reduced risk of buffer ov
 This was added to Cstrings.c Cstrings.py CstringsStruct.c and CstringsAarrays.
 Check cv in choices.
 August 19 2026.
+The fib option was changed. One condition on the multi if statement was removed. *ptr == 0x20 for spaces between numbers as its covered by *ptr != '\0'
+and theres only one error message for all errors.
+Check fib in choices.
+September 5 2026.
