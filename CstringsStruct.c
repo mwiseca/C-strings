@@ -2029,7 +2029,7 @@ void mapNum() {
         if(strcmp(input,"m") == 0) {
             break;
         }
-        printf("//Select a name for the for loop int i is the usual.\n");
+        printf("//Select a name for the for loop int i is the usual m for main.\n");
         while(fgets(forLoopInt,SIZE,stdin) == NULL) {
             checkInput();
         }
@@ -2037,7 +2037,7 @@ void mapNum() {
         if(strlen(forLoopInt) >= MAX) {
             clear();
         }
-        if(strcmp(input,"m") == 0) {
+        if(strcmp(forLoopInt,"m") == 0) {
             break;
         }
         printf("//Enter the number of elements in arrays.\n");
