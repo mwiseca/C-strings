@@ -210,3 +210,7 @@ The fib option was changed. One condition on the multi if statement was removed.
 and theres only one error message for all errors.
 Check fib in choices.
 September 5 2026.
+A new Directory was made. Alternatives. It has the older files using different ways of building a menu program.
+CstringsBasic uses a if else chain to select choices. CstringsIf.c calls functions with a if else chain.
+CstringsArrays uses 2 arrays for key value pairs.
+Sept 14 2026.
