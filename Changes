@@ -213,4 +213,6 @@ September 5 2026.
 A new Directory was made. Alternatives. It has the older files using different ways of building a menu program.
 CstringsBasic uses a if else chain to select choices. CstringsIf.c calls functions with a if else chain.
 CstringsArrays uses 2 arrays for key value pairs.
-Sept 14 2026.
+September 14 2026.
+CstringsStruct has been renamed to Cstrings.
+September 14 2026.
