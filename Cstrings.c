@@ -3048,7 +3048,7 @@ int main() {
         {"mn",             mapNum},
         {"sf",         structMenu},
         {"ms",          mapStruct},
-        {"skv      structKeyValue},
+        {"skv",    structKeyValue},
         {"fc",              funct},
         {"cf",          callFunct},
         {"h",                heap}, 
