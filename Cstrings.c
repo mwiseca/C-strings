@@ -2593,7 +2593,7 @@ void mapKv() {
         if(strcmp(error,"m") == 0) {
             break;
         }
-        printf("Enter the type for the values s for string i for int and d for double.\n");
+        printf("//Enter the type for the values s for string i for int and d for double.\n");
         while(1) {
             if(fgets(valueType,SIZE,stdin) == NULL) {
                 checkInput();
