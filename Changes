@@ -216,8 +216,8 @@ CstringsArrays uses 2 arrays for key value pairs.
 September 14 2026.
 CstringsStruct has been renamed to Cstrings.
 September 14 2026.
-Added: A struct for key value pairs for a simple map.
+Added: A struct for key value pairs for a simple map in Cstrings.c only.
 Check skv in choices.
-Added: A feature to map keys to  values in skv.
+Added: A feature to map keys to  values in skv in Cstrings.c only. 
 Check mkv in choices.
 
