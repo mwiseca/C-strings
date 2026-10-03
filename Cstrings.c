@@ -2463,7 +2463,7 @@ void structKeyValue() {
     printf("%s%s%s%s\n",structVar[6],keyType,keyName,structVar[5]);
     printf("    %s%s%s\n",valueType,valueName,values[3]);
     printf("%s%s\n\n",structArray[6],"      //Place this code above the main function\n\n");
-    printf(" %s%s %s%s\n",structArray[0],name,varName,structArray[1]);
+    printf("%s%s %s%s\n",structArray[0],name,varName,structArray[1]);
     for (int i = 0; i < count   && i < counts; i++) {
         if(strcmp(keyType,structVar[2])==0) {
             printf("%s%s%s%s%s%s%s",structArray[5],structArray[2],structArray[3],arrayKey[i],structArray[3],structArray[4],structArray[8]); 
