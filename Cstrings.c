@@ -1670,12 +1670,21 @@ void changeVar() {
 
         printf("//Enter the value assigned.\n");
         printf("//");
-        while(fgets(value,sizeof(value),stdin) == NULL) {
-            checkInput();
-        }
-        value[strcspn(value,"\n")]=0;
-        if(strlen(value) >= MAX) {
-            clear(); 
+        while(1) {
+            if(fgets(value,sizeof(value),stdin) == NULL) {
+                checkInput();
+                continue;
+            }
+            value[strcspn(value,"\n")]=0;
+            if(strlen(value) >= MAX) {
+                clear(); 
+            }
+            if(strlen(value) < 4) {
+                printf("\nEnter at least 4 characters.\n\n");
+                continue;
+            } else {
+                break;
+            }
         }
         printf("//Enter the new value m for main.\n");
         printf("//");
