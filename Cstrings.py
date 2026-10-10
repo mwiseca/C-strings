@@ -624,7 +624,7 @@ def changeVar():
                 if nv == "m":
                     return "" 
                 if len(nv) + 2 > len(value):  
-                    print("//Enter a string maximum 2 bytes less than original value.\n")
+                    print("//Enter a string maximum 2 bytes less than original value or m for main.\n")
                 else: 
                     break
             print(f"\n{t[0]}{name}{t[1]}{t[2]}{t[3]}{t[7]}{value}{t[7]}{t[4]}      //Place code with variables")
