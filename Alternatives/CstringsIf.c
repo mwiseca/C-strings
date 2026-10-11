@@ -1671,7 +1671,7 @@ void changeVar() {
             if(strlen(value) >= MAX) {
                 clear(); 
             }
-            if(strlen(value) > 4) {
+            if(strlen(value) < 4) {
                 printf("\nEnter at least 4 characters.\n\n");
                 continue;
             } else {
